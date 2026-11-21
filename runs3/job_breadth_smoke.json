@@ -1,0 +1,27 @@
+[
+ {
+  "name": "br-smoke",
+  "kind": "breadth",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "families": [
+    "inbetween",
+    "oddone"
+   ],
+   "seed": 99,
+   "steps": 20,
+   "examples": 160,
+   "lr": 0.0002,
+   "sizes": {
+    "pool": 1,
+    "held": 2,
+    "bbh": 2,
+    "code": 2,
+    "rule": 2,
+    "order": 2,
+    "retention": 4
+   }
+  }
+ }
+]

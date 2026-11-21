@@ -1,0 +1,4586 @@
+{
+ "arm": "COOP",
+ "seed": 2,
+ "model": "claude-haiku-5-5",
+ "mock": false,
+ "config": {
+  "N": 16,
+  "R": 12,
+  "G": 12,
+  "cost": 1.5
+ },
+ "complete": true,
+ "plants": [
+  "roba",
+  "taze",
+  "kufu",
+  "vodu"
+ ],
+ "generations": [
+  {
+   "gen": 0,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": -7,
+     "upkeep": 10.5,
+     "net": -17.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": 8,
+     "upkeep": 7.5,
+     "net": 0.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": -7,
+     "upkeep": 12.0,
+     "net": -19.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": -12,
+     "upkeep": 6.0,
+     "net": -18.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 12.0,
+     "net": -24.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 13.5,
+     "net": -5.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 10.5,
+     "net": -12.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 0
+     },
+     "gross": -7,
+     "upkeep": 9.0,
+     "net": -16.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": -7,
+     "upkeep": 6.0,
+     "net": -13.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": -2,
+     "upkeep": 4.5,
+     "net": -6.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 0.0,
+     "net": -7.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 7.5,
+     "net": -9.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 6.0,
+     "net": -13.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.438,
+    "TALK": 1.938,
+    "LORE": 1.438,
+    "AGG": 2.438,
+    "gross": -5.125,
+    "net": -12.344,
+    "success_rate": 0.115
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "soak"
+    ],
+    "taze": [
+     "soak",
+     "roast"
+    ],
+    "kufu": [
+     "roast",
+     "dry"
+    ],
+    "vodu": [
+     "soak",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 1,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a1",
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": -12,
+     "upkeep": 7.5,
+     "net": -19.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a1",
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": -12,
+     "upkeep": 7.5,
+     "net": -19.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 13.5,
+     "net": 4.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 13.5,
+     "net": -25.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a11",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a11",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 1.5,
+     "net": 1.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 0.0,
+     "net": 3.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a13",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 7.5,
+     "net": 10.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 7.5,
+     "net": -9.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": -2,
+     "upkeep": 4.5,
+     "net": -6.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 3.0,
+     "net": -5.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a9",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 4.5,
+     "net": -6.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a9",
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 4.5,
+     "net": -6.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 10.5,
+     "net": -22.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 10.5,
+     "net": -12.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 0.938,
+    "TALK": 2.188,
+    "LORE": 1.25,
+    "AGG": 3.125,
+    "gross": -2.625,
+    "net": -9.188,
+    "success_rate": 0.156
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "soak"
+    ],
+    "taze": [
+     "soak",
+     "roast"
+    ],
+    "kufu": [
+     "roast",
+     "roast"
+    ],
+    "vodu": [
+     "soak",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 2,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": -12,
+     "upkeep": 9.0,
+     "net": -21.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a8",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 7.5,
+     "net": 10.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a2",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 13.5,
+     "net": -10.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a2",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 13.5,
+     "net": -10.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 0.0,
+     "net": -7.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 0.0,
+     "net": 3.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a6",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 3.0,
+     "net": -5.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a11",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a11",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 4.5,
+     "net": 8.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a13",
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 4.5,
+     "net": -6.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a13",
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 3,
+     "upkeep": 6.0,
+     "net": -3.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 0.812,
+    "TALK": 1.75,
+    "LORE": 0.875,
+    "AGG": 3.5,
+    "gross": -3.25,
+    "net": -8.406,
+    "success_rate": 0.146
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "soak"
+    ],
+    "taze": [
+     "soak",
+     "roast"
+    ],
+    "kufu": [
+     "roast",
+     "roast"
+    ],
+    "vodu": [
+     "roast",
+     "roast"
+    ]
+   }
+  },
+  {
+   "gen": 3,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a1",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 9.0,
+     "net": -11.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 9.0,
+     "net": -16.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a11",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 3.0,
+     "net": 0.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a11",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 0.0,
+     "net": 8.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 0.0,
+     "net": -12.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a15",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 3,
+     "upkeep": 6.0,
+     "net": -3.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a15",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 13,
+     "upkeep": 4.5,
+     "net": 8.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a12",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 6.0,
+     "net": -13.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 0.0,
+     "net": -7.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 1.5,
+     "net": -3.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a2",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 13.5,
+     "net": -10.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a2",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 15.0,
+     "net": -12.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.0,
+    "TALK": 1.5,
+    "LORE": 0.875,
+    "AGG": 3.688,
+    "gross": -2.625,
+    "net": -7.688,
+    "success_rate": 0.156
+   },
+   "exiled": 0,
+   "parse_fail": 1,
+   "recipes": {
+    "roba": [
+     "roast",
+     "soak"
+    ],
+    "taze": [
+     "soak",
+     "roast"
+    ],
+    "kufu": [
+     "roast",
+     "roast"
+    ],
+    "vodu": [
+     "roast",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 4,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 0.0,
+     "net": -7.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 0.0,
+     "net": -2.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 4.5,
+     "net": 3.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 7.5,
+     "net": 5.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 8,
+     "upkeep": 4.5,
+     "net": 3.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a6",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a13",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 8,
+     "upkeep": 3.0,
+     "net": 5.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a13",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 0.0,
+     "net": -2.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a12",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 8,
+     "upkeep": 3.0,
+     "net": 5.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 3.0,
+     "net": 5.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 0.312,
+    "TALK": 1.188,
+    "LORE": 0.562,
+    "AGG": 3.562,
+    "gross": -1.375,
+    "net": -4.469,
+    "success_rate": 0.177
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "soak"
+    ],
+    "taze": [
+     "soak",
+     "roast"
+    ],
+    "kufu": [
+     "roast",
+     "roast"
+    ],
+    "vodu": [
+     "dry",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 5,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a5",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 7.5,
+     "net": -9.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 6.0,
+     "net": 2.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 3,
+     "upkeep": 3.0,
+     "net": 0.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 0.0,
+     "net": -12.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 6.0,
+     "net": -13.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 4.5,
+     "net": -1.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 6.0,
+     "net": -13.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 8,
+     "upkeep": 4.5,
+     "net": 3.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 4.5,
+     "net": -6.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 0.0,
+     "net": -12.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 1.5,
+     "net": -3.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 1.5,
+     "net": -8.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 0.625,
+    "TALK": 1.5,
+    "LORE": 0.25,
+    "AGG": 3.375,
+    "gross": -4.5,
+    "net": -8.062,
+    "success_rate": 0.125
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "soak"
+    ],
+    "taze": [
+     "roast",
+     "soak"
+    ],
+    "kufu": [
+     "roast",
+     "roast"
+    ],
+    "vodu": [
+     "dry",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 6,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 4.5,
+     "net": -6.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a1",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 6.0,
+     "net": -8.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 6.0,
+     "net": -13.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 1.5,
+     "net": -3.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 6.0,
+     "net": -8.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": -2,
+     "upkeep": 1.5,
+     "net": -3.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a11",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": -2,
+     "upkeep": 6.0,
+     "net": -8.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a11",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 6.0,
+     "net": -8.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a15",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 1.5,
+     "net": -8.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a15",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 9.0,
+     "net": -11.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 6.0,
+     "net": -13.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 0.875,
+    "TALK": 1.625,
+    "LORE": 0.438,
+    "AGG": 3.25,
+    "gross": -5.125,
+    "net": -9.531,
+    "success_rate": 0.115
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "soak"
+    ],
+    "taze": [
+     "dry",
+     "dry"
+    ],
+    "kufu": [
+     "roast",
+     "roast"
+    ],
+    "vodu": [
+     "dry",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 7,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 8,
+     "upkeep": 3.0,
+     "net": 5.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 1.5,
+     "net": -8.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 6.0,
+     "net": -18.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 6.0,
+     "net": 12.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": -7,
+     "upkeep": 7.5,
+     "net": -14.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a11",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 6.0,
+     "net": 12.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a11",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 8,
+     "upkeep": 7.5,
+     "net": 0.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a6",
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 6.0,
+     "net": -13.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a6",
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 6.0,
+     "net": -13.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 1.5,
+     "net": -8.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 1.5,
+     "net": -8.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 0.812,
+    "TALK": 1.875,
+    "LORE": 0.25,
+    "AGG": 3.125,
+    "gross": -3.25,
+    "net": -7.656,
+    "success_rate": 0.146
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "roast"
+    ],
+    "taze": [
+     "dry",
+     "dry"
+    ],
+    "kufu": [
+     "roast",
+     "roast"
+    ],
+    "vodu": [
+     "dry",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 8,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": -12,
+     "upkeep": 6.0,
+     "net": -18.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": -7,
+     "upkeep": 6.0,
+     "net": -13.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 8,
+     "upkeep": 7.5,
+     "net": 0.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 7.5,
+     "net": -19.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a9",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 7.5,
+     "net": -4.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a9",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 9.0,
+     "net": -11.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 3,
+     "upkeep": 4.5,
+     "net": -1.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 1.5,
+     "net": 11.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a15",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 1.5,
+     "net": -8.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a15",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 1.5,
+     "net": -8.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 1.5,
+     "net": -8.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 1.5,
+     "net": -3.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 8,
+     "upkeep": 4.5,
+     "net": 3.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": 3,
+     "upkeep": 3.0,
+     "net": 0.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.125,
+    "TALK": 1.375,
+    "LORE": 0.438,
+    "AGG": 2.875,
+    "gross": -2.0,
+    "net": -6.406,
+    "success_rate": 0.167
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "roast"
+    ],
+    "taze": [
+     "dry",
+     "dry"
+    ],
+    "kufu": [
+     "roast",
+     "roast"
+    ],
+    "vodu": [
+     "soak",
+     "dry"
+    ]
+   }
+  },
+  {
+   "gen": 9,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a9",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a9",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 1.5,
+     "net": -3.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a14",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 6.0,
+     "net": -8.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a15",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 3,
+     "upkeep": 1.5,
+     "net": 1.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a15",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": 8,
+     "upkeep": 1.5,
+     "net": 6.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a13",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 1.5,
+     "net": -8.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a13",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 3.0,
+     "net": -5.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 7.5,
+     "net": -9.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 7.5,
+     "net": -9.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a11",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a11",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 1.5,
+     "net": -3.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 0.875,
+    "TALK": 1.0,
+    "LORE": 0.5,
+    "AGG": 2.938,
+    "gross": -4.5,
+    "net": -8.062,
+    "success_rate": 0.125
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "roast"
+    ],
+    "taze": [
+     "dry",
+     "dry"
+    ],
+    "kufu": [
+     "dry",
+     "dry"
+    ],
+    "vodu": [
+     "soak",
+     "dry"
+    ]
+   }
+  },
+  {
+   "gen": 10,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a7",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a15",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 0.0,
+     "net": -7.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a15",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a1",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a1",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a11",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a11",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 6.0,
+     "net": -8.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 6.0,
+     "net": -18.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a13",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 7.5,
+     "net": -19.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 7.5,
+     "net": -9.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 0.812,
+    "TALK": 1.125,
+    "LORE": 0.5,
+    "AGG": 3.062,
+    "gross": -10.125,
+    "net": -13.781,
+    "success_rate": 0.031
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "roast"
+    ],
+    "taze": [
+     "pound",
+     "dry"
+    ],
+    "kufu": [
+     "dry",
+     "dry"
+    ],
+    "vodu": [
+     "soak",
+     "dry"
+    ]
+   }
+  },
+  {
+   "gen": 11,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 6.0,
+     "net": -13.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 6.0,
+     "net": -18.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a15",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 10.5,
+     "net": -2.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a15",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 7.5,
+     "net": -14.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 3.0,
+     "net": 5.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 3,
+     "upkeep": 4.5,
+     "net": -1.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a13",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 1.5,
+     "net": 1.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 8,
+     "upkeep": 1.5,
+     "net": 6.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": -2,
+     "upkeep": 1.5,
+     "net": -3.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": -2,
+     "upkeep": 1.5,
+     "net": -3.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 0.75,
+    "TALK": 1.188,
+    "LORE": 0.5,
+    "AGG": 3.312,
+    "gross": -3.875,
+    "net": -7.531,
+    "success_rate": 0.135
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "roast"
+    ],
+    "taze": [
+     "pound",
+     "dry"
+    ],
+    "kufu": [
+     "roast",
+     "dry"
+    ],
+    "vodu": [
+     "soak",
+     "dry"
+    ]
+   }
+  }
+ ],
+ "final_population": [
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 3
+   },
+   "parent": "a13",
+   "inherited": []
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a13",
+   "inherited": []
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a7",
+   "inherited": []
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a7",
+   "inherited": []
+  },
+  {
+   "genome": {
+    "MEM": 0,
+    "TALK": 2,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a10",
+   "inherited": []
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a10",
+   "inherited": []
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 2
+   },
+   "parent": "a8",
+   "inherited": []
+  },
+  {
+   "genome": {
+    "MEM": 0,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 2
+   },
+   "parent": "a8",
+   "inherited": []
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 3,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a4",
+   "inherited": []
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 4,
+    "LORE": 2,
+    "AGG": 4
+   },
+   "parent": "a4",
+   "inherited": []
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 3
+   },
+   "parent": "a14",
+   "inherited": []
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 2
+   },
+   "parent": "a14",
+   "inherited": []
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 2
+   },
+   "parent": "a15",
+   "inherited": []
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 2
+   },
+   "parent": "a15",
+   "inherited": []
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a12",
+   "inherited": []
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a12",
+   "inherited": []
+  }
+ ],
+ "usage": {
+  "calls": 3924,
+  "cost_usd": 0.6035
+ },
+ "samples": {
+  "messages": [
+   {
+    "gen": 2,
+    "round": 1,
+    "agent": "a12",
+    "to": "a7",
+    "text": "Hi a7, no records yet. Let's both try a plausible sequence; I'll"
+   },
+   {
+    "gen": 11,
+    "round": 1,
+    "agent": "a10",
+    "to": "a8",
+    "text": "Let's try soak"
+   },
+   {
+    "gen": 7,
+    "round": 6,
+    "agent": "a0",
+    "to": "a9",
+    "text": "Roba: roast first"
+   },
+   {
+    "gen": 2,
+    "round": 6,
+    "agent": "a0",
+    "to": "a13",
+    "text": "Try dry; I"
+   },
+   {
+    "gen": 2,
+    "round": 10,
+    "agent": "a9",
+    "to": "a14",
+    "text": "Roba needs which"
+   },
+   {
+    "gen": 5,
+    "round": 5,
+    "agent": "a6",
+    "to": "a15",
+    "text": "Vodu now: what step 1 will"
+   },
+   {
+    "gen": 2,
+    "round": 9,
+    "agent": "a15",
+    "to": "a5",
+    "text": "Vodu this round. I'll open with"
+   },
+   {
+    "gen": 9,
+    "round": 12,
+    "agent": "a0",
+    "to": "a14",
+    "text": "Let's both pick"
+   },
+   {
+    "gen": 1,
+    "round": 10,
+    "agent": "a14",
+    "to": "a3",
+    "text": "Taze last time: my step 2 dry was wrong. I'll open with soak as step 1. Please try pound as step 2. Tell me"
+   },
+   {
+    "gen": 2,
+    "round": 11,
+    "agent": "a0",
+    "to": "a13",
+    "text": "Roast then pound?"
+   },
+   {
+    "gen": 7,
+    "round": 2,
+    "agent": "a6",
+    "to": "a8",
+    "text": "Round 1 roba: your roast was right, my pound was wrong. Try"
+   },
+   {
+    "gen": 5,
+    "round": 11,
+    "agent": "a9",
+    "to": "a15",
+    "text": "Vodu step 2 isn't pound or dry for me. I'll try roast."
+   },
+   {
+    "gen": 0,
+    "round": 3,
+    "agent": "a2",
+    "to": "a9",
+    "text": "Vodu is new to me. Taze's first step was soak, and roba's second wasn't roast. What step 1 will you use for vodu? I'll"
+   },
+   {
+    "gen": 10,
+    "round": 10,
+    "agent": "a10",
+    "to": "a15",
+    "text": "Vodu: I open with soak; you try roast. Adjust next round if"
+   },
+   {
+    "gen": 7,
+    "round": 5,
+    "agent": "a6",
+    "to": "a8",
+    "text": "Vodu needs step 1 I haven't confirmed. Let's try soak then roast,"
+   },
+   {
+    "gen": 8,
+    "round": 1,
+    "agent": "a1",
+    "to": "a10",
+    "text": "Hi a10, vodu is in season. I'll pick step 2; let's agree"
+   },
+   {
+    "gen": 9,
+    "round": 6,
+    "agent": "a11",
+    "to": "a5",
+    "text": "Taze step 1"
+   },
+   {
+    "gen": 9,
+    "round": 8,
+    "agent": "a11",
+    "to": "a5",
+    "text": "Vodu: I pick"
+   },
+   {
+    "gen": 9,
+    "round": 3,
+    "agent": "a4",
+    "to": "a8",
+    "text": "Taze step 1: I'll try soak."
+   },
+   {
+    "gen": 9,
+    "round": 11,
+    "agent": "a12",
+    "to": "a1",
+    "text": "Kufu first step? Tell me, I'll"
+   }
+  ],
+  "gossip": [],
+  "notes": []
+ },
+ "samples_seen": {
+  "messages": 1620,
+  "gossip": 0,
+  "notes": 0
+ }
+}

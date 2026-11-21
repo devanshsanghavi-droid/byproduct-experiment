@@ -1,0 +1,67 @@
+[
+ {
+  "name": "base-05b-2",
+  "kind": "battery",
+  "params": {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "world": {
+    "plants": {
+     "steps": 1,
+     "actions": 4,
+     "n": 2,
+     "tries": 5
+    },
+    "tracks": {
+     "ring": 6,
+     "n": 2,
+     "rounds": 4
+    },
+    "trade": {
+     "offers": 3,
+     "bundle": 1,
+     "rounds": 8
+    }
+   },
+   "test_sizes": {
+    "near": 16,
+    "code": 30,
+    "rule": 30,
+    "order": 40,
+    "retention": 60
+   }
+  }
+ },
+ {
+  "name": "ceiling-retest",
+  "kind": "battery",
+  "params": {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "world": {
+    "plants": {
+     "steps": 1,
+     "actions": 4,
+     "n": 2,
+     "tries": 5
+    },
+    "tracks": {
+     "ring": 6,
+     "n": 2,
+     "rounds": 4
+    },
+    "trade": {
+     "offers": 3,
+     "bundle": 1,
+     "rounds": 8
+    }
+   },
+   "test_sizes": {
+    "near": 16,
+    "code": 30,
+    "rule": 30,
+    "order": 40,
+    "retention": 60
+   },
+   "adapter": "/runs/ceiling-05b-3/adapter.pt"
+  }
+ }
+]

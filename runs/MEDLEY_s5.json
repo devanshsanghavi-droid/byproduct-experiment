@@ -1,0 +1,4856 @@
+{
+ "arm": "MEDLEY",
+ "seed": 5,
+ "model": "claude-haiku-5-5",
+ "mock": false,
+ "config": {
+  "N": 16,
+  "R": 12,
+  "G": 12,
+  "cost": 1.5
+ },
+ "complete": true,
+ "plants": [
+  "reki",
+  "keka",
+  "pogu",
+  "baku"
+ ],
+ "generations": [
+  {
+   "gen": 0,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 37,
+     "upkeep": 4.5,
+     "net": 32.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 18,
+     "upkeep": 7.5,
+     "net": 10.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change between seasons; re-verify each plant. Last season: reki was pound>dry (OK), keka roast>roast OK. a2 cooperates reliably; a6 gave a wrong first"
+    },
+    {
+     "id": "a2",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 4,
+     "upkeep": 10.5,
+     "net": -6.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "I have no records from this season, so I can offer no verified preparation steps. Next season, test each plant's two-step recipe early, track which step pairs succeed, and share results publicly. Coordinate with partners before choosing, and avoid grabbing when a partner has shared a clear plan."
+    },
+    {
+     "id": "a3",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 30,
+     "upkeep": 4.5,
+     "net": 25.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pogu and keka both answered roast>roast; coordinate early, and grab"
+    },
+    {
+     "id": "a4",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 39,
+     "upkeep": 12.0,
+     "net": 27.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants seen: reki (pound then dry worked with a7, both grabbed, +2), pogu (roast>roast worked), baku (soak>soak worked). Partner a7 cooperated and split well. Grabbing gave 7 each time; consider whether mutual grabbing is worth it versus 4-4 splits to keep partners trusting and avoid exile."
+    },
+    {
+     "id": "a5",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 22,
+     "upkeep": 3.0,
+     "net": 19.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 27,
+     "upkeep": 9.0,
+     "net": 18.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations seen so far: baku's step 2 was soak (r11 soak>soak OK). Reki works with pound then dry (pound>dry OK). Keka and pogu unknown. Coordinate step choices via messages before each round; a1 failed with pound>soak on baku, so avoid that pairing. Grabbing with a10 earned well; keep it cooperative."
+    },
+    {
+     "id": "a7",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 1
+     },
+     "gross": 3,
+     "upkeep": 18.0,
+     "net": -15.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Only a4 was seen this season. Known working sequences (may change): reki = pound then dry (OK in 3 rounds); pogu = roast then roast (OK); baku = soak then soak (OK, a4 grabbed). keka: pound>roast and dry>roast failed with step2 right, so step1 needs trying other than pound/dry (try soak or roast first). a4 tends to grab, leaving us 1 energy; agree on steps by message before choosing and avoid grabbing when possible to keep a4 cooperative."
+    },
+    {
+     "id": "a8",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 4.5,
+     "net": 28.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Both my rounds with a5 succeeded as first chooser (roast>roast for keka, pound>dry for reki). Coordinate steps openly via messages; split harvests 4/4 and avoid"
+    },
+    {
+     "id": "a9",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 2
+     },
+     "gross": 19,
+     "upkeep": 13.5,
+     "net": 5.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pogu: roast then roast works (first=roast, second=roast). Keka: roast first worked with a0. Reki: second step dry worked after pound from first. Grabbing: a0 grabbed when we both did, splitting 1/7 in our favor only when we grab alone; grabbing is temperament-driven, so expect splits of 4/4 or 1/7 in grabs. Coordinate steps via messages before choosing; check which step each partner prefers."
+    },
+    {
+     "id": "a10",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 30,
+     "upkeep": 16.5,
+     "net": 13.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations seen: pogu = roast then roast (reliable). reki = pound then dry (reliable). keka failed with roast>dry and pound>soak; try other combos. baku = soak then soak worked. Grabbing by a8 and a6 was common; expect grabs and split to 1 when partner grabs."
+    },
+    {
+     "id": "a11",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 0
+     },
+     "gross": 7,
+     "upkeep": 7.5,
+     "net": -0.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki preparation is pound then dry (worked in rounds 11-12). Partner a12 grabs every time, leaving us 1 each; consider avoiding or demanding a split before pairing with a12. Reply with steps only; grabbing is temperament-based."
+    },
+    {
+     "id": "a12",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 49,
+     "upkeep": 10.5,
+     "net": 38.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known so far: baku prep is soak then soak (works). reki works with pound then dry. pogu and keka failed with soak/pound and roast/dry; try other combos. Partner a11 grabbed often; grabbing yields 7 when only you grab. Test other steps for pogu and keka early."
+    },
+    {
+     "id": "a13",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 5,
+     "upkeep": 12.0,
+     "net": -7.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "a14 grabs every time it partners with us; expect 1 energy per success. Known working steps: keka = roast then roast; reki = pound then"
+    },
+    {
+     "id": "a14",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 41,
+     "upkeep": 10.5,
+     "net": 30.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 0,
+     "votes_against": 1,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 12.0,
+     "net": 6.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plant steps vary by season; test-probe then reuse. a3 grabs on success, so expect split or lost grabs. Baku failed with pound>roast and soak>dry; try"
+    }
+   ],
+   "mean": {
+    "MEM": 2.125,
+    "TALK": 2.188,
+    "LORE": 2.188,
+    "AGG": 2.438,
+    "gross": 23.875,
+    "net": 14.125,
+    "success_rate": 0.615
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "pound",
+     "dry"
+    ],
+    "keka": [
+     "roast",
+     "roast"
+    ],
+    "pogu": [
+     "roast",
+     "roast"
+    ],
+    "baku": [
+     "soak",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 1,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 10.5,
+     "net": 2.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "reki: pound then dry works (grab when you can; both grabbing gives only +2 each). baku: soak then soak works in one season, but failed for me with a13 after roast/pound; verify. pogu and keka: failed with soak/pound, roast/dry, dry/soak, pound/dry, soak/soak; untested combos remain (e.g. roast/soak, dry/roast, pound/pound). Share"
+    },
+    {
+     "id": "a1",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 20,
+     "upkeep": 10.5,
+     "net": 9.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known preps (may change): reki = pound then dry (works). pogu = roast then roast (worked once). baku = soak then soak failed when tested with a15 as first; try other combos like dry/roast/pound first. keka unknown: test all. Grabbing alone yields 7; a15 and a11 grab often, so expect"
+    },
+    {
+     "id": "a2",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 1,
+     "upkeep": 6.0,
+     "net": -5.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 30,
+     "upkeep": 4.5,
+     "net": 25.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 9,
+     "upkeep": 10.5,
+     "net": -1.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 25,
+     "upkeep": 12.0,
+     "net": 13.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 0
+     },
+     "gross": 6,
+     "upkeep": 4.5,
+     "net": 1.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Baku: soak then soak works. Reki: pound then dry works. Keka: roast then roast worked for one pair. Pogu: soak/pound and roast/dry failed; try other combos like dry then pound early. Coordinate steps by message, split 4/4, grab only if partner is greedy."
+    },
+    {
+     "id": "a7",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 7,
+     "upkeep": 4.5,
+     "net": 2.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Baku prep is soak then soak (works). Reki works with pound then dry. Pogu and keka: failed with soak/pound and roast/dry; try roast/roast for keka."
+    },
+    {
+     "id": "a8",
+     "parent": "a4",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 24,
+     "upkeep": 13.5,
+     "net": 10.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 5,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Known preps: baku = soak>soak; reki = pound>dry; pogu = roast>roast (worked with a4, both grabbed +2). keka still unknown; test untried combos early. Mutual grabbing gave only +2 each; 4-4 splits or single grab (7) may be better. Preps may change between seasons, so verify before relying on them."
+    },
+    {
+     "id": "a9",
+     "parent": "a4",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 37,
+     "upkeep": 13.5,
+     "net": 23.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change between seasons. Last season baku worked with dry then pound (r12, both grabbed, +2), not soak then soak. Reki worked with pound then dry (r10, +7 for grabber). Pogu and keka are still unknown. Test steps early. Mutual grabbing gives only +2 each, so 4-4 splits are"
+    },
+    {
+     "id": "a10",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 6,
+     "upkeep": 4.5,
+     "net": 1.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pogu: roast>roast worked. Baku: soak>soak worked. Check preps first."
+    },
+    {
+     "id": "a11",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 3.0,
+     "net": 10.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pogu: roast>roast works. Baku: soak>soak works (confirmed). Coordinate steps early;"
+    },
+    {
+     "id": "a12",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 24,
+     "upkeep": 4.5,
+     "net": 19.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 4,
+     "votes_against": 1,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 1,
+     "upkeep": 1.5,
+     "net": -0.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 7,
+     "upkeep": 9.0,
+     "net": -2.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 4,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Known preps: baku = soak then soak (works; pound/roast step2 failed). reki = pound then dry. keka = roast then roast (works). pogu = roast then roast (works). Use these pairs; grabbing is settled by temperament, so avoid grabbing wars and stay cooperative. Exile risk: be fair to all."
+    },
+    {
+     "id": "a15",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 5,
+     "upkeep": 9.0,
+     "net": -4.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Baku: soak then soak works (r11 soak>soak OK); avoid pound. Reki: pound then dry works. Pogu and keka still unknown; failed so far: soak/pound, roast/dry on pogu/keka. Try roast, dry, pound combos early. Coordinate steps by message before each round."
+    }
+   ],
+   "mean": {
+    "MEM": 2.062,
+    "TALK": 1.438,
+    "LORE": 1.562,
+    "AGG": 3.312,
+    "gross": 14.25,
+    "net": 6.656,
+    "success_rate": 0.521
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "pound",
+     "dry"
+    ],
+    "keka": [
+     "roast",
+     "roast"
+    ],
+    "pogu": [
+     "roast",
+     "roast"
+    ],
+    "baku": [
+     "dry",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 2,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 10,
+     "upkeep": 3.0,
+     "net": 7.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 22,
+     "upkeep": 4.5,
+     "net": 17.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 10,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a9",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 14,
+     "upkeep": 13.5,
+     "net": 0.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 9,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change. Last season's records: baku was dry then pound (not soak/soak); reki was pound then dry. Test pogu and keka early with varied step pairs. Mutual grabbing yields only +2 each; a single grabber gets 7, so avoid mutual grabs. Track which step each partner got right."
+    },
+    {
+     "id": "a3",
+     "parent": "a9",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 21,
+     "upkeep": 13.5,
+     "net": 7.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 9,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change. Last season: reki = pound then dry (grabber got 7). Baku = dry then pound (both grabbed, +2) per a peer; my records show soak>pound worked for baku with a11, so test again. Keka roast>roast worked (+2). Pogu unknown; test early. Grab only when mutual grab is"
+    },
+    {
+     "id": "a4",
+     "parent": "a12",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 41,
+     "upkeep": 6.0,
+     "net": 35.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a12",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 15,
+     "upkeep": 6.0,
+     "net": 9.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pogu prep appears to be roast then roast; verify early."
+    },
+    {
+     "id": "a6",
+     "parent": "a5",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 16,
+     "upkeep": 13.5,
+     "net": 2.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Keka: roast-roast works. Pogu: roast works as second step. Baku:"
+    },
+    {
+     "id": "a7",
+     "parent": "a5",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 25,
+     "upkeep": 12.0,
+     "net": 13.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 20,
+     "upkeep": 13.5,
+     "net": 6.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 9,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preps may change; verify each. Seen: baku soak>soak (also soak>pound worked with a2); reki pound>dry; pogu roast>roast (soak>roast failed for a2 round 11). keka still unknown: test early. Mutual grabbing gives only +2 each; prefer 4-4 splits or a single grab for 7."
+    },
+    {
+     "id": "a9",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 40,
+     "upkeep": 13.5,
+     "net": 26.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 10,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Keka prep roast>roast worked with a1 (rounds 9-12). Reki pound>dry worked with a1. Pogu roast>roast, baku soak>soak. Verify before relying; preps may change. Grabbing: single grab gave 7 to grabber; mutual grab only 2 each. Consider 4-4 splits to keep trust."
+    },
+    {
+     "id": "a10",
+     "parent": "a11",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 22,
+     "upkeep": 1.5,
+     "net": 20.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a11",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 27,
+     "upkeep": 3.0,
+     "net": 24.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 9,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pogu: roast>roast works. Baku: soak>soak works. Reki: pound>dry works. Coordinate"
+    },
+    {
+     "id": "a12",
+     "parent": "a1",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 22,
+     "upkeep": 10.5,
+     "net": 11.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known so far: keka = roast then roast (works reliably). pogu = roast then roast (works). baku = soak then pound (worked once; soak-soak failed). reki = pound then dry (from earlier season). Grabbing often leads to split of 2 each; if you can grab alone, you get 7. Test"
+    },
+    {
+     "id": "a13",
+     "parent": "a1",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 29,
+     "upkeep": 9.0,
+     "net": 20.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "pogu = roast then roast (reliable). keka = roast then roast (worked repeatedly). reki = pound then dry (worked once). baku = soak then soak"
+    },
+    {
+     "id": "a14",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 18,
+     "upkeep": 4.5,
+     "net": 13.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Baku: soak then soak works. Reki: pound then dry works. Pogu: roast then roast works (both grabbed, split 2 each). Keka: untested; previous fails were"
+    },
+    {
+     "id": "a15",
+     "parent": "a7",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 18,
+     "upkeep": 6.0,
+     "net": 12.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Baku: soak then soak works. Reki: pound then dry works. Keka: roast then roast works. Pogu: roast then roast works. Grabbing costs shared payout; coordinate"
+    }
+   ],
+   "mean": {
+    "MEM": 2.125,
+    "TALK": 1.938,
+    "LORE": 1.5,
+    "AGG": 3.625,
+    "gross": 22.5,
+    "net": 14.156,
+    "success_rate": 0.75
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "pound",
+     "dry"
+    ],
+    "keka": [
+     "roast",
+     "roast"
+    ],
+    "pogu": [
+     "roast",
+     "roast"
+    ],
+    "baku": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 3,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 4.5,
+     "net": 18.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 9,
+     "upkeep": 4.5,
+     "net": 4.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a9",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 13.5,
+     "net": 4.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preps seen: pogu roast>roast, keka roast>roast, reki pound>dry (a1), baku soak>soak (failed r11 w/ a4; r12 soak>pound succeeded, so verify). Mutual grabs yield only 2 each; agree on 4-4 splits with partners before rounds."
+    },
+    {
+     "id": "a3",
+     "parent": "a9",
+     "genome": {
+      "MEM": 3,
+      "TALK": 3,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 16,
+     "upkeep": 13.5,
+     "net": 2.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preps seen: keka roast>roast (worked with a5, a1), pogu roast>roast (worked with a5), reki pound>dry (worked with a1), baku soak>soak (failed for me with a5 in r12; verify). Grabbing both sides yields only 2 each; consider agreeing on 4-4 splits. Confirm partner's step 2 before relying on plan."
+    },
+    {
+     "id": "a4",
+     "parent": "a11",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 12,
+     "upkeep": 1.5,
+     "net": 10.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a11",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 22,
+     "upkeep": 3.0,
+     "net": 19.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki: pound>dry failed for a3 in r11; verify. Baku soak>soak"
+    },
+    {
+     "id": "a6",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 21,
+     "upkeep": 1.5,
+     "net": 19.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 3.0,
+     "net": 15.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 15,
+     "upkeep": 9.0,
+     "net": 6.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "pogu: roast then roast (reliable). keka: roast then roast (reliable). reki: dry then pound (worked with a6). baku: soak first step right, second step wrong;"
+    },
+    {
+     "id": "a9",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 9.0,
+     "net": 9.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "pogu = roast then roast (reliable, repeatedly OK). keka = roast then roast (worked). reki = dry then pound (worked in r10, r11; pound-dry failed)."
+    },
+    {
+     "id": "a10",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 15,
+     "upkeep": 4.5,
+     "net": 10.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 4,
+     "upkeep": 4.5,
+     "net": -0.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 2,
+     "upkeep": 1.5,
+     "net": 0.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Baku: soak then soak works. Reki: pound then dry works."
+    },
+    {
+     "id": "a13",
+     "parent": "a14",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 14,
+     "upkeep": 4.5,
+     "net": 9.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Keka: roast then roast worked (+4 split, no grab). Baku: soak then soak FAILED, so its prep changed; test other steps. Reki and pogu notes"
+    },
+    {
+     "id": "a14",
+     "parent": "a7",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 16,
+     "upkeep": 12.0,
+     "net": 4.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a7",
+     "genome": {
+      "MEM": 3,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 17,
+     "upkeep": 9.0,
+     "net": 8.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.875,
+    "TALK": 1.375,
+    "LORE": 0.875,
+    "AGG": 3.625,
+    "gross": 15.0,
+    "net": 8.812,
+    "success_rate": 0.583
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "dry",
+     "pound"
+    ],
+    "keka": [
+     "roast",
+     "roast"
+    ],
+    "pogu": [
+     "roast",
+     "roast"
+    ],
+    "baku": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 4,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 24,
+     "upkeep": 1.5,
+     "net": 22.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 21,
+     "upkeep": 3.0,
+     "net": 18.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 10,
+     "upkeep": 4.5,
+     "net": 5.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki: roast>soak OK (r11). Pogu: roast>roast OK (r12). Baku: soak>soak"
+    },
+    {
+     "id": "a3",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 19,
+     "upkeep": 3.0,
+     "net": 16.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki: roast>soak worked for a2 in r11; verify. Pogu: roast>roast"
+    },
+    {
+     "id": "a4",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 3.0,
+     "net": 15.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 28,
+     "upkeep": 6.0,
+     "net": 22.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 14,
+     "upkeep": 4.5,
+     "net": 9.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants need specific step pairs; test varied actions. Roast>roast worked"
+    },
+    {
+     "id": "a7",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 11,
+     "upkeep": 3.0,
+     "net": 8.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 14,
+     "upkeep": 1.5,
+     "net": 12.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 2,
+     "upkeep": 1.5,
+     "net": 0.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a10",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 9,
+     "upkeep": 4.5,
+     "net": 4.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a10",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 36,
+     "upkeep": 3.0,
+     "net": 33.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 12,
+     "upkeep": 4.5,
+     "net": 7.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Keka: roast then roast worked (+4 split). Reki: roast then soak worked, a5 grabbed (got 7, I got 1); expect grabs. Pogu: roast then roast"
+    },
+    {
+     "id": "a13",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 0,
+     "upkeep": 4.5,
+     "net": -4.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki: roast>soak worked (a4 grabbed). Baku: soak>pound worked, so prep changed. Keka: roast>roast worked last season. Pogu unknown. a4 grabs; expect a low split with"
+    },
+    {
+     "id": "a14",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 19,
+     "upkeep": 10.5,
+     "net": 8.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change. Verify each plant fresh. Last season: pogu roast>roast OK; keka roast>roast OK; reki roast>soak OK (r9,r10); baku unresolved, roast>soak and dry>dry failed."
+    },
+    {
+     "id": "a15",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 17,
+     "upkeep": 9.0,
+     "net": 8.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season mostly worked with roast. pogu: roast then roast reliable. keka: roast then roast worked. reki: roast then soak worked (r11, r12). baku: soak-roast and"
+    }
+   ],
+   "mean": {
+    "MEM": 1.5,
+    "TALK": 0.625,
+    "LORE": 0.688,
+    "AGG": 3.562,
+    "gross": 15.875,
+    "net": 11.656,
+    "success_rate": 0.573
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "roast",
+     "soak"
+    ],
+    "keka": [
+     "roast",
+     "roast"
+    ],
+    "pogu": [
+     "roast",
+     "roast"
+    ],
+    "baku": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 5,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a11",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 21,
+     "upkeep": 4.5,
+     "net": 16.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki: roast then soak works. Baku: soak then pound works."
+    },
+    {
+     "id": "a1",
+     "parent": "a11",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 5,
+     "upkeep": 3.0,
+     "net": 2.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 7,
+     "upkeep": 3.0,
+     "net": 4.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pogu: roast then roast works. Reki: pound failed with pound;"
+    },
+    {
+     "id": "a3",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 1.5,
+     "net": 11.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 0,
+     "upkeep": 6.0,
+     "net": -6.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 10,
+     "upkeep": 6.0,
+     "net": 4.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 5,
+     "votes_against": 1,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a1",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 4,
+     "upkeep": 4.5,
+     "net": -0.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a1",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 0,
+     "upkeep": 4.5,
+     "net": -4.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 10,
+     "upkeep": 0.0,
+     "net": 10.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 20,
+     "upkeep": 1.5,
+     "net": 18.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 9,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 7,
+     "upkeep": 1.5,
+     "net": 5.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "No records kept. Test each plant's two-step recipe early; share"
+    },
+    {
+     "id": "a11",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 11,
+     "upkeep": 3.0,
+     "net": 8.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -1,
+     "upkeep": 3.0,
+     "net": -4.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant's steps early; partner a15 gave wrong step1"
+    },
+    {
+     "id": "a13",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 1.5,
+     "net": 6.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 10,
+     "upkeep": 3.0,
+     "net": 7.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 5,
+     "upkeep": 7.5,
+     "net": -2.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change between seasons; don't assume old pairs. Test varied step pairs early per plant, and track which step each partner got wrong. Roast>roast"
+    }
+   ],
+   "mean": {
+    "MEM": 1.062,
+    "TALK": 0.812,
+    "LORE": 0.375,
+    "AGG": 3.938,
+    "gross": 8.125,
+    "net": 4.75,
+    "success_rate": 0.469
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "roast",
+     "soak"
+    ],
+    "keka": [
+     "soak",
+     "pound"
+    ],
+    "pogu": [
+     "roast",
+     "roast"
+    ],
+    "baku": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 6,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a9",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 1.5,
+     "net": -8.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a9",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 6,
+     "upkeep": 4.5,
+     "net": 1.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pogu unknown: roast>pound failed; try other pairs. Baku: soak then"
+    },
+    {
+     "id": "a3",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -3,
+     "upkeep": 4.5,
+     "net": -7.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki: roast then soak worked previously; verify. Pogu: step1 pound"
+    },
+    {
+     "id": "a4",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 7,
+     "upkeep": 3.0,
+     "net": 4.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Second partners: soak then pound worked for baku and keka."
+    },
+    {
+     "id": "a5",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 0,
+     "upkeep": 4.5,
+     "net": -4.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "keka: soak then pound works. Try soak>pound first; reki: roast"
+    },
+    {
+     "id": "a6",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -1,
+     "upkeep": 3.0,
+     "net": -4.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "No records kept. Coordinate step pairs via messages; test each"
+    },
+    {
+     "id": "a7",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -9,
+     "upkeep": 1.5,
+     "net": -10.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a11",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -3,
+     "upkeep": 1.5,
+     "net": -4.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a11",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a14",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 3.0,
+     "net": -5.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a14",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -9,
+     "upkeep": 3.0,
+     "net": -12.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -6,
+     "upkeep": 1.5,
+     "net": -7.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -6,
+     "upkeep": 1.5,
+     "net": -7.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 1.5,
+     "net": 16.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change. Test each plant's steps early, log which"
+    },
+    {
+     "id": "a15",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 1,
+     "upkeep": 1.5,
+     "net": -0.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant's two-step recipe early, log results per plant,"
+    }
+   ],
+   "mean": {
+    "MEM": 0.875,
+    "TALK": 0.438,
+    "LORE": 0.438,
+    "AGG": 3.938,
+    "gross": -2.375,
+    "net": -5.0,
+    "success_rate": 0.219
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "roast",
+     "soak"
+    ],
+    "keka": [
+     "soak",
+     "pound"
+    ],
+    "pogu": [
+     "pound",
+     "pound"
+    ],
+    "baku": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 7,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 1.5,
+     "net": -8.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test each plant's two steps early and"
+    },
+    {
+     "id": "a1",
+     "parent": "a14",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -6,
+     "upkeep": 3.0,
+     "net": -9.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test each plant's 2 steps early and"
+    },
+    {
+     "id": "a2",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 0,
+     "upkeep": 1.5,
+     "net": -1.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change: test each plant early. Baku and keka:"
+    },
+    {
+     "id": "a3",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -1,
+     "upkeep": 3.0,
+     "net": -4.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test each plant early. Last season soak-then-pound"
+    },
+    {
+     "id": "a4",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -9,
+     "upkeep": 3.0,
+     "net": -12.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test all plants early. Pogu: roast>pound failed,"
+    },
+    {
+     "id": "a5",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -9,
+     "upkeep": 3.0,
+     "net": -12.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a15",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -9,
+     "upkeep": 3.0,
+     "net": -12.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; retest each plant's two steps early, logging"
+    },
+    {
+     "id": "a7",
+     "parent": "a15",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -10,
+     "upkeep": 1.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; re-test each plant's two steps early, log"
+    },
+    {
+     "id": "a8",
+     "parent": "a6",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test each plant early with soak, pound,"
+    },
+    {
+     "id": "a9",
+     "parent": "a6",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Recipes may have changed; test each plant's two steps early,"
+    },
+    {
+     "id": "a10",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -6,
+     "upkeep": 0.0,
+     "net": -6.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -6,
+     "upkeep": 3.0,
+     "net": -9.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a5",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -3,
+     "upkeep": 4.5,
+     "net": -7.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Step1: keka pound, reki roast, baku soak. Step2 untested; avoid"
+    },
+    {
+     "id": "a13",
+     "parent": "a5",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -9,
+     "upkeep": 4.5,
+     "net": -13.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change: test each plant early. Reki: roast failed"
+    },
+    {
+     "id": "a14",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -6,
+     "upkeep": 3.0,
+     "net": -9.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 0.75,
+    "TALK": 0.5,
+    "LORE": 0.688,
+    "AGG": 3.875,
+    "gross": -7.0,
+    "net": -9.906,
+    "success_rate": 0.125
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "roast",
+     "soak"
+    ],
+    "keka": [
+     "pound",
+     "soak"
+    ],
+    "pogu": [
+     "pound",
+     "pound"
+    ],
+    "baku": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 8,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -8,
+     "upkeep": 1.5,
+     "net": -9.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test each plant early. Record which step"
+    },
+    {
+     "id": "a1",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -1,
+     "upkeep": 1.5,
+     "net": -2.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test each plant early. Record which step"
+    },
+    {
+     "id": "a2",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 4,
+     "upkeep": 1.5,
+     "net": 2.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test each plant early. Records were none"
+    },
+    {
+     "id": "a3",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 5,
+     "upkeep": 1.5,
+     "net": 3.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test each plant early. Baku and keka:"
+    },
+    {
+     "id": "a5",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 0.0,
+     "net": -7.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 5,
+     "upkeep": 4.5,
+     "net": 0.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change. Test all plants early. Baku: soak then"
+    },
+    {
+     "id": "a7",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 5,
+     "upkeep": 4.5,
+     "net": 0.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test each plant early. Last season: baku"
+    },
+    {
+     "id": "a8",
+     "parent": "a0",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test each plant's two steps early. Record"
+    },
+    {
+     "id": "a9",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -6,
+     "upkeep": 3.0,
+     "net": -9.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change. Test all four plants early with varied"
+    },
+    {
+     "id": "a10",
+     "parent": "a1",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 2,
+     "upkeep": 1.5,
+     "net": 0.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change. Test each plant's two steps early, especially"
+    },
+    {
+     "id": "a11",
+     "parent": "a1",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 5,
+     "upkeep": 3.0,
+     "net": 2.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test every plant's two steps early; recipes may change. Baku:"
+    },
+    {
+     "id": "a12",
+     "parent": "a11",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 7,
+     "upkeep": 4.5,
+     "net": 2.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a11",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 2,
+     "upkeep": 3.0,
+     "net": -1.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a14",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 3.0,
+     "net": 0.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a14",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 12,
+     "upkeep": 3.0,
+     "net": 9.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 1,
+     "votes_against": 1,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 0.875,
+    "TALK": 0.125,
+    "LORE": 0.625,
+    "AGG": 4.0,
+    "gross": 0.25,
+    "net": -2.188,
+    "success_rate": 0.271
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "dry",
+     "roast"
+    ],
+    "keka": [
+     "pound",
+     "soak"
+    ],
+    "pogu": [
+     "pound",
+     "pound"
+    ],
+    "baku": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 9,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a15",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 0,
+     "upkeep": 3.0,
+     "net": -3.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a15",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -9,
+     "upkeep": 1.5,
+     "net": -10.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test each plant early. Records were lost,"
+    },
+    {
+     "id": "a3",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change between seasons; re-test every plant in early rounds rather than trusting old notes. Keep public remarks honest and share step results to"
+    },
+    {
+     "id": "a4",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -1,
+     "upkeep": 1.5,
+     "net": -2.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test each plant early with varied steps."
+    },
+    {
+     "id": "a5",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -6,
+     "upkeep": 0.0,
+     "net": -6.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 4,
+     "upkeep": 3.0,
+     "net": 1.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a11",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test each plant's two steps early. Record"
+    },
+    {
+     "id": "a9",
+     "parent": "a11",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": -9,
+     "upkeep": 4.5,
+     "net": -13.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change: test all four plants' two steps early, logging each pair. Last season pound>pound worked for pogu; keka failed with pound>pound, so its"
+    },
+    {
+     "id": "a10",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 3.0,
+     "net": -5.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Recipes may change; test each plant's two steps early. Keka:"
+    },
+    {
+     "id": "a11",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 1.5,
+     "net": -13.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test each plant's two steps early with"
+    },
+    {
+     "id": "a12",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 6.0,
+     "net": -18.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test all plants early. Baku was soak"
+    },
+    {
+     "id": "a13",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a7",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": -1,
+     "upkeep": 7.5,
+     "net": -8.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki: dry then roast. Pogu: pound then pound. Baku: pound first, second not roast or dry (try soak). Keka: first not soak, second not pound."
+    },
+    {
+     "id": "a15",
+     "parent": "a7",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -1,
+     "upkeep": 3.0,
+     "net": -4.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.125,
+    "TALK": 0.125,
+    "LORE": 0.75,
+    "AGG": 3.875,
+    "gross": -6.5,
+    "net": -9.5,
+    "success_rate": 0.125
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "dry",
+     "roast"
+    ],
+    "keka": [
+     "pound",
+     "soak"
+    ],
+    "pogu": [
+     "pound",
+     "pound"
+    ],
+    "baku": [
+     "pound",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 10,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 1,
+     "upkeep": 4.5,
+     "net": -3.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -4,
+     "upkeep": 3.0,
+     "net": -7.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; test each plant early with varied steps,"
+    },
+    {
+     "id": "a3",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 1.5,
+     "net": -8.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change. Test each plant early with varied step"
+    },
+    {
+     "id": "a4",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -4,
+     "upkeep": 3.0,
+     "net": -7.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a15",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 1,
+     "upkeep": 3.0,
+     "net": -2.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a15",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 2,
+     "upkeep": 3.0,
+     "net": -1.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -4,
+     "upkeep": 3.0,
+     "net": -7.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change. Test each plant's two steps early; keka's"
+    },
+    {
+     "id": "a9",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -4,
+     "upkeep": 3.0,
+     "net": -7.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change. Test each plant's two steps early; keka's"
+    },
+    {
+     "id": "a10",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -6,
+     "upkeep": 1.5,
+     "net": -7.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "No records kept; I know nothing yet. Try all four"
+    },
+    {
+     "id": "a11",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -6,
+     "upkeep": 1.5,
+     "net": -7.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 6.0,
+     "net": -8.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki: dry then roast (verify). Pogu: pound then pound. Baku:"
+    },
+    {
+     "id": "a13",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 4,
+     "upkeep": 7.5,
+     "net": -3.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki: dry then soak (changed). Pogu: pound, pound. Baku: not dry first; try pound then soak. Keka: first not soak or roast; try dry or"
+    },
+    {
+     "id": "a14",
+     "parent": "a13",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -3,
+     "upkeep": 3.0,
+     "net": -6.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a13",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -1,
+     "upkeep": 3.0,
+     "net": -4.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.438,
+    "TALK": 0.312,
+    "LORE": 0.5,
+    "AGG": 3.75,
+    "gross": -3.25,
+    "net": -6.625,
+    "success_rate": 0.188
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "dry",
+     "soak"
+    ],
+    "keka": [
+     "pound",
+     "soak"
+    ],
+    "pogu": [
+     "pound",
+     "pound"
+    ],
+    "baku": [
+     "pound",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 11,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a7",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -6,
+     "upkeep": 6.0,
+     "net": -12.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pogu: try pound then pound (worked with a1). Keka: roast"
+    },
+    {
+     "id": "a1",
+     "parent": "a7",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 4,
+     "upkeep": 3.0,
+     "net": 1.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 3.0,
+     "net": 15.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a13",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 5,
+     "upkeep": 7.5,
+     "net": -2.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki: dry then soak. Pogu: pound, pound. Baku: pound then soak. Keka: roast first, then dry or soak (not pound). Some members grab often; expect"
+    },
+    {
+     "id": "a5",
+     "parent": "a13",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 1,
+     "upkeep": 7.5,
+     "net": -6.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pogu: pound, pound (worked). Baku: pound then soak (worked r9). Reki: dry then soak (dry step1 seems right). Keka: roast first is right; step2 not"
+    },
+    {
+     "id": "a6",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 12,
+     "upkeep": 4.5,
+     "net": 7.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 3.0,
+     "net": -5.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a15",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 5,
+     "upkeep": 3.0,
+     "net": 2.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a15",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 3.0,
+     "net": 15.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 3.0,
+     "net": 10.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 1,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 4,
+     "upkeep": 3.0,
+     "net": 1.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Recipes may change; test each plant early with varied steps."
+    },
+    {
+     "id": "a13",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 0.0,
+     "net": -7.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 0.0,
+     "net": -2.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 1,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.812,
+    "TALK": 0.188,
+    "LORE": 0.375,
+    "AGG": 3.625,
+    "gross": 2.0,
+    "net": -1.562,
+    "success_rate": 0.292
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "dry",
+     "soak"
+    ],
+    "keka": [
+     "roast",
+     "dry"
+    ],
+    "pogu": [
+     "pound",
+     "pound"
+    ],
+    "baku": [
+     "pound",
+     "soak"
+    ]
+   }
+  }
+ ],
+ "final_population": [
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a9",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a9",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a3",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a3",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a10",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a10",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a6",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 3
+   },
+   "parent": "a6",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a8",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 3
+   },
+   "parent": "a8",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a11",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a11",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a1",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 2
+   },
+   "parent": "a1",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 0,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a15",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 0,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a15",
+   "inherited": [
+    "",
+    ""
+   ]
+  }
+ ],
+ "usage": {
+  "calls": 3557,
+  "cost_usd": 0.5463
+ },
+ "samples": {
+  "messages": [
+   {
+    "gen": 0,
+    "round": 11,
+    "agent": "a6",
+    "to": "a10",
+    "text": "Baku: soak second"
+   },
+   {
+    "gen": 7,
+    "round": 5,
+    "agent": "a6",
+    "to": "a4",
+    "text": "Baku step1 pound?"
+   },
+   {
+    "gen": 7,
+    "round": 7,
+    "agent": "a9",
+    "to": "a15",
+    "text": "Baku is in season. Which step"
+   },
+   {
+    "gen": 2,
+    "round": 2,
+    "agent": "a8",
+    "to": "a2",
+    "text": "Round 2: reki is in season and I'm first. Last season reki was pound then dry, so I'll open with pound. Please pick dry"
+   },
+   {
+    "gen": 0,
+    "round": 12,
+    "agent": "a4",
+    "to": "a7",
+    "text": "Baku: I'll play soak first. Please answer soak second, per a6's note."
+   },
+   {
+    "gen": 1,
+    "round": 11,
+    "agent": "a15",
+    "to": "a1",
+    "text": "Baku: soak then"
+   },
+   {
+    "gen": 5,
+    "round": 5,
+    "agent": "a6",
+    "to": "a2",
+    "text": "Reki step 1 is yours to"
+   },
+   {
+    "gen": 1,
+    "round": 2,
+    "agent": "a2",
+    "to": "a0",
+    "text": "Baku this round. What's your step"
+   },
+   {
+    "gen": 7,
+    "round": 5,
+    "agent": "a14",
+    "to": "a8",
+    "text": "Keka step1 pound?"
+   },
+   {
+    "gen": 4,
+    "round": 1,
+    "agent": "a7",
+    "to": "a14",
+    "text": "Let's both try"
+   },
+   {
+    "gen": 7,
+    "round": 12,
+    "agent": "a8",
+    "to": "a4",
+    "text": "Reki step1 soak? I'll pick soak;"
+   },
+   {
+    "gen": 3,
+    "round": 7,
+    "agent": "a14",
+    "to": "a11",
+    "text": "Baku is new to both of us. I'll open with roast as step 1. Please answer with roast as step 2, and let's split"
+   },
+   {
+    "gen": 10,
+    "round": 2,
+    "agent": "a2",
+    "to": "a3",
+    "text": "Let's test baku"
+   },
+   {
+    "gen": 5,
+    "round": 6,
+    "agent": "a4",
+    "to": "a7",
+    "text": "Keka: soak then pound worked in r4. Repeat it?"
+   },
+   {
+    "gen": 0,
+    "round": 9,
+    "agent": "a7",
+    "to": "a4",
+    "text": "Reki is pound then dry, which worked in r3, r5 and r7. I'm playing pound first. Please play dry as step 2 and don't"
+   },
+   {
+    "gen": 1,
+    "round": 3,
+    "agent": "a3",
+    "to": "a6",
+    "text": "Pogu: roast, roast?"
+   },
+   {
+    "gen": 2,
+    "round": 3,
+    "agent": "a9",
+    "to": "a1",
+    "text": "Hi a1. Baku is in season, I'm second and choose step 2. Last notes say baku = soak>soak; what step 1 will you open"
+   },
+   {
+    "gen": 3,
+    "round": 11,
+    "agent": "a10",
+    "to": "a1",
+    "text": "Keka: roast or"
+   },
+   {
+    "gen": 0,
+    "round": 2,
+    "agent": "a9",
+    "to": "a0",
+    "text": "Round 1 roast failed on step 1. I'll try soak first; you"
+   },
+   {
+    "gen": 5,
+    "round": 8,
+    "agent": "a14",
+    "to": "a5",
+    "text": "Reki: roast then"
+   }
+  ],
+  "gossip": [
+   {
+    "gen": 1,
+    "round": 4,
+    "agent": "a2",
+    "text": "Keka: trying pound as step 2."
+   },
+   {
+    "gen": 2,
+    "round": 11,
+    "agent": "a9",
+    "text": "Reki: agreed on pound>dry with a1. Answering dry as second. Let's split 4-4 if it succeeds."
+   },
+   {
+    "gen": 2,
+    "round": 2,
+    "agent": "a8",
+    "text": "Round 2: I'm opening reki with pound, as last season's notes suggest. a2 is second and will report whether dry is right."
+   },
+   {
+    "gen": 3,
+    "round": 8,
+    "agent": "a10",
+    "text": "Pogu: roast>roast again"
+   },
+   {
+    "gen": 5,
+    "round": 6,
+    "agent": "a14",
+    "text": "Reki step1 roast?"
+   },
+   {
+    "gen": 11,
+    "round": 9,
+    "agent": "a12",
+    "text": "Testing roast first for baku."
+   },
+   {
+    "gen": 5,
+    "round": 12,
+    "agent": "a6",
+    "text": "Pogu step 2: roast, per a7's"
+   },
+   {
+    "gen": 5,
+    "round": 10,
+    "agent": "a4",
+    "text": "Pogu: a4 opens roast, matching a7's roast-then-roast, which worked in round 8."
+   },
+   {
+    "gen": 2,
+    "round": 5,
+    "agent": "a7",
+    "text": "Pogu: roast>roast has worked (a3, a11, a0 reports). Opening roast as step 1; a4, please answer roast, not dry."
+   },
+   {
+    "gen": 10,
+    "round": 7,
+    "agent": "a4",
+    "text": "Reki step two: trying dry."
+   },
+   {
+    "gen": 7,
+    "round": 2,
+    "agent": "a15",
+    "text": "Testing baku step1"
+   },
+   {
+    "gen": 2,
+    "round": 2,
+    "agent": "a6",
+    "text": "Round 2: I'm opening pogu with pound as step 1 and will share what second learns. Keka worked with roast>roast last round."
+   },
+   {
+    "gen": 1,
+    "round": 6,
+    "agent": "a15",
+    "text": "Pogu: roast first"
+   },
+   {
+    "gen": 5,
+    "round": 2,
+    "agent": "a5",
+    "text": "Baku step 2 unknown; trying pound after a4's dry opener."
+   },
+   {
+    "gen": 10,
+    "round": 10,
+    "agent": "a4",
+    "text": "Pogu step one: soak, trying it."
+   },
+   {
+    "gen": 2,
+    "round": 1,
+    "agent": "a3",
+    "text": "Round 1: testing pogu. Preparations may differ this season, so we should test steps early and share results."
+   },
+   {
+    "gen": 3,
+    "round": 9,
+    "agent": "a14",
+    "text": "Reki: a11 says step 1 is dry. My r6 record shows pound was right for step 2, so I'm choosing pound. Will report."
+   },
+   {
+    "gen": 0,
+    "round": 2,
+    "agent": "a9",
+    "text": "Round 1 showed baku's second step is soak. Trying dry first; a0,"
+   },
+   {
+    "gen": 5,
+    "round": 2,
+    "agent": "a11",
+    "text": "Baku: soak then"
+   },
+   {
+    "gen": 5,
+    "round": 7,
+    "agent": "a14",
+    "text": "Pogu: roast, roast"
+   }
+  ],
+  "notes": [
+   {
+    "gen": 8,
+    "agent": "a1",
+    "text": "Recipes may change; test each plant early. Record which step"
+   },
+   {
+    "gen": 11,
+    "agent": "a12",
+    "text": "Recipes may change; test each plant early with varied steps."
+   },
+   {
+    "gen": 7,
+    "agent": "a3",
+    "text": "Recipes may change; test each plant early. Last season soak-then-pound"
+   },
+   {
+    "gen": 4,
+    "agent": "a15",
+    "text": "Season mostly worked with roast. pogu: roast then roast reliable. keka: roast then roast worked. reki: roast then soak worked (r11, r12). baku: soak-roast and"
+   },
+   {
+    "gen": 4,
+    "agent": "a2",
+    "text": "Reki: roast>soak OK (r11). Pogu: roast>roast OK (r12). Baku: soak>soak"
+   },
+   {
+    "gen": 4,
+    "agent": "a13",
+    "text": "Reki: roast>soak worked (a4 grabbed). Baku: soak>pound worked, so prep changed. Keka: roast>roast worked last season. Pogu unknown. a4 grabs; expect a low split with"
+   },
+   {
+    "gen": 9,
+    "agent": "a9",
+    "text": "Recipes may change: test all four plants' two steps early, logging each pair. Last season pound>pound worked for pogu; keka failed with pound>pound, so its"
+   },
+   {
+    "gen": 6,
+    "agent": "a6",
+    "text": "No records kept. Coordinate step pairs via messages; test each"
+   },
+   {
+    "gen": 8,
+    "agent": "a11",
+    "text": "Test every plant's two steps early; recipes may change. Baku:"
+   },
+   {
+    "gen": 7,
+    "agent": "a1",
+    "text": "Recipes may change; test each plant's 2 steps early and"
+   },
+   {
+    "gen": 2,
+    "agent": "a9",
+    "text": "Keka prep roast>roast worked with a1 (rounds 9-12). Reki pound>dry worked with a1. Pogu roast>roast, baku soak>soak. Verify before relying; preps may change. Grabbing: single grab gave 7 to grabber; mutual grab only 2 each. Consider 4-4 splits to keep trust."
+   },
+   {
+    "gen": 6,
+    "agent": "a3",
+    "text": "Reki: roast then soak worked previously; verify. Pogu: step1 pound"
+   },
+   {
+    "gen": 0,
+    "agent": "a6",
+    "text": "Preparations seen so far: baku's step 2 was soak (r11 soak>soak OK). Reki works with pound then dry (pound>dry OK). Keka and pogu unknown. Coordinate step choices via messages before each round; a1 failed with pound>soak on baku, so avoid that pairing. Grabbing with a10 earned well; keep it cooperative."
+   },
+   {
+    "gen": 6,
+    "agent": "a5",
+    "text": "keka: soak then pound works. Try soak>pound first; reki: roast"
+   },
+   {
+    "gen": 3,
+    "agent": "a8",
+    "text": "pogu: roast then roast (reliable). keka: roast then roast (reliable). reki: dry then pound (worked with a6). baku: soak first step right, second step wrong;"
+   },
+   {
+    "gen": 2,
+    "agent": "a15",
+    "text": "Baku: soak then soak works. Reki: pound then dry works. Keka: roast then roast works. Pogu: roast then roast works. Grabbing costs shared payout; coordinate"
+   },
+   {
+    "gen": 1,
+    "agent": "a0",
+    "text": "reki: pound then dry works (grab when you can; both grabbing gives only +2 each). baku: soak then soak works in one season, but failed for me with a13 after roast/pound; verify. pogu and keka: failed with soak/pound, roast/dry, dry/soak, pound/dry, soak/soak; untested combos remain (e.g. roast/soak, dry/roast, pound/pound). Share"
+   },
+   {
+    "gen": 1,
+    "agent": "a10",
+    "text": "Pogu: roast>roast worked. Baku: soak>soak worked. Check preps first."
+   },
+   {
+    "gen": 5,
+    "agent": "a0",
+    "text": "Reki: roast then soak works. Baku: soak then pound works."
+   },
+   {
+    "gen": 5,
+    "agent": "a12",
+    "text": "Test each plant's steps early; partner a15 gave wrong step1"
+   }
+  ]
+ },
+ "samples_seen": {
+  "messages": 960,
+  "gossip": 920,
+  "notes": 101
+ }
+}

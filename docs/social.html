@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root { color-scheme: light }
+body { margin: 0; font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif }
+img { max-width: 100% }
+[hidden] { display: none !important }
+</style>
+<title>Social Arms Experiment</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+/* Layout: one reading column. Verdict first, then the arm table with baseline rows, theory labels, charts, what was not tested. Tokens match the earlier pages. */
+:root { --bg:#f6f4ee; --card:#fffdf8; --fg:#1c1b18; --muted:#6a665d; --rule:#dcd7ca; --accent:#1f6f54; --drift:#8a8578;
+  --pass:#1f6f54; --fail:#b0432b; --run:#8a6a12; --passbg:#dcefe6; --failbg:#f6ddd6; --runbg:#f3e9c8; --band:#e6e0cf; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#151513; --card:#1d1c19; --fg:#ebe8e0; --muted:#a09b90;
+  --rule:#35332e; --accent:#62c49e; --drift:#8f8a7e; --pass:#7fd3b0; --fail:#f09a84; --run:#e2c46a; --passbg:#173428; --failbg:#3b1d16;
+  --runbg:#3a3113; --band:#34312a; color-scheme: dark } }
+:root[data-theme="dark"] { --bg:#151513; --card:#1d1c19; --fg:#ebe8e0; --muted:#a09b90; --rule:#35332e; --accent:#62c49e;
+  --drift:#8f8a7e; --pass:#7fd3b0; --fail:#f09a84; --run:#e2c46a; --passbg:#173428; --failbg:#3b1d16; --runbg:#3a3113; --band:#34312a; color-scheme: dark }
+body { background:var(--bg); color:var(--fg); font:15px/1.55 Inter,system-ui,sans-serif; }
+main { max-width:1000px; margin:0 auto; padding-block:28px 56px; padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px)); display:flex; flex-direction:column; gap:30px; }
+h1 { font:600 clamp(20px,3.2vw,27px)/1.25 "Space Grotesk",Inter,sans-serif; margin:0; text-wrap:balance; }
+h2 { font:600 18px/1.3 "Space Grotesk",Inter,sans-serif; margin:0 0 10px; text-wrap:balance; }
+p { margin:0 0 8px; max-width:68ch; } .lede { font-size:16.5px; } .muted,small { color:var(--muted); }
+.kicker { font:600 12px/1.3 Inter,sans-serif; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+section { min-width:0; } .scroll + p, .charts + p { margin-top:10px; }
+.scroll { overflow-x:auto; border:1px solid var(--rule); border-radius:10px; background:var(--card); }
+table { border-collapse:collapse; width:100%; font-size:13.5px; font-variant-numeric:tabular-nums; }
+th,td { padding:8px 10px; text-align:left; border-bottom:1px solid var(--rule); vertical-align:top; }
+th { font-weight:600; font-size:12px; color:var(--muted); } tbody tr:last-child td { border-bottom:0; }
+tr.ref td { color:var(--muted); } td:first-child { min-width:150px; } td small { font-size:12px; white-space:nowrap; } td small.wrap { white-space:normal; }
+.badge { display:inline-block; padding:2px 9px; border-radius:99px; font-weight:600; font-size:12px; white-space:nowrap; vertical-align:2px; }
+.badge.fail { color:var(--fail); background:var(--failbg); } .badge.pass { color:var(--pass); background:var(--passbg); }
+.badge.run { color:var(--run); background:var(--runbg); }
+.charts { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:14px; }
+.small { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; }
+figure { margin:0; background:var(--card); border:1px solid var(--rule); border-radius:10px; padding:12px 12px 6px; min-width:0; }
+figcaption { font-size:13px; margin-bottom:6px; font-weight:600; color:var(--fg); } svg { width:100%; height:auto; display:block; }
+.cap { font-size:12px; color:var(--muted); margin:4px 0 6px; }
+.grid { stroke:var(--rule); stroke-width:1; } .band { fill:var(--band); }
+.base { stroke:var(--run); stroke-width:1.4; stroke-dasharray:6 3; } text.base { stroke:none; fill:var(--run); }
+.tick { fill:var(--muted); font:10px Inter,sans-serif; } .lab { fill:var(--muted); font:10.5px Inter,sans-serif; }
+.line { fill:none; stroke:var(--accent); stroke-width:2; } .thin { fill:none; stroke:var(--drift); stroke-width:1; opacity:.6; }
+.mean { fill:var(--accent); } .run { fill:var(--drift); } .meanbar { stroke:var(--accent); stroke-width:3; stroke-linecap:round; }
+ul { margin:0; padding-left:20px; max-width:70ch; } li { margin-bottom:6px; } code { font-size:13px; }
+</style>
+<main>
+<header>
+  <div class="kicker">Byproduct experiment. Version 4: social arms with changing weights</div>
+  <h1>All three surviving theories say intelligence was a byproduct. A faithful simulation therefore scores agents only on staying alive and being copied, then measures general ability separately on held-out tests.</h1>
+</header>
+
+<section>
+  <p class="lede">This version could not test the thesis. <span class="badge fail">Thesis verdict: not testable at this scale</span></p>
+  <p>A free check run before any model call showed that the social rules can separate an arm from its control by under one doubling of
+  breadth. Two were needed for a score difference to be detectable with 5 seeds. The verdict was fixed then, before any result.</p>
+  <p><strong>What the 25 runs did measure.</strong> Cooperation: broadens, mechanical (+0.35 doublings of breadth against SOLO, standard error 0.10). Copying from successful non-parents: no breadth change (-0.02 doublings of breadth against SOLO, standard error 0.10).</p>
+  <p>Populations did learn: SOLO's practised skill ended +0.077 against the untrained 0.510 (standard error 0.014). SOLO minus DRIFT on the same score was +0.001 (standard error 0.022), so by the pre-set rule the learning is credited to the correctness filter.</p>
+  <p>5 of 5 arms ended above the untrained model on similar unseen tasks (DRIFT, SOLO, SOLO-W, COOP, CULTURE). The largest gain was SOLO at +0.088 (standard error 0.007). SOLO minus DRIFT on that score was +0.041 (standard error 0.021), short of the 2 standard error rule. Part of every gain is reply format: the untrained model gave an unusable reply on 3.7% of these questions, the trained populations on 0.3%. Counting valid replies only, gains run from +0.028 (DRIFT) to +0.068 (SOLO). These lines were added after the smoke test and are exploratory.</p>
+  <p class="muted">Setup: Qwen2.5-1.5B, one adapter per population of 32 agents, 8 generations, 5 seeds per arm. Each agent carries a
+  repertoire of task families and lives 24 one-question rounds. The top 8 by energy are parents. The adapter is trained after every
+  generation on parents' own replies that were correct (SOLO-W: all parent replies). Rules and labels were written before any model call
+  (<code>SPEC4.md</code>).</p>
+</section>
+
+<section>
+  <h2>Each arm against the baselines</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Arm</th><th>Runs</th><th>Breadth<br><small>effective families trained on</small></th><th>Breadth from rules alone<br><small>null model, no learning</small></th>
+    <th>Practised skill<br><small>49 families the world can pose</small></th><th>Similar unseen tasks<br><small>16 reserved families</small></th>
+    <th>New-skill tasks<br><small>18 held families</small></th><th>Share right in life<br><small>generation 1 to 8</small></th></tr></thead>
+    <tbody><tr class="ref"><td>Untrained model (baseline)</td><td></td><td></td><td></td><td>0.510</td><td>0.543</td><td>0.406</td><td></td></tr>
+<tr class="ref"><td>Chance (random replies)</td><td></td><td></td><td></td><td></td><td>0.289</td><td></td><td></td></tr>
+<tr><td><strong>DRIFT</strong><br><small class="wrap">random parents (chance)</small></td><td>5</td><td>4.02 <small>± 0.13</small></td><td>4.3 to 4.8</td><td>0.586 <small>± 0.016</small></td><td>0.590 <small>± 0.017</small></td><td>0.452 <small>± 0.016</small></td><td>0.60 to 0.75</td></tr>
+<tr><td><strong>SOLO</strong><br><small class="wrap">survival alone</small></td><td>5</td><td>5.20 <small>± 0.52</small></td><td>5.9 to 9.8</td><td>0.587 <small>± 0.014</small></td><td>0.631 <small>± 0.007</small></td><td>0.467 <small>± 0.009</small></td><td>0.61 to 0.89</td></tr>
+<tr><td><strong>SOLO-W</strong><br><small class="wrap">survival alone, old learning rule</small></td><td>5</td><td>5.72 <small>± 0.62</small></td><td>6.3 to 9.8</td><td>0.550 <small>± 0.012</small></td><td>0.595 <small>± 0.011</small></td><td>0.432 <small>± 0.007</small></td><td>0.60 to 0.83</td></tr>
+<tr><td><strong>COOP</strong><br><small class="wrap">cooperation: pairs, shared harvest</small></td><td>5</td><td>6.61 <small>± 0.56</small></td><td>8.3 to 11.1</td><td>0.588 <small>± 0.010</small></td><td>0.612 <small>± 0.005</small></td><td>0.465 <small>± 0.009</small></td><td>0.60 to 0.87</td></tr>
+<tr><td><strong>CULTURE</strong><br><small class="wrap">cultural brain: copy a family from a successful non-parent</small></td><td>5</td><td>5.09 <small>± 0.41</small></td><td>5.7 to 10.3</td><td>0.601 <small>± 0.012</small></td><td>0.614 <small>± 0.009</small></td><td>0.468 <small>± 0.012</small></td><td>0.60 to 0.91</td></tr></tbody></table></div>
+  <p class="muted">Mean ± 1 standard error over seeds. The null model column gives the breadth each arm reaches with a frozen score table:
+  the untrained model's scores, then a perfect table. Run-to-run spread of the similar-task score in earlier experiments was 0.031.</p>
+</section>
+
+<section>
+  <h2>The theories, judged against their controls</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Theory</th><th>Breadth gap<br><small>doublings, paired by seed</small></th><th>Gap from rules alone<br><small>null model range</small></th>
+    <th>Breadth label</th><th>Practised-skill gap</th><th>Similar-task gap<br><small>descriptive, not a test</small></th>
+    <th>New-skill gap<br><small>descriptive, not a test</small></th></tr></thead>
+    <tbody><tr><td><strong>Theory 2, cooperation</strong><br><small>COOP against SOLO</small></td><td>+0.354 <small>± 0.096</small></td><td>+0.185 to +0.523</td><td><span class="badge run">Broadens, mechanical</span></td><td>+0.001 <small>± 0.007</small><br><span class="badge run">no difference</span></td><td>-0.019 <small>± 0.010</small></td><td>-0.002 <small>± 0.007</small></td></tr>
+<tr><td><strong>Theory 4, cultural brain</strong><br><small>CULTURE against SOLO</small></td><td>-0.019 <small>± 0.102</small></td><td>+0.073 to -0.042</td><td><span class="badge run">No breadth change</span></td><td>+0.013 <small>± 0.018</small><br><span class="badge run">no difference</span></td><td>-0.017 <small>± 0.011</small></td><td>+0.001 <small>± 0.013</small></td></tr>
+<tr><td><strong>Theory 3, self-domestication</strong><br><small>DOMEST against ALPHA</small></td><td colspan="2">not run</td><td><span class="badge fail">Not tested</span></td><td colspan="3">The model kept the whole harvest every time it was asked in the smoke test, so the arms that depend on that choice were dropped by rule.</td></tr></tbody></table></div>
+  <p class="muted">"More than mechanics" needs the real gap to exceed the larger null-model gap by more than 2 standard errors. Practised skill
+  is skill on families the population could train on. It is not held-out ability and is not evidence for the thesis.</p>
+</section>
+
+<section>
+  <h2>Where the runs landed</h2>
+  <div class="charts">
+    <figure><figcaption>Breadth: effective number of families trained on</figcaption><svg viewBox="0 0 350 226" role="img" aria-label="Breadth: effective number of families trained on, one dot per run, by arm">
+<line class="grid" x1="46" y1="190.0" x2="336" y2="190.0"/>
+<text class="tick" x="40" y="193.5" text-anchor="end">2</text>
+<line class="grid" x1="46" y1="156.4" x2="336" y2="156.4"/>
+<text class="tick" x="40" y="159.9" text-anchor="end">4</text>
+<line class="grid" x1="46" y1="122.8" x2="336" y2="122.8"/>
+<text class="tick" x="40" y="126.3" text-anchor="end">6</text>
+<line class="grid" x1="46" y1="89.2" x2="336" y2="89.2"/>
+<text class="tick" x="40" y="92.7" text-anchor="end">8</text>
+<line class="grid" x1="46" y1="55.6" x2="336" y2="55.6"/>
+<text class="tick" x="40" y="59.1" text-anchor="end">10</text>
+<line class="grid" x1="46" y1="22.0" x2="336" y2="22.0"/>
+<text class="tick" x="40" y="25.5" text-anchor="end">12</text>
+<rect class="band" x="55.3" y="142.6" width="39.4" height="9.5" rx="2"><title>DRIFT: null model, 4 to 5</title></rect>
+<text class="tick" x="75.0" y="206" text-anchor="middle">DRIFT</text>
+<rect class="band" x="113.3" y="59.2" width="39.4" height="64.8" rx="2"><title>SOLO: null model, 6 to 10</title></rect>
+<text class="tick" x="133.0" y="206" text-anchor="middle">SOLO</text>
+<rect class="band" x="171.3" y="59.2" width="39.4" height="58.2" rx="2"><title>SOLO-W: null model, 6 to 10</title></rect>
+<text class="tick" x="191.0" y="206" text-anchor="middle">SOLO-W</text>
+<rect class="band" x="229.3" y="37.0" width="39.4" height="47.3" rx="2"><title>COOP: null model, 8 to 11</title></rect>
+<text class="tick" x="249.0" y="206" text-anchor="middle">COOP</text>
+<rect class="band" x="287.3" y="50.6" width="39.4" height="77.0" rx="2"><title>CULTURE: null model, 6 to 10</title></rect>
+<text class="tick" x="307.0" y="206" text-anchor="middle">CULTURE</text>
+<circle class="run" cx="64.0" cy="163.6" r="3.2"><title>DRIFT, seed 4: 3.6</title></circle>
+<circle class="run" cx="69.5" cy="156.7" r="3.2"><title>DRIFT, seed 1: 4.0</title></circle>
+<circle class="run" cx="75.0" cy="155.9" r="3.2"><title>DRIFT, seed 3: 4.0</title></circle>
+<circle class="run" cx="80.5" cy="153.6" r="3.2"><title>DRIFT, seed 2: 4.2</title></circle>
+<circle class="run" cx="86.0" cy="150.7" r="3.2"><title>DRIFT, seed 5: 4.3</title></circle>
+<line class="meanbar" x1="57.6" y1="156.1" x2="92.4" y2="156.1"><title>DRIFT mean: 4.0</title></line>
+<circle class="run" cx="122.0" cy="155.7" r="3.2"><title>SOLO, seed 4: 4.0</title></circle>
+<circle class="run" cx="127.5" cy="145.1" r="3.2"><title>SOLO, seed 5: 4.7</title></circle>
+<circle class="run" cx="133.0" cy="143.4" r="3.2"><title>SOLO, seed 2: 4.8</title></circle>
+<circle class="run" cx="138.5" cy="133.1" r="3.2"><title>SOLO, seed 1: 5.4</title></circle>
+<circle class="run" cx="144.0" cy="104.2" r="3.2"><title>SOLO, seed 3: 7.1</title></circle>
+<line class="meanbar" x1="115.6" y1="136.3" x2="150.4" y2="136.3"><title>SOLO mean: 5.2</title></line>
+<circle class="run" cx="180.0" cy="158.8" r="3.2"><title>SOLO-W, seed 2: 3.9</title></circle>
+<circle class="run" cx="185.5" cy="138.7" r="3.2"><title>SOLO-W, seed 5: 5.1</title></circle>
+<circle class="run" cx="191.0" cy="127.5" r="3.2"><title>SOLO-W, seed 1: 5.7</title></circle>
+<circle class="run" cx="196.5" cy="115.9" r="3.2"><title>SOLO-W, seed 4: 6.4</title></circle>
+<circle class="run" cx="202.0" cy="96.9" r="3.2"><title>SOLO-W, seed 3: 7.5</title></circle>
+<line class="meanbar" x1="173.6" y1="127.6" x2="208.4" y2="127.6"><title>SOLO-W mean: 5.7</title></line>
+<circle class="run" cx="238.0" cy="138.4" r="3.2"><title>COOP, seed 5: 5.1</title></circle>
+<circle class="run" cx="243.5" cy="122.2" r="3.2"><title>COOP, seed 4: 6.0</title></circle>
+<circle class="run" cx="249.0" cy="116.6" r="3.2"><title>COOP, seed 1: 6.4</title></circle>
+<circle class="run" cx="254.5" cy="103.2" r="3.2"><title>COOP, seed 2: 7.2</title></circle>
+<circle class="run" cx="260.0" cy="82.1" r="3.2"><title>COOP, seed 3: 8.4</title></circle>
+<line class="meanbar" x1="231.6" y1="112.5" x2="266.4" y2="112.5"><title>COOP mean: 6.6</title></line>
+<circle class="run" cx="296.0" cy="153.2" r="3.2"><title>CULTURE, seed 1: 4.2</title></circle>
+<circle class="run" cx="301.5" cy="143.1" r="3.2"><title>CULTURE, seed 4: 4.8</title></circle>
+<circle class="run" cx="307.0" cy="142.6" r="3.2"><title>CULTURE, seed 5: 4.8</title></circle>
+<circle class="run" cx="312.5" cy="138.9" r="3.2"><title>CULTURE, seed 2: 5.0</title></circle>
+<circle class="run" cx="318.0" cy="112.2" r="3.2"><title>CULTURE, seed 3: 6.6</title></circle>
+<line class="meanbar" x1="289.6" y1="138.0" x2="324.4" y2="138.0"><title>CULTURE mean: 5.1</title></line>
+</svg><p class="cap">Shaded: the range the rules alone produce (null model). Dots: runs. Bar: mean.</p></figure>
+    <figure><figcaption>Practised skill, final adapter</figcaption><svg viewBox="0 0 350 226" role="img" aria-label="Practised skill, final adapter, one dot per run, by arm">
+<line class="grid" x1="46" y1="190.0" x2="336" y2="190.0"/>
+<text class="tick" x="40" y="193.5" text-anchor="end">0.50</text>
+<line class="grid" x1="46" y1="134.0" x2="336" y2="134.0"/>
+<text class="tick" x="40" y="137.5" text-anchor="end">0.55</text>
+<line class="grid" x1="46" y1="78.0" x2="336" y2="78.0"/>
+<text class="tick" x="40" y="81.5" text-anchor="end">0.60</text>
+<line class="grid" x1="46" y1="22.0" x2="336" y2="22.0"/>
+<text class="tick" x="40" y="25.5" text-anchor="end">0.65</text>
+<text class="tick" x="75.0" y="206" text-anchor="middle">DRIFT</text>
+<text class="tick" x="133.0" y="206" text-anchor="middle">SOLO</text>
+<text class="tick" x="191.0" y="206" text-anchor="middle">SOLO-W</text>
+<text class="tick" x="249.0" y="206" text-anchor="middle">COOP</text>
+<text class="tick" x="307.0" y="206" text-anchor="middle">CULTURE</text>
+<line class="base" x1="46" y1="178.6" x2="336" y2="178.6"/>
+<text class="lab base" x="336" y="174.6" text-anchor="end">untrained 0.510</text>
+<circle class="run" cx="64.0" cy="152.8" r="3.2"><title>DRIFT, seed 2: 0.533</title></circle>
+<circle class="run" cx="69.5" cy="101.4" r="3.2"><title>DRIFT, seed 5: 0.579</title></circle>
+<circle class="run" cx="75.0" cy="92.9" r="3.2"><title>DRIFT, seed 3: 0.587</title></circle>
+<circle class="run" cx="80.5" cy="75.8" r="3.2"><title>DRIFT, seed 4: 0.602</title></circle>
+<circle class="run" cx="86.0" cy="44.3" r="3.2"><title>DRIFT, seed 1: 0.630</title></circle>
+<line class="meanbar" x1="57.6" y1="93.5" x2="92.4" y2="93.5"><title>DRIFT mean: 0.586</title></line>
+<circle class="run" cx="122.0" cy="130.0" r="3.2"><title>SOLO, seed 4: 0.554</title></circle>
+<circle class="run" cx="127.5" cy="110.0" r="3.2"><title>SOLO, seed 2: 0.571</title></circle>
+<circle class="run" cx="133.0" cy="104.3" r="3.2"><title>SOLO, seed 1: 0.577</title></circle>
+<circle class="run" cx="138.5" cy="75.8" r="3.2"><title>SOLO, seed 5: 0.602</title></circle>
+<circle class="run" cx="144.0" cy="41.4" r="3.2"><title>SOLO, seed 3: 0.633</title></circle>
+<line class="meanbar" x1="115.6" y1="92.3" x2="150.4" y2="92.3"><title>SOLO mean: 0.587</title></line>
+<circle class="run" cx="180.0" cy="167.2" r="3.2"><title>SOLO-W, seed 4: 0.520</title></circle>
+<circle class="run" cx="185.5" cy="158.5" r="3.2"><title>SOLO-W, seed 5: 0.528</title></circle>
+<circle class="run" cx="191.0" cy="138.6" r="3.2"><title>SOLO-W, seed 3: 0.546</title></circle>
+<circle class="run" cx="196.5" cy="104.3" r="3.2"><title>SOLO-W, seed 1: 0.577</title></circle>
+<circle class="run" cx="202.0" cy="101.4" r="3.2"><title>SOLO-W, seed 2: 0.579</title></circle>
+<line class="meanbar" x1="173.6" y1="134.0" x2="208.4" y2="134.0"><title>SOLO-W mean: 0.550</title></line>
+<circle class="run" cx="238.0" cy="121.5" r="3.2"><title>COOP, seed 2: 0.561</title></circle>
+<circle class="run" cx="243.5" cy="101.4" r="3.2"><title>COOP, seed 1: 0.579</title></circle>
+<circle class="run" cx="249.0" cy="101.4" r="3.2"><title>COOP, seed 4: 0.579</title></circle>
+<circle class="run" cx="254.5" cy="78.6" r="3.2"><title>COOP, seed 5: 0.600</title></circle>
+<circle class="run" cx="260.0" cy="55.7" r="3.2"><title>COOP, seed 3: 0.620</title></circle>
+<line class="meanbar" x1="231.6" y1="91.7" x2="266.4" y2="91.7"><title>COOP mean: 0.588</title></line>
+<circle class="run" cx="296.0" cy="124.3" r="3.2"><title>CULTURE, seed 1: 0.559</title></circle>
+<circle class="run" cx="301.5" cy="90.0" r="3.2"><title>CULTURE, seed 2: 0.589</title></circle>
+<circle class="run" cx="307.0" cy="64.3" r="3.2"><title>CULTURE, seed 3: 0.612</title></circle>
+<circle class="run" cx="312.5" cy="64.3" r="3.2"><title>CULTURE, seed 5: 0.612</title></circle>
+<circle class="run" cx="318.0" cy="44.3" r="3.2"><title>CULTURE, seed 4: 0.630</title></circle>
+<line class="meanbar" x1="289.6" y1="77.4" x2="324.4" y2="77.4"><title>CULTURE mean: 0.601</title></line>
+</svg><p class="cap">Dashed: untrained model. Dots: runs. Bar: mean.</p></figure>
+    <figure><figcaption>Similar unseen tasks, final adapter</figcaption><svg viewBox="0 0 350 226" role="img" aria-label="Similar unseen tasks, final adapter, one dot per run, by arm">
+<line class="grid" x1="46" y1="190.0" x2="336" y2="190.0"/>
+<text class="tick" x="40" y="193.5" text-anchor="end">0.50</text>
+<line class="grid" x1="46" y1="148.0" x2="336" y2="148.0"/>
+<text class="tick" x="40" y="151.5" text-anchor="end">0.55</text>
+<line class="grid" x1="46" y1="106.0" x2="336" y2="106.0"/>
+<text class="tick" x="40" y="109.5" text-anchor="end">0.60</text>
+<line class="grid" x1="46" y1="64.0" x2="336" y2="64.0"/>
+<text class="tick" x="40" y="67.5" text-anchor="end">0.65</text>
+<line class="grid" x1="46" y1="22.0" x2="336" y2="22.0"/>
+<text class="tick" x="40" y="25.5" text-anchor="end">0.70</text>
+<text class="tick" x="75.0" y="206" text-anchor="middle">DRIFT</text>
+<text class="tick" x="133.0" y="206" text-anchor="middle">SOLO</text>
+<text class="tick" x="191.0" y="206" text-anchor="middle">SOLO-W</text>
+<text class="tick" x="249.0" y="206" text-anchor="middle">COOP</text>
+<text class="tick" x="307.0" y="206" text-anchor="middle">CULTURE</text>
+<line class="base" x1="46" y1="153.9" x2="336" y2="153.9"/>
+<text class="lab base" x="336" y="149.9" text-anchor="end">untrained 0.543</text>
+<circle class="run" cx="64.0" cy="165.4" r="3.2"><title>DRIFT, seed 2: 0.529</title></circle>
+<circle class="run" cx="69.5" cy="112.9" r="3.2"><title>DRIFT, seed 4: 0.592</title></circle>
+<circle class="run" cx="75.0" cy="111.2" r="3.2"><title>DRIFT, seed 1: 0.594</title></circle>
+<circle class="run" cx="80.5" cy="107.9" r="3.2"><title>DRIFT, seed 3: 0.598</title></circle>
+<circle class="run" cx="86.0" cy="75.2" r="3.2"><title>DRIFT, seed 5: 0.637</title></circle>
+<line class="meanbar" x1="57.6" y1="114.5" x2="92.4" y2="114.5"><title>DRIFT mean: 0.590</title></line>
+<circle class="run" cx="122.0" cy="101.4" r="3.2"><title>SOLO, seed 5: 0.606</title></circle>
+<circle class="run" cx="127.5" cy="81.7" r="3.2"><title>SOLO, seed 1: 0.629</title></circle>
+<circle class="run" cx="133.0" cy="81.7" r="3.2"><title>SOLO, seed 2: 0.629</title></circle>
+<circle class="run" cx="138.5" cy="71.9" r="3.2"><title>SOLO, seed 3: 0.641</title></circle>
+<circle class="run" cx="144.0" cy="63.7" r="3.2"><title>SOLO, seed 4: 0.650</title></circle>
+<line class="meanbar" x1="115.6" y1="80.0" x2="150.4" y2="80.0"><title>SOLO mean: 0.631</title></line>
+<circle class="run" cx="180.0" cy="135.8" r="3.2"><title>SOLO-W, seed 5: 0.565</title></circle>
+<circle class="run" cx="185.5" cy="117.8" r="3.2"><title>SOLO-W, seed 2: 0.586</title></circle>
+<circle class="run" cx="191.0" cy="116.2" r="3.2"><title>SOLO-W, seed 3: 0.588</title></circle>
+<circle class="run" cx="196.5" cy="91.6" r="3.2"><title>SOLO-W, seed 4: 0.617</title></circle>
+<circle class="run" cx="202.0" cy="88.3" r="3.2"><title>SOLO-W, seed 1: 0.621</title></circle>
+<line class="meanbar" x1="173.6" y1="109.9" x2="208.4" y2="109.9"><title>SOLO-W mean: 0.595</title></line>
+<circle class="run" cx="238.0" cy="112.9" r="3.2"><title>COOP, seed 2: 0.592</title></circle>
+<circle class="run" cx="243.5" cy="96.5" r="3.2"><title>COOP, seed 4: 0.611</title></circle>
+<circle class="run" cx="249.0" cy="94.8" r="3.2"><title>COOP, seed 1: 0.613</title></circle>
+<circle class="run" cx="254.5" cy="90.0" r="3.2"><title>COOP, seed 3: 0.619</title></circle>
+<circle class="run" cx="260.0" cy="86.7" r="3.2"><title>COOP, seed 5: 0.623</title></circle>
+<line class="meanbar" x1="231.6" y1="96.2" x2="266.4" y2="96.2"><title>COOP mean: 0.612</title></line>
+<circle class="run" cx="296.0" cy="112.9" r="3.2"><title>CULTURE, seed 1: 0.592</title></circle>
+<circle class="run" cx="301.5" cy="107.9" r="3.2"><title>CULTURE, seed 2: 0.598</title></circle>
+<circle class="run" cx="307.0" cy="91.6" r="3.2"><title>CULTURE, seed 4: 0.617</title></circle>
+<circle class="run" cx="312.5" cy="83.3" r="3.2"><title>CULTURE, seed 5: 0.627</title></circle>
+<circle class="run" cx="318.0" cy="75.2" r="3.2"><title>CULTURE, seed 3: 0.637</title></circle>
+<line class="meanbar" x1="289.6" y1="94.2" x2="324.4" y2="94.2"><title>CULTURE mean: 0.614</title></line>
+</svg><p class="cap">Dashed: untrained model. Descriptive only.</p></figure>
+    <figure><figcaption>New-skill tasks, final adapter</figcaption><svg viewBox="0 0 350 226" role="img" aria-label="New-skill tasks, final adapter, one dot per run, by arm">
+<line class="grid" x1="46" y1="190.0" x2="336" y2="190.0"/>
+<text class="tick" x="40" y="193.5" text-anchor="end">0.40</text>
+<line class="grid" x1="46" y1="156.4" x2="336" y2="156.4"/>
+<text class="tick" x="40" y="159.9" text-anchor="end">0.42</text>
+<line class="grid" x1="46" y1="122.8" x2="336" y2="122.8"/>
+<text class="tick" x="40" y="126.3" text-anchor="end">0.44</text>
+<line class="grid" x1="46" y1="89.2" x2="336" y2="89.2"/>
+<text class="tick" x="40" y="92.7" text-anchor="end">0.46</text>
+<line class="grid" x1="46" y1="55.6" x2="336" y2="55.6"/>
+<text class="tick" x="40" y="59.1" text-anchor="end">0.48</text>
+<line class="grid" x1="46" y1="22.0" x2="336" y2="22.0"/>
+<text class="tick" x="40" y="25.5" text-anchor="end">0.50</text>
+<text class="tick" x="75.0" y="206" text-anchor="middle">DRIFT</text>
+<text class="tick" x="133.0" y="206" text-anchor="middle">SOLO</text>
+<text class="tick" x="191.0" y="206" text-anchor="middle">SOLO-W</text>
+<text class="tick" x="249.0" y="206" text-anchor="middle">COOP</text>
+<text class="tick" x="307.0" y="206" text-anchor="middle">CULTURE</text>
+<line class="base" x1="46" y1="179.9" x2="336" y2="179.9"/>
+<text class="lab base" x="336" y="175.9" text-anchor="end">untrained 0.406</text>
+<circle class="run" cx="64.0" cy="167.8" r="3.2"><title>DRIFT, seed 2: 0.413</title></circle>
+<circle class="run" cx="69.5" cy="153.2" r="3.2"><title>DRIFT, seed 3: 0.422</title></circle>
+<circle class="run" cx="75.0" cy="94.9" r="3.2"><title>DRIFT, seed 1: 0.457</title></circle>
+<circle class="run" cx="80.5" cy="74.4" r="3.2"><title>DRIFT, seed 4: 0.469</title></circle>
+<circle class="run" cx="86.0" cy="22.0" r="3.2"><title>DRIFT, seed 5: 0.500</title></circle>
+<line class="meanbar" x1="57.6" y1="102.5" x2="92.4" y2="102.5"><title>DRIFT mean: 0.452</title></line>
+<circle class="run" cx="122.0" cy="124.1" r="3.2"><title>SOLO, seed 1: 0.439</title></circle>
+<circle class="run" cx="127.5" cy="86.2" r="3.2"><title>SOLO, seed 5: 0.462</title></circle>
+<circle class="run" cx="133.0" cy="83.3" r="3.2"><title>SOLO, seed 3: 0.464</title></circle>
+<circle class="run" cx="138.5" cy="60.0" r="3.2"><title>SOLO, seed 2: 0.477</title></circle>
+<circle class="run" cx="144.0" cy="36.6" r="3.2"><title>SOLO, seed 4: 0.491</title></circle>
+<line class="meanbar" x1="115.6" y1="78.1" x2="150.4" y2="78.1"><title>SOLO mean: 0.467</title></line>
+<circle class="run" cx="180.0" cy="153.2" r="3.2"><title>SOLO-W, seed 3: 0.422</title></circle>
+<circle class="run" cx="185.5" cy="153.2" r="3.2"><title>SOLO-W, seed 5: 0.422</title></circle>
+<circle class="run" cx="191.0" cy="150.4" r="3.2"><title>SOLO-W, seed 1: 0.424</title></circle>
+<circle class="run" cx="196.5" cy="135.7" r="3.2"><title>SOLO-W, seed 2: 0.432</title></circle>
+<circle class="run" cx="202.0" cy="89.0" r="3.2"><title>SOLO-W, seed 4: 0.460</title></circle>
+<line class="meanbar" x1="173.6" y1="136.2" x2="208.4" y2="136.2"><title>SOLO-W mean: 0.432</title></line>
+<circle class="run" cx="238.0" cy="132.9" r="3.2"><title>COOP, seed 1: 0.434</title></circle>
+<circle class="run" cx="243.5" cy="92.1" r="3.2"><title>COOP, seed 3: 0.458</title></circle>
+<circle class="run" cx="249.0" cy="65.7" r="3.2"><title>COOP, seed 2: 0.474</title></circle>
+<circle class="run" cx="254.5" cy="65.7" r="3.2"><title>COOP, seed 4: 0.474</title></circle>
+<circle class="run" cx="260.0" cy="48.2" r="3.2"><title>COOP, seed 5: 0.484</title></circle>
+<line class="meanbar" x1="231.6" y1="81.0" x2="266.4" y2="81.0"><title>COOP mean: 0.465</title></line>
+<circle class="run" cx="296.0" cy="138.6" r="3.2"><title>CULTURE, seed 1: 0.431</title></circle>
+<circle class="run" cx="301.5" cy="103.6" r="3.2"><title>CULTURE, seed 4: 0.451</title></circle>
+<circle class="run" cx="307.0" cy="60.0" r="3.2"><title>CULTURE, seed 2: 0.477</title></circle>
+<circle class="run" cx="312.5" cy="42.5" r="3.2"><title>CULTURE, seed 3: 0.488</title></circle>
+<circle class="run" cx="318.0" cy="36.6" r="3.2"><title>CULTURE, seed 5: 0.491</title></circle>
+<line class="meanbar" x1="289.6" y1="76.3" x2="324.4" y2="76.3"><title>CULTURE mean: 0.468</title></line>
+</svg><p class="cap">Dashed: untrained model. Descriptive only.</p></figure>
+  </div>
+</section>
+
+<section>
+  <h2>Share of replies right during life, by generation</h2>
+  <div class="small"><figure><figcaption>DRIFT</figcaption><svg viewBox="0 0 212 138" role="img" aria-label="Share right by generation, DRIFT">
+<line class="grid" x1="34" y1="112.0" x2="200" y2="112.0"/>
+<text class="tick" x="29" y="115.5" text-anchor="end">0.0</text>
+<line class="grid" x1="34" y1="63.0" x2="200" y2="63.0"/>
+<text class="tick" x="29" y="66.5" text-anchor="end">0.5</text>
+<line class="grid" x1="34" y1="14.0" x2="200" y2="14.0"/>
+<text class="tick" x="29" y="17.5" text-anchor="end">1.0</text>
+<text class="tick" x="34.0" y="126" text-anchor="middle">gen 1</text>
+<text class="tick" x="200.0" y="126" text-anchor="middle">gen 8</text>
+<polyline class="thin" points="34.0,47.2 57.7,30.6 81.4,27.9 105.1,28.9 128.9,35.8 152.6,37.6 176.3,40.7 200.0,38.5"/>
+<polyline class="thin" points="34.0,48.5 57.7,34.4 81.4,34.7 105.1,30.6 128.9,29.8 152.6,32.2 176.3,37.0 200.0,40.3"/>
+<polyline class="thin" points="34.0,67.7 57.7,50.8 81.4,50.5 105.1,47.7 128.9,52.0 152.6,40.4 176.3,45.4 200.0,47.8"/>
+<polyline class="thin" points="34.0,36.5 57.7,25.1 81.4,24.0 105.1,27.0 128.9,33.3 152.6,40.2 176.3,35.8 200.0,30.2"/>
+<polyline class="thin" points="34.0,64.4 57.7,20.0 81.4,24.2 105.1,26.6 128.9,26.4 152.6,23.4 176.3,32.4 200.0,35.2"/>
+<polyline class="line" points="34.0,52.8 57.7,32.2 81.4,32.2 105.1,32.2 128.9,35.5 152.6,34.8 176.3,38.2 200.0,38.4"/>
+<circle class="mean" cx="34.0" cy="52.8" r="2.6"><title>DRIFT, generation 1: mean 0.60</title></circle>
+<circle class="mean" cx="57.7" cy="32.2" r="2.6"><title>DRIFT, generation 2: mean 0.81</title></circle>
+<circle class="mean" cx="81.4" cy="32.2" r="2.6"><title>DRIFT, generation 3: mean 0.81</title></circle>
+<circle class="mean" cx="105.1" cy="32.2" r="2.6"><title>DRIFT, generation 4: mean 0.81</title></circle>
+<circle class="mean" cx="128.9" cy="35.5" r="2.6"><title>DRIFT, generation 5: mean 0.78</title></circle>
+<circle class="mean" cx="152.6" cy="34.8" r="2.6"><title>DRIFT, generation 6: mean 0.79</title></circle>
+<circle class="mean" cx="176.3" cy="38.2" r="2.6"><title>DRIFT, generation 7: mean 0.75</title></circle>
+<circle class="mean" cx="200.0" cy="38.4" r="2.6"><title>DRIFT, generation 8: mean 0.75</title></circle>
+</svg></figure><figure><figcaption>SOLO</figcaption><svg viewBox="0 0 212 138" role="img" aria-label="Share right by generation, SOLO">
+<line class="grid" x1="34" y1="112.0" x2="200" y2="112.0"/>
+<text class="tick" x="29" y="115.5" text-anchor="end">0.0</text>
+<line class="grid" x1="34" y1="63.0" x2="200" y2="63.0"/>
+<text class="tick" x="29" y="66.5" text-anchor="end">0.5</text>
+<line class="grid" x1="34" y1="14.0" x2="200" y2="14.0"/>
+<text class="tick" x="29" y="17.5" text-anchor="end">1.0</text>
+<text class="tick" x="34.0" y="126" text-anchor="middle">gen 1</text>
+<text class="tick" x="200.0" y="126" text-anchor="middle">gen 8</text>
+<polyline class="thin" points="34.0,47.2 57.7,30.6 81.4,27.5 105.1,22.0 128.9,27.4 152.6,25.7 176.3,30.5 200.0,28.0"/>
+<polyline class="thin" points="34.0,47.9 57.7,26.1 81.4,27.7 105.1,24.2 128.9,28.2 152.6,20.0 176.3,24.2 200.0,21.4"/>
+<polyline class="thin" points="34.0,67.7 57.7,51.3 81.4,36.3 105.1,34.4 128.9,29.2 152.6,25.0 176.3,23.8 200.0,25.9"/>
+<polyline class="thin" points="34.0,36.0 57.7,22.5 81.4,21.5 105.1,23.3 128.9,22.0 152.6,26.6 176.3,21.3 200.0,28.2"/>
+<polyline class="thin" points="34.0,64.4 57.7,24.7 81.4,20.8 105.1,18.5 128.9,19.1 152.6,17.6 176.3,17.1 200.0,19.9"/>
+<polyline class="line" points="34.0,52.6 57.7,31.0 81.4,26.8 105.1,24.5 128.9,25.2 152.6,23.0 176.3,23.4 200.0,24.7"/>
+<circle class="mean" cx="34.0" cy="52.6" r="2.6"><title>SOLO, generation 1: mean 0.61</title></circle>
+<circle class="mean" cx="57.7" cy="31.0" r="2.6"><title>SOLO, generation 2: mean 0.83</title></circle>
+<circle class="mean" cx="81.4" cy="26.8" r="2.6"><title>SOLO, generation 3: mean 0.87</title></circle>
+<circle class="mean" cx="105.1" cy="24.5" r="2.6"><title>SOLO, generation 4: mean 0.89</title></circle>
+<circle class="mean" cx="128.9" cy="25.2" r="2.6"><title>SOLO, generation 5: mean 0.89</title></circle>
+<circle class="mean" cx="152.6" cy="23.0" r="2.6"><title>SOLO, generation 6: mean 0.91</title></circle>
+<circle class="mean" cx="176.3" cy="23.4" r="2.6"><title>SOLO, generation 7: mean 0.90</title></circle>
+<circle class="mean" cx="200.0" cy="24.7" r="2.6"><title>SOLO, generation 8: mean 0.89</title></circle>
+</svg></figure><figure><figcaption>SOLO-W</figcaption><svg viewBox="0 0 212 138" role="img" aria-label="Share right by generation, SOLO-W">
+<line class="grid" x1="34" y1="112.0" x2="200" y2="112.0"/>
+<text class="tick" x="29" y="115.5" text-anchor="end">0.0</text>
+<line class="grid" x1="34" y1="63.0" x2="200" y2="63.0"/>
+<text class="tick" x="29" y="66.5" text-anchor="end">0.5</text>
+<line class="grid" x1="34" y1="14.0" x2="200" y2="14.0"/>
+<text class="tick" x="29" y="17.5" text-anchor="end">1.0</text>
+<text class="tick" x="34.0" y="126" text-anchor="middle">gen 1</text>
+<text class="tick" x="200.0" y="126" text-anchor="middle">gen 8</text>
+<polyline class="thin" points="34.0,47.2 57.7,38.5 81.4,39.4 105.1,40.2 128.9,30.1 152.6,35.4 176.3,35.4 200.0,30.7"/>
+<polyline class="thin" points="34.0,48.5 57.7,40.8 81.4,36.7 105.1,21.5 128.9,20.4 152.6,21.7 176.3,18.1 200.0,20.5"/>
+<polyline class="thin" points="34.0,67.7 57.7,65.8 81.4,63.8 105.1,57.3 128.9,38.6 152.6,36.1 176.3,32.9 200.0,32.1"/>
+<polyline class="thin" points="34.0,36.0 57.7,33.1 81.4,33.5 105.1,36.3 128.9,32.2 152.6,32.8 176.3,34.3 200.0,31.5"/>
+<polyline class="thin" points="34.0,65.4 57.7,67.9 81.4,64.4 105.1,55.9 128.9,50.4 152.6,49.9 176.3,44.4 200.0,38.5"/>
+<polyline class="line" points="34.0,52.9 57.7,49.2 81.4,47.6 105.1,42.2 128.9,34.3 152.6,35.2 176.3,33.0 200.0,30.7"/>
+<circle class="mean" cx="34.0" cy="52.9" r="2.6"><title>SOLO-W, generation 1: mean 0.60</title></circle>
+<circle class="mean" cx="57.7" cy="49.2" r="2.6"><title>SOLO-W, generation 2: mean 0.64</title></circle>
+<circle class="mean" cx="81.4" cy="47.6" r="2.6"><title>SOLO-W, generation 3: mean 0.66</title></circle>
+<circle class="mean" cx="105.1" cy="42.2" r="2.6"><title>SOLO-W, generation 4: mean 0.71</title></circle>
+<circle class="mean" cx="128.9" cy="34.3" r="2.6"><title>SOLO-W, generation 5: mean 0.79</title></circle>
+<circle class="mean" cx="152.6" cy="35.2" r="2.6"><title>SOLO-W, generation 6: mean 0.78</title></circle>
+<circle class="mean" cx="176.3" cy="33.0" r="2.6"><title>SOLO-W, generation 7: mean 0.81</title></circle>
+<circle class="mean" cx="200.0" cy="30.7" r="2.6"><title>SOLO-W, generation 8: mean 0.83</title></circle>
+</svg></figure><figure><figcaption>COOP</figcaption><svg viewBox="0 0 212 138" role="img" aria-label="Share right by generation, COOP">
+<line class="grid" x1="34" y1="112.0" x2="200" y2="112.0"/>
+<text class="tick" x="29" y="115.5" text-anchor="end">0.0</text>
+<line class="grid" x1="34" y1="63.0" x2="200" y2="63.0"/>
+<text class="tick" x="29" y="66.5" text-anchor="end">0.5</text>
+<line class="grid" x1="34" y1="14.0" x2="200" y2="14.0"/>
+<text class="tick" x="29" y="17.5" text-anchor="end">1.0</text>
+<text class="tick" x="34.0" y="126" text-anchor="middle">gen 1</text>
+<text class="tick" x="200.0" y="126" text-anchor="middle">gen 8</text>
+<polyline class="thin" points="34.0,44.8 57.7,32.6 81.4,31.5 105.1,29.8 128.9,29.3 152.6,28.2 176.3,30.6 200.0,26.0"/>
+<polyline class="thin" points="34.0,48.7 57.7,30.0 81.4,28.7 105.1,33.9 128.9,28.4 152.6,30.7 176.3,30.1 200.0,26.2"/>
+<polyline class="thin" points="34.0,66.4 57.7,55.3 81.4,47.0 105.1,38.6 128.9,34.4 152.6,34.7 176.3,32.6 200.0,29.2"/>
+<polyline class="thin" points="34.0,37.9 57.7,24.3 81.4,20.1 105.1,26.9 128.9,22.5 152.6,28.0 176.3,25.2 200.0,27.7"/>
+<polyline class="thin" points="34.0,68.0 57.7,26.4 81.4,23.4 105.1,23.1 128.9,26.2 152.6,22.7 176.3,30.2 200.0,26.4"/>
+<polyline class="line" points="34.0,53.2 57.7,33.7 81.4,30.2 105.1,30.5 128.9,28.2 152.6,28.9 176.3,29.7 200.0,27.1"/>
+<circle class="mean" cx="34.0" cy="53.2" r="2.6"><title>COOP, generation 1: mean 0.60</title></circle>
+<circle class="mean" cx="57.7" cy="33.7" r="2.6"><title>COOP, generation 2: mean 0.80</title></circle>
+<circle class="mean" cx="81.4" cy="30.2" r="2.6"><title>COOP, generation 3: mean 0.84</title></circle>
+<circle class="mean" cx="105.1" cy="30.5" r="2.6"><title>COOP, generation 4: mean 0.83</title></circle>
+<circle class="mean" cx="128.9" cy="28.2" r="2.6"><title>COOP, generation 5: mean 0.86</title></circle>
+<circle class="mean" cx="152.6" cy="28.9" r="2.6"><title>COOP, generation 6: mean 0.85</title></circle>
+<circle class="mean" cx="176.3" cy="29.7" r="2.6"><title>COOP, generation 7: mean 0.84</title></circle>
+<circle class="mean" cx="200.0" cy="27.1" r="2.6"><title>COOP, generation 8: mean 0.87</title></circle>
+</svg></figure><figure><figcaption>CULTURE</figcaption><svg viewBox="0 0 212 138" role="img" aria-label="Share right by generation, CULTURE">
+<line class="grid" x1="34" y1="112.0" x2="200" y2="112.0"/>
+<text class="tick" x="29" y="115.5" text-anchor="end">0.0</text>
+<line class="grid" x1="34" y1="63.0" x2="200" y2="63.0"/>
+<text class="tick" x="29" y="66.5" text-anchor="end">0.5</text>
+<line class="grid" x1="34" y1="14.0" x2="200" y2="14.0"/>
+<text class="tick" x="29" y="17.5" text-anchor="end">1.0</text>
+<text class="tick" x="34.0" y="126" text-anchor="middle">gen 1</text>
+<text class="tick" x="200.0" y="126" text-anchor="middle">gen 8</text>
+<polyline class="thin" points="34.0,47.4 57.7,27.8 81.4,26.9 105.1,21.1 128.9,22.5 152.6,19.6 176.3,20.9 200.0,18.6"/>
+<polyline class="thin" points="34.0,48.5 57.7,28.3 81.4,23.1 105.1,21.4 128.9,21.0 152.6,22.4 176.3,20.8 200.0,27.3"/>
+<polyline class="thin" points="34.0,67.3 57.7,52.7 81.4,37.5 105.1,38.2 128.9,30.8 152.6,36.7 176.3,31.2 200.0,25.7"/>
+<polyline class="thin" points="34.0,36.0 57.7,21.5 81.4,21.7 105.1,18.1 128.9,19.9 152.6,19.7 176.3,25.7 200.0,23.1"/>
+<polyline class="thin" points="34.0,64.4 57.7,28.2 81.4,18.0 105.1,21.3 128.9,20.9 152.6,22.9 176.3,21.5 200.0,18.0"/>
+<polyline class="line" points="34.0,52.7 57.7,31.7 81.4,25.4 105.1,24.0 128.9,23.0 152.6,24.3 176.3,24.0 200.0,22.5"/>
+<circle class="mean" cx="34.0" cy="52.7" r="2.6"><title>CULTURE, generation 1: mean 0.60</title></circle>
+<circle class="mean" cx="57.7" cy="31.7" r="2.6"><title>CULTURE, generation 2: mean 0.82</title></circle>
+<circle class="mean" cx="81.4" cy="25.4" r="2.6"><title>CULTURE, generation 3: mean 0.88</title></circle>
+<circle class="mean" cx="105.1" cy="24.0" r="2.6"><title>CULTURE, generation 4: mean 0.90</title></circle>
+<circle class="mean" cx="128.9" cy="23.0" r="2.6"><title>CULTURE, generation 5: mean 0.91</title></circle>
+<circle class="mean" cx="152.6" cy="24.3" r="2.6"><title>CULTURE, generation 6: mean 0.90</title></circle>
+<circle class="mean" cx="176.3" cy="24.0" r="2.6"><title>CULTURE, generation 7: mean 0.90</title></circle>
+<circle class="mean" cx="200.0" cy="22.5" r="2.6"><title>CULTURE, generation 8: mean 0.91</title></circle>
+</svg></figure></div>
+  <p class="muted">Thin lines: seeds. Thick line: mean. Sampling temperature 0.7.</p>
+  <h2 style="margin-top:22px">Distinct families among the 8 parents, by generation</h2>
+  <div class="small"><figure><figcaption>DRIFT</figcaption><svg viewBox="0 0 212 138" role="img" aria-label="Families among parents by generation, DRIFT">
+<line class="grid" x1="34" y1="112.0" x2="200" y2="112.0"/>
+<text class="tick" x="29" y="115.5" text-anchor="end">0</text>
+<line class="grid" x1="34" y1="63.0" x2="200" y2="63.0"/>
+<text class="tick" x="29" y="66.5" text-anchor="end">8</text>
+<line class="grid" x1="34" y1="14.0" x2="200" y2="14.0"/>
+<text class="tick" x="29" y="17.5" text-anchor="end">15</text>
+<text class="tick" x="34.0" y="126" text-anchor="middle">gen 1</text>
+<text class="tick" x="200.0" y="126" text-anchor="middle">gen 8</text>
+<polyline class="thin" points="34.0,98.9 57.7,98.9 81.4,79.3 105.1,66.3 128.9,33.6 152.6,40.1 176.3,40.1 200.0,40.1"/>
+<polyline class="thin" points="34.0,98.9 57.7,72.8 81.4,72.8 105.1,66.3 128.9,59.7 152.6,46.7 176.3,27.1 200.0,40.1"/>
+<polyline class="thin" points="34.0,98.9 57.7,66.3 81.4,72.8 105.1,59.7 128.9,66.3 152.6,53.2 176.3,46.7 200.0,33.6"/>
+<polyline class="thin" points="34.0,98.9 57.7,98.9 81.4,85.9 105.1,72.8 128.9,66.3 152.6,66.3 176.3,72.8 200.0,66.3"/>
+<polyline class="thin" points="34.0,98.9 57.7,98.9 81.4,79.3 105.1,66.3 128.9,59.7 152.6,59.7 176.3,46.7 200.0,33.6"/>
+<polyline class="line" points="34.0,98.9 57.7,87.2 81.4,78.0 105.1,66.3 128.9,57.1 152.6,53.2 176.3,46.7 200.0,42.7"/>
+<circle class="mean" cx="34.0" cy="98.9" r="2.6"><title>DRIFT, generation 1: mean 2.0</title></circle>
+<circle class="mean" cx="57.7" cy="87.2" r="2.6"><title>DRIFT, generation 2: mean 3.8</title></circle>
+<circle class="mean" cx="81.4" cy="78.0" r="2.6"><title>DRIFT, generation 3: mean 5.2</title></circle>
+<circle class="mean" cx="105.1" cy="66.3" r="2.6"><title>DRIFT, generation 4: mean 7.0</title></circle>
+<circle class="mean" cx="128.9" cy="57.1" r="2.6"><title>DRIFT, generation 5: mean 8.4</title></circle>
+<circle class="mean" cx="152.6" cy="53.2" r="2.6"><title>DRIFT, generation 6: mean 9.0</title></circle>
+<circle class="mean" cx="176.3" cy="46.7" r="2.6"><title>DRIFT, generation 7: mean 10.0</title></circle>
+<circle class="mean" cx="200.0" cy="42.7" r="2.6"><title>DRIFT, generation 8: mean 10.6</title></circle>
+</svg></figure><figure><figcaption>SOLO</figcaption><svg viewBox="0 0 212 138" role="img" aria-label="Families among parents by generation, SOLO">
+<line class="grid" x1="34" y1="112.0" x2="200" y2="112.0"/>
+<text class="tick" x="29" y="115.5" text-anchor="end">0</text>
+<line class="grid" x1="34" y1="63.0" x2="200" y2="63.0"/>
+<text class="tick" x="29" y="66.5" text-anchor="end">8</text>
+<line class="grid" x1="34" y1="14.0" x2="200" y2="14.0"/>
+<text class="tick" x="29" y="17.5" text-anchor="end">15</text>
+<text class="tick" x="34.0" y="126" text-anchor="middle">gen 1</text>
+<text class="tick" x="200.0" y="126" text-anchor="middle">gen 8</text>
+<polyline class="thin" points="34.0,98.9 57.7,85.9 81.4,72.8 105.1,59.7 128.9,46.7 152.6,33.6 176.3,46.7 200.0,46.7"/>
+<polyline class="thin" points="34.0,98.9 57.7,85.9 81.4,85.9 105.1,66.3 128.9,72.8 152.6,46.7 176.3,46.7 200.0,46.7"/>
+<polyline class="thin" points="34.0,98.9 57.7,72.8 81.4,59.7 105.1,40.1 128.9,46.7 152.6,27.1 176.3,33.6 200.0,59.7"/>
+<polyline class="thin" points="34.0,98.9 57.7,92.4 81.4,79.3 105.1,79.3 128.9,79.3 152.6,72.8 176.3,66.3 200.0,20.5"/>
+<polyline class="thin" points="34.0,98.9 57.7,92.4 81.4,92.4 105.1,72.8 128.9,66.3 152.6,59.7 176.3,40.1 200.0,33.6"/>
+<polyline class="line" points="34.0,98.9 57.7,85.9 81.4,78.0 105.1,63.7 128.9,62.3 152.6,48.0 176.3,46.7 200.0,41.4"/>
+<circle class="mean" cx="34.0" cy="98.9" r="2.6"><title>SOLO, generation 1: mean 2.0</title></circle>
+<circle class="mean" cx="57.7" cy="85.9" r="2.6"><title>SOLO, generation 2: mean 4.0</title></circle>
+<circle class="mean" cx="81.4" cy="78.0" r="2.6"><title>SOLO, generation 3: mean 5.2</title></circle>
+<circle class="mean" cx="105.1" cy="63.7" r="2.6"><title>SOLO, generation 4: mean 7.4</title></circle>
+<circle class="mean" cx="128.9" cy="62.3" r="2.6"><title>SOLO, generation 5: mean 7.6</title></circle>
+<circle class="mean" cx="152.6" cy="48.0" r="2.6"><title>SOLO, generation 6: mean 9.8</title></circle>
+<circle class="mean" cx="176.3" cy="46.7" r="2.6"><title>SOLO, generation 7: mean 10.0</title></circle>
+<circle class="mean" cx="200.0" cy="41.4" r="2.6"><title>SOLO, generation 8: mean 10.8</title></circle>
+</svg></figure><figure><figcaption>SOLO-W</figcaption><svg viewBox="0 0 212 138" role="img" aria-label="Families among parents by generation, SOLO-W">
+<line class="grid" x1="34" y1="112.0" x2="200" y2="112.0"/>
+<text class="tick" x="29" y="115.5" text-anchor="end">0</text>
+<line class="grid" x1="34" y1="63.0" x2="200" y2="63.0"/>
+<text class="tick" x="29" y="66.5" text-anchor="end">8</text>
+<line class="grid" x1="34" y1="14.0" x2="200" y2="14.0"/>
+<text class="tick" x="29" y="17.5" text-anchor="end">15</text>
+<text class="tick" x="34.0" y="126" text-anchor="middle">gen 1</text>
+<text class="tick" x="200.0" y="126" text-anchor="middle">gen 8</text>
+<polyline class="thin" points="34.0,98.9 57.7,79.3 81.4,59.7 105.1,72.8 128.9,66.3 152.6,46.7 176.3,33.6 200.0,40.1"/>
+<polyline class="thin" points="34.0,98.9 57.7,92.4 81.4,98.9 105.1,85.9 128.9,79.3 152.6,79.3 176.3,72.8 200.0,72.8"/>
+<polyline class="thin" points="34.0,98.9 57.7,85.9 81.4,59.7 105.1,46.7 128.9,46.7 152.6,40.1 176.3,27.1 200.0,27.1"/>
+<polyline class="thin" points="34.0,98.9 57.7,85.9 81.4,66.3 105.1,59.7 128.9,46.7 152.6,14.0 176.3,33.6 200.0,33.6"/>
+<polyline class="thin" points="34.0,98.9 57.7,85.9 81.4,79.3 105.1,72.8 128.9,72.8 152.6,59.7 176.3,40.1 200.0,79.3"/>
+<polyline class="line" points="34.0,98.9 57.7,85.9 81.4,72.8 105.1,67.6 128.9,62.3 152.6,48.0 176.3,41.4 200.0,50.6"/>
+<circle class="mean" cx="34.0" cy="98.9" r="2.6"><title>SOLO-W, generation 1: mean 2.0</title></circle>
+<circle class="mean" cx="57.7" cy="85.9" r="2.6"><title>SOLO-W, generation 2: mean 4.0</title></circle>
+<circle class="mean" cx="81.4" cy="72.8" r="2.6"><title>SOLO-W, generation 3: mean 6.0</title></circle>
+<circle class="mean" cx="105.1" cy="67.6" r="2.6"><title>SOLO-W, generation 4: mean 6.8</title></circle>
+<circle class="mean" cx="128.9" cy="62.3" r="2.6"><title>SOLO-W, generation 5: mean 7.6</title></circle>
+<circle class="mean" cx="152.6" cy="48.0" r="2.6"><title>SOLO-W, generation 6: mean 9.8</title></circle>
+<circle class="mean" cx="176.3" cy="41.4" r="2.6"><title>SOLO-W, generation 7: mean 10.8</title></circle>
+<circle class="mean" cx="200.0" cy="50.6" r="2.6"><title>SOLO-W, generation 8: mean 9.4</title></circle>
+</svg></figure><figure><figcaption>COOP</figcaption><svg viewBox="0 0 212 138" role="img" aria-label="Families among parents by generation, COOP">
+<line class="grid" x1="34" y1="112.0" x2="200" y2="112.0"/>
+<text class="tick" x="29" y="115.5" text-anchor="end">0</text>
+<line class="grid" x1="34" y1="63.0" x2="200" y2="63.0"/>
+<text class="tick" x="29" y="66.5" text-anchor="end">8</text>
+<line class="grid" x1="34" y1="14.0" x2="200" y2="14.0"/>
+<text class="tick" x="29" y="17.5" text-anchor="end">15</text>
+<text class="tick" x="34.0" y="126" text-anchor="middle">gen 1</text>
+<text class="tick" x="200.0" y="126" text-anchor="middle">gen 8</text>
+<polyline class="thin" points="34.0,98.9 57.7,92.4 81.4,72.8 105.1,66.3 128.9,46.7 152.6,33.6 176.3,33.6 200.0,33.6"/>
+<polyline class="thin" points="34.0,98.9 57.7,85.9 81.4,66.3 105.1,46.7 128.9,53.2 152.6,33.6 176.3,40.1 200.0,53.2"/>
+<polyline class="thin" points="34.0,98.9 57.7,66.3 81.4,72.8 105.1,46.7 128.9,40.1 152.6,33.6 176.3,33.6 200.0,27.1"/>
+<polyline class="thin" points="34.0,98.9 57.7,92.4 81.4,79.3 105.1,53.2 128.9,59.7 152.6,46.7 176.3,46.7 200.0,33.6"/>
+<polyline class="thin" points="34.0,98.9 57.7,98.9 81.4,85.9 105.1,79.3 128.9,66.3 152.6,53.2 176.3,53.2 200.0,40.1"/>
+<polyline class="line" points="34.0,98.9 57.7,87.2 81.4,75.4 105.1,58.4 128.9,53.2 152.6,40.1 176.3,41.4 200.0,37.5"/>
+<circle class="mean" cx="34.0" cy="98.9" r="2.6"><title>COOP, generation 1: mean 2.0</title></circle>
+<circle class="mean" cx="57.7" cy="87.2" r="2.6"><title>COOP, generation 2: mean 3.8</title></circle>
+<circle class="mean" cx="81.4" cy="75.4" r="2.6"><title>COOP, generation 3: mean 5.6</title></circle>
+<circle class="mean" cx="105.1" cy="58.4" r="2.6"><title>COOP, generation 4: mean 8.2</title></circle>
+<circle class="mean" cx="128.9" cy="53.2" r="2.6"><title>COOP, generation 5: mean 9.0</title></circle>
+<circle class="mean" cx="152.6" cy="40.1" r="2.6"><title>COOP, generation 6: mean 11.0</title></circle>
+<circle class="mean" cx="176.3" cy="41.4" r="2.6"><title>COOP, generation 7: mean 10.8</title></circle>
+<circle class="mean" cx="200.0" cy="37.5" r="2.6"><title>COOP, generation 8: mean 11.4</title></circle>
+</svg></figure><figure><figcaption>CULTURE</figcaption><svg viewBox="0 0 212 138" role="img" aria-label="Families among parents by generation, CULTURE">
+<line class="grid" x1="34" y1="112.0" x2="200" y2="112.0"/>
+<text class="tick" x="29" y="115.5" text-anchor="end">0</text>
+<line class="grid" x1="34" y1="63.0" x2="200" y2="63.0"/>
+<text class="tick" x="29" y="66.5" text-anchor="end">8</text>
+<line class="grid" x1="34" y1="14.0" x2="200" y2="14.0"/>
+<text class="tick" x="29" y="17.5" text-anchor="end">15</text>
+<text class="tick" x="34.0" y="126" text-anchor="middle">gen 1</text>
+<text class="tick" x="200.0" y="126" text-anchor="middle">gen 8</text>
+<polyline class="thin" points="34.0,98.9 57.7,92.4 81.4,85.9 105.1,72.8 128.9,66.3 152.6,72.8 176.3,79.3 200.0,72.8"/>
+<polyline class="thin" points="34.0,98.9 57.7,85.9 81.4,85.9 105.1,72.8 128.9,66.3 152.6,66.3 176.3,53.2 200.0,40.1"/>
+<polyline class="thin" points="34.0,98.9 57.7,72.8 81.4,66.3 105.1,53.2 128.9,40.1 152.6,46.7 176.3,27.1 200.0,27.1"/>
+<polyline class="thin" points="34.0,98.9 57.7,92.4 81.4,92.4 105.1,79.3 128.9,72.8 152.6,53.2 176.3,40.1 200.0,20.5"/>
+<polyline class="thin" points="34.0,98.9 57.7,92.4 81.4,72.8 105.1,66.3 128.9,53.2 152.6,66.3 176.3,66.3 200.0,53.2"/>
+<polyline class="line" points="34.0,98.9 57.7,87.2 81.4,80.6 105.1,68.9 128.9,59.7 152.6,61.0 176.3,53.2 200.0,42.7"/>
+<circle class="mean" cx="34.0" cy="98.9" r="2.6"><title>CULTURE, generation 1: mean 2.0</title></circle>
+<circle class="mean" cx="57.7" cy="87.2" r="2.6"><title>CULTURE, generation 2: mean 3.8</title></circle>
+<circle class="mean" cx="81.4" cy="80.6" r="2.6"><title>CULTURE, generation 3: mean 4.8</title></circle>
+<circle class="mean" cx="105.1" cy="68.9" r="2.6"><title>CULTURE, generation 4: mean 6.6</title></circle>
+<circle class="mean" cx="128.9" cy="59.7" r="2.6"><title>CULTURE, generation 5: mean 8.0</title></circle>
+<circle class="mean" cx="152.6" cy="61.0" r="2.6"><title>CULTURE, generation 6: mean 7.8</title></circle>
+<circle class="mean" cx="176.3" cy="53.2" r="2.6"><title>CULTURE, generation 7: mean 9.0</title></circle>
+<circle class="mean" cx="200.0" cy="42.7" r="2.6"><title>CULTURE, generation 8: mean 10.6</title></circle>
+</svg></figure></div>
+  <p class="muted">Every population starts from the same 2 families. Breadth has to be built by gaining families and keeping them.</p>
+</section>
+
+<section>
+  <h2>Rules read from the runs</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Rule</th><th>Comparison</th><th>Mean difference ± standard error</th><th>Result</th></tr></thead>
+    <tbody><tr><td>1. Learning check</td><td>SOLO practised skill minus untrained 0.510</td><td>+0.077 <small>± 0.014</small></td><td><span class="badge pass">Pass</span></td></tr>
+<tr><td>1. Who gets the credit</td><td>SOLO minus DRIFT, practised skill</td><td>+0.001 <small>± 0.022</small></td><td><span class="badge run">Credit: the correctness filter</span></td></tr>
+<tr><td>6. Selection and breadth</td><td>SOLO minus DRIFT, breadth in doublings</td><td>+0.347 <small>± 0.130</small></td><td><span class="badge pass">above</span><br><small>null model: +0.48 to +1.05</small></td></tr>
+<tr><td>6. Selection and similar tasks</td><td>SOLO minus DRIFT, similar-task score</td><td>+0.041 <small>± 0.021</small></td><td><span class="badge run">no difference</span></td></tr>
+<tr><td>Old learning rule</td><td>SOLO-W minus SOLO, practised skill</td><td>-0.037 <small>± 0.019</small></td><td><span class="badge run">no difference</span></td></tr>
+<tr><td>Old learning rule</td><td>SOLO-W minus SOLO, similar-task score</td><td>-0.035 <small>± 0.008</small></td><td><span class="badge fail">below</span></td></tr>
+<tr><td>E, exploratory. DRIFT</td><td>similar-task score minus untrained 0.543<br><small>valid replies only, minus untrained 0.564</small></td><td>+0.047 <small>± 0.017</small><br>+0.028 <small>± 0.017</small></td><td><span class="badge pass">above</span><br><span class="badge run">no difference</span></td></tr>
+<tr><td>E, exploratory. SOLO</td><td>similar-task score minus untrained 0.543<br><small>valid replies only, minus untrained 0.564</small></td><td>+0.088 <small>± 0.007</small><br>+0.068 <small>± 0.008</small></td><td><span class="badge pass">above</span><br><span class="badge pass">above</span></td></tr>
+<tr><td>E, exploratory. SOLO-W</td><td>similar-task score minus untrained 0.543<br><small>valid replies only, minus untrained 0.564</small></td><td>+0.052 <small>± 0.011</small><br>+0.033 <small>± 0.010</small></td><td><span class="badge pass">above</span><br><span class="badge pass">above</span></td></tr>
+<tr><td>E, exploratory. COOP</td><td>similar-task score minus untrained 0.543<br><small>valid replies only, minus untrained 0.564</small></td><td>+0.069 <small>± 0.005</small><br>+0.050 <small>± 0.006</small></td><td><span class="badge pass">above</span><br><span class="badge pass">above</span></td></tr>
+<tr><td>E, exploratory. CULTURE</td><td>similar-task score minus untrained 0.543<br><small>valid replies only, minus untrained 0.564</small></td><td>+0.071 <small>± 0.009</small><br>+0.053 <small>± 0.009</small></td><td><span class="badge pass">above</span><br><span class="badge pass">above</span></td></tr>
+<tr><td>E, exploratory. DRIFT</td><td>new-skill score minus untrained 0.406</td><td>+0.046 <small>± 0.016</small></td><td><span class="badge pass">above</span></td></tr>
+<tr><td>E, exploratory. SOLO</td><td>new-skill score minus untrained 0.406</td><td>+0.061 <small>± 0.009</small></td><td><span class="badge pass">above</span></td></tr>
+<tr><td>E, exploratory. SOLO-W</td><td>new-skill score minus untrained 0.406</td><td>+0.026 <small>± 0.007</small></td><td><span class="badge pass">above</span></td></tr>
+<tr><td>E, exploratory. COOP</td><td>new-skill score minus untrained 0.406</td><td>+0.059 <small>± 0.009</small></td><td><span class="badge pass">above</span></td></tr>
+<tr><td>E, exploratory. CULTURE</td><td>new-skill score minus untrained 0.406</td><td>+0.062 <small>± 0.012</small></td><td><span class="badge pass">above</span></td></tr></tbody></table></div>
+  <p class="muted">"Above" and "below" mean more than 2 standard errors from zero, paired by seed. One test passes by luck about 6% of the time.
+  The rows marked E were added after the smoke test and are exploratory.</p>
+</section>
+
+<section>
+  <h2>Checks before the run, and what they removed</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Check</th><th>Measure</th><th>Result</th><th>Pass rule</th><th>Outcome</th></tr></thead>
+    <tbody><tr><td>0. Null model, free</td><td>largest breadth gap possible between a theory arm and its control</td><td>0.96 doublings</td><td>2 doublings</td><td><span class="badge fail">Score lift untestable</span></td></tr>
+<tr><td>1. Smoke, learning</td><td>score on practised families, temperature 0</td><td>0.750 untrained to 0.984</td><td>up at least 0.05</td><td><span class="badge pass">Pass</span></td></tr>
+<tr><td>1. Smoke, cost</td><td>projected cost of one full run</td><td>$0.17 to $0.21</td><td>at most $0.26</td><td><span class="badge pass">Pass</span></td></tr>
+<tr><td>2. Smoke, keep-all rate</td><td>share of holders who kept the whole harvest, generation 1</td><td>15 of 15 (100%)</td><td>between 5% and 95%</td><td><span class="badge fail">Fail: 3 arms dropped</span></td></tr>
+<tr><td>2. Smoke, vote</td><td>agents barred per generation</td><td>2</td><td>at least 1</td><td><span class="badge pass">Pass</span></td></tr></tbody></table></div>
+  <ul style="margin-top:10px">
+    <li><strong>Score lift from social rules was declared untestable.</strong> Rules 3, 4 and 5 of the design are not read. Similar-task and
+    new-skill scores above are descriptive.</li>
+    <li><strong>Theory 3, self-domestication, was not tested.</strong> The model kept the whole harvest every time it was asked, so there was
+    no variation for selection or a vote to act on. ALPHA, DOMEST and MEDLEY were not run. The prompt was not reworded to force a pass.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Limits</h2>
+  <ul>
+    <li>Who practises what follows repertoire rules written by hand. The null model measures how much of each result those rules explain.</li>
+    <li>One adapter per population. Skill belongs to the population; no claim about an individual can be read from these runs.</li>
+    <li>The learning rule differs from version 3: descendants inherit only what was right. This filter improves a model with no selection.</li>
+    <li>COOP differs from SOLO in three ways at once: two repertoires practised, pay tied to a random partner, parents chosen as pairs.</li>
+    <li>One 1.5B model from one family, 5 seeds, 8 generations, task families written by AI in one style.</li>
+    <li>The code, rules and this page were written by an AI model directed by the author.</li>
+  </ul>
+  <p class="muted" style="margin-top:10px">Cost: $4.31 for the 25 runs and $0.21 for two smoke runs, $4.52 of an $11 limit (own upper estimate).</p>
+</section>
+</main>

@@ -1,0 +1,34 @@
+[
+ {
+  "name": "s4-smoke-SOLO",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "SOLO",
+   "seed": 91,
+   "P": {
+    "G": 4,
+    "test_at": [
+     4
+    ]
+   }
+  }
+ },
+ {
+  "name": "s4-smoke-MEDLEY",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "MEDLEY",
+   "seed": 91,
+   "P": {
+    "G": 4,
+    "test_at": [
+     4
+    ]
+   }
+  }
+ }
+]

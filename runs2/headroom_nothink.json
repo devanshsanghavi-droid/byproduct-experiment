@@ -1,0 +1,207 @@
+{
+ "model": "claude-haiku-5-5",
+ "mock": false,
+ "thinking": "off",
+ "reps": 24,
+ "sets": {
+  "bare": [],
+  "method": [
+   "Before each try, work out what every past result rules out.",
+   "Only try options that fit all past results.",
+   "Change one thing at a time so each result teaches you something.",
+   "Once something works, repeat it exactly."
+  ],
+  "method+laws": [
+   "Before each try, work out what every past result rules out.",
+   "Only try options that fit all past results.",
+   "Once something works, repeat it exactly.",
+   "No preparation uses the same action twice.",
+   "Dry is never the first step."
+  ],
+  "code-expert": [
+   "First try one letter in every position, then the next letter, to count how often each letter appears.",
+   "Then move one letter at a time to find its position.",
+   "Only try options that fit all past results."
+  ],
+  "harmful": [
+   "Always begin with soak, whatever happened before.",
+   "After any failure, change every step at once.",
+   "Past results are unreliable. Trust your first idea."
+  ]
+ },
+ "scores": {
+  "bare": {
+   "near_energy": {
+    "mean": 30.542,
+    "se": 1.985,
+    "n": 24
+   },
+   "near_rate": {
+    "mean": 0.539,
+    "se": 0.022,
+    "n": 24
+   },
+   "near_illegal_tries": {
+    "mean": 1.458,
+    "se": 0.248,
+    "n": 24
+   },
+   "near_invalid": 0,
+   "mid_code": {
+    "mean": 0.429,
+    "se": 0.036,
+    "n": 24
+   },
+   "far_rule": {
+    "mean": 0.667,
+    "se": 0.047,
+    "n": 24
+   },
+   "far_order": {
+    "mean": 1.0,
+    "se": 0.0,
+    "n": 48
+   }
+  },
+  "method": {
+   "near_energy": {
+    "mean": 28.667,
+    "se": 2.285,
+    "n": 24
+   },
+   "near_rate": {
+    "mean": 0.519,
+    "se": 0.025,
+    "n": 24
+   },
+   "near_illegal_tries": {
+    "mean": 1.792,
+    "se": 0.262,
+    "n": 24
+   },
+   "near_invalid": 0,
+   "mid_code": {
+    "mean": 0.412,
+    "se": 0.026,
+    "n": 24
+   },
+   "far_rule": {
+    "mean": 0.724,
+    "se": 0.045,
+    "n": 24
+   },
+   "far_order": {
+    "mean": 1.0,
+    "se": 0.0,
+    "n": 48
+   }
+  },
+  "method+laws": {
+   "near_energy": {
+    "mean": 36.792,
+    "se": 1.915,
+    "n": 24
+   },
+   "near_rate": {
+    "mean": 0.609,
+    "se": 0.021,
+    "n": 24
+   },
+   "near_illegal_tries": {
+    "mean": 0,
+    "se": 0.0,
+    "n": 24
+   },
+   "near_invalid": 0,
+   "mid_code": {
+    "mean": 0.388,
+    "se": 0.026,
+    "n": 24
+   },
+   "far_rule": {
+    "mean": 0.635,
+    "se": 0.042,
+    "n": 24
+   },
+   "far_order": {
+    "mean": 1.0,
+    "se": 0.0,
+    "n": 48
+   }
+  },
+  "code-expert": {
+   "near_energy": {
+    "mean": 29.083,
+    "se": 2.169,
+    "n": 24
+   },
+   "near_rate": {
+    "mean": 0.523,
+    "se": 0.024,
+    "n": 24
+   },
+   "near_illegal_tries": {
+    "mean": 3.333,
+    "se": 0.344,
+    "n": 24
+   },
+   "near_invalid": 0,
+   "mid_code": {
+    "mean": 0.396,
+    "se": 0.032,
+    "n": 24
+   },
+   "far_rule": {
+    "mean": 0.641,
+    "se": 0.034,
+    "n": 24
+   },
+   "far_order": {
+    "mean": 0.979,
+    "se": 0.021,
+    "n": 48
+   }
+  },
+  "harmful": {
+   "near_energy": {
+    "mean": 14.292,
+    "se": 3.661,
+    "n": 24
+   },
+   "near_rate": {
+    "mean": 0.359,
+    "se": 0.041,
+    "n": 24
+   },
+   "near_illegal_tries": {
+    "mean": 1.958,
+    "se": 0.332,
+    "n": 24
+   },
+   "near_invalid": 0,
+   "mid_code": {
+    "mean": 0.254,
+    "se": 0.047,
+    "n": 24
+   },
+   "far_rule": {
+    "mean": 0.661,
+    "se": 0.042,
+    "n": 24
+   },
+   "far_order": {
+    "mean": 0.979,
+    "se": 0.021,
+    "n": 48
+   }
+  }
+ },
+ "usage": {
+  "calls": 4122,
+  "input_tokens": 1661340,
+  "output_tokens": 1024651,
+  "cost_usd": 0.6785,
+  "failures": 0,
+  "parse_fail": 0
+ }
+}

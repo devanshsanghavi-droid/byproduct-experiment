@@ -1,0 +1,285 @@
+{
+ "model": "claude-haiku-5-5",
+ "mock": false,
+ "reps": 24,
+ "seed": 0,
+ "complete": true,
+ "tasks": {
+  "H1": {
+   "turns": 8,
+   "positions": 3,
+   "symbols": 4,
+   "score": "(turns + 1 - turn solved) / turns, 0 if unsolved"
+  },
+  "H2": {
+   "rounds": 4,
+   "parts": 4,
+   "words_per_part": 3,
+   "partner": {
+    "MEM": 2,
+    "TALK": 2,
+    "LORE": 0,
+    "AGG": 0
+   },
+   "reps_per_cell": 12,
+   "score": "mean of sender-role and receiver-role fraction of parts right",
+   "chance": 0.125
+  },
+  "H3": {
+   "probes": 6,
+   "test_triples": 8,
+   "rules": 23,
+   "score": "accuracy",
+   "chance": 0.5
+  }
+ },
+ "H1": {
+  "0": {
+   "mean": 0.0,
+   "sd": 0.0,
+   "n": 24,
+   "solved_rate": 0.0
+  },
+  "1": {
+   "mean": 0.5156,
+   "sd": 0.3364,
+   "n": 24,
+   "solved_rate": 0.75
+  },
+  "2": {
+   "mean": 0.6875,
+   "sd": 0.0824,
+   "n": 24,
+   "solved_rate": 1.0
+  },
+  "3": {
+   "mean": 0.7083,
+   "sd": 0.0952,
+   "n": 24,
+   "solved_rate": 1.0
+  },
+  "4": {
+   "mean": 0.7188,
+   "sd": 0.0845,
+   "n": 24,
+   "solved_rate": 1.0
+  }
+ },
+ "H3": {
+  "0": {
+   "mean": 0.5312,
+   "sd": 0.2309,
+   "n": 24
+  },
+  "1": {
+   "mean": 0.5312,
+   "sd": 0.2339,
+   "n": 24
+  },
+  "2": {
+   "mean": 0.7448,
+   "sd": 0.2402,
+   "n": 24
+  },
+  "3": {
+   "mean": 0.8073,
+   "sd": 0.195,
+   "n": 24
+  },
+  "4": {
+   "mean": 0.8542,
+   "sd": 0.1593,
+   "n": 24
+  }
+ },
+ "H2": {
+  "0,0": {
+   "mean": 0.2917,
+   "sd": 0.1231,
+   "n": 12,
+   "sender_role": 0.0833,
+   "receiver_role": 0.5
+  },
+  "0,1": {
+   "mean": 0.4688,
+   "sd": 0.1319,
+   "n": 12,
+   "sender_role": 0.4375,
+   "receiver_role": 0.5
+  },
+  "0,2": {
+   "mean": 0.5729,
+   "sd": 0.1355,
+   "n": 12,
+   "sender_role": 0.6458,
+   "receiver_role": 0.5
+  },
+  "0,3": {
+   "mean": 0.6875,
+   "sd": 0.1131,
+   "n": 12,
+   "sender_role": 0.875,
+   "receiver_role": 0.5
+  },
+  "0,4": {
+   "mean": 0.75,
+   "sd": 0.0754,
+   "n": 12,
+   "sender_role": 1.0,
+   "receiver_role": 0.5
+  },
+  "1,0": {
+   "mean": 0.4583,
+   "sd": 0.1231,
+   "n": 12,
+   "sender_role": 0.0833,
+   "receiver_role": 0.8333
+  },
+  "1,1": {
+   "mean": 0.8125,
+   "sd": 0.1359,
+   "n": 12,
+   "sender_role": 0.7917,
+   "receiver_role": 0.8333
+  },
+  "1,2": {
+   "mean": 0.9167,
+   "sd": 0.0814,
+   "n": 12,
+   "sender_role": 1.0,
+   "receiver_role": 0.8333
+  },
+  "1,3": {
+   "mean": 0.9062,
+   "sd": 0.0942,
+   "n": 12,
+   "sender_role": 0.9792,
+   "receiver_role": 0.8333
+  },
+  "1,4": {
+   "mean": 0.9167,
+   "sd": 0.0814,
+   "n": 12,
+   "sender_role": 1.0,
+   "receiver_role": 0.8333
+  },
+  "2,0": {
+   "mean": 0.5417,
+   "sd": 0.0615,
+   "n": 12,
+   "sender_role": 0.0833,
+   "receiver_role": 1.0
+  },
+  "2,1": {
+   "mean": 0.9792,
+   "sd": 0.0487,
+   "n": 12,
+   "sender_role": 0.9583,
+   "receiver_role": 1.0
+  },
+  "2,2": {
+   "mean": 1.0,
+   "sd": 0.0,
+   "n": 12,
+   "sender_role": 1.0,
+   "receiver_role": 1.0
+  },
+  "2,3": {
+   "mean": 0.9792,
+   "sd": 0.0487,
+   "n": 12,
+   "sender_role": 0.9583,
+   "receiver_role": 1.0
+  },
+  "2,4": {
+   "mean": 1.0,
+   "sd": 0.0,
+   "n": 12,
+   "sender_role": 1.0,
+   "receiver_role": 1.0
+  },
+  "3,0": {
+   "mean": 0.5417,
+   "sd": 0.0615,
+   "n": 12,
+   "sender_role": 0.0833,
+   "receiver_role": 1.0
+  },
+  "3,1": {
+   "mean": 0.9688,
+   "sd": 0.0565,
+   "n": 12,
+   "sender_role": 0.9375,
+   "receiver_role": 1.0
+  },
+  "3,2": {
+   "mean": 1.0,
+   "sd": 0.0,
+   "n": 12,
+   "sender_role": 1.0,
+   "receiver_role": 1.0
+  },
+  "3,3": {
+   "mean": 0.9792,
+   "sd": 0.0487,
+   "n": 12,
+   "sender_role": 0.9583,
+   "receiver_role": 1.0
+  },
+  "3,4": {
+   "mean": 1.0,
+   "sd": 0.0,
+   "n": 12,
+   "sender_role": 1.0,
+   "receiver_role": 1.0
+  },
+  "4,0": {
+   "mean": 0.5417,
+   "sd": 0.0615,
+   "n": 12,
+   "sender_role": 0.0833,
+   "receiver_role": 1.0
+  },
+  "4,1": {
+   "mean": 1.0,
+   "sd": 0.0,
+   "n": 12,
+   "sender_role": 1.0,
+   "receiver_role": 1.0
+  },
+  "4,2": {
+   "mean": 1.0,
+   "sd": 0.0,
+   "n": 12,
+   "sender_role": 1.0,
+   "receiver_role": 1.0
+  },
+  "4,3": {
+   "mean": 1.0,
+   "sd": 0.0,
+   "n": 12,
+   "sender_role": 1.0,
+   "receiver_role": 1.0
+  },
+  "4,4": {
+   "mean": 1.0,
+   "sd": 0.0,
+   "n": 12,
+   "sender_role": 1.0,
+   "receiver_role": 1.0
+  }
+ },
+ "invalid_replies": {
+  "H1": 0,
+  "H2": 0,
+  "H3": 0
+ },
+ "usage": {
+  "calls": 2705,
+  "input_tokens": 866591,
+  "output_tokens": 561934,
+  "cost_usd": 0.3676,
+  "failures": 0,
+  "parse_fail": 0
+ }
+}

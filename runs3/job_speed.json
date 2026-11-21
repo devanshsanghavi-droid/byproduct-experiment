@@ -1,0 +1,1 @@
+[{"name": "speed", "kind": "speed", "params": {"models": ["Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct"], "lives": 16, "iters": 8}}]

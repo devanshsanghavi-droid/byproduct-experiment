@@ -1,0 +1,4 @@
+[
+ {"name": "speed-05b", "kind": "speed", "params": {"models": ["Qwen/Qwen2.5-0.5B-Instruct"], "lives": 16, "iters": 8}},
+ {"name": "headroom-05b", "kind": "headroom", "params": {"model": "Qwen/Qwen2.5-0.5B-Instruct", "n": 24, "temps": [0.0, 0.7]}}
+]

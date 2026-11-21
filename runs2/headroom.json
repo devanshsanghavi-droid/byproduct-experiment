@@ -1,0 +1,168 @@
+{
+ "model": "claude-haiku-5-5",
+ "mock": false,
+ "reps": 24,
+ "sets": {
+  "bare": [],
+  "method": [
+   "Before each try, work out what every past result rules out.",
+   "Only try options that fit all past results.",
+   "Change one thing at a time so each result teaches you something.",
+   "Once something works, repeat it exactly."
+  ],
+  "method+laws": [
+   "Before each try, work out what every past result rules out.",
+   "Only try options that fit all past results.",
+   "Once something works, repeat it exactly.",
+   "No preparation uses the same action twice.",
+   "Dry is never the first step."
+  ],
+  "harmful": [
+   "Always begin with soak, whatever happened before.",
+   "After any failure, change every step at once.",
+   "Past results are unreliable. Trust your first idea."
+  ]
+ },
+ "scores": {
+  "bare": {
+   "near_energy": {
+    "mean": 35.75,
+    "se": 1.735,
+    "n": 24
+   },
+   "near_rate": {
+    "mean": 0.597,
+    "se": 0.019,
+    "n": 24
+   },
+   "near_illegal_tries": {
+    "mean": 1.583,
+    "se": 0.255,
+    "n": 24
+   },
+   "near_invalid": 0,
+   "mid_code": {
+    "mean": 0.467,
+    "se": 0.021,
+    "n": 24
+   },
+   "far_rule": {
+    "mean": 0.776,
+    "se": 0.06,
+    "n": 24
+   },
+   "far_order": {
+    "mean": 1.0,
+    "se": 0.0,
+    "n": 48
+   }
+  },
+  "method": {
+   "near_energy": {
+    "mean": 32.625,
+    "se": 1.737,
+    "n": 24
+   },
+   "near_rate": {
+    "mean": 0.562,
+    "se": 0.019,
+    "n": 24
+   },
+   "near_illegal_tries": {
+    "mean": 1.833,
+    "se": 0.253,
+    "n": 24
+   },
+   "near_invalid": 0,
+   "mid_code": {
+    "mean": 0.483,
+    "se": 0.029,
+    "n": 24
+   },
+   "far_rule": {
+    "mean": 0.776,
+    "se": 0.052,
+    "n": 24
+   },
+   "far_order": {
+    "mean": 1.0,
+    "se": 0.0,
+    "n": 48
+   }
+  },
+  "method+laws": {
+   "near_energy": {
+    "mean": 39.708,
+    "se": 1.563,
+    "n": 24
+   },
+   "near_rate": {
+    "mean": 0.641,
+    "se": 0.017,
+    "n": 24
+   },
+   "near_illegal_tries": {
+    "mean": 0,
+    "se": 0.0,
+    "n": 24
+   },
+   "near_invalid": 0,
+   "mid_code": {
+    "mean": 0.467,
+    "se": 0.034,
+    "n": 24
+   },
+   "far_rule": {
+    "mean": 0.786,
+    "se": 0.054,
+    "n": 24
+   },
+   "far_order": {
+    "mean": 1.0,
+    "se": 0.0,
+    "n": 48
+   }
+  },
+  "harmful": {
+   "near_energy": {
+    "mean": 34.708,
+    "se": 1.504,
+    "n": 24
+   },
+   "near_rate": {
+    "mean": 0.586,
+    "se": 0.017,
+    "n": 24
+   },
+   "near_illegal_tries": {
+    "mean": 1,
+    "se": 0.209,
+    "n": 24
+   },
+   "near_invalid": 0,
+   "mid_code": {
+    "mean": 0.467,
+    "se": 0.032,
+    "n": 24
+   },
+   "far_rule": {
+    "mean": 0.776,
+    "se": 0.053,
+    "n": 24
+   },
+   "far_order": {
+    "mean": 1.0,
+    "se": 0.0,
+    "n": 48
+   }
+  }
+ },
+ "usage": {
+  "calls": 3196,
+  "input_tokens": 1294033,
+  "output_tokens": 1269060,
+  "cost_usd": 0.7639,
+  "failures": 0,
+  "parse_fail": 0
+ }
+}

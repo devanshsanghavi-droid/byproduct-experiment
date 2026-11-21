@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root { color-scheme: light }
+body { margin: 0; font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif }
+img { max-width: 100% }
+[hidden] { display: none !important }
+</style>
+<title>Breadth Curve Experiment</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+/* Layout: one reading column. Verdict, main table with baseline rows, two curves to scale, then detail tables. Tokens match the earlier pages. */
+:root { --bg:#f6f4ee; --card:#fffdf8; --fg:#1c1b18; --muted:#6a665d; --rule:#dcd7ca; --accent:#1f6f54; --drift:#8a8578;
+  --pass:#1f6f54; --fail:#b0432b; --run:#8a6a12; --passbg:#dcefe6; --failbg:#f6ddd6; --runbg:#f3e9c8; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#151513; --card:#1d1c19; --fg:#ebe8e0; --muted:#a09b90;
+  --rule:#35332e; --accent:#62c49e; --drift:#8f8a7e; --pass:#7fd3b0; --fail:#f09a84; --run:#e2c46a; --passbg:#173428; --failbg:#3b1d16;
+  --runbg:#3a3113; color-scheme: dark } }
+:root[data-theme="dark"] { --bg:#151513; --card:#1d1c19; --fg:#ebe8e0; --muted:#a09b90; --rule:#35332e; --accent:#62c49e;
+  --drift:#8f8a7e; --pass:#7fd3b0; --fail:#f09a84; --run:#e2c46a; --passbg:#173428; --failbg:#3b1d16; --runbg:#3a3113; color-scheme: dark }
+body { background:var(--bg); color:var(--fg); font:15px/1.55 Inter,system-ui,sans-serif; }
+main { max-width:1000px; margin:0 auto; padding-block:28px 56px; padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px)); display:flex; flex-direction:column; gap:30px; }
+h1 { font:600 clamp(20px,3.2vw,27px)/1.25 "Space Grotesk",Inter,sans-serif; margin:0; text-wrap:balance; }
+h2 { font:600 18px/1.3 "Space Grotesk",Inter,sans-serif; margin:0 0 10px; text-wrap:balance; }
+p { margin:0 0 8px; max-width:68ch; } .lede { font-size:16.5px; } .muted,figcaption,small { color:var(--muted); }
+.kicker { font:600 12px/1.3 Inter,sans-serif; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+section { min-width:0; } .scroll + p, .charts + p { margin-top:10px; }
+.scroll { overflow-x:auto; border:1px solid var(--rule); border-radius:10px; background:var(--card); }
+table { border-collapse:collapse; width:100%; font-size:13.5px; font-variant-numeric:tabular-nums; }
+th,td { padding:8px 10px; text-align:left; border-bottom:1px solid var(--rule); vertical-align:top; }
+th { font-weight:600; font-size:12px; color:var(--muted); } tbody tr:last-child td { border-bottom:0; }
+tr.ref td { color:var(--muted); } td:first-child { min-width:150px; } td small { font-size:12px; white-space:nowrap; }
+.badge { display:inline-block; padding:2px 9px; border-radius:99px; font-weight:600; font-size:12px; white-space:nowrap; vertical-align:2px; }
+.badge.fail { color:var(--fail); background:var(--failbg); } .badge.pass { color:var(--pass); background:var(--passbg); }
+.charts { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:14px; }
+figure { margin:0; background:var(--card); border:1px solid var(--rule); border-radius:10px; padding:12px 12px 6px; min-width:0; }
+figcaption { font-size:13px; margin-bottom:6px; font-weight:600; color:var(--fg); } svg { width:100%; height:auto; display:block; }
+.grid { stroke:var(--rule); stroke-width:1; } .chance { stroke:var(--muted); stroke-width:1; stroke-dasharray:3 3; }
+.base { stroke:var(--run); stroke-width:1.4; stroke-dasharray:6 3; } text.base { stroke:none; fill:var(--run); }
+.tick { fill:var(--muted); font:10.5px Inter,sans-serif; } .lab { fill:var(--muted); font:10.5px Inter,sans-serif; }
+tr.ref td small { color:var(--muted); }
+.line { fill:none; stroke:var(--accent); stroke-width:2; } .mean { fill:var(--accent); } .run { fill:var(--drift); }
+ul { margin:0; padding-left:20px; max-width:70ch; } li { margin-bottom:6px; } code { font-size:13px; }
+</style>
+<main>
+<header>
+  <div class="kicker">Byproduct experiment. Follow-up: does breadth of training buy transfer?</div>
+  <h1>All three surviving theories say intelligence was a byproduct. A faithful simulation therefore scores agents only on staying alive and being copied, then measures general ability separately on held-out tests.</h1>
+</header>
+
+<section>
+  <p class="lede">No, by the rule set in advance. With the training budget fixed, the score on 18 task families built on skills the training pool never uses changed by +0.003 for each doubling of the number of families trained on (standard error 0.005). Training at any breadth lifted those families by +0.067 (standard error 0.008) over the untrained model, and more families added nothing further. <span class="badge fail">Pre-set outcome: Flat</span></p>
+  <p>Breadth did help one kind of unseen task: families from the same pool that a run happened not to train on. Their gain over the untrained model grew from +0.031 at 2 families to +0.177 at 32 (+0.035 per doubling, standard error 0.005). This comparison was chosen after seeing the data.</p>
+  <p><strong>Rerun with the rule fixed first:</strong> Confirmed. On 16 pool families that no run trained on, the score rose by +0.024 for each doubling of the number of families trained on (standard error 0.005, 4.6 standard errors above flat), from 0.601 at 2 families to 0.704 at 32; the untrained model scores 0.543. <span class="badge pass">Pre-set outcome: Confirmed, and the near-far split is confirmed</span></p>
+  <p><strong>Two checks added on 2026-11-15:</strong> a second, separate reserved set: +0.026 per doubling (standard error 0.005), pre-set outcome "Replicated, and the split is replicated"; a model twice the size (3B): +0.024 per doubling (standard error 0.005), pre-set outcome "Replicated, and the split is replicated".</p>
+  <p>My reading: breadth buys transfer to tasks that resemble the training set, and none to tasks that need a different skill. General ability and the public test stayed flat.</p>
+  <p class="muted">Setup: Qwen2.5-1.5B, 18 training runs. Each run trained on K one-question task families drawn at random from a pool of 65,
+  with the same budget at every K: 1,200 steps on 9,600 examples of correct answers. The rule was written before the runs:
+  a rising line more than 2 standard errors above flat counts as a curve.</p>
+</section>
+
+<section>
+  <h2>Scores by number of families trained on</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Row</th><th>Held-out families<br><small>18 families, 576 questions, never trained on</small></th>
+<th>Same-pool families not trained on</th><th>Families trained on</th><th>Public test, strict scoring<br><small>11 BIG-Bench Hard tasks</small></th>
+    <th>General ability<br><small>3 original tests</small></th><th>Retention</th></tr></thead>
+    <tbody>
+    <tr class="ref"><td>Chance (random replies)</td><td>0.207</td><td colspan="2">0.221</td><td>0.263</td><td>0.281</td><td>0.000</td></tr>
+<tr class="ref"><td>Untrained model (baseline)</td><td>0.417</td><td colspan="2">0.517</td><td>0.345</td><td>0.330</td><td>0.822</td></tr>
+<tr><td>Trained on 2 families</td><td>0.457 <small>± 0.012</small></td><td>0.544 <small>± 0.015</small></td><td>1.000 <small>± 0.000</small></td><td>0.270 <small>± 0.050</small></td><td>0.313 <small>± 0.013</small></td><td>0.793 <small>± 0.047</small></td></tr>
+<tr><td>Trained on 4 families</td><td>0.500 <small>± 0.031</small></td><td>0.581 <small>± 0.006</small></td><td>0.969 <small>± 0.018</small></td><td>0.290 <small>± 0.008</small></td><td>0.330 <small>± 0.024</small></td><td>0.856 <small>± 0.036</small></td></tr>
+<tr><td>Trained on 8 families</td><td>0.476 <small>± 0.030</small></td><td>0.586 <small>± 0.022</small></td><td>0.979 <small>± 0.005</small></td><td>0.288 <small>± 0.013</small></td><td>0.342 <small>± 0.011</small></td><td>0.863 <small>± 0.013</small></td></tr>
+<tr><td>Trained on 16 families</td><td>0.491 <small>± 0.014</small></td><td>0.626 <small>± 0.018</small></td><td>0.953 <small>± 0.012</small></td><td>0.276 <small>± 0.027</small></td><td>0.347 <small>± 0.008</small></td><td>0.815 <small>± 0.032</small></td></tr>
+<tr><td>Trained on 32 families</td><td>0.499 <small>± 0.015</small></td><td>0.644 <small>± 0.017</small></td><td>0.914 <small>± 0.014</small></td><td>0.287 <small>± 0.009</small></td><td>0.333 <small>± 0.011</small></td><td>0.863 <small>± 0.020</small></td></tr>
+<tr><td>Trained on 64 families</td><td>0.477 <small>± 0.016</small></td><td>0.833 <small>± 0.110</small><br><small>1 family per run</small></td><td>0.871 <small>± 0.006</small></td><td>0.245 <small>± 0.009</small></td><td>0.298 <small>± 0.051</small></td><td>0.915 <small>± 0.010</small></td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">Fraction correct at temperature 0 on the same items in every row. Trained rows are the mean of 3 runs, each with its own
+  random set of families; ± is the standard error across those 3 runs. For the two reference rows the pool score covers all 65 pool families.</p>
+</section>
+
+<section>
+  <h2>The curves</h2>
+  <div class="charts">
+    <figure><figcaption>Held-out families: skills the pool never uses</figcaption><svg viewBox="0 0 350 232" role="img" aria-label="Held-out families: skills the pool never uses against number of families trained on">
+<line class="grid" x1="46" y1="196.0" x2="338" y2="196.0"/>
+<text class="tick" x="40" y="199.5" text-anchor="end">0.2</text>
+<line class="grid" x1="46" y1="153.5" x2="338" y2="153.5"/>
+<text class="tick" x="40" y="157.0" text-anchor="end">0.3</text>
+<line class="grid" x1="46" y1="111.0" x2="338" y2="111.0"/>
+<text class="tick" x="40" y="114.5" text-anchor="end">0.4</text>
+<line class="grid" x1="46" y1="68.5" x2="338" y2="68.5"/>
+<text class="tick" x="40" y="72.0" text-anchor="end">0.5</text>
+<line class="grid" x1="46" y1="26.0" x2="338" y2="26.0"/>
+<text class="tick" x="40" y="29.5" text-anchor="end">0.6</text>
+<text class="tick" x="46.0" y="212" text-anchor="middle">2</text>
+<text class="tick" x="102.8" y="212" text-anchor="middle">4</text>
+<text class="tick" x="159.6" y="212" text-anchor="middle">8</text>
+<text class="tick" x="216.4" y="212" text-anchor="middle">16</text>
+<text class="tick" x="273.2" y="212" text-anchor="middle">32</text>
+<text class="tick" x="330.0" y="212" text-anchor="middle">64</text>
+<text class="tick" x="188.0" y="228" text-anchor="middle">task families trained on</text>
+<line class="base" x1="46" y1="103.9" x2="338" y2="103.9"/>
+<text class="lab base" x="338" y="115.9" text-anchor="end">untrained 0.417</text>
+<line class="chance" x1="46" y1="193.2" x2="338" y2="193.2"/>
+<text class="lab" x="338" y="189.2" text-anchor="end">chance 0.207</text>
+<polyline class="line" points="46.0,86.7 102.8,68.5 159.6,78.6 216.4,72.4 273.2,68.8 330.0,78.3"/>
+<circle class="run" cx="46.0" cy="76.6" r="3"/>
+<circle class="run" cx="46.0" cy="92.1" r="3"/>
+<circle class="run" cx="46.0" cy="91.4" r="3"/>
+<circle class="run" cx="102.8" cy="61.1" r="3"/>
+<circle class="run" cx="102.8" cy="94.3" r="3"/>
+<circle class="run" cx="102.8" cy="50.1" r="3"/>
+<circle class="run" cx="159.6" cy="98.8" r="3"/>
+<circle class="run" cx="159.6" cy="81.8" r="3"/>
+<circle class="run" cx="159.6" cy="55.2" r="3"/>
+<circle class="run" cx="216.4" cy="80.3" r="3"/>
+<circle class="run" cx="216.4" cy="76.6" r="3"/>
+<circle class="run" cx="216.4" cy="60.4" r="3"/>
+<circle class="run" cx="273.2" cy="59.7" r="3"/>
+<circle class="run" cx="273.2" cy="81.0" r="3"/>
+<circle class="run" cx="273.2" cy="65.6" r="3"/>
+<circle class="run" cx="330.0" cy="73.7" r="3"/>
+<circle class="run" cx="330.0" cy="69.2" r="3"/>
+<circle class="run" cx="330.0" cy="92.1" r="3"/>
+<circle class="mean" cx="46.0" cy="86.7" r="4"/>
+<circle class="mean" cx="102.8" cy="68.5" r="4"/>
+<circle class="mean" cx="159.6" cy="78.6" r="4"/>
+<circle class="mean" cx="216.4" cy="72.4" r="4"/>
+<circle class="mean" cx="273.2" cy="68.8" r="4"/>
+<circle class="mean" cx="330.0" cy="78.3" r="4"/>
+</svg></figure>
+    <figure><figcaption>Same-pool families a run did not train on: gain over the untrained model</figcaption><svg viewBox="0 0 350 232" role="img" aria-label="Same-pool families a run did not train on: gain over the untrained model against number of families trained on">
+<line class="grid" x1="46" y1="196.0" x2="338" y2="196.0"/>
+<text class="tick" x="40" y="199.5" text-anchor="end">-0.1</text>
+<line class="grid" x1="46" y1="153.5" x2="338" y2="153.5"/>
+<text class="tick" x="40" y="157.0" text-anchor="end">0.0</text>
+<line class="grid" x1="46" y1="111.0" x2="338" y2="111.0"/>
+<text class="tick" x="40" y="114.5" text-anchor="end">0.1</text>
+<line class="grid" x1="46" y1="68.5" x2="338" y2="68.5"/>
+<text class="tick" x="40" y="72.0" text-anchor="end">0.2</text>
+<line class="grid" x1="46" y1="26.0" x2="338" y2="26.0"/>
+<text class="tick" x="40" y="29.5" text-anchor="end">0.3</text>
+<text class="tick" x="46.0" y="212" text-anchor="middle">2</text>
+<text class="tick" x="102.8" y="212" text-anchor="middle">4</text>
+<text class="tick" x="159.6" y="212" text-anchor="middle">8</text>
+<text class="tick" x="216.4" y="212" text-anchor="middle">16</text>
+<text class="tick" x="273.2" y="212" text-anchor="middle">32</text>
+<text class="tick" x="330.0" y="212" text-anchor="middle">64</text>
+<text class="tick" x="188.0" y="228" text-anchor="middle">task families trained on</text>
+<line class="base" x1="46" y1="153.5" x2="338" y2="153.5"/>
+<text class="lab base" x="338" y="165.5" text-anchor="end">no gain 0.000</text>
+<polyline class="line" points="46.0,140.3 102.8,126.5 159.6,122.4 216.4,102.2 273.2,78.4"/>
+<circle class="run" cx="46.0" cy="127.4" r="3"/>
+<circle class="run" cx="46.0" cy="146.8" r="3"/>
+<circle class="run" cx="46.0" cy="146.8" r="3"/>
+<circle class="run" cx="102.8" cy="134.3" r="3"/>
+<circle class="run" cx="102.8" cy="122.1" r="3"/>
+<circle class="run" cx="102.8" cy="123.0" r="3"/>
+<circle class="run" cx="159.6" cy="134.9" r="3"/>
+<circle class="run" cx="159.6" cy="119.9" r="3"/>
+<circle class="run" cx="159.6" cy="112.5" r="3"/>
+<circle class="run" cx="216.4" cy="115.6" r="3"/>
+<circle class="run" cx="216.4" cy="101.5" r="3"/>
+<circle class="run" cx="216.4" cy="89.5" r="3"/>
+<circle class="run" cx="273.2" cy="68.2" r="3"/>
+<circle class="run" cx="273.2" cy="93.9" r="3"/>
+<circle class="run" cx="273.2" cy="73.0" r="3"/>
+<circle class="mean" cx="46.0" cy="140.3" r="4"/>
+<circle class="mean" cx="102.8" cy="126.5" r="4"/>
+<circle class="mean" cx="159.6" cy="122.4" r="4"/>
+<circle class="mean" cx="216.4" cy="102.2" r="4"/>
+<circle class="mean" cx="273.2" cy="78.4" r="4"/>
+</svg></figure>
+    <figure><figcaption>General ability (3 original tests)</figcaption><svg viewBox="0 0 350 232" role="img" aria-label="General ability (3 original tests) against number of families trained on">
+<line class="grid" x1="46" y1="196.0" x2="338" y2="196.0"/>
+<text class="tick" x="40" y="199.5" text-anchor="end">0.1</text>
+<line class="grid" x1="46" y1="139.3" x2="338" y2="139.3"/>
+<text class="tick" x="40" y="142.8" text-anchor="end">0.2</text>
+<line class="grid" x1="46" y1="82.7" x2="338" y2="82.7"/>
+<text class="tick" x="40" y="86.2" text-anchor="end">0.3</text>
+<line class="grid" x1="46" y1="26.0" x2="338" y2="26.0"/>
+<text class="tick" x="40" y="29.5" text-anchor="end">0.4</text>
+<text class="tick" x="46.0" y="212" text-anchor="middle">2</text>
+<text class="tick" x="102.8" y="212" text-anchor="middle">4</text>
+<text class="tick" x="159.6" y="212" text-anchor="middle">8</text>
+<text class="tick" x="216.4" y="212" text-anchor="middle">16</text>
+<text class="tick" x="273.2" y="212" text-anchor="middle">32</text>
+<text class="tick" x="330.0" y="212" text-anchor="middle">64</text>
+<text class="tick" x="188.0" y="228" text-anchor="middle">task families trained on</text>
+<line class="base" x1="46" y1="66.0" x2="338" y2="66.0"/>
+<text class="lab base" x="338" y="62.0" text-anchor="end">untrained 0.330</text>
+<line class="chance" x1="46" y1="93.4" x2="338" y2="93.4"/>
+<text class="lab" x="338" y="89.4" text-anchor="end">chance 0.281</text>
+<polyline class="line" points="46.0,75.3 102.8,65.4 159.6,59.1 216.4,56.2 273.2,64.0 330.0,83.8"/>
+<circle class="run" cx="46.0" cy="72.1" r="3"/>
+<circle class="run" cx="46.0" cy="65.0" r="3"/>
+<circle class="run" cx="46.0" cy="89.0" r="3"/>
+<circle class="run" cx="102.8" cy="91.7" r="3"/>
+<circle class="run" cx="102.8" cy="56.9" r="3"/>
+<circle class="run" cx="102.8" cy="47.6" r="3"/>
+<circle class="run" cx="159.6" cy="70.9" r="3"/>
+<circle class="run" cx="159.6" cy="51.8" r="3"/>
+<circle class="run" cx="159.6" cy="54.5" r="3"/>
+<circle class="run" cx="216.4" cy="65.7" r="3"/>
+<circle class="run" cx="216.4" cy="52.0" r="3"/>
+<circle class="run" cx="216.4" cy="51.0" r="3"/>
+<circle class="run" cx="273.2" cy="57.7" r="3"/>
+<circle class="run" cx="273.2" cy="76.4" r="3"/>
+<circle class="run" cx="273.2" cy="57.8" r="3"/>
+<circle class="run" cx="330.0" cy="141.1" r="3"/>
+<circle class="run" cx="330.0" cy="46.9" r="3"/>
+<circle class="run" cx="330.0" cy="63.4" r="3"/>
+<circle class="mean" cx="46.0" cy="75.3" r="4"/>
+<circle class="mean" cx="102.8" cy="65.4" r="4"/>
+<circle class="mean" cx="159.6" cy="59.1" r="4"/>
+<circle class="mean" cx="216.4" cy="56.2" r="4"/>
+<circle class="mean" cx="273.2" cy="64.0" r="4"/>
+<circle class="mean" cx="330.0" cy="83.8" r="4"/>
+</svg></figure>
+    <figure><figcaption>Retention (unrelated skills kept)</figcaption><svg viewBox="0 0 350 232" role="img" aria-label="Retention (unrelated skills kept) against number of families trained on">
+<line class="grid" x1="46" y1="196.0" x2="338" y2="196.0"/>
+<text class="tick" x="40" y="199.5" text-anchor="end">0.6</text>
+<line class="grid" x1="46" y1="153.5" x2="338" y2="153.5"/>
+<text class="tick" x="40" y="157.0" text-anchor="end">0.7</text>
+<line class="grid" x1="46" y1="111.0" x2="338" y2="111.0"/>
+<text class="tick" x="40" y="114.5" text-anchor="end">0.8</text>
+<line class="grid" x1="46" y1="68.5" x2="338" y2="68.5"/>
+<text class="tick" x="40" y="72.0" text-anchor="end">0.9</text>
+<line class="grid" x1="46" y1="26.0" x2="338" y2="26.0"/>
+<text class="tick" x="40" y="29.5" text-anchor="end">1.0</text>
+<text class="tick" x="46.0" y="212" text-anchor="middle">2</text>
+<text class="tick" x="102.8" y="212" text-anchor="middle">4</text>
+<text class="tick" x="159.6" y="212" text-anchor="middle">8</text>
+<text class="tick" x="216.4" y="212" text-anchor="middle">16</text>
+<text class="tick" x="273.2" y="212" text-anchor="middle">32</text>
+<text class="tick" x="330.0" y="212" text-anchor="middle">64</text>
+<text class="tick" x="188.0" y="228" text-anchor="middle">task families trained on</text>
+<line class="base" x1="46" y1="101.6" x2="338" y2="101.6"/>
+<text class="lab base" x="338" y="113.6" text-anchor="end">untrained 0.822</text>
+<polyline class="line" points="46.0,114.1 102.8,87.4 159.6,84.2 216.4,104.7 273.2,84.2 330.0,62.2"/>
+<circle class="run" cx="46.0" cy="87.4" r="3"/>
+<circle class="run" cx="46.0" cy="153.5" r="3"/>
+<circle class="run" cx="46.0" cy="101.6" r="3"/>
+<circle class="run" cx="102.8" cy="82.7" r="3"/>
+<circle class="run" cx="102.8" cy="115.7" r="3"/>
+<circle class="run" cx="102.8" cy="63.8" r="3"/>
+<circle class="run" cx="159.6" cy="73.2" r="3"/>
+<circle class="run" cx="159.6" cy="87.4" r="3"/>
+<circle class="run" cx="159.6" cy="92.1" r="3"/>
+<circle class="run" cx="216.4" cy="120.4" r="3"/>
+<circle class="run" cx="216.4" cy="77.9" r="3"/>
+<circle class="run" cx="216.4" cy="115.7" r="3"/>
+<circle class="run" cx="273.2" cy="87.4" r="3"/>
+<circle class="run" cx="273.2" cy="68.5" r="3"/>
+<circle class="run" cx="273.2" cy="96.8" r="3"/>
+<circle class="run" cx="330.0" cy="63.8" r="3"/>
+<circle class="run" cx="330.0" cy="54.3" r="3"/>
+<circle class="run" cx="330.0" cy="68.5" r="3"/>
+<circle class="mean" cx="46.0" cy="114.1" r="4"/>
+<circle class="mean" cx="102.8" cy="87.4" r="4"/>
+<circle class="mean" cx="159.6" cy="84.2" r="4"/>
+<circle class="mean" cx="216.4" cy="104.7" r="4"/>
+<circle class="mean" cx="273.2" cy="84.2" r="4"/>
+<circle class="mean" cx="330.0" cy="62.2" r="4"/>
+</svg></figure>
+  </div>
+  <p class="muted">Grey dots are single runs. Green dots and the line are the mean of 3 runs. The horizontal axis doubles at each step.
+  The vertical axes differ between panels.</p>
+</section>
+
+<section>
+  <h2>Is the line rising?</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Measure</th><th>Change per doubling of families</th><th>Standard error</th><th>Slope ÷ standard error</th>
+    <th>64 families minus 2 families</th><th>Reading</th></tr></thead>
+    <tbody>
+    <tr><td>Held-out families</td><td>+0.0032</td><td>0.0049</td><td>+0.7</td><td>+0.020 <small>± 0.020</small></td><td>flat</td></tr>
+<tr><td>Same-pool families not trained on, all levels</td><td>+0.0478</td><td>0.0120</td><td>+4.0</td><td>+0.289 <small>± 0.111</small></td><td>rises</td></tr>
+<tr><td>Families trained on</td><td>-0.0239</td><td>0.0031</td><td>-7.7</td><td>-0.129 <small>± 0.006</small></td><td>falls</td></tr>
+<tr><td>Public test</td><td>-0.0043</td><td>0.0055</td><td>-0.8</td><td>-0.026 <small>± 0.051</small></td><td>flat</td></tr>
+<tr><td>General ability</td><td>-0.0018</td><td>0.0056</td><td>-0.3</td><td>-0.015 <small>± 0.053</small></td><td>flat</td></tr>
+<tr><td>Retention</td><td>+0.0167</td><td>0.0072</td><td>+2.3</td><td>+0.122 <small>± 0.048</small></td><td>rises</td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">Least-squares line over the 18 trained runs. "Rises" or "falls" needs more than 2 standard errors; anything less reads as flat. The same-pool row includes the 64-family level,
+  where only 1 family per run is left unseen; the next section gives that line without it.</p>
+</section>
+
+<section>
+  <h2>Added after seeing the data: transfer inside the pool</h2>
+  <p>The plan listed "pool families a run did not train on" as a reported score, with no pass rule. Two choices below were made after
+  seeing the results: comparing each run with the untrained model on the same families, and leaving out the 64-family level, where only 1 family per run is left.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Families trained on</th><th>Same-pool families left unseen, per run</th><th>Gain over the untrained model on those families</th></tr></thead>
+    <tbody>
+    <tr><td>2</td><td>63</td><td>+0.031 <small>± 0.015</small></td></tr>
+<tr><td>4</td><td>61</td><td>+0.064 <small>± 0.009</small></td></tr>
+<tr><td>8</td><td>57</td><td>+0.073 <small>± 0.015</small></td></tr>
+<tr><td>16</td><td>49</td><td>+0.121 <small>± 0.018</small></td></tr>
+<tr><td>32</td><td>33</td><td>+0.177 <small>± 0.019</small></td></tr>
+<tr><td>64</td><td>1 <small>left out of the fit</small></td><td>+0.167 <small>± 0.110</small></td></tr>
+    </tbody>
+  </table></div>
+  <p>Line through levels 2 to 32: +0.035 per doubling, standard error 0.005,
+  which is 7.1 standard errors above flat.</p>
+  <p class="muted">Why the two unseen sets may differ: the pool was written in four themes (arithmetic, symbols, lists, logic), so its families share
+  sub-skills, and the writers reported near-duplicates. The held-out set was built on skills the pool was told not to use. This explanation is mine and was not tested.</p>
+</section>
+
+<section>
+  <h2>Rerun with the rule fixed first: reserved families</h2>
+  <p>Confirmed. On 16 pool families that no run trained on, the score rose by +0.024 for each doubling of the number of families trained on (standard error 0.005, 4.6 standard errors above flat), from 0.601 at 2 families to 0.704 at 32; the untrained model scores 0.543. <span class="badge pass">Pre-set outcome: Confirmed, and the near-far split is confirmed</span></p>
+  <p>In the same runs the held-out families, built on skills the pool never uses, changed by +0.003 per doubling (standard error 0.004). The gap between the two scores widened by +0.022 per doubling (standard error 0.005), so the near-far split is confirmed as well.</p>
+  <p class="muted">Design, written into the plan before any rerun result: 16 of the 65 pool families were drawn once by a fixed seed and kept out of
+  every training set. 20 new runs, 4 at each of 2, 4, 8, 16, 32 families, each drew its families from the other 49 with new seeds.
+  Same model and budget. Rule 1: the line of the reserved-family score against the number of families must rise by more than 2 standard errors.
+  Rule 2: the same for the reserved score minus the held-out score, run by run.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Row</th><th>Reserved same-pool families<br><small>16 families, 512 questions, never trained on</small></th><th>Reserved, minus untrained</th>
+    <th>Held-out families<br><small>18 families, 576 questions</small></th><th>Families trained on</th><th>Valid replies on reserved</th></tr></thead>
+    <tbody>
+    <tr class="ref"><td>Chance (random replies)</td><td>0.289</td><td></td><td>0.207</td><td></td><td></td></tr>
+<tr class="ref"><td>Untrained model (baseline)</td><td>0.543 <small>± 0.022 item noise</small></td><td></td><td>0.406</td><td></td><td>0.963</td></tr>
+<tr><td>Trained on 2 families</td><td>0.601 <small>± 0.011</small></td><td>+0.058</td><td>0.478 <small>± 0.018</small></td><td>1.000 <small>± 0.000</small></td><td>0.998</td></tr>
+<tr><td>Trained on 4 families</td><td>0.652 <small>± 0.018</small></td><td>+0.109</td><td>0.489 <small>± 0.004</small></td><td>1.000 <small>± 0.000</small></td><td>0.996</td></tr>
+<tr><td>Trained on 8 families</td><td>0.666 <small>± 0.025</small></td><td>+0.123</td><td>0.484 <small>± 0.020</small></td><td>0.965 <small>± 0.022</small></td><td>1.000</td></tr>
+<tr><td>Trained on 16 families</td><td>0.690 <small>± 0.016</small></td><td>+0.147</td><td>0.481 <small>± 0.004</small></td><td>0.947 <small>± 0.009</small></td><td>0.994</td></tr>
+<tr><td>Trained on 32 families</td><td>0.704 <small>± 0.015</small></td><td>+0.161</td><td>0.497 <small>± 0.015</small></td><td>0.942 <small>± 0.011</small></td><td>0.997</td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">Fraction correct at temperature 0 on the same items in every row. Trained rows are the mean of 4 runs; ± is the standard error across those runs.
+  The untrained row is one model, so its ± is the item-sampling noise of 512 questions.</p>
+  <div class="charts">
+    <figure><figcaption>Rerun: reserved same-pool families</figcaption><svg viewBox="0 0 350 232" role="img" aria-label="Rerun: reserved same-pool families against number of families trained on">
+<line class="grid" x1="46" y1="196.0" x2="338" y2="196.0"/>
+<text class="tick" x="40" y="199.5" text-anchor="end">0.2</text>
+<line class="grid" x1="46" y1="167.7" x2="338" y2="167.7"/>
+<text class="tick" x="40" y="171.2" text-anchor="end">0.3</text>
+<line class="grid" x1="46" y1="139.3" x2="338" y2="139.3"/>
+<text class="tick" x="40" y="142.8" text-anchor="end">0.4</text>
+<line class="grid" x1="46" y1="111.0" x2="338" y2="111.0"/>
+<text class="tick" x="40" y="114.5" text-anchor="end">0.5</text>
+<line class="grid" x1="46" y1="82.7" x2="338" y2="82.7"/>
+<text class="tick" x="40" y="86.2" text-anchor="end">0.6</text>
+<line class="grid" x1="46" y1="54.3" x2="338" y2="54.3"/>
+<text class="tick" x="40" y="57.8" text-anchor="end">0.7</text>
+<line class="grid" x1="46" y1="26.0" x2="338" y2="26.0"/>
+<text class="tick" x="40" y="29.5" text-anchor="end">0.8</text>
+<text class="tick" x="46.0" y="212" text-anchor="middle">2</text>
+<text class="tick" x="117.0" y="212" text-anchor="middle">4</text>
+<text class="tick" x="188.0" y="212" text-anchor="middle">8</text>
+<text class="tick" x="259.0" y="212" text-anchor="middle">16</text>
+<text class="tick" x="330.0" y="212" text-anchor="middle">32</text>
+<text class="tick" x="188.0" y="228" text-anchor="middle">task families trained on</text>
+<line class="base" x1="46" y1="98.8" x2="338" y2="98.8"/>
+<text class="lab base" x="338" y="110.8" text-anchor="end">untrained 0.543</text>
+<line class="chance" x1="46" y1="170.8" x2="338" y2="170.8"/>
+<text class="lab" x="338" y="166.8" text-anchor="end">chance 0.289</text>
+<polyline class="line" points="46.0,82.5 117.0,67.8 188.0,64.0 259.0,57.0 330.0,53.3"/>
+<circle class="run" cx="46.0" cy="80.0" r="3"/>
+<circle class="run" cx="46.0" cy="76.2" r="3"/>
+<circle class="run" cx="46.0" cy="83.3" r="3"/>
+<circle class="run" cx="46.0" cy="90.5" r="3"/>
+<circle class="run" cx="117.0" cy="66.7" r="3"/>
+<circle class="run" cx="117.0" cy="75.6" r="3"/>
+<circle class="run" cx="117.0" cy="53.5" r="3"/>
+<circle class="run" cx="117.0" cy="75.6" r="3"/>
+<circle class="run" cx="188.0" cy="75.6" r="3"/>
+<circle class="run" cx="188.0" cy="57.3" r="3"/>
+<circle class="run" cx="188.0" cy="47.4" r="3"/>
+<circle class="run" cx="188.0" cy="75.6" r="3"/>
+<circle class="run" cx="259.0" cy="56.8" r="3"/>
+<circle class="run" cx="259.0" cy="69.5" r="3"/>
+<circle class="run" cx="259.0" cy="52.9" r="3"/>
+<circle class="run" cx="259.0" cy="49.0" r="3"/>
+<circle class="run" cx="330.0" cy="49.0" r="3"/>
+<circle class="run" cx="330.0" cy="61.8" r="3"/>
+<circle class="run" cx="330.0" cy="43.5" r="3"/>
+<circle class="run" cx="330.0" cy="59.0" r="3"/>
+<circle class="mean" cx="46.0" cy="82.5" r="4"/>
+<circle class="mean" cx="117.0" cy="67.8" r="4"/>
+<circle class="mean" cx="188.0" cy="64.0" r="4"/>
+<circle class="mean" cx="259.0" cy="57.0" r="4"/>
+<circle class="mean" cx="330.0" cy="53.3" r="4"/>
+</svg></figure>
+    <figure><figcaption>Rerun: held-out families (skills the pool never uses)</figcaption><svg viewBox="0 0 350 232" role="img" aria-label="Rerun: held-out families (skills the pool never uses) against number of families trained on">
+<line class="grid" x1="46" y1="196.0" x2="338" y2="196.0"/>
+<text class="tick" x="40" y="199.5" text-anchor="end">0.2</text>
+<line class="grid" x1="46" y1="153.5" x2="338" y2="153.5"/>
+<text class="tick" x="40" y="157.0" text-anchor="end">0.3</text>
+<line class="grid" x1="46" y1="111.0" x2="338" y2="111.0"/>
+<text class="tick" x="40" y="114.5" text-anchor="end">0.4</text>
+<line class="grid" x1="46" y1="68.5" x2="338" y2="68.5"/>
+<text class="tick" x="40" y="72.0" text-anchor="end">0.5</text>
+<line class="grid" x1="46" y1="26.0" x2="338" y2="26.0"/>
+<text class="tick" x="40" y="29.5" text-anchor="end">0.6</text>
+<text class="tick" x="46.0" y="212" text-anchor="middle">2</text>
+<text class="tick" x="117.0" y="212" text-anchor="middle">4</text>
+<text class="tick" x="188.0" y="212" text-anchor="middle">8</text>
+<text class="tick" x="259.0" y="212" text-anchor="middle">16</text>
+<text class="tick" x="330.0" y="212" text-anchor="middle">32</text>
+<text class="tick" x="188.0" y="228" text-anchor="middle">task families trained on</text>
+<line class="base" x1="46" y1="108.4" x2="338" y2="108.4"/>
+<text class="lab base" x="338" y="120.4" text-anchor="end">untrained 0.406</text>
+<line class="chance" x1="46" y1="193.2" x2="338" y2="193.2"/>
+<text class="lab" x="338" y="189.2" text-anchor="end">chance 0.207</text>
+<polyline class="line" points="46.0,77.7 117.0,73.1 188.0,75.5 259.0,76.6 330.0,70.0"/>
+<circle class="run" cx="46.0" cy="81.0" r="3"/>
+<circle class="run" cx="46.0" cy="56.7" r="3"/>
+<circle class="run" cx="46.0" cy="81.0" r="3"/>
+<circle class="run" cx="46.0" cy="92.1" r="3"/>
+<circle class="run" cx="117.0" cy="73.7" r="3"/>
+<circle class="run" cx="117.0" cy="78.1" r="3"/>
+<circle class="run" cx="117.0" cy="70.0" r="3"/>
+<circle class="run" cx="117.0" cy="70.7" r="3"/>
+<circle class="run" cx="188.0" cy="62.6" r="3"/>
+<circle class="run" cx="188.0" cy="81.0" r="3"/>
+<circle class="run" cx="188.0" cy="61.1" r="3"/>
+<circle class="run" cx="188.0" cy="97.3" r="3"/>
+<circle class="run" cx="259.0" cy="77.3" r="3"/>
+<circle class="run" cx="259.0" cy="74.4" r="3"/>
+<circle class="run" cx="259.0" cy="81.0" r="3"/>
+<circle class="run" cx="259.0" cy="73.7" r="3"/>
+<circle class="run" cx="330.0" cy="82.5" r="3"/>
+<circle class="run" cx="330.0" cy="67.0" r="3"/>
+<circle class="run" cx="330.0" cy="53.8" r="3"/>
+<circle class="run" cx="330.0" cy="76.6" r="3"/>
+<circle class="mean" cx="46.0" cy="77.7" r="4"/>
+<circle class="mean" cx="117.0" cy="73.1" r="4"/>
+<circle class="mean" cx="188.0" cy="75.5" r="4"/>
+<circle class="mean" cx="259.0" cy="76.6" r="4"/>
+<circle class="mean" cx="330.0" cy="70.0" r="4"/>
+</svg></figure>
+  </div>
+  <p class="muted">Grey dots are single runs. Green dots and the line are the mean of 4 runs.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Measure</th><th>Change per doubling of families</th><th>Standard error</th><th>Slope ÷ standard error</th><th>Reading</th></tr></thead>
+    <tbody>
+    <tr><td>Reserved same-pool families (rule 1)</td><td>+0.0244</td><td>0.0053</td><td>+4.6</td><td>rises</td></tr>
+<tr><td>Reserved minus held-out, per run (rule 2)</td><td>+0.0216</td><td>0.0053</td><td>+4.1</td><td>rises</td></tr>
+<tr><td>Held-out families</td><td>+0.0028</td><td>0.0041</td><td>+0.7</td><td>flat</td></tr>
+<tr><td>Earlier comparison repeated: gain on non-reserved families not trained on</td><td>+0.0185</td><td>0.0038</td><td>+4.8</td><td>rises</td></tr>
+<tr><td>Families trained on</td><td>-0.0168</td><td>0.0036</td><td>-4.6</td><td>falls</td></tr>
+<tr><td>Valid replies on reserved families</td><td>-0.0004</td><td>0.0007</td><td>-0.6</td><td>flat</td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">Least-squares lines over the 20 rerun runs. 32 families minus 2 families on the reserved score:
+  +0.103 (standard error 0.019). All 20 trained runs minus the untrained model:
+  reserved +0.120 (standard error 0.011), held-out
+  +0.079 (standard error 0.006).</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Reserved family</th><th>Untrained</th><th>2</th><th>4</th><th>8</th><th>16</th><th>32</th><th>Change, untrained to 32</th></tr></thead><tbody><tr><td>nextto</td><td>0.44</td><td>0.52</td><td>0.77</td><td>0.65</td><td>0.86</td><td>0.88</td><td>+0.44</td></tr>
+<tr><td>sort</td><td>0.16</td><td>0.13</td><td>0.23</td><td>0.13</td><td>0.34</td><td>0.52</td><td>+0.36</td></tr>
+<tr><td>swap</td><td>0.06</td><td>0.23</td><td>0.26</td><td>0.34</td><td>0.27</td><td>0.42</td><td>+0.36</td></tr>
+<tr><td>nextsign</td><td>0.69</td><td>0.82</td><td>0.97</td><td>0.97</td><td>0.99</td><td>0.98</td><td>+0.29</td></tr>
+<tr><td>morecuts</td><td>0.69</td><td>0.70</td><td>0.77</td><td>0.80</td><td>0.91</td><td>0.92</td><td>+0.23</td></tr>
+<tr><td>needs</td><td>0.41</td><td>0.70</td><td>0.64</td><td>0.74</td><td>0.59</td><td>0.59</td><td>+0.18</td></tr>
+<tr><td>gap</td><td>0.84</td><td>1.00</td><td>0.92</td><td>1.00</td><td>1.00</td><td>1.00</td><td>+0.16</td></tr>
+<tr><td>sooner</td><td>0.66</td><td>0.71</td><td>0.76</td><td>0.70</td><td>0.73</td><td>0.80</td><td>+0.14</td></tr>
+<tr><td>countif</td><td>0.25</td><td>0.33</td><td>0.33</td><td>0.43</td><td>0.45</td><td>0.38</td><td>+0.13</td></tr>
+<tr><td>path</td><td>0.50</td><td>0.51</td><td>0.68</td><td>0.70</td><td>0.69</td><td>0.62</td><td>+0.12</td></tr>
+<tr><td>notchnum</td><td>0.31</td><td>0.30</td><td>0.37</td><td>0.39</td><td>0.41</td><td>0.42</td><td>+0.11</td></tr>
+<tr><td>onlyin</td><td>0.56</td><td>0.62</td><td>0.66</td><td>0.74</td><td>0.66</td><td>0.62</td><td>+0.05</td></tr>
+<tr><td>verify</td><td>0.50</td><td>0.49</td><td>0.53</td><td>0.50</td><td>0.52</td><td>0.52</td><td>+0.02</td></tr>
+<tr><td>whichsign</td><td>0.97</td><td>0.98</td><td>0.97</td><td>0.99</td><td>1.00</td><td>0.98</td><td>+0.01</td></tr>
+<tr><td>whohas</td><td>1.00</td><td>0.99</td><td>1.00</td><td>0.99</td><td>1.00</td><td>1.00</td><td>+0.00</td></tr>
+<tr><td>beadpair</td><td>0.66</td><td>0.56</td><td>0.57</td><td>0.58</td><td>0.62</td><td>0.63</td><td>-0.02</td></tr></tbody>
+  </table></div>
+  <p class="muted">Reserved families one by one, mean of 4 runs per level. Some have a close relative among the trainable families
+  (nextsign and nextto with neighbor; whichsign with resign); the plan lists this as a known limit.</p>
+</section>
+
+<section>
+<h2>Two checks on the confirmed result: a second reserved set and a larger model</h2>
+<p>The confirmed rerun rested on one set of 16 reserved families and one model size. Each check below changes one of those and nothing else. The rules were written before either was run and are the same two rules as the rerun.</p>
+<p><strong>A, second reserved set.</strong> Replicated. The reserved-family score changed by +0.026 per doubling of the families trained on (standard error 0.005, +5.7 standard errors from flat), from 0.567 at 2 families to 0.682 at 32; untrained 0.484. Held-out families: +0.003 per doubling (standard error 0.005); the gap to the held-out families widened by +0.022 per doubling (standard error 0.005).</p>
+<p><strong>B, model twice the size.</strong> Replicated. The reserved-family score changed by +0.024 per doubling of the families trained on (standard error 0.005, +4.7 standard errors from flat), from 0.696 at 2 families to 0.799 at 32; untrained 0.633. Held-out families: +0.006 per doubling (standard error 0.006); the gap to the held-out families widened by +0.018 per doubling (standard error 0.005).</p>
+<div class="scroll"><table><thead><tr><th>Experiment</th><th>Trained runs</th><th>Chance on reserved</th><th>Untrained</th><th>Trained on 2 families</th><th>Trained on 32 families</th><th>Reserved families: change per doubling (rule 1)</th><th>Held-out families: change per doubling</th><th>Reserved minus held-out: change per doubling (rule 2)</th><th>Pre-set outcome</th></tr></thead><tbody><tr><td>Confirmed rerun: 1.5B model, reserved set 1</td><td>20</td><td>0.289</td><td>0.543</td><td>0.601</td><td>0.704</td><td>+0.024 <small>± 0.005</small><br><small>+4.6 standard errors</small></td><td>+0.003 <small>± 0.004</small></td><td>+0.022 <small>± 0.005</small></td><td><span class="badge pass">Confirmed, and the near-far split is confirmed</span></td></tr>
+<tr><td>A. Second reserved set: 1.5B model, reserved set 2</td><td>20</td><td>0.270</td><td>0.484</td><td>0.567</td><td>0.682</td><td>+0.026 <small>± 0.005</small><br><small>+5.7 standard errors</small></td><td>+0.003 <small>± 0.005</small></td><td>+0.022 <small>± 0.005</small></td><td><span class="badge pass">Replicated, and the split is replicated</span></td></tr>
+<tr><td>B. Larger model: 3B model, reserved set 1</td><td>20</td><td>0.289</td><td>0.633</td><td>0.696</td><td>0.799</td><td>+0.024 <small>± 0.005</small><br><small>+4.7 standard errors</small></td><td>+0.006 <small>± 0.006</small></td><td>+0.018 <small>± 0.005</small></td><td><span class="badge pass">Replicated, and the split is replicated</span></td></tr></tbody></table></div>
+<p class="muted">Fraction correct at temperature 0. ± is the standard error of the fitted slope across runs. Reserved set 2 shares no family with reserved set 1, so the scores of rows 1 and 2 are on different questions and their levels are not comparable; the slopes are.</p>
+<div class="charts">
+<figure><figcaption>A: second reserved set, 1.5B model</figcaption><svg viewBox="0 0 350 232" role="img" aria-label="A: second reserved set, 1.5B model against number of families trained on">
+<line class="grid" x1="46" y1="196.0" x2="338" y2="196.0"/>
+<text class="tick" x="40" y="199.5" text-anchor="end">0.2</text>
+<line class="grid" x1="46" y1="167.7" x2="338" y2="167.7"/>
+<text class="tick" x="40" y="171.2" text-anchor="end">0.3</text>
+<line class="grid" x1="46" y1="139.3" x2="338" y2="139.3"/>
+<text class="tick" x="40" y="142.8" text-anchor="end">0.4</text>
+<line class="grid" x1="46" y1="111.0" x2="338" y2="111.0"/>
+<text class="tick" x="40" y="114.5" text-anchor="end">0.5</text>
+<line class="grid" x1="46" y1="82.7" x2="338" y2="82.7"/>
+<text class="tick" x="40" y="86.2" text-anchor="end">0.6</text>
+<line class="grid" x1="46" y1="54.3" x2="338" y2="54.3"/>
+<text class="tick" x="40" y="57.8" text-anchor="end">0.7</text>
+<line class="grid" x1="46" y1="26.0" x2="338" y2="26.0"/>
+<text class="tick" x="40" y="29.5" text-anchor="end">0.8</text>
+<text class="tick" x="46.0" y="212" text-anchor="middle">2</text>
+<text class="tick" x="117.0" y="212" text-anchor="middle">4</text>
+<text class="tick" x="188.0" y="212" text-anchor="middle">8</text>
+<text class="tick" x="259.0" y="212" text-anchor="middle">16</text>
+<text class="tick" x="330.0" y="212" text-anchor="middle">32</text>
+<text class="tick" x="188.0" y="228" text-anchor="middle">task families trained on</text>
+<line class="base" x1="46" y1="115.4" x2="338" y2="115.4"/>
+<text class="lab base" x="338" y="127.4" text-anchor="end">untrained 0.484</text>
+<line class="chance" x1="46" y1="176.3" x2="338" y2="176.3"/>
+<text class="lab" x="338" y="172.3" text-anchor="end">chance 0.270</text>
+<polyline class="line" points="46.0,91.9 117.0,87.9 188.0,78.5 259.0,79.7 330.0,59.5"/>
+<circle class="run" cx="46.0" cy="83.9" r="3"/>
+<circle class="run" cx="46.0" cy="94.4" r="3"/>
+<circle class="run" cx="46.0" cy="92.2" r="3"/>
+<circle class="run" cx="46.0" cy="97.2" r="3"/>
+<circle class="run" cx="117.0" cy="88.9" r="3"/>
+<circle class="run" cx="117.0" cy="76.7" r="3"/>
+<circle class="run" cx="117.0" cy="102.7" r="3"/>
+<circle class="run" cx="117.0" cy="83.3" r="3"/>
+<circle class="run" cx="188.0" cy="82.2" r="3"/>
+<circle class="run" cx="188.0" cy="77.3" r="3"/>
+<circle class="run" cx="188.0" cy="81.7" r="3"/>
+<circle class="run" cx="188.0" cy="72.8" r="3"/>
+<circle class="run" cx="259.0" cy="71.2" r="3"/>
+<circle class="run" cx="259.0" cy="75.6" r="3"/>
+<circle class="run" cx="259.0" cy="87.2" r="3"/>
+<circle class="run" cx="259.0" cy="85.0" r="3"/>
+<circle class="run" cx="330.0" cy="61.8" r="3"/>
+<circle class="run" cx="330.0" cy="66.7" r="3"/>
+<circle class="run" cx="330.0" cy="58.4" r="3"/>
+<circle class="run" cx="330.0" cy="51.2" r="3"/>
+<circle class="mean" cx="46.0" cy="91.9" r="4"/>
+<circle class="mean" cx="117.0" cy="87.9" r="4"/>
+<circle class="mean" cx="188.0" cy="78.5" r="4"/>
+<circle class="mean" cx="259.0" cy="79.7" r="4"/>
+<circle class="mean" cx="330.0" cy="59.5" r="4"/>
+</svg></figure>
+<figure><figcaption>A: held-out families, 1.5B model</figcaption><svg viewBox="0 0 350 232" role="img" aria-label="A: held-out families, 1.5B model against number of families trained on">
+<line class="grid" x1="46" y1="196.0" x2="338" y2="196.0"/>
+<text class="tick" x="40" y="199.5" text-anchor="end">0.2</text>
+<line class="grid" x1="46" y1="153.5" x2="338" y2="153.5"/>
+<text class="tick" x="40" y="157.0" text-anchor="end">0.3</text>
+<line class="grid" x1="46" y1="111.0" x2="338" y2="111.0"/>
+<text class="tick" x="40" y="114.5" text-anchor="end">0.4</text>
+<line class="grid" x1="46" y1="68.5" x2="338" y2="68.5"/>
+<text class="tick" x="40" y="72.0" text-anchor="end">0.5</text>
+<line class="grid" x1="46" y1="26.0" x2="338" y2="26.0"/>
+<text class="tick" x="40" y="29.5" text-anchor="end">0.6</text>
+<text class="tick" x="46.0" y="212" text-anchor="middle">2</text>
+<text class="tick" x="117.0" y="212" text-anchor="middle">4</text>
+<text class="tick" x="188.0" y="212" text-anchor="middle">8</text>
+<text class="tick" x="259.0" y="212" text-anchor="middle">16</text>
+<text class="tick" x="330.0" y="212" text-anchor="middle">32</text>
+<text class="tick" x="188.0" y="228" text-anchor="middle">task families trained on</text>
+<line class="base" x1="46" y1="105.4" x2="338" y2="105.4"/>
+<text class="lab base" x="338" y="117.4" text-anchor="end">untrained 0.413</text>
+<line class="chance" x1="46" y1="193.2" x2="338" y2="193.2"/>
+<text class="lab" x="338" y="189.2" text-anchor="end">chance 0.207</text>
+<polyline class="line" points="46.0,84.9 117.0,79.6 188.0,84.0 259.0,75.9 330.0,79.4"/>
+<circle class="run" cx="46.0" cy="72.2" r="3"/>
+<circle class="run" cx="46.0" cy="86.9" r="3"/>
+<circle class="run" cx="46.0" cy="78.1" r="3"/>
+<circle class="run" cx="46.0" cy="102.5" r="3"/>
+<circle class="run" cx="117.0" cy="96.5" r="3"/>
+<circle class="run" cx="117.0" cy="49.3" r="3"/>
+<circle class="run" cx="117.0" cy="91.4" r="3"/>
+<circle class="run" cx="117.0" cy="81.0" r="3"/>
+<circle class="run" cx="188.0" cy="75.9" r="3"/>
+<circle class="run" cx="188.0" cy="92.9" r="3"/>
+<circle class="run" cx="188.0" cy="90.6" r="3"/>
+<circle class="run" cx="188.0" cy="76.6" r="3"/>
+<circle class="run" cx="259.0" cy="65.6" r="3"/>
+<circle class="run" cx="259.0" cy="72.9" r="3"/>
+<circle class="run" cx="259.0" cy="82.5" r="3"/>
+<circle class="run" cx="259.0" cy="82.5" r="3"/>
+<circle class="run" cx="330.0" cy="61.9" r="3"/>
+<circle class="run" cx="330.0" cy="84.7" r="3"/>
+<circle class="run" cx="330.0" cy="90.6" r="3"/>
+<circle class="run" cx="330.0" cy="80.3" r="3"/>
+<circle class="mean" cx="46.0" cy="84.9" r="4"/>
+<circle class="mean" cx="117.0" cy="79.6" r="4"/>
+<circle class="mean" cx="188.0" cy="84.0" r="4"/>
+<circle class="mean" cx="259.0" cy="75.9" r="4"/>
+<circle class="mean" cx="330.0" cy="79.4" r="4"/>
+</svg></figure>
+<figure><figcaption>B: reserved set 1, 3B model</figcaption><svg viewBox="0 0 350 232" role="img" aria-label="B: reserved set 1, 3B model against number of families trained on">
+<line class="grid" x1="46" y1="196.0" x2="338" y2="196.0"/>
+<text class="tick" x="40" y="199.5" text-anchor="end">0.2</text>
+<line class="grid" x1="46" y1="171.7" x2="338" y2="171.7"/>
+<text class="tick" x="40" y="175.2" text-anchor="end">0.3</text>
+<line class="grid" x1="46" y1="147.4" x2="338" y2="147.4"/>
+<text class="tick" x="40" y="150.9" text-anchor="end">0.4</text>
+<line class="grid" x1="46" y1="123.1" x2="338" y2="123.1"/>
+<text class="tick" x="40" y="126.6" text-anchor="end">0.5</text>
+<line class="grid" x1="46" y1="98.9" x2="338" y2="98.9"/>
+<text class="tick" x="40" y="102.4" text-anchor="end">0.6</text>
+<line class="grid" x1="46" y1="74.6" x2="338" y2="74.6"/>
+<text class="tick" x="40" y="78.1" text-anchor="end">0.7</text>
+<line class="grid" x1="46" y1="50.3" x2="338" y2="50.3"/>
+<text class="tick" x="40" y="53.8" text-anchor="end">0.8</text>
+<line class="grid" x1="46" y1="26.0" x2="338" y2="26.0"/>
+<text class="tick" x="40" y="29.5" text-anchor="end">0.9</text>
+<text class="tick" x="46.0" y="212" text-anchor="middle">2</text>
+<text class="tick" x="117.0" y="212" text-anchor="middle">4</text>
+<text class="tick" x="188.0" y="212" text-anchor="middle">8</text>
+<text class="tick" x="259.0" y="212" text-anchor="middle">16</text>
+<text class="tick" x="330.0" y="212" text-anchor="middle">32</text>
+<text class="tick" x="188.0" y="228" text-anchor="middle">task families trained on</text>
+<line class="base" x1="46" y1="90.9" x2="338" y2="90.9"/>
+<text class="lab base" x="338" y="102.9" text-anchor="end">untrained 0.633</text>
+<line class="chance" x1="46" y1="174.4" x2="338" y2="174.4"/>
+<text class="lab" x="338" y="170.4" text-anchor="end">chance 0.289</text>
+<polyline class="line" points="46.0,75.5 117.0,63.6 188.0,61.2 259.0,55.0 330.0,50.6"/>
+<circle class="run" cx="46.0" cy="70.0" r="3"/>
+<circle class="run" cx="46.0" cy="76.7" r="3"/>
+<circle class="run" cx="46.0" cy="87.1" r="3"/>
+<circle class="run" cx="46.0" cy="68.1" r="3"/>
+<circle class="run" cx="117.0" cy="63.4" r="3"/>
+<circle class="run" cx="117.0" cy="68.1" r="3"/>
+<circle class="run" cx="117.0" cy="51.5" r="3"/>
+<circle class="run" cx="117.0" cy="71.4" r="3"/>
+<circle class="run" cx="188.0" cy="62.9" r="3"/>
+<circle class="run" cx="188.0" cy="54.9" r="3"/>
+<circle class="run" cx="188.0" cy="52.0" r="3"/>
+<circle class="run" cx="188.0" cy="75.2" r="3"/>
+<circle class="run" cx="259.0" cy="54.9" r="3"/>
+<circle class="run" cx="259.0" cy="51.5" r="3"/>
+<circle class="run" cx="259.0" cy="52.9" r="3"/>
+<circle class="run" cx="259.0" cy="60.5" r="3"/>
+<circle class="run" cx="330.0" cy="44.9" r="3"/>
+<circle class="run" cx="330.0" cy="46.3" r="3"/>
+<circle class="run" cx="330.0" cy="48.7" r="3"/>
+<circle class="run" cx="330.0" cy="62.4" r="3"/>
+<circle class="mean" cx="46.0" cy="75.5" r="4"/>
+<circle class="mean" cx="117.0" cy="63.6" r="4"/>
+<circle class="mean" cx="188.0" cy="61.2" r="4"/>
+<circle class="mean" cx="259.0" cy="55.0" r="4"/>
+<circle class="mean" cx="330.0" cy="50.6" r="4"/>
+</svg></figure>
+<figure><figcaption>B: held-out families, 3B model</figcaption><svg viewBox="0 0 350 232" role="img" aria-label="B: held-out families, 3B model against number of families trained on">
+<line class="grid" x1="46" y1="196.0" x2="338" y2="196.0"/>
+<text class="tick" x="40" y="199.5" text-anchor="end">0.2</text>
+<line class="grid" x1="46" y1="162.0" x2="338" y2="162.0"/>
+<text class="tick" x="40" y="165.5" text-anchor="end">0.3</text>
+<line class="grid" x1="46" y1="128.0" x2="338" y2="128.0"/>
+<text class="tick" x="40" y="131.5" text-anchor="end">0.4</text>
+<line class="grid" x1="46" y1="94.0" x2="338" y2="94.0"/>
+<text class="tick" x="40" y="97.5" text-anchor="end">0.5</text>
+<line class="grid" x1="46" y1="60.0" x2="338" y2="60.0"/>
+<text class="tick" x="40" y="63.5" text-anchor="end">0.6</text>
+<line class="grid" x1="46" y1="26.0" x2="338" y2="26.0"/>
+<text class="tick" x="40" y="29.5" text-anchor="end">0.7</text>
+<text class="tick" x="46.0" y="212" text-anchor="middle">2</text>
+<text class="tick" x="117.0" y="212" text-anchor="middle">4</text>
+<text class="tick" x="188.0" y="212" text-anchor="middle">8</text>
+<text class="tick" x="259.0" y="212" text-anchor="middle">16</text>
+<text class="tick" x="330.0" y="212" text-anchor="middle">32</text>
+<text class="tick" x="188.0" y="228" text-anchor="middle">task families trained on</text>
+<line class="base" x1="46" y1="86.9" x2="338" y2="86.9"/>
+<text class="lab base" x="338" y="98.9" text-anchor="end">untrained 0.521</text>
+<line class="chance" x1="46" y1="193.8" x2="338" y2="193.8"/>
+<text class="lab" x="338" y="189.8" text-anchor="end">chance 0.207</text>
+<polyline class="line" points="46.0,82.2 117.0,71.6 188.0,63.9 259.0,77.8 330.0,68.8"/>
+<circle class="run" cx="46.0" cy="70.4" r="3"/>
+<circle class="run" cx="46.0" cy="97.5" r="3"/>
+<circle class="run" cx="46.0" cy="87.5" r="3"/>
+<circle class="run" cx="46.0" cy="73.3" r="3"/>
+<circle class="run" cx="117.0" cy="65.7" r="3"/>
+<circle class="run" cx="117.0" cy="72.2" r="3"/>
+<circle class="run" cx="117.0" cy="56.8" r="3"/>
+<circle class="run" cx="117.0" cy="91.7" r="3"/>
+<circle class="run" cx="188.0" cy="49.2" r="3"/>
+<circle class="run" cx="188.0" cy="60.3" r="3"/>
+<circle class="run" cx="188.0" cy="68.6" r="3"/>
+<circle class="run" cx="188.0" cy="77.5" r="3"/>
+<circle class="run" cx="259.0" cy="63.9" r="3"/>
+<circle class="run" cx="259.0" cy="88.1" r="3"/>
+<circle class="run" cx="259.0" cy="68.6" r="3"/>
+<circle class="run" cx="259.0" cy="90.5" r="3"/>
+<circle class="run" cx="330.0" cy="73.9" r="3"/>
+<circle class="run" cx="330.0" cy="59.2" r="3"/>
+<circle class="run" cx="330.0" cy="66.3" r="3"/>
+<circle class="run" cx="330.0" cy="75.7" r="3"/>
+<circle class="mean" cx="46.0" cy="82.2" r="4"/>
+<circle class="mean" cx="117.0" cy="71.6" r="4"/>
+<circle class="mean" cx="188.0" cy="63.9" r="4"/>
+<circle class="mean" cx="259.0" cy="77.8" r="4"/>
+<circle class="mean" cx="330.0" cy="68.8" r="4"/>
+</svg></figure>
+</div><p class="muted">Grey dots are single runs. Green dots and the line are the level means. The vertical axes differ between panels.</p>
+<p><strong>A, level by level.</strong> Reserved set 2: begins, bigger, count, everyother, first, fuse, handoff, liar, minmax, pick, queue, round, syllog, topitem, trips, twostep.</p>
+<div class="scroll"><table><thead><tr><th>Row</th><th>Reserved families<br><small>16 families, 512 questions, never trained on</small></th><th>Reserved, minus untrained</th><th>Held-out families<br><small>18 families, 576 questions</small></th><th>Families trained on</th><th>Valid replies on reserved</th></tr></thead><tbody><tr class="ref"><td>Chance (random replies)</td><td>0.270</td><td></td><td>0.207</td><td></td><td></td></tr>
+<tr class="ref"><td>Untrained model (baseline)</td><td>0.484 <small>± 0.022 item noise</small></td><td></td><td>0.413</td><td></td><td>0.967</td></tr>
+<tr><td>Trained on 2 families <small>(4 runs)</small></td><td>0.567 <small>± 0.010</small></td><td>+0.083</td><td>0.461 <small>± 0.015</small></td><td>1.000 <small>± 0.000</small></td><td>0.995</td></tr>
+<tr><td>Trained on 4 families <small>(4 runs)</small></td><td>0.582 <small>± 0.020</small></td><td>+0.097</td><td>0.474 <small>± 0.025</small></td><td>0.992 <small>± 0.008</small></td><td>0.997</td></tr>
+<tr><td>Trained on 8 families <small>(4 runs)</small></td><td>0.615 <small>± 0.008</small></td><td>+0.130</td><td>0.464 <small>± 0.011</small></td><td>0.973 <small>± 0.013</small></td><td>0.997</td></tr>
+<tr><td>Trained on 16 families <small>(4 runs)</small></td><td>0.610 <small>± 0.013</small></td><td>+0.126</td><td>0.483 <small>± 0.010</small></td><td>0.945 <small>± 0.007</small></td><td>0.990</td></tr>
+<tr><td>Trained on 32 families <small>(4 runs)</small></td><td>0.682 <small>± 0.011</small></td><td>+0.197</td><td>0.474 <small>± 0.015</small></td><td>0.878 <small>± 0.012</small></td><td>0.996</td></tr></tbody></table></div>
+<div class="scroll"><table><thead><tr><th>Reserved family</th><th>Untrained</th><th>2</th><th>4</th><th>8</th><th>16</th><th>32</th><th>Change, untrained to 32</th></tr></thead><tbody><tr><td>pick</td><td>0.47</td><td>0.59</td><td>0.62</td><td>0.74</td><td>0.82</td><td>0.93</td><td>+0.46</td></tr>
+<tr><td>topitem</td><td>0.44</td><td>0.58</td><td>0.54</td><td>0.62</td><td>0.66</td><td>0.88</td><td>+0.45</td></tr>
+<tr><td>everyother</td><td>0.09</td><td>0.17</td><td>0.12</td><td>0.19</td><td>0.19</td><td>0.45</td><td>+0.36</td></tr>
+<tr><td>first</td><td>0.09</td><td>0.36</td><td>0.34</td><td>0.36</td><td>0.39</td><td>0.44</td><td>+0.34</td></tr>
+<tr><td>queue</td><td>0.31</td><td>0.45</td><td>0.54</td><td>0.70</td><td>0.62</td><td>0.63</td><td>+0.32</td></tr>
+<tr><td>twostep</td><td>0.59</td><td>0.70</td><td>0.80</td><td>0.88</td><td>0.80</td><td>0.91</td><td>+0.32</td></tr>
+<tr><td>bigger</td><td>0.31</td><td>0.55</td><td>0.42</td><td>0.49</td><td>0.40</td><td>0.58</td><td>+0.27</td></tr>
+<tr><td>handoff</td><td>0.66</td><td>0.62</td><td>0.82</td><td>0.82</td><td>0.77</td><td>0.85</td><td>+0.20</td></tr>
+<tr><td>begins</td><td>0.47</td><td>0.53</td><td>0.53</td><td>0.62</td><td>0.69</td><td>0.65</td><td>+0.18</td></tr>
+<tr><td>syllog</td><td>0.62</td><td>0.77</td><td>0.73</td><td>0.77</td><td>0.80</td><td>0.78</td><td>+0.16</td></tr>
+<tr><td>count</td><td>0.72</td><td>0.78</td><td>0.77</td><td>0.81</td><td>0.81</td><td>0.84</td><td>+0.12</td></tr>
+<tr><td>liar</td><td>0.50</td><td>0.58</td><td>0.60</td><td>0.49</td><td>0.55</td><td>0.62</td><td>+0.12</td></tr>
+<tr><td>round</td><td>0.97</td><td>0.99</td><td>0.99</td><td>1.00</td><td>0.98</td><td>1.00</td><td>+0.03</td></tr>
+<tr><td>fuse</td><td>0.03</td><td>0.02</td><td>0.05</td><td>0.02</td><td>0.02</td><td>0.02</td><td>-0.02</td></tr>
+<tr><td>minmax</td><td>0.59</td><td>0.60</td><td>0.62</td><td>0.55</td><td>0.55</td><td>0.58</td><td>-0.02</td></tr>
+<tr><td>trips</td><td>0.88</td><td>0.80</td><td>0.79</td><td>0.77</td><td>0.71</td><td>0.74</td><td>-0.13</td></tr></tbody></table></div>
+<p><strong>B, level by level.</strong> Same families, seeds and questions as the confirmed rerun; only the model changed.</p>
+<div class="scroll"><table><thead><tr><th>Row</th><th>Reserved families<br><small>16 families, 512 questions, never trained on</small></th><th>Reserved, minus untrained</th><th>Held-out families<br><small>18 families, 576 questions</small></th><th>Families trained on</th><th>Valid replies on reserved</th></tr></thead><tbody><tr class="ref"><td>Chance (random replies)</td><td>0.289</td><td></td><td>0.207</td><td></td><td></td></tr>
+<tr class="ref"><td>Untrained model (baseline)</td><td>0.633 <small>± 0.021 item noise</small></td><td></td><td>0.521</td><td></td><td>0.996</td></tr>
+<tr><td>Trained on 2 families <small>(4 runs)</small></td><td>0.696 <small>± 0.018</small></td><td>+0.064</td><td>0.535 <small>± 0.019</small></td><td>1.000 <small>± 0.000</small></td><td>0.999</td></tr>
+<tr><td>Trained on 4 families <small>(4 runs)</small></td><td>0.745 <small>± 0.018</small></td><td>+0.112</td><td>0.566 <small>± 0.022</small></td><td>1.000 <small>± 0.000</small></td><td>0.998</td></tr>
+<tr><td>Trained on 8 families <small>(4 runs)</small></td><td>0.755 <small>± 0.021</small></td><td>+0.122</td><td>0.589 <small>± 0.018</small></td><td>0.984 <small>± 0.009</small></td><td>0.999</td></tr>
+<tr><td>Trained on 16 families <small>(4 runs)</small></td><td>0.781 <small>± 0.008</small></td><td>+0.148</td><td>0.548 <small>± 0.020</small></td><td>0.945 <small>± 0.021</small></td><td>0.997</td></tr>
+<tr><td>Trained on 32 families <small>(4 runs)</small></td><td>0.799 <small>± 0.017</small></td><td>+0.166</td><td>0.574 <small>± 0.011</small></td><td>0.945 <small>± 0.005</small></td><td>0.999</td></tr></tbody></table></div>
+<p class="muted"><strong>Deviation from the written plan.</strong> 14 of the 20 trained 3B runs first stopped with a GPU out-of-memory error. The plan said failed runs are not replaced. They were run again with the same families, seeds and settings, because the failures followed prompt length and would have left mostly 2-family runs. In those 14 runs each 8-example training step went through the model as two groups of 4 with the gradients summed, which is the same gradient up to rounding. The other 6 trained runs used a single pass. The change was written into the plan before any score of this check was read.</p>
+<p class="muted">Each 3B run against its 1.5B twin trained on the same families (20 pairs): reserved +0.093 (standard error 0.007), held-out +0.077 (standard error 0.010). The reserved difference changed by -0.000 per doubling (standard error 0.005). Untrained 3B minus untrained 1.5B: reserved +0.090, held-out +0.115.</p>
+<div class="scroll"><table><thead><tr><th>Reserved family</th><th>Untrained</th><th>2</th><th>4</th><th>8</th><th>16</th><th>32</th><th>Change, untrained to 32</th></tr></thead><tbody><tr><td>sort</td><td>0.34</td><td>0.50</td><td>0.68</td><td>0.66</td><td>0.68</td><td>0.83</td><td>+0.48</td></tr>
+<tr><td>nextto</td><td>0.53</td><td>0.60</td><td>0.84</td><td>0.88</td><td>0.93</td><td>0.88</td><td>+0.34</td></tr>
+<tr><td>onlyin</td><td>0.56</td><td>0.69</td><td>0.94</td><td>0.87</td><td>0.89</td><td>0.91</td><td>+0.34</td></tr>
+<tr><td>needs</td><td>0.41</td><td>0.50</td><td>0.53</td><td>0.62</td><td>0.66</td><td>0.66</td><td>+0.26</td></tr>
+<tr><td>swap</td><td>0.22</td><td>0.26</td><td>0.31</td><td>0.32</td><td>0.39</td><td>0.48</td><td>+0.26</td></tr>
+<tr><td>path</td><td>0.53</td><td>0.77</td><td>0.77</td><td>0.84</td><td>0.82</td><td>0.77</td><td>+0.24</td></tr>
+<tr><td>morecuts</td><td>0.78</td><td>0.93</td><td>0.94</td><td>1.00</td><td>0.98</td><td>1.00</td><td>+0.22</td></tr>
+<tr><td>beadpair</td><td>0.66</td><td>0.70</td><td>0.70</td><td>0.70</td><td>0.80</td><td>0.80</td><td>+0.15</td></tr>
+<tr><td>verify</td><td>0.47</td><td>0.60</td><td>0.58</td><td>0.60</td><td>0.60</td><td>0.60</td><td>+0.13</td></tr>
+<tr><td>notchnum</td><td>0.31</td><td>0.34</td><td>0.30</td><td>0.34</td><td>0.34</td><td>0.42</td><td>+0.11</td></tr>
+<tr><td>nextsign</td><td>0.94</td><td>0.94</td><td>0.98</td><td>1.00</td><td>0.98</td><td>1.00</td><td>+0.06</td></tr>
+<tr><td>gap</td><td>0.97</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>+0.03</td></tr>
+<tr><td>whohas</td><td>0.97</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>+0.03</td></tr>
+<tr><td>whichsign</td><td>0.97</td><td>1.00</td><td>0.98</td><td>0.98</td><td>0.98</td><td>0.98</td><td>+0.02</td></tr>
+<tr><td>sooner</td><td>0.94</td><td>0.84</td><td>0.88</td><td>0.88</td><td>0.91</td><td>0.93</td><td>-0.01</td></tr>
+<tr><td>countif</td><td>0.53</td><td>0.47</td><td>0.50</td><td>0.39</td><td>0.51</td><td>0.52</td><td>-0.02</td></tr></tbody></table></div>
+</section>
+
+<section>
+  <h2>All trained runs against the untrained model</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Measure</th><th>Mean of 18 trained runs minus untrained</th><th>Standard error across runs</th></tr></thead>
+    <tbody>
+    <tr><td>Held-out families</td><td>+0.067</td><td>0.008</td></tr>
+<tr><td>Same-pool families not trained on</td><td>+0.118</td><td>0.028</td></tr>
+<tr><td>Public test, strict scoring</td><td>-0.069</td><td>0.009</td></tr>
+<tr><td>General ability</td><td>-0.002</td><td>0.009</td></tr>
+<tr><td>Retention</td><td>+0.028</td><td>0.014</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>The public-test drop is a scoring artefact</h2>
+  <p>Strict scoring counts a multiple-choice reply as right only if it names the option letter. Trained models often reply with the option's text.
+  I recorded raw replies for four models and rescored them, also accepting a reply equal to the text of exactly one option.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Model</th><th>Strict score</th><th>Rescored</th><th>Multiple-choice replies that are a letter</th><th>That are an option's text</th></tr></thead>
+    <tbody>
+    <tr class="ref"><td>Untrained model</td><td>0.345</td><td>0.370</td><td>92%</td><td>8%</td></tr>
+<tr><td>Trained on 2 families (run 1)</td><td>0.311</td><td>0.391</td><td>30%</td><td>35%</td></tr>
+<tr><td>Trained on 16 families (run 2)</td><td>0.232</td><td>0.368</td><td>31%</td><td>63%</td></tr>
+<tr><td>Trained on 64 families (run 2)</td><td>0.234</td><td>0.339</td><td>41%</td><td>47%</td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">440 items per model, so one score has a standard error of about 0.023. After rescoring, no model differs from the untrained one by 2 standard errors.
+  Only 4 of the 19 models were rescored, so the per-level public-test numbers above remain strict.</p>
+</section>
+
+<section>
+  <h2>Held-out families one by one</h2>
+  <div class="scroll"><table><thead><tr><th>Family</th><th>Untrained</th><th>2</th><th>4</th><th>8</th><th>16</th><th>32</th><th>64</th><th>Change, untrained to 64</th></tr></thead><tbody><tr><td>reverse</td><td>0.09</td><td>0.62</td><td>0.64</td><td>0.84</td><td>0.81</td><td>0.86</td><td>0.82</td><td>+0.73</td></tr>
+<tr><td>taboo</td><td>0.56</td><td>0.50</td><td>0.90</td><td>0.74</td><td>0.77</td><td>0.92</td><td>0.91</td><td>+0.34</td></tr>
+<tr><td>fromend</td><td>0.25</td><td>0.08</td><td>0.33</td><td>0.19</td><td>0.36</td><td>0.32</td><td>0.48</td><td>+0.23</td></tr>
+<tr><td>rank</td><td>0.62</td><td>0.61</td><td>0.75</td><td>0.69</td><td>0.77</td><td>0.80</td><td>0.78</td><td>+0.16</td></tr>
+<tr><td>longest</td><td>0.28</td><td>0.40</td><td>0.32</td><td>0.33</td><td>0.31</td><td>0.30</td><td>0.39</td><td>+0.10</td></tr>
+<tr><td>majority</td><td>0.84</td><td>0.95</td><td>0.94</td><td>0.94</td><td>0.96</td><td>0.88</td><td>0.92</td><td>+0.07</td></tr>
+<tr><td>parity</td><td>0.41</td><td>0.41</td><td>0.51</td><td>0.42</td><td>0.47</td><td>0.41</td><td>0.46</td><td>+0.05</td></tr>
+<tr><td>rule</td><td>0.44</td><td>0.44</td><td>0.35</td><td>0.30</td><td>0.41</td><td>0.48</td><td>0.49</td><td>+0.05</td></tr>
+<tr><td>between</td><td>0.69</td><td>0.80</td><td>0.76</td><td>0.79</td><td>0.79</td><td>0.67</td><td>0.73</td><td>+0.04</td></tr>
+<tr><td>kin</td><td>0.47</td><td>0.46</td><td>0.46</td><td>0.47</td><td>0.46</td><td>0.45</td><td>0.50</td><td>+0.03</td></tr>
+<tr><td>change</td><td>0.16</td><td>0.32</td><td>0.12</td><td>0.12</td><td>0.15</td><td>0.15</td><td>0.18</td><td>+0.02</td></tr>
+<tr><td>days</td><td>0.38</td><td>0.38</td><td>0.44</td><td>0.57</td><td>0.38</td><td>0.50</td><td>0.38</td><td>+0.00</td></tr>
+<tr><td>elim</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>+0.00</td></tr>
+<tr><td>overlap</td><td>0.00</td><td>0.00</td><td>0.05</td><td>0.00</td><td>0.03</td><td>0.00</td><td>0.00</td><td>+0.00</td></tr>
+<tr><td>rotate</td><td>0.03</td><td>0.14</td><td>0.31</td><td>0.17</td><td>0.19</td><td>0.39</td><td>0.00</td><td>-0.03</td></tr>
+<tr><td>ring</td><td>0.25</td><td>0.22</td><td>0.19</td><td>0.22</td><td>0.24</td><td>0.21</td><td>0.21</td><td>-0.04</td></tr>
+<tr><td>toll</td><td>0.19</td><td>0.25</td><td>0.20</td><td>0.14</td><td>0.14</td><td>0.15</td><td>0.09</td><td>-0.09</td></tr>
+<tr><td>dedup</td><td>0.84</td><td>0.66</td><td>0.73</td><td>0.65</td><td>0.60</td><td>0.52</td><td>0.26</td><td>-0.58</td></tr></tbody></table></div>
+  <p class="muted">Columns are the number of families trained on; values are means of 3 runs, 32 questions per family. Sorted by change.</p>
+</section>
+
+<section>
+  <h2>Public test task by task</h2>
+  <div class="scroll"><table><thead><tr><th>Family</th><th>Untrained</th><th>2</th><th>4</th><th>8</th><th>16</th><th>32</th><th>64</th><th>Change, untrained to 64</th></tr></thead><tbody><tr><td>web of lies</td><td>0.00</td><td>0.07</td><td>0.06</td><td>0.07</td><td>0.11</td><td>0.38</td><td>0.12</td><td>+0.12</td></tr>
+<tr><td>object counting</td><td>0.33</td><td>0.33</td><td>0.38</td><td>0.47</td><td>0.43</td><td>0.38</td><td>0.39</td><td>+0.07</td></tr>
+<tr><td>multistep arithmetic two</td><td>0.03</td><td>0.03</td><td>0.03</td><td>0.05</td><td>0.07</td><td>0.04</td><td>0.05</td><td>+0.03</td></tr>
+<tr><td>boolean expressions</td><td>0.72</td><td>0.80</td><td>0.77</td><td>0.80</td><td>0.73</td><td>0.75</td><td>0.74</td><td>+0.02</td></tr>
+<tr><td>logical deduction three objects</td><td>0.50</td><td>0.30</td><td>0.47</td><td>0.47</td><td>0.41</td><td>0.48</td><td>0.49</td><td>-0.01</td></tr>
+<tr><td>navigate</td><td>0.57</td><td>0.58</td><td>0.55</td><td>0.52</td><td>0.57</td><td>0.54</td><td>0.55</td><td>-0.02</td></tr>
+<tr><td>temporal sequences</td><td>0.23</td><td>0.09</td><td>0.15</td><td>0.10</td><td>0.21</td><td>0.21</td><td>0.12</td><td>-0.11</td></tr>
+<tr><td>penguins in a table</td><td>0.33</td><td>0.12</td><td>0.26</td><td>0.16</td><td>0.17</td><td>0.15</td><td>0.17</td><td>-0.16</td></tr>
+<tr><td>reasoning about colored objects</td><td>0.23</td><td>0.10</td><td>0.05</td><td>0.09</td><td>0.12</td><td>0.06</td><td>0.01</td><td>-0.22</td></tr>
+<tr><td>tracking shuffled objects three objects</td><td>0.40</td><td>0.23</td><td>0.00</td><td>0.00</td><td>0.03</td><td>0.00</td><td>0.00</td><td>-0.40</td></tr>
+<tr><td>date understanding</td><td>0.47</td><td>0.33</td><td>0.48</td><td>0.45</td><td>0.17</td><td>0.17</td><td>0.05</td><td>-0.42</td></tr></tbody></table></div>
+  <p class="muted">40 items per task from BIG-Bench Hard, written by other authors. Several tasks resemble pool families
+  (counting, navigation, swaps, boolean logic), so this is a transfer test written by others, and only partly a far test.</p>
+</section>
+
+<section>
+  <h2>Limits</h2>
+  <ul>
+    <li>One model size (1.5B). Three runs per level, so each standard error rests on 3 values.</li>
+    <li>At low K, which families were drawn is mixed with how many. Each run drew its own set to average over this.</li>
+    <li>The 52 new pool families and 12 new held-out families were written by AI subagents in one style, then machine-checked. A family that trains a skill close to a held-out one would inflate the curve; the per-family table shows where the gain sits.</li>
+    <li>The first same-pool result was analysed after seeing the data. The rerun fixed its rule first; its outcome is "Confirmed, and the near-far split is confirmed". Two later checks repeated it on a second reserved set and on a 3B model; their outcomes are in the section above. All runs use one model family (Qwen2.5) and one task style.</li>
+    <li>The model was trained on correct answers directly. This measures what breadth can buy at most; it is not a selection experiment.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Cost</h2>
+  <p>$2.66 on Modal for this experiment (own upper estimate), against a $10 limit: $2.56 for the 19 runs, the rest for a smoke test and the four reply recordings. Rules and design: SPEC3.md, "Breadth curve".</p>
+  <p>Rerun: $2.58 (own upper estimate) for 21 runs and a smoke test, against about $3 approved. Rules: SPEC3.md, "Near-transfer rerun".</p>
+  <p>Two checks: $7.89 (own upper estimate), against under $10 approved. Rules: SPEC3.md, "Two strengthening experiments".</p>
+</section>
+</main>

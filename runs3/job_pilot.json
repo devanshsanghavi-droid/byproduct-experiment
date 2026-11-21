@@ -1,0 +1,206 @@
+[
+ {
+  "name": "base-05b",
+  "kind": "battery",
+  "params": {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "world": {
+    "plants": {
+     "steps": 1,
+     "actions": 4,
+     "n": 2,
+     "tries": 5
+    },
+    "tracks": {
+     "ring": 6,
+     "n": 2,
+     "rounds": 4
+    },
+    "trade": {
+     "offers": 3,
+     "bundle": 1,
+     "rounds": 8
+    }
+   },
+   "test_sizes": {
+    "near": 16,
+    "code": 30,
+    "rule": 30,
+    "order": 40,
+    "retention": 60
+   }
+  }
+ },
+ {
+  "name": "pilot-DRIFT-s1",
+  "kind": "sim",
+  "params": {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "arm": "DRIFT",
+   "seed": 1,
+   "world": {
+    "plants": {
+     "steps": 1,
+     "actions": 4,
+     "n": 2,
+     "tries": 5
+    },
+    "tracks": {
+     "ring": 6,
+     "n": 2,
+     "rounds": 4
+    },
+    "trade": {
+     "offers": 3,
+     "bundle": 1,
+     "rounds": 8
+    }
+   },
+   "P": {
+    "G": 8,
+    "N": 24,
+    "parents": 6,
+    "iters": 60,
+    "lr": 0.0001,
+    "temp": 0.7,
+    "window": 2
+   },
+   "test_sizes": {
+    "near": 16,
+    "code": 30,
+    "rule": 30,
+    "order": 40,
+    "retention": 60
+   }
+  }
+ },
+ {
+  "name": "pilot-SOLO-s1",
+  "kind": "sim",
+  "params": {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "arm": "SOLO",
+   "seed": 1,
+   "world": {
+    "plants": {
+     "steps": 1,
+     "actions": 4,
+     "n": 2,
+     "tries": 5
+    },
+    "tracks": {
+     "ring": 6,
+     "n": 2,
+     "rounds": 4
+    },
+    "trade": {
+     "offers": 3,
+     "bundle": 1,
+     "rounds": 8
+    }
+   },
+   "P": {
+    "G": 8,
+    "N": 24,
+    "parents": 6,
+    "iters": 60,
+    "lr": 0.0001,
+    "temp": 0.7,
+    "window": 2
+   },
+   "test_sizes": {
+    "near": 16,
+    "code": 30,
+    "rule": 30,
+    "order": 40,
+    "retention": 60
+   }
+  }
+ },
+ {
+  "name": "pilot-DRIFT-s2",
+  "kind": "sim",
+  "params": {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "arm": "DRIFT",
+   "seed": 2,
+   "world": {
+    "plants": {
+     "steps": 1,
+     "actions": 4,
+     "n": 2,
+     "tries": 5
+    },
+    "tracks": {
+     "ring": 6,
+     "n": 2,
+     "rounds": 4
+    },
+    "trade": {
+     "offers": 3,
+     "bundle": 1,
+     "rounds": 8
+    }
+   },
+   "P": {
+    "G": 8,
+    "N": 24,
+    "parents": 6,
+    "iters": 60,
+    "lr": 0.0001,
+    "temp": 0.7,
+    "window": 2
+   },
+   "test_sizes": {
+    "near": 16,
+    "code": 30,
+    "rule": 30,
+    "order": 40,
+    "retention": 60
+   }
+  }
+ },
+ {
+  "name": "pilot-SOLO-s2",
+  "kind": "sim",
+  "params": {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "arm": "SOLO",
+   "seed": 2,
+   "world": {
+    "plants": {
+     "steps": 1,
+     "actions": 4,
+     "n": 2,
+     "tries": 5
+    },
+    "tracks": {
+     "ring": 6,
+     "n": 2,
+     "rounds": 4
+    },
+    "trade": {
+     "offers": 3,
+     "bundle": 1,
+     "rounds": 8
+    }
+   },
+   "P": {
+    "G": 8,
+    "N": 24,
+    "parents": 6,
+    "iters": 60,
+    "lr": 0.0001,
+    "temp": 0.7,
+    "window": 2
+   },
+   "test_sizes": {
+    "near": 16,
+    "code": 30,
+    "rule": 30,
+    "order": 40,
+    "retention": 60
+   }
+  }
+ }
+]

@@ -1,0 +1,4594 @@
+{
+ "arm": "CULTURE",
+ "seed": 1,
+ "model": "claude-haiku-5-5",
+ "mock": false,
+ "config": {
+  "N": 16,
+  "R": 12,
+  "G": 12,
+  "cost": 1.5
+ },
+ "complete": true,
+ "plants": [
+  "fedo",
+  "karu",
+  "nido",
+  "kesu"
+ ],
+ "generations": [
+  {
+   "gen": 0,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": -2,
+     "upkeep": 6.0,
+     "net": -8.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Karu is not roast-then-dry; nido is not soak-then-roast (both steps wrong each). Untested for karu: pound, soak, dry combos. For nido: dry, roast, pound combos."
+    },
+    {
+     "id": "a1",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 18,
+     "upkeep": 7.5,
+     "net": 10.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Last season's best: kesu roast>pound, fedo pound>roast, karu dry>roast (all worked). Nido is untested; try it early. Preparations may change, so check each plant's steps"
+    },
+    {
+     "id": "a2",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 8,
+     "upkeep": 6.0,
+     "net": 2.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast OK (keep). kesu: dry>soak failed both steps; try other pairs. Actions: dry, pound, roast, soak."
+    },
+    {
+     "id": "a3",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 8,
+     "upkeep": 9.0,
+     "net": -1.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Nido: roast then soak. Kesu: roast first, not soak second."
+    },
+    {
+     "id": "a4",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 9.0,
+     "net": -1.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 3,
+     "upkeep": 0.0,
+     "net": 3.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 18,
+     "upkeep": 6.0,
+     "net": 12.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast. nido: avoid pound and dry. Test karu, kesu."
+    },
+    {
+     "id": "a7",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 0
+     },
+     "gross": -2,
+     "upkeep": 1.5,
+     "net": -3.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 10.5,
+     "net": -2.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Last season's findings (may change): fedo = pound then roast. kesu = roast then pound (worked 3 times). karu = dry first, second step is roast or soak (not pound), so try roast or soak. nido = unknown, test its options. Verify each, since preparations can change."
+    },
+    {
+     "id": "a9",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": -12,
+     "upkeep": 7.5,
+     "net": -19.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "I have no records from this season, so I learned nothing reliable about any plant's preparation. Next season, log every round's plant and both steps,"
+    },
+    {
+     "id": "a10",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 0
+     },
+     "gross": -12,
+     "upkeep": 7.5,
+     "net": -19.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 13,
+     "upkeep": 12.0,
+     "net": 1.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "kesu: roast,pound. fedo: pound,roast. nido: roast,soak. karu: step1 dry/pound, step2"
+    },
+    {
+     "id": "a12",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 0
+     },
+     "gross": -2,
+     "upkeep": 7.5,
+     "net": -9.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "I have no records from this season, so I learned nothing reliable about any plant's 2-step preparation. Next season: log every round (plant, both steps chosen, result). Actions are dry, roast, pound, soak. Try different step pairs per plant early to find its fixed preparation, then reuse the correct pair every time it appears. Preparations may change between seasons, so verify with a quick test before relying on old results."
+    },
+    {
+     "id": "a13",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 6.0,
+     "net": -13.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "No records from me; try each plant's two steps from"
+    }
+   ],
+   "mean": {
+    "MEM": 1.25,
+    "TALK": 1.875,
+    "LORE": 1.188,
+    "AGG": 1.562,
+    "gross": 1.75,
+    "net": -4.719,
+    "success_rate": 0.229
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "fedo": [
+     "pound",
+     "roast"
+    ],
+    "karu": [
+     "dry",
+     "roast"
+    ],
+    "nido": [
+     "roast",
+     "soak"
+    ],
+    "kesu": [
+     "roast",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 1,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 4.5,
+     "net": 33.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast (confirmed x3). kesu: roast>soak worked once. nido: avoid"
+    },
+    {
+     "id": "a1",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 18,
+     "upkeep": 6.0,
+     "net": 12.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo pound>roast; nido, kesu roast>soak; karu try dry>roast"
+    },
+    {
+     "id": "a2",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast (confirmed). karu: dry>roast (confirmed). nido: roast>soak (confirmed). kesu changed: roast>pound failed, roast is right first, so test roast>soak or roast>dry."
+    },
+    {
+     "id": "a3",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: fedo pound>roast (OK), karu dry>roast (OK), nido roast>soak (OK). Kesu untested; last season roast>pound. Preparations may change, so verify each plant's steps early."
+    },
+    {
+     "id": "a4",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 0.0,
+     "net": -7.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 1.5,
+     "net": 16.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound then roast (confirmed?). nido: avoid pound/dry. karu, kesu"
+    },
+    {
+     "id": "a6",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 23,
+     "upkeep": 6.0,
+     "net": 17.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast OK (keep). nido: roast>soak OK (keep). kesu: soak>roast failed both steps; try dry/pound/roast combos not yet tested. karu: untested; test pairs with roast,"
+    },
+    {
+     "id": "a7",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 6.0,
+     "net": 27.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "nido: roast>soak OK (keep). fedo: pound>roast OK (keep). kesu: dry>soak failed; avoid dry and soak, try pound or roast pairs. karu: untested."
+    },
+    {
+     "id": "a8",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "karu: dry,roast. fedo: pound,roast. nido: roast,soak. kesu: roast then dry"
+    },
+    {
+     "id": "a9",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "nido,kesu: roast,soak. karu: dry then pound? test. fedo untested."
+    },
+    {
+     "id": "a10",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Confirmed: nido roast>soak; fedo pound>roast. Kesu: roast first is right, but second is not soak or pound, so try roast>dry. Karu untested; try dry or"
+    },
+    {
+     "id": "a11",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 23,
+     "upkeep": 9.0,
+     "net": 14.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Nido, kesu: roast>soak. Fedo: pound>roast. Karu: dry first, not soak."
+    },
+    {
+     "id": "a12",
+     "parent": "a4",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 7.5,
+     "net": -4.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a4",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 9.0,
+     "net": 4.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a8",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: fedo = pound>roast; nido = roast>soak; kesu = roast>soak; karu = dry>roast. Preparations may change, so test these first and adjust if"
+    },
+    {
+     "id": "a15",
+     "parent": "a8",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: fedo = pound then roast (2x). karu = dry then roast (4x). kesu = roast then soak (1x; older note said roast then pound, so it changed). nido = roast then soak (1x). Preparations may change, so check each plant's steps first."
+    }
+   ],
+   "mean": {
+    "MEM": 2.188,
+    "TALK": 1.312,
+    "LORE": 1.312,
+    "AGG": 1.938,
+    "gross": 25.5,
+    "net": 18.281,
+    "success_rate": 0.625
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "fedo": [
+     "pound",
+     "roast"
+    ],
+    "karu": [
+     "dry",
+     "roast"
+    ],
+    "nido": [
+     "roast",
+     "soak"
+    ],
+    "kesu": [
+     "roast",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 2,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 28,
+     "upkeep": 3.0,
+     "net": 25.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast (confirmed x5). kesu: roast>soak worked once. nido: avoid"
+    },
+    {
+     "id": "a1",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 4.5,
+     "net": 23.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a3",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast (confirmed x4). karu: dry>roast (confirmed x3). nido: soak>roast (confirmed r12; soak>pound failed). kesu: roast>soak worked once (r8). Preparations may change, so verify kesu"
+    },
+    {
+     "id": "a3",
+     "parent": "a3",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: fedo pound>roast; karu dry>roast; kesu roast>soak (3x). Nido inferred soak>roast (untested; dry>roast step2 right). Check nido early."
+    },
+    {
+     "id": "a4",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: fedo = pound>roast (confirmed many times). karu = dry>roast (confirmed r12). kesu = roast>soak (worked r6, r9; older roast>pound is outdated). nido: roast>soak failed fully (r7), and dry>roast had step2 right and step1 wrong (r8). So nido's step2 is likely roast and step1 is likely pound. Test pound>roast for nido first. Avoid roast>soak and dry>roast for nido."
+    },
+    {
+     "id": "a5",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified end of season 2: fedo = pound>roast (confirmed often). karu = dry>roast (worked, 4x earlier). kesu = roast>soak (worked r8; older pound version is outdated). nido = soak>roast (worked r12; roast>soak and dry>pound failed). Recheck each plant's steps first, since preparations can change."
+    },
+    {
+     "id": "a6",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 28,
+     "upkeep": 6.0,
+     "net": 22.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast (confirmed 4x). nido: roast>soak failed r11; avoid, try other pairs. kesu: roast>soak worked once; retest. karu: untested, try all pairs."
+    },
+    {
+     "id": "a7",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 6.0,
+     "net": 27.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast (confirmed x5). kesu: roast>soak worked; avoid dry>soak. nido: roast>soak worked earlier, retest. karu: still untested; try dry>pound or soak>dry."
+    },
+    {
+     "id": "a8",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 12.0,
+     "net": 21.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast. kesu: roast>soak. nido: soak>roast. karu: test dry>pound."
+    },
+    {
+     "id": "a9",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast. kesu: roast>soak. karu: dry>roast. nido: untested, try others."
+    },
+    {
+     "id": "a10",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 12.0,
+     "net": 21.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast. karu: dry>roast. nido: soak>roast. kesu: roast>soak (once)."
+    },
+    {
+     "id": "a11",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 13.5,
+     "net": 29.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast; nido: soak>roast; karu: dry>roast; kesu: roast>soak. Verify first."
+    },
+    {
+     "id": "a12",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 6.0,
+     "net": 27.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified recent: fedo = pound>roast (x4); karu = dry>roast; kesu = roast>soak (worked once); nido = roast>soak per old note, untested lately. Test each plant's"
+    },
+    {
+     "id": "a13",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 4.5,
+     "net": 38.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast (x3). kesu: roast>soak (x1). nido: unverified, test roast>soak"
+    },
+    {
+     "id": "a14",
+     "parent": "a2",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 43,
+     "upkeep": 7.5,
+     "net": 35.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast (confirmed x5). kesu: roast>soak (confirmed x4). karu: dry>roast (confirmed previously). nido: roast>soak worked last season, but in r11 roast>dry failed both steps, so"
+    },
+    {
+     "id": "a15",
+     "parent": "a2",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast (confirmed many times). karu: dry>roast (confirmed x2). nido: soak>roast worked r10; old roast>soak is outdated. kesu: roast>soak worked once (r5), retest to confirm."
+    }
+   ],
+   "mean": {
+    "MEM": 2.75,
+    "TALK": 1.062,
+    "LORE": 1.688,
+    "AGG": 1.438,
+    "gross": 34.875,
+    "net": 26.625,
+    "success_rate": 0.781
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "fedo": [
+     "pound",
+     "roast"
+    ],
+    "karu": [
+     "dry",
+     "roast"
+    ],
+    "nido": [
+     "soak",
+     "roast"
+    ],
+    "kesu": [
+     "roast",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 3,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a13",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 4.5,
+     "net": 18.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "kesu: dry>roast (x4 OK). fedo: pound>roast (x3). nido: still unverified,"
+    },
+    {
+     "id": "a1",
+     "parent": "a13",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 6.0,
+     "net": -3.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "nido: soak>roast (deduced from r9, r11, r12). kesu: dry>roast (confirmed r10; old roast>soak is outdated). fedo: pound>roast from last note, unverified this season."
+    },
+    {
+     "id": "a2",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 23,
+     "upkeep": 7.5,
+     "net": 15.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast (confirmed). karu: dry>roast (confirmed). kesu: dry>roast (OK r6, r7; old note said roast>soak). nido: not pound/dry first; step2 roast in r12, so test"
+    },
+    {
+     "id": "a3",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 23,
+     "upkeep": 9.0,
+     "net": 14.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast. karu: dry>roast. kesu: dry>roast (changed from roast>soak). nido: soak>roast (deduced from r2, r9, r10). All four confirmed by multiple OKs or consistent failures."
+    },
+    {
+     "id": "a4",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Confirmed: fedo pound>roast (many times); karu dry>roast (x4); nido soak>roast (r5, r7, r12). kesu unresolved: dry>pound failed with step1 dry right, step2 wrong, so pound isn't step2. Old roast>soak note conflicts; test kesu dry>soak or dry>roast."
+    },
+    {
+     "id": "a5",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Confirmed: fedo pound>roast, karu dry>roast, nido soak>roast. Kesu step2 is roast (r9, r12), and step1 is not pound or soak, so try dry>roast or roast>roast"
+    },
+    {
+     "id": "a6",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 13.5,
+     "net": 24.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast; nido: soak>roast; karu: dry>roast; kesu: dry>roast. Verified last"
+    },
+    {
+     "id": "a7",
+     "parent": "a11",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo pound>roast; karu dry>roast; nido soak>roast; kesu dry>roast? verify"
+    },
+    {
+     "id": "a8",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 6.0,
+     "net": 17.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo = pound>roast (verified x4). karu = dry>roast (verified). kesu = roast>soak (worked once, retest). nido = soak>roast (verified x2; old roast>soak failed)."
+    },
+    {
+     "id": "a9",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 6.0,
+     "net": 12.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast (ok r10). karu: dry>roast (ok r12). kesu: roast>soak worked once in old season; pound>dry failed r9. nido: dry>pound failed r11; try roast>soak."
+    },
+    {
+     "id": "a10",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 6.0,
+     "net": 22.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast (confirmed x7). kesu: roast>soak (confirmed). nido: roast>soak unverified, retest. karu: untested; try dry>pound or soak>dry."
+    },
+    {
+     "id": "a11",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 8,
+     "upkeep": 6.0,
+     "net": 2.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast confirmed (x6). kesu: roast>soak failed r12, so preparation may have changed; try others. nido: roast>soak unverified, retest. karu: untested, try dry>pound or soak>dry."
+    },
+    {
+     "id": "a12",
+     "parent": "a4",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: fedo = pound>roast (r12 OK). karu = dry>roast (r9, r10 OK). kesu: roast>soak FAILED both steps in r11, so it is no longer reliable; try other combos. Old 'roast>pound' was outdated. nido: still unknown; roast>soak and dry>roast failed earlier. Test pound>roast first, then try other pairs. Next season, check whether fedo and karu still hold before relying on them."
+    },
+    {
+     "id": "a13",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: fedo = pound>roast (r5, r9, r10, r11). karu = dry>roast (r7, r8, r12). nido = soak>roast (r6, r12); roast>soak failed r7. kesu = roast>soak (worked r6, r9); roast>pound is outdated. Next season, use these first, and test only if a plant's preparation seems changed."
+    },
+    {
+     "id": "a14",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 28,
+     "upkeep": 13.5,
+     "net": 14.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast; karu, kesu: dry>roast; nido: soak>pound?"
+    },
+    {
+     "id": "a15",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 23,
+     "upkeep": 15.0,
+     "net": 8.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast (confirmed x4). karu: dry>roast. kesu: dry>roast (changed, old roast>soak failed). nido: soak>roast (confirmed x2). Verify karu again."
+    }
+   ],
+   "mean": {
+    "MEM": 2.688,
+    "TALK": 1.188,
+    "LORE": 2.0,
+    "AGG": 1.688,
+    "gross": 26.438,
+    "net": 17.625,
+    "success_rate": 0.641
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "fedo": [
+     "pound",
+     "roast"
+    ],
+    "karu": [
+     "dry",
+     "roast"
+    ],
+    "nido": [
+     "soak",
+     "roast"
+    ],
+    "kesu": [
+     "dry",
+     "roast"
+    ]
+   }
+  },
+  {
+   "gen": 4,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 28,
+     "upkeep": 12.0,
+     "net": 16.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 2 results: fedo now = soak>roast (r9 OK; old pound>roast failed). karu = dry>roast (r3, r8, r11 OK). nido = soak>roast (r2, r7, r10, r12 OK). kesu changed: roast>soak failed with both steps wrong, so its prep is unknown. Test kesu with new pairs, e.g. pound>soak, dry>soak, soak>pound."
+    },
+    {
+     "id": "a1",
+     "parent": "a13",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 28,
+     "upkeep": 7.5,
+     "net": 20.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: fedo=pound>roast, karu=dry>roast, nido=soak>roast. kesu is NOT roast>soak or soak>dry; try others like dry>pound, pound>soak, or roast>dry."
+    },
+    {
+     "id": "a2",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: nido = soak>roast (r5, r7-r10). karu = dry>roast (r6, r11). fedo = pound>roast (older, untested this season). kesu changed: roast>soak failed r12 with both steps wrong. Test kesu with new pairs, e.g. dry>soak or pound>soak, avoiding roast in step1 until resolved."
+    },
+    {
+     "id": "a3",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Nido: soak>roast (r5,r6,r10 OK). Karu: dry>roast (r12 OK). Kesu: dry>roast (r9 OK), roast>soak wrong. Fedo: roast is step2 (right r7,r11); step1 is not dry or"
+    },
+    {
+     "id": "a4",
+     "parent": "a7",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 12.0,
+     "net": 21.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo soak>roast; karu dry>roast; nido soak>roast; kesu dry>roast"
+    },
+    {
+     "id": "a5",
+     "parent": "a7",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "karu dry>roast; nido soak>roast; kesu dry>roast; fedo: not pound/dry first,"
+    },
+    {
+     "id": "a6",
+     "parent": "a5",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fedo changed: pound>roast failed r10 (roast step right). Try soak>roast or dry>roast. Verified this season: nido soak>roast, kesu dry>roast, karu dry>roast."
+    },
+    {
+     "id": "a7",
+     "parent": "a5",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 7.5,
+     "net": 35.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may have changed. This season: nido = soak>roast (r5,6,7,12 OK). kesu = dry>roast (r8,9,11 OK). karu = dry>roast (r10 OK). fedo unseen; last season"
+    },
+    {
+     "id": "a8",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo=soak>roast (changed). nido=soak>roast, karu=dry>roast verified. kesu unverified; try dry>roast."
+    },
+    {
+     "id": "a9",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 15.0,
+     "net": 18.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: kesu = dry>roast (r3,r7-12). karu = dry>roast (r5,r11). nido = soak>roast (r6). fedo = ?>roast, first step not pound (r4). Recheck fedo"
+    },
+    {
+     "id": "a10",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 12.0,
+     "net": 16.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: nido = soak>roast (OK r11, r12). karu = dry>roast (OK r9). fedo FAILED pound>roast in r10 (step1 wrong, step2 roast right), so fedo's first step may have changed; test other first steps with roast second. kesu untested this season; roast>soak worked in an earlier season but failed r11, so test alternatives. Check karu and nido with their known pairs first."
+    },
+    {
+     "id": "a11",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 10.5,
+     "net": 17.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season report. My records: fedo = soak>roast (OK r10, r12). Old 'fedo = pound>roast' failed in r9 (step1 wrong, step2 right), so it is likely outdated. nido = soak>roast (OK r11), matching the older note. Karu and kesu were not tested by me. Older notes say karu = dry>roast and kesu = roast>soak, but kesu's roast>soak failed in r11 last season. Next season: try fedo and nido with soak>roast first. Verify karu with dry>roast and kesu with roast>soak before relying on them, and retest if either fails."
+    },
+    {
+     "id": "a12",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 23,
+     "upkeep": 6.0,
+     "net": 17.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast. karu: dry>roast. nido: soak>roast. kesu: roast>soak is outdated; r12 dry>pound had step1 dry right, step2 not pound. Try dry>roast, dry>soak, dry>dry."
+    },
+    {
+     "id": "a13",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": -2,
+     "upkeep": 4.5,
+     "net": -6.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: pound>roast. karu: dry>roast. nido: soak>roast. kesu: roast>soak. All verified; preparations may change, so recheck if a plant fails."
+    },
+    {
+     "id": "a14",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 8,
+     "upkeep": 3.0,
+     "net": 5.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "kesu dry>roast; fedo pound>roast; karu not soak>dry; nido unknown"
+    },
+    {
+     "id": "a15",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 6.0,
+     "net": 2.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Step2 is roast. karu dry>roast. fedo, nido soak>roast. kesu dry>roast?"
+    }
+   ],
+   "mean": {
+    "MEM": 2.562,
+    "TALK": 1.438,
+    "LORE": 2.062,
+    "AGG": 1.562,
+    "gross": 27.062,
+    "net": 17.969,
+    "success_rate": 0.651
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "fedo": [
+     "soak",
+     "roast"
+    ],
+    "karu": [
+     "dry",
+     "roast"
+    ],
+    "nido": [
+     "soak",
+     "roast"
+    ],
+    "kesu": [
+     "dry",
+     "roast"
+    ]
+   }
+  },
+  {
+   "gen": 5,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a7",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 0
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season (verified by records): fedo = soak>roast (r12 OK; r11 failed only on step1). karu = soak>roast (r8,9 OK). kesu = dry>roast (r5,6,7,10 OK). nido = soak>roast (from prior notes, r5-12 OK). Preparations may change, so check first."
+    },
+    {
+     "id": "a1",
+     "parent": "a7",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 7.5,
+     "net": 35.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: kesu=dry>roast, nido=soak>roast, karu=soak>roast (r7,r10 OK per my records; ignore conflicting karu note). Fedo unseen this season; test its last-season recipe early."
+    },
+    {
+     "id": "a2",
+     "parent": "a2",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations changed again. This season's verified recipes (step1>step2): fedo = soak>roast (r7, r12); karu = soak>roast (r5); kesu = dry>roast (r6, r8-r10); nido = soak>roast (r11). Last season's notes are outdated: karu was dry>roast, and fedo was assumed pound>roast. Next season, test each plant's recipe first with soak>roast or dry>roast, since both have worked. Keep checking for changes, as they are not stable across seasons."
+    },
+    {
+     "id": "a3",
+     "parent": "a2",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season (verified by my records): nido = soak>roast (r5,6,9,10 OK). kesu = dry>roast (r7,11,12 OK). karu = soak>roast (r8 OK; the prior note's dry>roast claim conflicts with this, so test karu's step1 with soak first). fedo unseen this season; last season's pound>roast is untested, so try it first. Roast has been the step2 in every success, so keep it there. Preparations can change, so verify each plant on its first appearance."
+    },
+    {
+     "id": "a4",
+     "parent": "a5",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Changed: karu soak>roast, fedo soak>roast, kesu dry>roast, nido soak>roast. Verify."
+    },
+    {
+     "id": "a5",
+     "parent": "a5",
+     "genome": {
+      "MEM": 3,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "karu soak>roast; nido soak>roast; kesu dry>roast; fedo: avoid pound/dry first"
+    },
+    {
+     "id": "a6",
+     "parent": "a8",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 0
+     },
+     "gross": 18,
+     "upkeep": 10.5,
+     "net": 7.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a8",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: karu, fedo, nido = soak>roast; kesu = dry>roast."
+    },
+    {
+     "id": "a8",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 43,
+     "upkeep": 6.0,
+     "net": 37.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: fedo soak>roast OK (r9). nido soak>roast OK (r5,6,7,11,12). kesu dry>roast OK (r8-12). karu dry>roast OK (r10). Preparations may change; verify first."
+    },
+    {
+     "id": "a9",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season end: kesu=dry>roast, nido=soak>roast, karu=soak>roast (r9 OK; dry>roast failed r6), fedo=soak>roast (r7 OK). Preparations may change; if one fails, try other first steps."
+    },
+    {
+     "id": "a10",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 13.5,
+     "net": 24.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: fedo soak>roast (r10,12 OK); nido soak>roast (r5,7 OK); kesu dry>roast (r6,9,11 OK); karu soak>roast (r8 OK, conflicts with old dry note, so verify)."
+    },
+    {
+     "id": "a11",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 12.0,
+     "net": 21.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "nido soak>roast; kesu dry>roast; karu not dry>roast; fedo unknown"
+    },
+    {
+     "id": "a12",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roast is step 2 for all four. This season: nido=soak>roast, karu=soak>roast, kesu=dry>roast. fedo=?>roast, not pound first; try soak or dry first."
+    },
+    {
+     "id": "a13",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 28,
+     "upkeep": 6.0,
+     "net": 22.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "nido=soak>roast verified. kesu=dry>roast verified. karu: dry>roast OK r10, soak>roast OK r12, so either works. fedo: step2 roast is right; step1 is not dry or pound,"
+    },
+    {
+     "id": "a14",
+     "parent": "a3",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: nido soak>roast, kesu dry>roast, karu soak>roast, fedo soak>roast (r6). Karu changed from dry. Check these first; next season may differ."
+    },
+    {
+     "id": "a15",
+     "parent": "a3",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Nido: soak>roast (OK r5,r7). Kesu: dry>roast (OK r6,r9,r12). Fedo: soak>roast (OK r8,r11). Karu: dry>roast FAILED r10; roast is right, step1 not dry, so try soak>roast"
+    }
+   ],
+   "mean": {
+    "MEM": 2.875,
+    "TALK": 1.562,
+    "LORE": 1.938,
+    "AGG": 0.75,
+    "gross": 36.125,
+    "net": 26.562,
+    "success_rate": 0.802
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "fedo": [
+     "soak",
+     "roast"
+    ],
+    "karu": [
+     "soak",
+     "roast"
+    ],
+    "nido": [
+     "soak",
+     "roast"
+    ],
+    "kesu": [
+     "dry",
+     "roast"
+    ]
+   }
+  },
+  {
+   "gen": 6,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 6.0,
+     "net": 22.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Nido soak>roast OK (r9,r12). Karu soak>roast OK (r11). Fedo step1 dry is right, step2 not pound; try roast. Kesu dry>roast unverified. Prior note may be"
+    },
+    {
+     "id": "a1",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 6.0,
+     "net": 32.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: nido soak>roast (r9,r11); kesu dry>roast (r12). Karu dry>roast FAILED r10 (step2 roast right, step1 wrong), so try a different step1 with roast. Fedo unverified"
+    },
+    {
+     "id": "a2",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 6.0,
+     "net": 27.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: dry then pound/dry. kesu dry>roast. karu, nido soak>roast."
+    },
+    {
+     "id": "a3",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 28,
+     "upkeep": 7.5,
+     "net": 20.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Nido soak>roast and karu soak>roast (verified r6). Fedo: step1 dry, step2 dry (only option left). Kesu dry>roast per prior notes; verify. Test fedo dry>dry early."
+    },
+    {
+     "id": "a4",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verify first; preparations may change. Last confirmed: nido soak>roast (r9,r11), kesu dry>roast (r10), karu soak>roast (r12; was dry>roast earlier, so check), fedo soak>roast (r9). Try these first. If one fails, test other two-step combos and record results."
+    },
+    {
+     "id": "a5",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 6.0,
+     "net": 27.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: karu soak>roast (r9), kesu dry>roast (r12). Fedo changed: soak>roast failed (r10), dry>pound failed with dry right, so try dry>soak or dry>dry. Nido"
+    },
+    {
+     "id": "a6",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: kesu dry>roast, karu soak>roast, nido soak>roast. fedo soak>roast FAILED r1 (both wrong); try other combos, e.g. pound or dry first, not roast second."
+    },
+    {
+     "id": "a7",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Current prep (this season's records): fedo=dry>dry, nido=soak>roast, kesu=dry>roast, karu=step2 roast, step1 not dry (try soak, then pound). Verify first."
+    },
+    {
+     "id": "a8",
+     "parent": "a4",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 28,
+     "upkeep": 12.0,
+     "net": 16.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: nido soak>roast, kesu dry>roast, karu dry>roast. fedo is now dry>(soak or dry), not roast/pound; try dry>soak next. Check karu and nido early."
+    },
+    {
+     "id": "a9",
+     "parent": "a4",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "All four verified: karu, fedo, nido soak>roast; kesu dry>roast."
+    },
+    {
+     "id": "a10",
+     "parent": "a5",
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 28,
+     "upkeep": 12.0,
+     "net": 16.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: try dry>dry (untested). karu, nido soak>roast; kesu dry>roast."
+    },
+    {
+     "id": "a11",
+     "parent": "a5",
+     "genome": {
+      "MEM": 3,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 28,
+     "upkeep": 10.5,
+     "net": 17.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "karu soak>roast; kesu dry>roast; fedo dry>dry; nido untested, try soak>roast"
+    },
+    {
+     "id": "a12",
+     "parent": "a2",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 0
+     },
+     "gross": 28,
+     "upkeep": 10.5,
+     "net": 17.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified from my records: nido = soak>roast (r7, r9, r12). kesu = dry>roast (r5, r8). karu = soak>roast (r10). fedo is NOT soak>roast (r11 failed). From r6, fedo's step2 is dry, and step1 is neither pound nor soak, so try roast>dry or dry>dry first. Notes conflicted on r9 and r10; my own records are the reliable source. Preparations may change, so verify each plant first."
+    },
+    {
+     "id": "a13",
+     "parent": "a2",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 3 records: nido = soak>roast (OK r5,r7,r10). karu = soak>roast (OK r6,r8,r9). kesu = dry>roast (OK r11). fedo = soak>roast FAILED r12, so its recipe has likely changed; test pound, dry, or other step pairs first. Other notes conflicted on karu and fedo, so verify each plant's recipe early before committing to it. Recipes change between seasons."
+    },
+    {
+     "id": "a14",
+     "parent": "a7",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 0
+     },
+     "gross": 3,
+     "upkeep": 9.0,
+     "net": -6.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a7",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Last season: karu, fedo, nido soak>roast; kesu dry>roast. Recheck."
+    }
+   ],
+   "mean": {
+    "MEM": 2.688,
+    "TALK": 1.438,
+    "LORE": 1.875,
+    "AGG": 0.312,
+    "gross": 31.75,
+    "net": 22.75,
+    "success_rate": 0.729
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "fedo": [
+     "dry",
+     "dry"
+    ],
+    "karu": [
+     "soak",
+     "roast"
+    ],
+    "nido": [
+     "soak",
+     "roast"
+    ],
+    "kesu": [
+     "dry",
+     "roast"
+    ]
+   }
+  },
+  {
+   "gen": 7,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a4",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 8,
+     "upkeep": 7.5,
+     "net": 0.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Confirmed this season: karu soak>roast (r9), kesu dry>roast (r10). nido changed: dry>pound failed, but step2 'pound' was right, so try ?>pound with step1 soak or roast. fedo changed: soak>roast failed with both steps wrong, so try other first steps (pound, dry, roast) and other second steps (pound, soak, dry). Verify"
+    },
+    {
+     "id": "a1",
+     "parent": "a4",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 13,
+     "upkeep": 9.0,
+     "net": 4.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: karu soak>roast (OK). Nido step1=pound, step2 is not dry/soak, so likely pound>roast (untested). Fedo step2=dry, step1 not pound (try soak>dry). Kesu untested; try dry>roast. Old nido soak>roast and fedo soak>roast are outdated."
+    },
+    {
+     "id": "a2",
+     "parent": "a13",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 0
+     },
+     "gross": 23,
+     "upkeep": 10.5,
+     "net": 12.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Confirmed this season: karu = soak>roast (OK r7, r12). kesu = dry>roast (OK r9, r10). Partial: fedo step1 = dry (right in r6, r8), step2 is not pound or soak, so try dry>roast first. nido step1 = pound (right in r11), step2 is not dry or roast, so try pound>soak next. Recipes may change between seasons, so verify early."
+    },
+    {
+     "id": "a3",
+     "parent": "a13",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 4 results: fedo = dry>dry (OK r10, r11; dry>roast and dry>soak failed, so step2 is not roast or soak). kesu = dry>roast (OK r7, r8, r12). karu = soak>roast (OK r9 only; verify). nido not tested by me, so keep prior soak>roast but verify early. Recipes may change between seasons, so test the listed recipe first and fall back to pairs using dry/soak/pound/roast if it fails."
+    },
+    {
+     "id": "a4",
+     "parent": "a15",
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 23,
+     "upkeep": 10.5,
+     "net": 12.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: soak>roast failed r11 (both steps wrong), so recheck. kesu: dry>roast OK r12. nido and karu soak>roast were last confirmed earlier; verify before using."
+    },
+    {
+     "id": "a5",
+     "parent": "a15",
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 8,
+     "upkeep": 9.0,
+     "net": -1.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verify all. Confirmed: kesu dry>roast, karu soak>roast. Fedo unknown."
+    },
+    {
+     "id": "a6",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 18,
+     "upkeep": 7.5,
+     "net": 10.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: fedo dry>dry (verified r10,r11); kesu dry>roast (verified r8,r9,r12); nido pound>? step1 pound right, step2 not soak (r6), test nido step2; karu unverified, try"
+    },
+    {
+     "id": "a7",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 18,
+     "upkeep": 6.0,
+     "net": 12.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: karu soak>roast (r9,r12); kesu dry>roast (r10). Fedo: step2 is dry, step1 not soak; try pound or roast. Nido unseen this season; last"
+    },
+    {
+     "id": "a8",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "kesu: dry>roast (5 OK). karu: soak>roast (3 OK). nido: step1 pound right; dry, soak wrong as step2, so try roast. fedo: soak and roast both"
+    },
+    {
+     "id": "a9",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 23,
+     "upkeep": 7.5,
+     "net": 15.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "kesu dry>roast; karu soak>roast; fedo try dry>roast; nido try pound>roast"
+    },
+    {
+     "id": "a10",
+     "parent": "a9",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Nido changed: step2 pound, step1 not roast. Karu soak>roast still"
+    },
+    {
+     "id": "a11",
+     "parent": "a9",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 8,
+     "upkeep": 10.5,
+     "net": -2.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Karu soak>roast ok. Nido ends in pound. Fedo changed; retest."
+    },
+    {
+     "id": "a12",
+     "parent": "a2",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": 8,
+     "upkeep": 6.0,
+     "net": 2.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a2",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 23,
+     "upkeep": 9.0,
+     "net": 14.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: kesu dry>roast, karu soak>roast, nido pound>pound. fedo step1 is dry; step2 is not pound or roast, so try dry>soak first, then dry>dry."
+    },
+    {
+     "id": "a14",
+     "parent": "a5",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 23,
+     "upkeep": 4.5,
+     "net": 18.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fedo: try roast>dry. Kesu dry>roast. Nido changed; verify."
+    },
+    {
+     "id": "a15",
+     "parent": "a5",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 6.0,
+     "net": 32.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "kesu dry>roast (r9-11 ok). fedo dry>dry (r12 ok). karu soak>roast (r9 ok). nido unknown; test soak>roast. Verify first since preparations change."
+    }
+   ],
+   "mean": {
+    "MEM": 2.5,
+    "TALK": 1.125,
+    "LORE": 1.938,
+    "AGG": 0.688,
+    "gross": 20.5,
+    "net": 12.156,
+    "success_rate": 0.542
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "fedo": [
+     "dry",
+     "dry"
+    ],
+    "karu": [
+     "soak",
+     "roast"
+    ],
+    "nido": [
+     "pound",
+     "pound"
+    ],
+    "kesu": [
+     "dry",
+     "roast"
+    ]
+   }
+  },
+  {
+   "gen": 8,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a15",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 23,
+     "upkeep": 6.0,
+     "net": 17.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo now dry>soak (r9 ok). kesu dry>roast confirmed (r11). nido step1 pound, step2 not dry/roast: test pound>soak. karu unverified: test soak>roast first."
+    },
+    {
+     "id": "a1",
+     "parent": "a15",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 8,
+     "upkeep": 6.0,
+     "net": 2.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "nido: step1 pound confirmed; step2 must be pound (soak, dry, roast all wrong), so try pound>pound first. karu soak>roast OK r9. kesu dry>roast and fedo"
+    },
+    {
+     "id": "a2",
+     "parent": "a10",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 23,
+     "upkeep": 9.0,
+     "net": 14.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: step1 dry, step2 not dry. karu soak>roast. kesu dry>roast."
+    },
+    {
+     "id": "a3",
+     "parent": "a10",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 0
+     },
+     "gross": 13,
+     "upkeep": 9.0,
+     "net": 4.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a3",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 0
+     },
+     "gross": 23,
+     "upkeep": 12.0,
+     "net": 11.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 5 results: fedo = dry>soak (OK r9, r10; dry>pound failed r6). karu = soak>roast (OK r8, r12). nido = pound>pound, inferred: step1 pound confirmed right (r7, r11), step2 ruled out dry, soak, and roast, so pound is the only option left. Verify early. kesu untested this season; last season dry>roast worked, so test that first. Preparations may change, so check each listed recipe first and fall back to dry/soak/pound/roast pairs only if it fails."
+    },
+    {
+     "id": "a5",
+     "parent": "a3",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 12.0,
+     "net": 16.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: fedo = dry>soak (OK r10). kesu = dry>roast (OK r7). karu = soak>roast (OK r8, r9, r12). nido: step1 is pound (right in r11), but pound>dry failed, so step2 is not dry. Try pound>roast or pound>soak first. Do not reuse the old fedo dry>dry note: it failed in r5 this season. Recipes may change, so test the listed recipe first and fall back to the other actions if it fails."
+    },
+    {
+     "id": "a6",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Last season's solutions: kesu dry>roast, karu soak>roast, nido pound>pound, fedo dry>soak. Preparations may have changed, so verify each plant's steps first before relying on these."
+    },
+    {
+     "id": "a7",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "kesu: dry>roast. karu: soak>roast. fedo: dry first, try pound second."
+    },
+    {
+     "id": "a8",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 0
+     },
+     "gross": -2,
+     "upkeep": 3.0,
+     "net": -5.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 28,
+     "upkeep": 4.5,
+     "net": 23.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Kesu dry>roast; karu soak>roast; fedo starts dry, try dry>soak. Nido"
+    },
+    {
+     "id": "a10",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "kesu dry>roast; karu soak>roast; nido pound>pound; fedo dry>dry (untested)"
+    },
+    {
+     "id": "a11",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 3,
+     "upkeep": 7.5,
+     "net": -4.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified r1-12: kesu dry>roast, karu soak>roast, nido pound>pound, fedo dry>soak (dry>dry was not needed). Preparations may change; re-verify first each plant."
+    },
+    {
+     "id": "a13",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 48,
+     "upkeep": 9.0,
+     "net": 39.0,
+     "successes": 12,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: fedo dry>soak (r4,6,7,12); karu soak>roast (r1,10,11); nido pound>pound (r2,3,5,8); kesu dry>roast (r9). Preparations may change, so recheck each plant's steps first."
+    },
+    {
+     "id": "a14",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 18,
+     "upkeep": 9.0,
+     "net": 9.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Karu soak>roast OK r11. Fedo dry>dry FAILED r12 (step1 dry right, step2 wrong); try dry>roast/soak/pound. Kesu dry>roast OK r12 per notes. Nido unknown; test soak>roast."
+    },
+    {
+     "id": "a15",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 13,
+     "upkeep": 10.5,
+     "net": 2.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Karu soak>roast OK r11. Kesu dry>roast OK (r9-12). Fedo: first step dry was right; dry>dry failed r12, so try dry>soak or dry>pound. Nido: untested, try"
+    }
+   ],
+   "mean": {
+    "MEM": 2.75,
+    "TALK": 1.125,
+    "LORE": 1.625,
+    "AGG": 0.938,
+    "gross": 23.312,
+    "net": 15.062,
+    "success_rate": 0.589
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "fedo": [
+     "dry",
+     "soak"
+    ],
+    "karu": [
+     "soak",
+     "roast"
+    ],
+    "nido": [
+     "pound",
+     "pound"
+    ],
+    "kesu": [
+     "dry",
+     "roast"
+    ]
+   }
+  },
+  {
+   "gen": 9,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: fedo dry>roast (changed; dry>soak failed r2). karu soak>roast (r8,10). kesu dry>roast (r1,4,5,7,12). nido pound>pound (r9). Recheck each plant's steps first; preparations can change."
+    },
+    {
+     "id": "a1",
+     "parent": "a13",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 7.5,
+     "net": 35.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified r5-12: fedo now dry>roast (dry>soak failed). kesu dry>roast. karu soak>roast. nido pound>pound. Preparations may change; recheck each plant's steps first."
+    },
+    {
+     "id": "a2",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 7.5,
+     "net": 35.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Kesu dry>roast, karu soak>roast, fedo dry>roast (verified). Nido unknown."
+    },
+    {
+     "id": "a3",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fedo now dry>roast (r9,11 OK; dry>soak failed r4). Kesu dry>roast (r1,3,8,10,12). Karu soak>roast (r2,5,6). Nido pound>pound (r7). Recheck each plant's first use."
+    },
+    {
+     "id": "a4",
+     "parent": "a7",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo try dry>roast; nido pound>pound; karu soak>roast; kesu dry>roast."
+    },
+    {
+     "id": "a5",
+     "parent": "a7",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 6.0,
+     "net": 32.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: dry>roast. kesu: dry>roast. karu: soak>roast. nido: pound>pound."
+    },
+    {
+     "id": "a6",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: karu soak>roast (r1,2,4,6,12); kesu dry>roast (r3,7,10,11); fedo dry>roast (r8; dry>soak failed r5, so it changed); nido pound>pound (r9). Recheck any plant that"
+    },
+    {
+     "id": "a7",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: fedo dry>roast, karu soak>roast, nido pound>pound, kesu dry>roast."
+    },
+    {
+     "id": "a8",
+     "parent": "a9",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 4.5,
+     "net": 38.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fedo dry>soak; karu soak>roast; nido pound>pound; kesu dry>roast. All verified."
+    },
+    {
+     "id": "a9",
+     "parent": "a9",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 48,
+     "upkeep": 4.5,
+     "net": 43.5,
+     "successes": 12,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fedo dry>soak; karu soak>roast; nido pound>pound; kesu dry>roast (unverified, test)."
+    },
+    {
+     "id": "a10",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: kesu dry>roast (r1), nido pound>pound (r2,4,6,9), karu soak>roast (r3,7,10-12), fedo dry>roast (r8; dry>soak failed r5). Recheck each plant's steps first."
+    },
+    {
+     "id": "a11",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: fedo dry>roast (r8,r12; dry>soak failed r6), karu soak>roast (r7,9,10), nido pound>pound (r5,11). Kesu untested; last known dry>roast. Recheck kesu first."
+    },
+    {
+     "id": "a12",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "fedo: step1 dry still right; step2 not soak (r12 failed), so test dry>roast or dry>pound. karu soak>roast confirmed r9-10. kesu dry>roast confirmed r11. nido pound>pound"
+    },
+    {
+     "id": "a13",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 6.0,
+     "net": 27.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "karu soak>roast confirmed (r10,r12). fedo step1 dry, step2 not soak: test roast. nido step1 pound, step2 not soak: test pound. kesu: recheck dry>roast."
+    },
+    {
+     "id": "a14",
+     "parent": "a5",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season's records: kesu = dry>roast (OK r5,7,8,10,11,12). fedo = dry>roast (OK r6; older notes saying dry>soak conflict with this, so test dry>roast first). karu = soak>roast (OK r9). nido unverified this season: older notes say pound>pound worked, but pound>dry failed, so try pound>pound first, then pound>roast or pound>soak. Recipes may change, so test the listed recipe first and fall back to other actions if it fails."
+    },
+    {
+     "id": "a15",
+     "parent": "a5",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season (verified): fedo = dry>roast (r5,r7). nido = pound>pound (r6,r8). kesu = dry>roast (r9-r12). karu not tested; last season soak>roast, so recheck. Preparations changed since last note, so test old notes first."
+    }
+   ],
+   "mean": {
+    "MEM": 3.188,
+    "TALK": 0.375,
+    "LORE": 1.812,
+    "AGG": 1.438,
+    "gross": 40.5,
+    "net": 32.438,
+    "success_rate": 0.875
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "fedo": [
+     "dry",
+     "roast"
+    ],
+    "karu": [
+     "soak",
+     "roast"
+    ],
+    "nido": [
+     "pound",
+     "pound"
+    ],
+    "kesu": [
+     "dry",
+     "roast"
+    ]
+   }
+  },
+  {
+   "gen": 10,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a9",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fedo dry>roast; karu soak>roast; nido pound>pound; kesu: try soak/pound."
+    },
+    {
+     "id": "a1",
+     "parent": "a9",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 18,
+     "upkeep": 4.5,
+     "net": 13.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Nido pound>pound confirmed OK. Kesu dry>roast FAILED (both steps wrong): try soak/pound first, dry/soak/pound second. Fedo dry>soak and karu soak>roast still unverified; test them."
+    },
+    {
+     "id": "a2",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 4.5,
+     "net": 38.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Kesu is soak>dry (verified twice). Nido pound>pound and karu soak>roast"
+    },
+    {
+     "id": "a3",
+     "parent": "a8",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 6.0,
+     "net": 27.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fedo dry>roast; karu soak>roast; nido pound>pound; kesu soak>dry. Verify all."
+    },
+    {
+     "id": "a4",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: fedo dry>roast (r5-8), karu soak>roast (r6,r9), nido pound>pound (r11). kesu soak is step1 (r10,r12 both had right step1), step2 not pound/roast; try soak>dry."
+    },
+    {
+     "id": "a5",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: fedo dry>roast (r8,r10 OK); karu soak>roast (r5,r12 OK); nido pound>pound (r9,r11 OK). kesu: step1 is soak (r7), step2 is not roast or pound, and dry first failed. Test kesu soak>dry first, then soak>soak."
+    },
+    {
+     "id": "a6",
+     "parent": "a2",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 0
+     },
+     "gross": 18,
+     "upkeep": 6.0,
+     "net": 12.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a2",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Nido pound>pound; karu soak>roast; fedo dry>roast; kesu soak>dry."
+    },
+    {
+     "id": "a8",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fedo dry>roast; karu soak>roast; nido pound>pound; kesu: not dry>roast."
+    },
+    {
+     "id": "a9",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified from r1-12: fedo dry>roast; kesu soak>dry (dry>roast failed r2); karu soak>roast; nido pound>pound. Prior notes' kesu dry>roast was wrong. Recheck if preparations change."
+    },
+    {
+     "id": "a10",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: karu soak>roast; nido pound>pound; kesu soak>dry (dry>roast failed r2); fedo dry>roast. Recheck any plant not listed here before relying on old notes."
+    },
+    {
+     "id": "a11",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 28,
+     "upkeep": 7.5,
+     "net": 20.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: fedo dry>roast, karu soak>roast, nido pound>pound, kesu soak>dry. Old"
+    },
+    {
+     "id": "a12",
+     "parent": "a0",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: fedo dry>roast, karu soak>roast, nido pound>pound, kesu soak>dry. Preparations may change, so recheck each plant's steps first; if a plant fails, test"
+    },
+    {
+     "id": "a13",
+     "parent": "a0",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: fedo dry>roast, karu soak>roast, nido pound>pound, kesu soak>dry (r12 OK). Recheck each plant's steps first; preparations can change between seasons."
+    },
+    {
+     "id": "a14",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fedo dry>roast, karu soak>roast, nido pound>pound. Kesu soak>dry (untested). Verify"
+    },
+    {
+     "id": "a15",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: karu soak>roast, fedo dry>roast, nido pound>pound (all OK). Kesu dry>roast FAILED both steps; test other kesu combos, avoiding dry>roast."
+    }
+   ],
+   "mean": {
+    "MEM": 3.375,
+    "TALK": 0.25,
+    "LORE": 1.5,
+    "AGG": 1.062,
+    "gross": 33.938,
+    "net": 26.25,
+    "success_rate": 0.766
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "fedo": [
+     "dry",
+     "roast"
+    ],
+    "karu": [
+     "soak",
+     "roast"
+    ],
+    "nido": [
+     "pound",
+     "pound"
+    ],
+    "kesu": [
+     "soak",
+     "dry"
+    ]
+   }
+  },
+  {
+   "gen": 11,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a2",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 4.5,
+     "net": 38.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+    },
+    {
+     "id": "a1",
+     "parent": "a2",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 0
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a15",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Karu soak>roast, kesu soak>dry, nido pound>pound all OK. Fedo changed: dry>roast and soak>pound/dry failed; try fedo soak>roast first. Fedo step1 soak seemed right."
+    },
+    {
+     "id": "a3",
+     "parent": "a15",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: karu soak>roast, nido pound>pound, kesu soak>dry. Fedo: step1 is soak (not dry); step2 not roast or pound, so try soak>dry first. Preparations may change;"
+    },
+    {
+     "id": "a4",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fedo soak>soak; karu soak>roast; nido pound>pound; kesu soak>dry."
+    },
+    {
+     "id": "a5",
+     "parent": "a8",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 28,
+     "upkeep": 7.5,
+     "net": 20.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: nido pound>pound; karu soak>roast; kesu soak>dry. Fedo ends in soak, and its first step must be soak (soak>soak), since pound, roast and dry all"
+    },
+    {
+     "id": "a6",
+     "parent": "a7",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 0
+     },
+     "gross": 8,
+     "upkeep": 6.0,
+     "net": 2.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a7",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fedo soak>soak; nido pound>pound; karu soak>roast; kesu soak>dry."
+    },
+    {
+     "id": "a8",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: kesu soak>dry, karu soak>roast, nido pound>pound. Fedo unknown: not dry>roast, not pound>dry; try roast/soak first step, soak/pound second. Recheck if preparations change."
+    },
+    {
+     "id": "a9",
+     "parent": "a9",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fedo is soak>soak (inferred from r5, r9, r11; the old dry>roast note was wrong). Kesu soak>dry, karu soak>roast, nido pound>pound all verified. Recheck if preparations"
+    },
+    {
+     "id": "a10",
+     "parent": "a5",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Last season (may have changed): kesu soak>dry (OK r1,r7,r9,r11). nido pound>pound (OK r2,r3,r6,r8,r12). karu soak>roast (OK r4). fedo: NOT dry>roast anymore; dry>roast failed r5 and soak>dry failed r10 with soak step right. So fedo step1 is soak, step2 is probably pound (untested). Next season, try fedo soak>pound first. Verify all plants early in case preparations changed."
+    },
+    {
+     "id": "a11",
+     "parent": "a5",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 43,
+     "upkeep": 7.5,
+     "net": 35.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Last season's verified steps (may change, so re-check): fedo dry>roast; karu soak>roast (confirmed r5, r9-r12); nido pound>pound (r9, r11); kesu soak>dry (confirmed twice). Try these first and test if one fails."
+    },
+    {
+     "id": "a12",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: kesu soak>dry (verified r1,3,4,10,11). nido pound>pound (verified r5,9,12). fedo soak>soak (deduced from r2,6,7,8). karu unverified this season; try soak>roast first."
+    },
+    {
+     "id": "a13",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: karu soak>roast OK (7 times), nido pound>pound OK (4 times), kesu soak>dry OK (once, r7). fedo dry>roast FAILED (r2, both steps wrong), so fedo's preparation changed; test fedo fresh. Recheck kesu and others each time."
+    },
+    {
+     "id": "a14",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: fedo soak>soak (r11 OK; old fedo dry>roast was wrong). nido pound>pound. karu soak>roast. kesu soak>dry. Recheck any plant not listed here."
+    },
+    {
+     "id": "a15",
+     "parent": "a10",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fedo soak>soak (r9 OK). Kesu soak>dry (verified 3x). Karu soak>roast (r10 OK). Nido pound>pound (r12 OK). Preparations may change between seasons; verify before relying on"
+    }
+   ],
+   "mean": {
+    "MEM": 3.312,
+    "TALK": 0.375,
+    "LORE": 1.812,
+    "AGG": 1.0,
+    "gross": 31.125,
+    "net": 22.875,
+    "success_rate": 0.719
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "fedo": [
+     "soak",
+     "soak"
+    ],
+    "karu": [
+     "soak",
+     "roast"
+    ],
+    "nido": [
+     "pound",
+     "pound"
+    ],
+    "kesu": [
+     "soak",
+     "dry"
+    ]
+   }
+  }
+ ],
+ "final_population": [
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 0
+   },
+   "parent": "a0",
+   "inherited": [
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido",
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 0
+   },
+   "parent": "a0",
+   "inherited": [
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido",
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 3,
+    "AGG": 1
+   },
+   "parent": "a11",
+   "inherited": [
+    "Last season's verified steps (may change, so re-check): fedo dry>roast; karu soak>roast (confirmed r5, r9-r12); nido pound>pound (r9, r11); kesu soak>dry (confirmed twice). Try these first and test if one fails.",
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 3,
+    "AGG": 1
+   },
+   "parent": "a11",
+   "inherited": [
+    "Last season's verified steps (may change, so re-check): fedo dry>roast; karu soak>roast (confirmed r5, r9-r12); nido pound>pound (r9, r11); kesu soak>dry (confirmed twice). Try these first and test if one fails.",
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 0,
+    "LORE": 3,
+    "AGG": 0
+   },
+   "parent": "a13",
+   "inherited": [
+    "This season: karu soak>roast OK (7 times), nido pound>pound OK (4 times), kesu soak>dry OK (once, r7). fedo dry>roast FAILED (r2, both steps wrong), so fedo's preparation changed; test fedo fresh. Recheck kesu and others each time.",
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 0,
+    "LORE": 2,
+    "AGG": 0
+   },
+   "parent": "a13",
+   "inherited": [
+    "This season: karu soak>roast OK (7 times), nido pound>pound OK (4 times), kesu soak>dry OK (once, r7). fedo dry>roast FAILED (r2, both steps wrong), so fedo's preparation changed; test fedo fresh. Recheck kesu and others each time.",
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 0,
+    "LORE": 2,
+    "AGG": 0
+   },
+   "parent": "a8",
+   "inherited": [
+    "Verified: kesu soak>dry, karu soak>roast, nido pound>pound. Fedo unknown: not dry>roast, not pound>dry; try roast/soak first step, soak/pound second. Recheck if preparations change.",
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 0,
+    "LORE": 2,
+    "AGG": 0
+   },
+   "parent": "a8",
+   "inherited": [
+    "Verified: kesu soak>dry, karu soak>roast, nido pound>pound. Fedo unknown: not dry>roast, not pound>dry; try roast/soak first step, soak/pound second. Recheck if preparations change.",
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 1,
+    "LORE": 3,
+    "AGG": 4
+   },
+   "parent": "a3",
+   "inherited": [
+    "Verified: karu soak>roast, nido pound>pound, kesu soak>dry. Fedo: step1 is soak (not dry); step2 not roast or pound, so try soak>dry first. Preparations may change;",
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 2,
+    "LORE": 2,
+    "AGG": 4
+   },
+   "parent": "a3",
+   "inherited": [
+    "Verified: karu soak>roast, nido pound>pound, kesu soak>dry. Fedo: step1 is soak (not dry); step2 not roast or pound, so try soak>dry first. Preparations may change;",
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 0,
+    "LORE": 4,
+    "AGG": 1
+   },
+   "parent": "a10",
+   "inherited": [
+    "Last season (may have changed): kesu soak>dry (OK r1,r7,r9,r11). nido pound>pound (OK r2,r3,r6,r8,r12). karu soak>roast (OK r4). fedo: NOT dry>roast anymore; dry>roast failed r5 and soak>dry failed r10 with soak step right. So fedo step1 is soak, step2 is probably pound (untested). Next season, try fedo soak>pound first. Verify all plants early in case preparations changed.",
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 0,
+    "LORE": 4,
+    "AGG": 1
+   },
+   "parent": "a10",
+   "inherited": [
+    "Last season (may have changed): kesu soak>dry (OK r1,r7,r9,r11). nido pound>pound (OK r2,r3,r6,r8,r12). karu soak>roast (OK r4). fedo: NOT dry>roast anymore; dry>roast failed r5 and soak>dry failed r10 with soak step right. So fedo step1 is soak, step2 is probably pound (untested). Next season, try fedo soak>pound first. Verify all plants early in case preparations changed.",
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 0
+   },
+   "parent": "a7",
+   "inherited": [
+    "Fedo soak>soak; nido pound>pound; karu soak>roast; kesu soak>dry.",
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 0
+   },
+   "parent": "a7",
+   "inherited": [
+    "Fedo soak>soak; nido pound>pound; karu soak>roast; kesu soak>dry.",
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 0,
+    "LORE": 2,
+    "AGG": 0
+   },
+   "parent": "a9",
+   "inherited": [
+    "Fedo is soak>soak (inferred from r5, r9, r11; the old dry>roast note was wrong). Kesu soak>dry, karu soak>roast, nido pound>pound all verified. Recheck if preparations",
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 2,
+    "AGG": 0
+   },
+   "parent": "a9",
+   "inherited": [
+    "Fedo is soak>soak (inferred from r5, r9, r11; the old dry>roast note was wrong). Kesu soak>dry, karu soak>roast, nido pound>pound all verified. Recheck if preparations",
+    "Fedo: roast>pound failed (both wrong); try others. Kesu soak>dry, nido"
+   ]
+  }
+ ],
+ "usage": {
+  "calls": 2477,
+  "cost_usd": 0.359
+ },
+ "samples": {
+  "messages": [],
+  "gossip": [],
+  "notes": [
+   {
+    "gen": 0,
+    "agent": "a2",
+    "text": "fedo: pound>roast OK (keep). kesu: dry>soak failed both steps; try other pairs. Actions: dry, pound, roast, soak."
+   },
+   {
+    "gen": 6,
+    "agent": "a13",
+    "text": "Season 3 records: nido = soak>roast (OK r5,r7,r10). karu = soak>roast (OK r6,r8,r9). kesu = dry>roast (OK r11). fedo = soak>roast FAILED r12, so its recipe has likely changed; test pound, dry, or other step pairs first. Other notes conflicted on karu and fedo, so verify each plant's recipe early before committing to it. Recipes change between seasons."
+   },
+   {
+    "gen": 0,
+    "agent": "a3",
+    "text": "Nido: roast then soak. Kesu: roast first, not soak second."
+   },
+   {
+    "gen": 7,
+    "agent": "a13",
+    "text": "Verified this season: kesu dry>roast, karu soak>roast, nido pound>pound. fedo step1 is dry; step2 is not pound or roast, so try dry>soak first, then dry>dry."
+   },
+   {
+    "gen": 3,
+    "agent": "a10",
+    "text": "fedo: pound>roast (confirmed x7). kesu: roast>soak (confirmed). nido: roast>soak unverified, retest. karu: untested; try dry>pound or soak>dry."
+   },
+   {
+    "gen": 10,
+    "agent": "a1",
+    "text": "Nido pound>pound confirmed OK. Kesu dry>roast FAILED (both steps wrong): try soak/pound first, dry/soak/pound second. Fedo dry>soak and karu soak>roast still unverified; test them."
+   },
+   {
+    "gen": 9,
+    "agent": "a2",
+    "text": "Kesu dry>roast, karu soak>roast, fedo dry>roast (verified). Nido unknown."
+   },
+   {
+    "gen": 0,
+    "agent": "a8",
+    "text": "Last season's findings (may change): fedo = pound then roast. kesu = roast then pound (worked 3 times). karu = dry first, second step is roast or soak (not pound), so try roast or soak. nido = unknown, test its options. Verify each, since preparations can change."
+   },
+   {
+    "gen": 7,
+    "agent": "a9",
+    "text": "kesu dry>roast; karu soak>roast; fedo try dry>roast; nido try pound>roast"
+   },
+   {
+    "gen": 0,
+    "agent": "a6",
+    "text": "fedo: pound>roast. nido: avoid pound and dry. Test karu, kesu."
+   },
+   {
+    "gen": 7,
+    "agent": "a3",
+    "text": "Season 4 results: fedo = dry>dry (OK r10, r11; dry>roast and dry>soak failed, so step2 is not roast or soak). kesu = dry>roast (OK r7, r8, r12). karu = soak>roast (OK r9 only; verify). nido not tested by me, so keep prior soak>roast but verify early. Recipes may change between seasons, so test the listed recipe first and fall back to pairs using dry/soak/pound/roast if it fails."
+   },
+   {
+    "gen": 4,
+    "agent": "a10",
+    "text": "This season: nido = soak>roast (OK r11, r12). karu = dry>roast (OK r9). fedo FAILED pound>roast in r10 (step1 wrong, step2 roast right), so fedo's first step may have changed; test other first steps with roast second. kesu untested this season; roast>soak worked in an earlier season but failed r11, so test alternatives. Check karu and nido with their known pairs first."
+   },
+   {
+    "gen": 5,
+    "agent": "a3",
+    "text": "This season (verified by my records): nido = soak>roast (r5,6,9,10 OK). kesu = dry>roast (r7,11,12 OK). karu = soak>roast (r8 OK; the prior note's dry>roast claim conflicts with this, so test karu's step1 with soak first). fedo unseen this season; last season's pound>roast is untested, so try it first. Roast has been the step2 in every success, so keep it there. Preparations can change, so verify each plant on its first appearance."
+   },
+   {
+    "gen": 7,
+    "agent": "a2",
+    "text": "Confirmed this season: karu = soak>roast (OK r7, r12). kesu = dry>roast (OK r9, r10). Partial: fedo step1 = dry (right in r6, r8), step2 is not pound or soak, so try dry>roast first. nido step1 = pound (right in r11), step2 is not dry or roast, so try pound>soak next. Recipes may change between seasons, so verify early."
+   },
+   {
+    "gen": 1,
+    "agent": "a14",
+    "text": "Verified this season: fedo = pound>roast; nido = roast>soak; kesu = roast>soak; karu = dry>roast. Preparations may change, so test these first and adjust if"
+   },
+   {
+    "gen": 5,
+    "agent": "a10",
+    "text": "This season: fedo soak>roast (r10,12 OK); nido soak>roast (r5,7 OK); kesu dry>roast (r6,9,11 OK); karu soak>roast (r8 OK, conflicts with old dry note, so verify)."
+   },
+   {
+    "gen": 7,
+    "agent": "a8",
+    "text": "kesu: dry>roast (5 OK). karu: soak>roast (3 OK). nido: step1 pound right; dry, soak wrong as step2, so try roast. fedo: soak and roast both"
+   },
+   {
+    "gen": 2,
+    "agent": "a6",
+    "text": "fedo: pound>roast (confirmed 4x). nido: roast>soak failed r11; avoid, try other pairs. kesu: roast>soak worked once; retest. karu: untested, try all pairs."
+   },
+   {
+    "gen": 11,
+    "agent": "a3",
+    "text": "Verified: karu soak>roast, nido pound>pound, kesu soak>dry. Fedo: step1 is soak (not dry); step2 not roast or pound, so try soak>dry first. Preparations may change;"
+   },
+   {
+    "gen": 2,
+    "agent": "a15",
+    "text": "fedo: pound>roast (confirmed many times). karu: dry>roast (confirmed x2). nido: soak>roast worked r10; old roast>soak is outdated. kesu: roast>soak worked once (r5), retest to confirm."
+   }
+  ]
+ },
+ "samples_seen": {
+  "messages": 0,
+  "gossip": 0,
+  "notes": 173
+ }
+}

@@ -1,0 +1,567 @@
+{
+ "thesis": "All three surviving theories say intelligence was a byproduct. A faithful simulation therefore scores agents only on staying alive and being copied, then measures general ability separately on held-out tests.",
+ "spent": 7.02,
+ "gpu_spent": 2.99,
+ "gpu": {
+  "base": {
+   "near_plants": 0.0625,
+   "near_tracks": 0.5729,
+   "near_trade": 0.5469,
+   "near_invalid": 0.0,
+   "near": 21.9167,
+   "code": 0.2062,
+   "rule": 0.5031,
+   "order": 0.2667,
+   "retention": 0.8222,
+   "general": 0.3253
+  },
+  "ceiling": {
+   "near_plants": 0.3917,
+   "near_tracks": 1.0,
+   "near_trade": 0.875,
+   "near_invalid": 0.0,
+   "near": 68.5833,
+   "code": 0.2062,
+   "rule": 0.4813,
+   "order": 0.2833,
+   "retention": 0.7222,
+   "general": 0.3236
+  },
+  "pilot": {
+   "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "rows": [
+    {
+     "seed": 1,
+     "final": {
+      "DRIFT": {
+       "near_plants": 0.1458,
+       "near_tracks": 0.5469,
+       "near_trade": 0.4688,
+       "near_invalid": 0.0,
+       "near": 21.9167,
+       "code": 0.2531,
+       "rule": 0.5125,
+       "order": 0.2833,
+       "retention": 0.8111,
+       "general": 0.3497
+      },
+      "SOLO": {
+       "near_plants": 0.0833,
+       "near_tracks": 0.7292,
+       "near_trade": 0.6198,
+       "near_invalid": 0.0,
+       "near": 32.125,
+       "code": 0.2531,
+       "rule": 0.5281,
+       "order": 0.3,
+       "retention": 0.8,
+       "general": 0.3604
+      }
+     },
+     "in_run": 4.152000000000001,
+     "in_run_pos": 5,
+     "in_run_n": 7
+    },
+    {
+     "seed": 2,
+     "final": {
+      "DRIFT": {
+       "near_plants": 0.1042,
+       "near_tracks": 0.3594,
+       "near_trade": 0.4271,
+       "near_invalid": 0.0,
+       "near": 10.6667,
+       "code": 0.2531,
+       "rule": 0.4938,
+       "order": 0.3,
+       "retention": 0.8111,
+       "general": 0.349
+      },
+      "SOLO": {
+       "near_plants": 0.0833,
+       "near_tracks": 0.6302,
+       "near_trade": 0.5365,
+       "near_invalid": 0.0016,
+       "near": 24.8333,
+       "code": 0.2531,
+       "rule": 0.5281,
+       "order": 0.3167,
+       "retention": 0.8111,
+       "general": 0.366
+      }
+     },
+     "in_run": 7.388428571428571,
+     "in_run_pos": 6,
+     "in_run_n": 7
+    },
+    {
+     "seed": 3,
+     "final": {
+      "DRIFT": {
+       "near_plants": 0.1167,
+       "near_tracks": 0.7396,
+       "near_trade": 0.6458,
+       "near_invalid": 0.0,
+       "near": 35.25,
+       "code": 0.2531,
+       "rule": 0.5156,
+       "order": 0.2833,
+       "retention": 0.8,
+       "general": 0.3507
+      },
+      "SOLO": {
+       "near_plants": 0.0833,
+       "near_tracks": 0.7188,
+       "near_trade": 0.7031,
+       "near_invalid": 0.0,
+       "near": 35.0417,
+       "code": 0.2281,
+       "rule": 0.5062,
+       "order": 0.2667,
+       "retention": 0.8111,
+       "general": 0.3337
+      }
+     },
+     "in_run": 5.758857142857144,
+     "in_run_pos": 4,
+     "in_run_n": 7
+    },
+    {
+     "seed": 4,
+     "final": {
+      "DRIFT": {
+       "near_plants": 0.0833,
+       "near_tracks": 0.4844,
+       "near_trade": 0.5885,
+       "near_invalid": 0.0,
+       "near": 21.0833,
+       "code": 0.2531,
+       "rule": 0.5469,
+       "order": 0.3167,
+       "retention": 0.8111,
+       "general": 0.3722
+      },
+      "SOLO": {
+       "near_plants": 0.125,
+       "near_tracks": 0.6719,
+       "near_trade": 0.5938,
+       "near_invalid": 0.0032,
+       "near": 30.875,
+       "code": 0.2313,
+       "rule": 0.5531,
+       "order": 0.25,
+       "retention": 0.7889,
+       "general": 0.3448
+      }
+     },
+     "in_run": 6.919428571428571,
+     "in_run_pos": 6,
+     "in_run_n": 7
+    },
+    {
+     "seed": 5,
+     "final": {
+      "DRIFT": {
+       "near_plants": 0.1042,
+       "near_tracks": 0.3854,
+       "near_trade": 0.5729,
+       "near_invalid": 0.0,
+       "near": 17.5417,
+       "code": 0.2531,
+       "rule": 0.525,
+       "order": 0.3,
+       "retention": 0.7889,
+       "general": 0.3594
+      },
+      "SOLO": {
+       "near_plants": 0.1625,
+       "near_tracks": 0.4427,
+       "near_trade": 0.6406,
+       "near_invalid": 0.0,
+       "near": 25.4583,
+       "code": 0.2219,
+       "rule": 0.5188,
+       "order": 0.3167,
+       "retention": 0.8,
+       "general": 0.3524
+      }
+     },
+     "in_run": 4.665285714285715,
+     "in_run_pos": 5,
+     "in_run_n": 7
+    }
+   ],
+   "near": {
+    "gaps": [
+     10.208300000000001,
+     14.1666,
+     -0.20830000000000126,
+     9.791699999999999,
+     7.9166000000000025
+    ],
+    "mean": 8.37498,
+    "se": 2.374803442266328,
+    "pos": 4,
+    "solo": 29.66666,
+    "drift": 21.29168,
+    "base": 21.9167
+   },
+   "general": {
+    "gaps": [
+     0.010699999999999987,
+     0.017000000000000015,
+     -0.017000000000000015,
+     -0.02739999999999998,
+     -0.007000000000000006
+    ],
+    "mean": -0.004739999999999999,
+    "se": 0.008306359009818921,
+    "pos": 2,
+    "solo": 0.35146,
+    "drift": 0.35619999999999996,
+    "base": 0.3253
+   },
+   "retention": {
+    "gaps": [
+     -0.011099999999999999,
+     0.0,
+     0.011099999999999999,
+     -0.022199999999999998,
+     0.011099999999999999
+    ],
+    "mean": -0.0022199999999999998,
+    "se": 0.006472356603278283,
+    "pos": 2,
+    "solo": 0.8022199999999999,
+    "drift": 0.8044399999999999,
+    "base": 0.8222
+   },
+   "done": true,
+   "pass": false
+  }
+ },
+ "cpu": {
+  "base": {
+   "near_plants": 0.3,
+   "near_tracks": 0.1797,
+   "near_trade": 0.3047,
+   "near_invalid": 0.0144,
+   "near": 8.375,
+   "code": 0.1083,
+   "rule": 0.4,
+   "order": 0.175,
+   "retention": 0.5,
+   "general": 0.2278
+  },
+  "ceiling": {
+   "near_plants": 0.7562,
+   "near_tracks": 1.0,
+   "near_trade": 0.7344,
+   "near_invalid": 0.0,
+   "near": 81.1875,
+   "code": 0.0667,
+   "rule": 0.2917,
+   "order": 0.175,
+   "retention": 0.45,
+   "general": 0.1778
+  },
+  "pilot": {
+   "seeds": [
+    1,
+    2
+   ],
+   "rows": [
+    {
+     "seed": 1,
+     "final": {
+      "DRIFT": {
+       "near_plants": 0.3438,
+       "near_tracks": 0.0938,
+       "near_trade": 0.3047,
+       "near_invalid": 0.0,
+       "near": 7.125,
+       "code": 0.0667,
+       "rule": 0.5,
+       "order": 0.225,
+       "retention": 0.4667,
+       "general": 0.2639
+      },
+      "SOLO": {
+       "near_plants": 0.3625,
+       "near_tracks": 0.1953,
+       "near_trade": 0.3125,
+       "near_invalid": 0.0,
+       "near": 12.4375,
+       "code": 0.1083,
+       "rule": 0.4625,
+       "order": 0.25,
+       "retention": 0.5,
+       "general": 0.2736
+      }
+     },
+     "in_run": 7.738,
+     "in_run_pos": 7,
+     "in_run_n": 7
+    },
+    {
+     "seed": 2,
+     "final": {
+      "DRIFT": {
+       "near_plants": 0.3187,
+       "near_tracks": 0.1719,
+       "near_trade": 0.3047,
+       "near_invalid": 0.0,
+       "near": 9.0,
+       "code": 0.0667,
+       "rule": 0.4667,
+       "order": 0.275,
+       "retention": 0.4667,
+       "general": 0.2694
+      },
+      "SOLO": {
+       "near_plants": 0.3812,
+       "near_tracks": 0.1797,
+       "near_trade": 0.3047,
+       "near_invalid": 0.0,
+       "near": 12.4375,
+       "code": 0.0667,
+       "rule": 0.4667,
+       "order": 0.2,
+       "retention": 0.4833,
+       "general": 0.2444
+      }
+     },
+     "in_run": 0.02971428571428549,
+     "in_run_pos": 4,
+     "in_run_n": 7
+    }
+   ],
+   "near": {
+    "gaps": [
+     5.3125,
+     3.4375
+    ],
+    "mean": 4.375,
+    "se": 0.9375,
+    "pos": 2,
+    "solo": 12.4375,
+    "drift": 8.0625,
+    "base": 8.375
+   },
+   "general": {
+    "gaps": [
+     0.009699999999999986,
+     -0.024999999999999967
+    ],
+    "mean": -0.00764999999999999,
+    "se": 0.017349999999999973,
+    "pos": 1,
+    "solo": 0.259,
+    "drift": 0.26665,
+    "base": 0.2278
+   },
+   "retention": {
+    "gaps": [
+     0.033299999999999996,
+     0.016600000000000004
+    ],
+    "mean": 0.02495,
+    "se": 0.008349999999999996,
+    "pos": 2,
+    "solo": 0.49165000000000003,
+    "drift": 0.4667,
+    "base": 0.5
+   },
+   "done": true,
+   "pass": true
+  }
+ },
+ "wide": {
+  "outcome": "Partial",
+  "steps": 1200,
+  "mid_without_reverse": {
+   "base": 0.5896,
+   "control": 0.5646,
+   "wide": 0.6062
+  },
+  "examples": 9750,
+  "base": {
+   "near_plants": 0.0875,
+   "near_tracks": 0.5625,
+   "near_trade": 0.5469,
+   "near_count": 0.7361,
+   "near_tally": 0.125,
+   "near_path": 0.4444,
+   "near_series": 0.6667,
+   "near_sort": 0.0972,
+   "near_gate": 0.6528,
+   "near_decode": 0.9444,
+   "near_oddone": 0.3056,
+   "near_minmax": 0.5278,
+   "near_swap": 0.2083,
+   "near_share": 0.9722,
+   "near_pick": 0.3611,
+   "near_countif": 0.2639,
+   "near_invalid": 0.0218,
+   "near_wide": 0.485,
+   "near": 78.3333,
+   "mid_invalid": 0.0,
+   "mid_taboo": 0.5625,
+   "mid_rank": 0.6042,
+   "mid_days": 0.5208,
+   "mid_reverse": 0.0938,
+   "mid_elim": 1.0,
+   "mid_change": 0.2604,
+   "mid": 0.5069,
+   "code": 0.2062,
+   "rule": 0.5125,
+   "order": 0.2667,
+   "retention": 0.8333,
+   "general": 0.3285
+  },
+  "wide": {
+   "near_plants": 0.2292,
+   "near_tracks": 1.0,
+   "near_trade": 0.8802,
+   "near_count": 0.9167,
+   "near_tally": 0.9583,
+   "near_path": 0.9306,
+   "near_series": 1.0,
+   "near_sort": 0.9306,
+   "near_gate": 1.0,
+   "near_decode": 1.0,
+   "near_oddone": 0.9861,
+   "near_minmax": 0.9444,
+   "near_swap": 0.7222,
+   "near_share": 1.0,
+   "near_pick": 0.9722,
+   "near_countif": 0.5972,
+   "near_invalid": 0.0,
+   "near_wide": 0.9199,
+   "near": 201.0417,
+   "mid_invalid": 0.0,
+   "mid_taboo": 0.5833,
+   "mid_rank": 0.6875,
+   "mid_days": 0.5625,
+   "mid_reverse": 0.8229,
+   "mid_elim": 1.0,
+   "mid_change": 0.1979,
+   "mid": 0.6424,
+   "code": 0.2625,
+   "rule": 0.5312,
+   "order": 0.2833,
+   "retention": 0.8,
+   "general": 0.359
+  },
+  "control": {
+   "near_plants": 0.5208,
+   "near_tracks": 1.0,
+   "near_trade": 0.9219,
+   "near_count": 0.7083,
+   "near_tally": 0.2083,
+   "near_path": 0.3472,
+   "near_series": 0.6389,
+   "near_sort": 0.125,
+   "near_gate": 0.75,
+   "near_decode": 0.7361,
+   "near_oddone": 0.4861,
+   "near_minmax": 0.5833,
+   "near_swap": 0.375,
+   "near_share": 0.9167,
+   "near_pick": 0.4861,
+   "near_countif": 0.2639,
+   "near_invalid": 0.0006,
+   "near_wide": 0.5096,
+   "near": 137.2917,
+   "mid_invalid": 0.0,
+   "mid_taboo": 0.5521,
+   "mid_rank": 0.5312,
+   "mid_days": 0.5208,
+   "mid_reverse": 0.7083,
+   "mid_elim": 1.0,
+   "mid_change": 0.2188,
+   "mid": 0.5885,
+   "code": 0.1969,
+   "rule": 0.5625,
+   "order": 0.3167,
+   "retention": 0.7556,
+   "general": 0.3587
+  },
+  "chance": {
+   "near_plants": 0.0792,
+   "near_tracks": 0.1562,
+   "near_trade": 0.3594,
+   "near_count": 0.125,
+   "near_tally": 0.0417,
+   "near_path": 0.0972,
+   "near_series": 0.0139,
+   "near_sort": 0.125,
+   "near_gate": 0.4306,
+   "near_decode": 0.3333,
+   "near_oddone": 0.1806,
+   "near_minmax": 0.0417,
+   "near_swap": 0.375,
+   "near_share": 0.125,
+   "near_pick": 0.1944,
+   "near_countif": 0.1806,
+   "near_invalid": 0.0,
+   "near_wide": 0.1741,
+   "near": -6.4583,
+   "mid_invalid": 0.0,
+   "mid_taboo": 0.5021,
+   "mid_rank": 0.26,
+   "mid_days": 0.4946,
+   "mid_reverse": 0.1062,
+   "mid_elim": 0.2379,
+   "mid_change": 0.0454,
+   "mid": 0.2744,
+   "code": 0.097,
+   "rule": 0.497,
+   "order": 0.25,
+   "retention": 0.0,
+   "general": 0.2813
+  },
+  "correct_near": 241.04166666666666,
+  "gaps": {
+   "mid_wide": [
+    0.1354,
+    0.018
+   ],
+   "mid_ctl": [
+    0.0816,
+    0.0206
+   ],
+   "mid_breadth": [
+    0.0538,
+    0.0158
+   ],
+   "gen_wide": [
+    0.0306,
+    0.0201
+   ],
+   "gen_ctl": [
+    0.0302,
+    0.0192
+   ],
+   "gen_breadth": [
+    0.0003,
+    0.018
+   ],
+   "ret_wide": [
+    -0.0333,
+    0.0369
+   ],
+   "ret_ctl": [
+    -0.0778,
+    0.0425
+   ]
+  },
+  "usd": 0.61
+ }
+}

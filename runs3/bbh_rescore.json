@@ -1,0 +1,245 @@
+{
+ "base": {
+  "strict": 0.3455,
+  "lenient": 0.3705,
+  "n": 440,
+  "multiple_choice": 240,
+  "reply_kinds": {
+   "letter": 0.921,
+   "option text": 0.079
+  },
+  "lenient_by_task": {
+   "boolean_expressions": 0.725,
+   "navigate": 0.575,
+   "object_counting": 0.325,
+   "tracking_shuffled_objects_three_objects": 0.4,
+   "logical_deduction_three_objects": 0.475,
+   "date_understanding": 0.475,
+   "web_of_lies": 0.0,
+   "temporal_sequences": 0.25,
+   "reasoning_about_colored_objects": 0.475,
+   "penguins_in_a_table": 0.35,
+   "multistep_arithmetic_two": 0.025
+  },
+  "samples": [
+   {
+    "task": "tracking_shuffled_objects_three_objects",
+    "target": "(C)",
+    "reply": "B"
+   },
+   {
+    "task": "tracking_shuffled_objects_three_objects",
+    "target": "(C)",
+    "reply": "B"
+   },
+   {
+    "task": "logical_deduction_three_objects",
+    "target": "(B)",
+    "reply": "A"
+   },
+   {
+    "task": "date_understanding",
+    "target": "(D)",
+    "reply": "E"
+   },
+   {
+    "task": "temporal_sequences",
+    "target": "(C)",
+    "reply": "B"
+   },
+   {
+    "task": "reasoning_about_colored_objects",
+    "target": "(G)",
+    "reply": "grey"
+   },
+   {
+    "task": "penguins_in_a_table",
+    "target": "(B)",
+    "reply": "D"
+   }
+  ]
+ },
+ "k02-r1": {
+  "strict": 0.3114,
+  "lenient": 0.3909,
+  "n": 440,
+  "multiple_choice": 240,
+  "reply_kinds": {
+   "option text": 0.346,
+   "other": 0.358,
+   "letter": 0.296
+  },
+  "lenient_by_task": {
+   "boolean_expressions": 0.9,
+   "navigate": 0.6,
+   "object_counting": 0.375,
+   "tracking_shuffled_objects_three_objects": 0.425,
+   "logical_deduction_three_objects": 0.425,
+   "date_understanding": 0.575,
+   "web_of_lies": 0.175,
+   "temporal_sequences": 0.125,
+   "reasoning_about_colored_objects": 0.45,
+   "penguins_in_a_table": 0.25,
+   "multistep_arithmetic_two": 0.0
+  },
+  "samples": [
+   {
+    "task": "tracking_shuffled_objects_three_objects",
+    "target": "(C)",
+    "reply": "Ulysses"
+   },
+   {
+    "task": "tracking_shuffled_objects_three_objects",
+    "target": "(C)",
+    "reply": "{\"answer\": (A)}"
+   },
+   {
+    "task": "logical_deduction_three_objects",
+    "target": "(B)",
+    "reply": "A"
+   },
+   {
+    "task": "date_understanding",
+    "target": "(D)",
+    "reply": "08/29/2021"
+   },
+   {
+    "task": "temporal_sequences",
+    "target": "(C)",
+    "reply": "{\"answer\": (B)}"
+   },
+   {
+    "task": "reasoning_about_colored_objects",
+    "target": "(G)",
+    "reply": "grey"
+   },
+   {
+    "task": "penguins_in_a_table",
+    "target": "(B)",
+    "reply": "49"
+   }
+  ]
+ },
+ "k16-r2": {
+  "strict": 0.2318,
+  "lenient": 0.3682,
+  "n": 440,
+  "multiple_choice": 240,
+  "reply_kinds": {
+   "option text": 0.633,
+   "other": 0.054,
+   "letter": 0.312
+  },
+  "lenient_by_task": {
+   "boolean_expressions": 0.725,
+   "navigate": 0.55,
+   "object_counting": 0.45,
+   "tracking_shuffled_objects_three_objects": 0.225,
+   "logical_deduction_three_objects": 0.325,
+   "date_understanding": 0.475,
+   "web_of_lies": 0.125,
+   "temporal_sequences": 0.275,
+   "reasoning_about_colored_objects": 0.375,
+   "penguins_in_a_table": 0.4,
+   "multistep_arithmetic_two": 0.125
+  },
+  "samples": [
+   {
+    "task": "tracking_shuffled_objects_three_objects",
+    "target": "(C)",
+    "reply": "Ulysses"
+   },
+   {
+    "task": "tracking_shuffled_objects_three_objects",
+    "target": "(C)",
+    "reply": "Moby Dick"
+   },
+   {
+    "task": "logical_deduction_three_objects",
+    "target": "(B)",
+    "reply": "A"
+   },
+   {
+    "task": "date_understanding",
+    "target": "(D)",
+    "reply": "08/28/2021"
+   },
+   {
+    "task": "temporal_sequences",
+    "target": "(C)",
+    "reply": "B"
+   },
+   {
+    "task": "reasoning_about_colored_objects",
+    "target": "(G)",
+    "reply": "red"
+   },
+   {
+    "task": "penguins_in_a_table",
+    "target": "(B)",
+    "reply": "62"
+   }
+  ]
+ },
+ "k64-r2": {
+  "strict": 0.2341,
+  "lenient": 0.3386,
+  "n": 440,
+  "multiple_choice": 240,
+  "reply_kinds": {
+   "option text": 0.467,
+   "other": 0.125,
+   "letter": 0.408
+  },
+  "lenient_by_task": {
+   "boolean_expressions": 0.725,
+   "navigate": 0.525,
+   "object_counting": 0.425,
+   "tracking_shuffled_objects_three_objects": 0.175,
+   "logical_deduction_three_objects": 0.45,
+   "date_understanding": 0.45,
+   "web_of_lies": 0.1,
+   "temporal_sequences": 0.025,
+   "reasoning_about_colored_objects": 0.425,
+   "penguins_in_a_table": 0.375,
+   "multistep_arithmetic_two": 0.05
+  },
+  "samples": [
+   {
+    "task": "tracking_shuffled_objects_three_objects",
+    "target": "(C)",
+    "reply": "catch-22"
+   },
+   {
+    "task": "tracking_shuffled_objects_three_objects",
+    "target": "(C)",
+    "reply": "Lolita"
+   },
+   {
+    "task": "logical_deduction_three_objects",
+    "target": "(B)",
+    "reply": "C"
+   },
+   {
+    "task": "date_understanding",
+    "target": "(D)",
+    "reply": "08/28/2021"
+   },
+   {
+    "task": "temporal_sequences",
+    "target": "(C)",
+    "reply": "B"
+   },
+   {
+    "task": "reasoning_about_colored_objects",
+    "target": "(G)",
+    "reply": "red"
+   },
+   {
+    "task": "penguins_in_a_table",
+    "target": "(B)",
+    "reply": "62"
+   }
+  ]
+ }
+}

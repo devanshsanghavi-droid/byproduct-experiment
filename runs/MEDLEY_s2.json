@@ -1,0 +1,4856 @@
+{
+ "arm": "MEDLEY",
+ "seed": 2,
+ "model": "claude-haiku-5-5",
+ "mock": false,
+ "config": {
+  "N": 16,
+  "R": 12,
+  "G": 12,
+  "cost": 1.5
+ },
+ "complete": true,
+ "plants": [
+  "roba",
+  "taze",
+  "kufu",
+  "vodu"
+ ],
+ "generations": [
+  {
+   "gen": 0,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 11,
+     "upkeep": 10.5,
+     "net": 0.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plant preparations may change; re-test each. Known from last season: vodu likely soak>soak (worked with a11 and a11 grabbed). Taze: soak>roast worked with a11. Kufu: roast>dry worked once, roast>soak failed; test roast>dry first. Roba: roast>soak worked once, dry>pound and roast>roast failed. Partner a11 grabbed often; expect grabs and split costs."
+    },
+    {
+     "id": "a1",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": 14,
+     "upkeep": 7.5,
+     "net": 6.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 0,
+     "upkeep": 12.0,
+     "net": -12.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "a4 grabs every round and takes 7, leaving partner 1; avoid pairing with a4 unless forced. Roba prep: roast>soak works. Vodu: soak>soak works. Kufu: roast>soak"
+    },
+    {
+     "id": "a3",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 2,
+     "upkeep": 6.0,
+     "net": -4.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast,soak. Taze: soak,roast. Kufu: roast,dry. Recheck; may change."
+    },
+    {
+     "id": "a4",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 36,
+     "upkeep": 3.0,
+     "net": 33.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 0,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Records were empty; no rounds recorded. Try pairing early, share"
+    },
+    {
+     "id": "a5",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 12.0,
+     "net": 6.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Taze prep: soak then roast works (seen with a12). Kufu: roast then dry works (r12); roast>soak failed. Grabbing with partner a12 splits 1 vs 7,"
+    },
+    {
+     "id": "a6",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 13.5,
+     "net": -15.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Taze: first step soak works with second roast (r10 success). Vodu: soak>soak succeeded. Kufu: pound or roast patterns unclear; r12 roast>pound failed on step 2, so try other second steps. Check partner's grab behavior: a9 grabbed in success rounds, leaving small shares. Prefer partners who do not grab, and agree"
+    },
+    {
+     "id": "a7",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": -4,
+     "upkeep": 10.5,
+     "net": -14.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: step2 soak was right with pound first? Unclear; test pairs carefully. Kufu: roast failed as step2 with soak first; try other steps. Ask partners"
+    },
+    {
+     "id": "a8",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 0
+     },
+     "gross": 7,
+     "upkeep": 9.0,
+     "net": -2.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 10,
+     "upkeep": 4.5,
+     "net": 5.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "No records kept. Ask partners early which steps their plant"
+    },
+    {
+     "id": "a10",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": -4,
+     "upkeep": 6.0,
+     "net": -10.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Records were empty, so I know nothing certain. Try pairs of actions per plant and share results publicly. Coordinate step pairs via messages before choosing;"
+    },
+    {
+     "id": "a11",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 19,
+     "upkeep": 4.5,
+     "net": 14.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "No records kept this season, so I have no verified preparations. Next season: exchange step plans early via messages, and test each plant's 2-step recipe with a partner you trust. Watch the public remarks for who shares honest results. Grab only when needed, since a shared harvest pays 4 each"
+    },
+    {
+     "id": "a12",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 12,
+     "upkeep": 0.0,
+     "net": 12.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 49,
+     "upkeep": 7.5,
+     "net": 41.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 0,
+     "votes_against": 1,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 10,
+     "upkeep": 3.0,
+     "net": 7.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Records were empty, so I know nothing certain yet. Try messaging partners early to agree on step pairs for each plant, and test which actions"
+    },
+    {
+     "id": "a15",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 6.0,
+     "net": 32.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Soak worked for vodu; roast worked as step 2 for"
+    }
+   ],
+   "mean": {
+    "MEM": 1.438,
+    "TALK": 1.938,
+    "LORE": 1.438,
+    "AGG": 2.438,
+    "gross": 13.5,
+    "net": 6.281,
+    "success_rate": 0.479
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "soak"
+    ],
+    "taze": [
+     "soak",
+     "roast"
+    ],
+    "kufu": [
+     "roast",
+     "dry"
+    ],
+    "vodu": [
+     "soak",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 1,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 19,
+     "upkeep": 9.0,
+     "net": 10.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 6,
+     "upkeep": 6.0,
+     "net": 0.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 12,
+     "upkeep": 4.5,
+     "net": 7.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pair early with a1; it cooperates. Soak works for vodu"
+    },
+    {
+     "id": "a3",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 11,
+     "upkeep": 3.0,
+     "net": 8.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pair early; agree on each plant's two steps via messages."
+    },
+    {
+     "id": "a4",
+     "parent": "a15",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 10,
+     "upkeep": 6.0,
+     "net": 4.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast>soak worked (both grabbed, +2). Kufu: step 2 roast"
+    },
+    {
+     "id": "a5",
+     "parent": "a15",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 12,
+     "upkeep": 7.5,
+     "net": 4.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak worked. Taze: soak then roast worked."
+    },
+    {
+     "id": "a6",
+     "parent": "a11",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 4,
+     "upkeep": 6.0,
+     "net": -2.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Kufu: step 1 is roast (confirmed, r12). Step 2 is not dry or pound, so try soak next. Roast/dry and roast/pound both failed. Preparations may change between seasons, so re-test. Share step plans early and compare results honestly. Grab only when needed."
+    },
+    {
+     "id": "a7",
+     "parent": "a11",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": -5,
+     "upkeep": 4.5,
+     "net": -9.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations are unverified and may change. Exchange step plans early by message, and test each plant's 2-step recipe with a trusted partner. Record each plant's verified steps. Grab only when needed, since a shared harvest pays 4 each. Watch remarks for honest members."
+    },
+    {
+     "id": "a8",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -3,
+     "upkeep": 0.0,
+     "net": -3.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 0.0,
+     "net": 3.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 6,
+     "upkeep": 6.0,
+     "net": 0.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Records were empty for me too, so the plant recipes are still unknown. Message your partner before each round to agree on a step pair for that plant. Log every round's steps and outcome so later rounds can reuse what worked. Grab only when it is clearly needed."
+    },
+    {
+     "id": "a11",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 7,
+     "upkeep": 3.0,
+     "net": 4.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Records were empty for me too. Message partners early to agree on step pairs per plant; test actions systematically and log which pairs succeed. Split"
+    },
+    {
+     "id": "a12",
+     "parent": "a1",
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": 1,
+     "upkeep": 7.5,
+     "net": -6.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a1",
+     "genome": {
+      "MEM": 0,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": 5,
+     "upkeep": 6.0,
+     "net": -1.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a5",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 12.0,
+     "net": 1.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Taze: soak then roast worked (a12, r9 with a4). Kufu: roast then dry worked (r12), roast>soak failed. Vodu: soak>roast failed (r10); try others. Roba: roast>soak"
+    },
+    {
+     "id": "a15",
+     "parent": "a5",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 7,
+     "upkeep": 12.0,
+     "net": -5.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Taze: soak then roast works. Kufu: roast then dry works (r12 roast>dry failed, so check step 2). Roba: roast then soak worked. Both grabbing gives"
+    }
+   ],
+   "mean": {
+    "MEM": 1.125,
+    "TALK": 1.562,
+    "LORE": 1.188,
+    "AGG": 2.938,
+    "gross": 6.75,
+    "net": 0.938,
+    "success_rate": 0.375
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "soak"
+    ],
+    "taze": [
+     "soak",
+     "roast"
+    ],
+    "kufu": [
+     "roast",
+     "roast"
+    ],
+    "vodu": [
+     "soak",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 2,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a0",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 19,
+     "upkeep": 7.5,
+     "net": 11.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a0",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 26,
+     "upkeep": 7.5,
+     "net": 18.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 3.0,
+     "net": 20.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Agree each plant's two steps early via messages; verify with"
+    },
+    {
+     "id": "a3",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 14,
+     "upkeep": 1.5,
+     "net": 12.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pair early with a trusted partner; agree each plant's two"
+    },
+    {
+     "id": "a4",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 6.0,
+     "net": 12.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak works with a11. Grabbing gave 7"
+    },
+    {
+     "id": "a5",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 20,
+     "upkeep": 4.5,
+     "net": 15.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak worked with a1. Partner a1 cooperates;"
+    },
+    {
+     "id": "a6",
+     "parent": "a5",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 10.5,
+     "net": 7.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak worked before; taze: soak then roast worked (confirmed r10-r12). Vodu: dry then roast failed; step 2 roast may be right, try"
+    },
+    {
+     "id": "a7",
+     "parent": "a5",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 22,
+     "upkeep": 6.0,
+     "net": 16.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak worked. Vodu: roast then roast worked."
+    },
+    {
+     "id": "a8",
+     "parent": "a11",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 1.5,
+     "net": 26.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Records were empty for me too. Message partners early to"
+    },
+    {
+     "id": "a9",
+     "parent": "a11",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 7,
+     "upkeep": 1.5,
+     "net": 5.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Records were empty for me too. Message partners early to"
+    },
+    {
+     "id": "a10",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 31,
+     "upkeep": 6.0,
+     "net": 25.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast>soak worked (+2 both grabbed). Kufu: roast>roast worked (+7"
+    },
+    {
+     "id": "a11",
+     "parent": "a4",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 26,
+     "upkeep": 7.5,
+     "net": 18.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak works. Taze: soak then roast. Vodu:"
+    },
+    {
+     "id": "a12",
+     "parent": "a9",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 5,
+     "upkeep": 0.0,
+     "net": 5.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a9",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 0.0,
+     "net": 23.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 3,
+     "upkeep": 12.0,
+     "net": -9.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Taze: soak then roast worked. Vodu: step2 roast confirmed; step1 not soak, dry, or pound, so try roast. Kufu: roast>dry failed; try others. Roba: roast>soak."
+    },
+    {
+     "id": "a15",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 21,
+     "upkeep": 12.0,
+     "net": 9.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Taze: soak then roast worked. Kufu: roast then dry worked. Roba: roast then soak. Vodu: soak>roast failed, dry>roast failed, pound>roast failed; try roast first or"
+    }
+   ],
+   "mean": {
+    "MEM": 1.312,
+    "TALK": 1.375,
+    "LORE": 0.938,
+    "AGG": 3.375,
+    "gross": 19.0,
+    "net": 13.562,
+    "success_rate": 0.625
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "soak"
+    ],
+    "taze": [
+     "soak",
+     "roast"
+    ],
+    "kufu": [
+     "roast",
+     "roast"
+    ],
+    "vodu": [
+     "roast",
+     "roast"
+    ]
+   }
+  },
+  {
+   "gen": 3,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 15,
+     "upkeep": 1.5,
+     "net": 13.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Records were empty for me too. Message partners early to"
+    },
+    {
+     "id": "a1",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 15,
+     "upkeep": 3.0,
+     "net": 12.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Records were empty for me too. Message partners early to agree on each plant's two steps before choosing. Track which step each partner got right,"
+    },
+    {
+     "id": "a2",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 7,
+     "upkeep": 4.5,
+     "net": 2.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak worked. Kufu: roast-roast worked. Message partners"
+    },
+    {
+     "id": "a3",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 19,
+     "upkeep": 7.5,
+     "net": 11.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast>soak worked. Kufu: roast>roast worked. Taze: soak>soak failed, so try other steps. Message partners early to agree on steps; grabbing pays 7 when only"
+    },
+    {
+     "id": "a4",
+     "parent": "a13",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 21,
+     "upkeep": 0.0,
+     "net": 21.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 24,
+     "upkeep": 1.5,
+     "net": 22.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 4,
+     "votes_against": 1,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 3.0,
+     "net": 15.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Agree each plant's two steps via messages before choosing; verify"
+    },
+    {
+     "id": "a7",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 29,
+     "upkeep": 3.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Agree each plant's two steps early via messages; verify after"
+    },
+    {
+     "id": "a8",
+     "parent": "a11",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 29,
+     "upkeep": 7.5,
+     "net": 21.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak. Taze: soak then roast. Kufu: roast"
+    },
+    {
+     "id": "a9",
+     "parent": "a11",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 6.0,
+     "net": 27.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak. Taze: soak then roast (verify). Kufu:"
+    },
+    {
+     "id": "a10",
+     "parent": "a1",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 35,
+     "upkeep": 7.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a1",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 35,
+     "upkeep": 7.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a7",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 11,
+     "upkeep": 7.5,
+     "net": 3.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 9,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants may change. Message partners early; share preparation steps. Roast"
+    },
+    {
+     "id": "a13",
+     "parent": "a7",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 6.0,
+     "net": 22.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak works. Vodu: roast then roast worked"
+    },
+    {
+     "id": "a14",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 29,
+     "upkeep": 4.5,
+     "net": 24.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak worked with a1. Kufu: roast-roast works"
+    },
+    {
+     "id": "a15",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 10,
+     "upkeep": 6.0,
+     "net": 4.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak worked (a13, a1). Taze: roast-dry failed with a13; try other steps. Message partners early to agree steps. Grabbing split a success"
+    }
+   ],
+   "mean": {
+    "MEM": 1.312,
+    "TALK": 0.938,
+    "LORE": 0.938,
+    "AGG": 3.562,
+    "gross": 22.375,
+    "net": 17.594,
+    "success_rate": 0.677
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "soak"
+    ],
+    "taze": [
+     "soak",
+     "roast"
+    ],
+    "kufu": [
+     "roast",
+     "roast"
+    ],
+    "vodu": [
+     "roast",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 4,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 7.5,
+     "net": 10.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 21,
+     "upkeep": 7.5,
+     "net": 13.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 10,
+     "upkeep": 9.0,
+     "net": 1.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a9",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 20,
+     "upkeep": 6.0,
+     "net": 14.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Kufu: roast then roast (confirmed r11). Vodu: step1 dry, step2 not roast. Roba: roast then soak (prior note). Taze: soak then roast, still unverified."
+    },
+    {
+     "id": "a5",
+     "parent": "a9",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 53,
+     "upkeep": 7.5,
+     "net": 45.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 10,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak. Taze: soak then roast. Vodu: dry"
+    },
+    {
+     "id": "a6",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 19,
+     "upkeep": 3.0,
+     "net": 16.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Agree each plant's two steps via messages early; verify after."
+    },
+    {
+     "id": "a7",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 17,
+     "upkeep": 4.5,
+     "net": 12.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season over, records lost. Agree each plant's two steps early via messages, using the four actions (pound, roast, soak, dry). Log each plant's verified steps"
+    },
+    {
+     "id": "a8",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 24,
+     "upkeep": 4.5,
+     "net": 19.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak worked with a1. Kufu: roast-roast works."
+    },
+    {
+     "id": "a9",
+     "parent": "a14",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 13,
+     "upkeep": 4.5,
+     "net": 8.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 11,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak works. Kufu: roast-roast works. a5 grabs"
+    },
+    {
+     "id": "a10",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 26,
+     "upkeep": 1.5,
+     "net": 24.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 1,
+     "upkeep": 3.0,
+     "net": -2.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 5,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "No records kept. Ask partners early which steps work per"
+    },
+    {
+     "id": "a12",
+     "parent": "a13",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 26,
+     "upkeep": 6.0,
+     "net": 20.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak works. Taze: soak then roast worked."
+    },
+    {
+     "id": "a13",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 32,
+     "upkeep": 1.5,
+     "net": 30.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 2,
+     "votes_against": 1,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 44,
+     "upkeep": 7.5,
+     "net": 36.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change. Verify each plant's steps; vodu was dry"
+    },
+    {
+     "id": "a15",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 24,
+     "upkeep": 9.0,
+     "net": 15.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak. Taze: soak then roast. Kufu: roast then roast. Vodu unknown. Partner a8 cooperated reliably; both grabbed on successes, so split 2"
+    }
+   ],
+   "mean": {
+    "MEM": 1.875,
+    "TALK": 1.062,
+    "LORE": 0.812,
+    "AGG": 3.375,
+    "gross": 24.125,
+    "net": 18.5,
+    "success_rate": 0.719
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "soak"
+    ],
+    "taze": [
+     "soak",
+     "roast"
+    ],
+    "kufu": [
+     "roast",
+     "roast"
+    ],
+    "vodu": [
+     "dry",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 5,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a5",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 52,
+     "upkeep": 7.5,
+     "net": 44.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 1,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Roba: roast then soak. Taze: roast then soak (changed). Vodu:"
+    },
+    {
+     "id": "a1",
+     "parent": "a5",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 2,
+     "upkeep": 7.5,
+     "net": -5.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast, soak worked. Vodu not dry-dry. Kufu not roast-soak."
+    },
+    {
+     "id": "a2",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 12,
+     "upkeep": 7.5,
+     "net": 4.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verify each plant's steps; preparations may change. Vodu: dry>soak this"
+    },
+    {
+     "id": "a3",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 24,
+     "upkeep": 9.0,
+     "net": 15.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 2,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Verify all: kufu roast-roast, roba roast-soak, vodu dry-soak, taze?"
+    },
+    {
+     "id": "a4",
+     "parent": "a2",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": -2,
+     "upkeep": 7.5,
+     "net": -9.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a2",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 12,
+     "upkeep": 9.0,
+     "net": 3.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 23,
+     "upkeep": 1.5,
+     "net": 21.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 10,
+     "upkeep": 1.5,
+     "net": 8.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a10",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 19,
+     "upkeep": 3.0,
+     "net": 16.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 7,
+     "upkeep": 1.5,
+     "net": 5.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 10,
+     "upkeep": 6.0,
+     "net": 4.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: dry, soak. Taze: roast, soak. Kufu: roast, roast. Recheck."
+    },
+    {
+     "id": "a11",
+     "parent": "a12",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 23,
+     "upkeep": 6.0,
+     "net": 17.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 20,
+     "upkeep": 4.5,
+     "net": 15.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 29,
+     "upkeep": 6.0,
+     "net": 23.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Roba: roast then soak (confirmed twice). Taze: soak then roast. Kufu: roast-roast works. Vodu: dry (one step may suffice). Share steps openly; grab only when"
+    },
+    {
+     "id": "a14",
+     "parent": "a6",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 10,
+     "upkeep": 3.0,
+     "net": 7.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants may change: verify each plant's steps early via messages."
+    },
+    {
+     "id": "a15",
+     "parent": "a6",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 3.0,
+     "net": 10.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change. Verify each plant's steps via messages before"
+    }
+   ],
+   "mean": {
+    "MEM": 1.812,
+    "TALK": 1.125,
+    "LORE": 0.562,
+    "AGG": 3.125,
+    "gross": 16.5,
+    "net": 11.25,
+    "success_rate": 0.542
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "soak"
+    ],
+    "taze": [
+     "roast",
+     "soak"
+    ],
+    "kufu": [
+     "roast",
+     "roast"
+    ],
+    "vodu": [
+     "dry",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 6,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 9,
+     "upkeep": 7.5,
+     "net": 1.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak. Taze: dry then soak? Kufu: roast"
+    },
+    {
+     "id": "a1",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 39,
+     "upkeep": 7.5,
+     "net": 31.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 1,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Roba: roast then soak. Taze: roast then soak (changed; verify)."
+    },
+    {
+     "id": "a2",
+     "parent": "a13",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 30,
+     "upkeep": 6.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak (confirmed). Taze: roast then soak (changed from soak-roast; verify). Kufu: roast-roast works. Vodu: unclear, try dry alone first. Share steps openly;"
+    },
+    {
+     "id": "a3",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 12,
+     "upkeep": 6.0,
+     "net": 6.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: dry>soak works (confirmed r11, r12, both grabbed for +2 each). Roba: roast then soak (confirmed twice). Taze changed: check roast then soak. Kufu: roast-roast"
+    },
+    {
+     "id": "a4",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 1.5,
+     "net": 6.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 16,
+     "upkeep": 1.5,
+     "net": 14.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 10,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a11",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": 3,
+     "upkeep": 6.0,
+     "net": -3.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a11",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 7,
+     "upkeep": 7.5,
+     "net": -0.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak. Taze: dry then dry (changed). Kufu:"
+    },
+    {
+     "id": "a8",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 3.0,
+     "net": 10.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 2,
+     "upkeep": 3.0,
+     "net": -1.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a12",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 4.5,
+     "net": 13.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a12",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 3.0,
+     "net": -5.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 24,
+     "upkeep": 6.0,
+     "net": 18.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a3",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 58,
+     "upkeep": 7.5,
+     "net": 50.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 10,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu dry-soak reliable; roba roast-soak; kufu roast-roast. Taze unclear, verify"
+    },
+    {
+     "id": "a14",
+     "parent": "a15",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 15,
+     "upkeep": 3.0,
+     "net": 12.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; verify each plant's steps via messages first."
+    },
+    {
+     "id": "a15",
+     "parent": "a15",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 10,
+     "upkeep": 4.5,
+     "net": 5.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 2,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Preparations change between seasons; verify each plant's steps via messages"
+    }
+   ],
+   "mean": {
+    "MEM": 1.688,
+    "TALK": 0.938,
+    "LORE": 0.625,
+    "AGG": 3.125,
+    "gross": 16.375,
+    "net": 11.5,
+    "success_rate": 0.573
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "soak"
+    ],
+    "taze": [
+     "dry",
+     "dry"
+    ],
+    "kufu": [
+     "roast",
+     "roast"
+    ],
+    "vodu": [
+     "dry",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 7,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a13",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 14,
+     "upkeep": 7.5,
+     "net": 6.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast-soak failed for me once; verify step2 with a6."
+    },
+    {
+     "id": "a1",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 14,
+     "upkeep": 9.0,
+     "net": 5.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu dry-soak; kufu roast-roast; taze likely dry-dry; roba roast-not soak."
+    },
+    {
+     "id": "a2",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 26,
+     "upkeep": 7.5,
+     "net": 18.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: dry-soak. Kufu: roast-roast. Taze: avoid dry; try roast-soak."
+    },
+    {
+     "id": "a3",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 34,
+     "upkeep": 7.5,
+     "net": 26.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba roast-then-not-soak; taze not roast; vodu dry-soak; kufu roast-roast."
+    },
+    {
+     "id": "a4",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 16,
+     "upkeep": 6.0,
+     "net": 10.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak (confirmed twice). Kufu: roast-roast works. Vodu: dry-soak reliable. Taze: roast-soak worked last note; verify before relying. Share steps openly; grab only"
+    },
+    {
+     "id": "a5",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 11,
+     "upkeep": 6.0,
+     "net": 5.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Roba: roast then soak (confirmed twice). Taze: roast then soak (verify; previously soak-roast). Kufu: roast-roast works. Vodu: dry then soak reliable. Share steps openly; grab"
+    },
+    {
+     "id": "a6",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 20,
+     "upkeep": 7.5,
+     "net": 12.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 4,
+     "upkeep": 6.0,
+     "net": -2.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 8,
+     "upkeep": 3.0,
+     "net": 5.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 6,
+     "upkeep": 1.5,
+     "net": 4.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 9,
+     "upkeep": 3.0,
+     "net": 6.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 16,
+     "upkeep": 4.5,
+     "net": 11.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 15,
+     "upkeep": 3.0,
+     "net": 12.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verify each plant's steps by message first; prior recipes may"
+    },
+    {
+     "id": "a13",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 17,
+     "upkeep": 1.5,
+     "net": 15.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 7,
+     "upkeep": 1.5,
+     "net": 5.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 7,
+     "upkeep": 3.0,
+     "net": 4.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.5,
+    "TALK": 1.188,
+    "LORE": 0.562,
+    "AGG": 3.312,
+    "gross": 14.0,
+    "net": 9.125,
+    "success_rate": 0.521
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "roast"
+    ],
+    "taze": [
+     "dry",
+     "dry"
+    ],
+    "kufu": [
+     "roast",
+     "roast"
+    ],
+    "vodu": [
+     "dry",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 8,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 6,
+     "upkeep": 6.0,
+     "net": 0.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants' preps may change; verify each. Last season: kufu roast-roast"
+    },
+    {
+     "id": "a1",
+     "parent": "a3",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 16,
+     "upkeep": 9.0,
+     "net": 7.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations changed. Taze: dry-dry worked. Roba: roast-roast worked. Kufu: roast-roast worked. Vodu: step1 soak (not dry), step2 unknown, not soak. Check each plant's steps first."
+    },
+    {
+     "id": "a2",
+     "parent": "a2",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 5,
+     "upkeep": 7.5,
+     "net": -2.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Taze: dry-dry. Kufu: roast-roast. Roba: roast first. Vodu changed; dry-soak"
+    },
+    {
+     "id": "a3",
+     "parent": "a2",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 26,
+     "upkeep": 6.0,
+     "net": 20.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Taze: dry-dry worked reliably. Vodu: dry-soak previously; roast failed. Kufu:"
+    },
+    {
+     "id": "a4",
+     "parent": "a13",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 15,
+     "upkeep": 0.0,
+     "net": 15.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a13",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 5,
+     "upkeep": 0.0,
+     "net": 5.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 13,
+     "upkeep": 7.5,
+     "net": 5.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 20,
+     "upkeep": 9.0,
+     "net": 11.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 9,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plant preps may change. Test each plant early. Kufu roast-roast"
+    },
+    {
+     "id": "a8",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 3.0,
+     "net": 10.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change. Verify each plant's steps by message before"
+    },
+    {
+     "id": "a9",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 7,
+     "upkeep": 3.0,
+     "net": 4.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change. Verify each plant's steps by message before"
+    },
+    {
+     "id": "a10",
+     "parent": "a11",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 0,
+     "upkeep": 4.5,
+     "net": -4.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a11",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 13,
+     "upkeep": 6.0,
+     "net": 7.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 7,
+     "upkeep": 6.0,
+     "net": 1.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast then soak (confirmed). Kufu: roast-roast. Vodu: dry-soak, verify; dry-pound failed. Taze: roast-soak unverified. Share steps openly; grab only when needed."
+    },
+    {
+     "id": "a13",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": -4,
+     "upkeep": 7.5,
+     "net": -11.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Taze: dry-dry worked (r12), so earlier roast-soak may be outdated; verify before relying. Kufu: roast-roast worked (r11). Roba and vodu: last notes said roast-soak and"
+    },
+    {
+     "id": "a14",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 19,
+     "upkeep": 7.5,
+     "net": 11.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Kufu: roast-roast works (grab when able). Vodu: dry-soak failed; try"
+    },
+    {
+     "id": "a15",
+     "parent": "a0",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 31,
+     "upkeep": 9.0,
+     "net": 22.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba, kufu: roast-roast worked. Taze: dry-dry worked. Vodu unknown; dry-soak"
+    }
+   ],
+   "mean": {
+    "MEM": 1.688,
+    "TALK": 1.25,
+    "LORE": 0.875,
+    "AGG": 3.5,
+    "gross": 12.0,
+    "net": 6.281,
+    "success_rate": 0.5
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "roast"
+    ],
+    "taze": [
+     "dry",
+     "dry"
+    ],
+    "kufu": [
+     "roast",
+     "roast"
+    ],
+    "vodu": [
+     "soak",
+     "dry"
+    ]
+   }
+  },
+  {
+   "gen": 9,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a15",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 24,
+     "upkeep": 9.0,
+     "net": 15.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: soak then dry worked last season (first soaks, second"
+    },
+    {
+     "id": "a1",
+     "parent": "a15",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 14,
+     "upkeep": 9.0,
+     "net": 5.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: soak then dry worked reliably. Roba and kufu: roast-roast."
+    },
+    {
+     "id": "a2",
+     "parent": "a3",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 15,
+     "upkeep": 6.0,
+     "net": 9.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: soak then dry. Kufu: dry then dry, likely. Taze:"
+    },
+    {
+     "id": "a3",
+     "parent": "a3",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 40,
+     "upkeep": 6.0,
+     "net": 34.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 9,
+     "grabbed": 4,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Vodu: soak-dry worked repeatedly. Taze: dry-dry reliable. Roba, kufu: roast-roast"
+    },
+    {
+     "id": "a4",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 1.5,
+     "net": 16.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba, kufu: roast-roast worked. Taze: dry-dry worked. Vodu: dry-soak failed;"
+    },
+    {
+     "id": "a5",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 4.5,
+     "net": 28.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 3,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Vodu: soak-dry worked for me as first? Record shows soak>dry"
+    },
+    {
+     "id": "a6",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 7,
+     "upkeep": 6.0,
+     "net": 1.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Kufu: roast-roast worked before, but my roast>pound failed; try roast-roast."
+    },
+    {
+     "id": "a7",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 9.0,
+     "net": -16.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: soak then dry worked (a2, r10). Taze: dry-dry worked. Kufu: roast-roast worked before, but roast-dry and dry-pound failed, so preparation may have changed. Verify"
+    },
+    {
+     "id": "a8",
+     "parent": "a7",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 12,
+     "upkeep": 9.0,
+     "net": 3.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: soak-dry worked for us as first? Records show soak"
+    },
+    {
+     "id": "a9",
+     "parent": "a7",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 8,
+     "upkeep": 9.0,
+     "net": -1.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: soak-dry worked for me (r10). Taze: dry-dry works. Kufu:"
+    },
+    {
+     "id": "a10",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 20,
+     "upkeep": 3.0,
+     "net": 17.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; verify each plant by message first. Last:"
+    },
+    {
+     "id": "a11",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 4.5,
+     "net": -6.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; verify each plant's steps by message first."
+    },
+    {
+     "id": "a12",
+     "parent": "a1",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 24,
+     "upkeep": 10.5,
+     "net": 13.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu is soak-dry (confirmed r9, r11, r12). Taze dry-dry and roba/kufu roast-roast worked last season, but preparations may change; verify early. Partner a14 often grabbed;"
+    },
+    {
+     "id": "a13",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 9,
+     "upkeep": 9.0,
+     "net": 0.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Preparations may change again; verify each. Last season: roba and kufu roast-roast worked, taze dry-dry worked. Kufu roast>pound failed, so kufu step2 is not pound."
+    },
+    {
+     "id": "a14",
+     "parent": "a11",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 7.5,
+     "net": 10.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: soak-dry worked for us with a12. Roba, kufu: roast-roast."
+    },
+    {
+     "id": "a15",
+     "parent": "a11",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 7,
+     "upkeep": 6.0,
+     "net": 1.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 2.25,
+    "TALK": 1.188,
+    "LORE": 1.125,
+    "AGG": 3.438,
+    "gross": 15.0,
+    "net": 8.156,
+    "success_rate": 0.562
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "roast"
+    ],
+    "taze": [
+     "dry",
+     "dry"
+    ],
+    "kufu": [
+     "dry",
+     "dry"
+    ],
+    "vodu": [
+     "soak",
+     "dry"
+    ]
+   }
+  },
+  {
+   "gen": 10,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 36,
+     "upkeep": 3.0,
+     "net": 33.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 16,
+     "upkeep": 7.5,
+     "net": 8.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: soak-dry works. Kufu: dry-dry works (roast failed). Taze: test"
+    },
+    {
+     "id": "a2",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 12,
+     "upkeep": 6.0,
+     "net": 6.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: soak-dry worked for me (r11 first, r12 second with a0). Grabbing: one grabber gets 7, both grab only 2 each. Taze: dry-dry reliable. Roba,"
+    },
+    {
+     "id": "a3",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 18,
+     "upkeep": 6.0,
+     "net": 12.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba and kufu: roast-roast worked for me as second (r11, r12 kufu was dry-dry OK). Vodu soak-dry and taze dry-dry were reliable previously. Verify each"
+    },
+    {
+     "id": "a4",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 5,
+     "upkeep": 3.0,
+     "net": 2.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; verify each plant by message first. Last"
+    },
+    {
+     "id": "a5",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 4,
+     "upkeep": 3.0,
+     "net": 1.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes may change; verify each plant by message first. Last"
+    },
+    {
+     "id": "a6",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 13,
+     "upkeep": 1.5,
+     "net": 11.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba, kufu: roast-roast. Taze: dry-dry. Vodu: soak-dry worked. Avoid dry-soak"
+    },
+    {
+     "id": "a7",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 2,
+     "upkeep": 3.0,
+     "net": -1.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba, kufu: roast-roast. Taze: dry-dry. Vodu: soak-dry. Verify each; share"
+    },
+    {
+     "id": "a8",
+     "parent": "a0",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 26,
+     "upkeep": 10.5,
+     "net": 15.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: soak then dry worked reliably; keep it. Roba and kufu: roast-roast worked for roba (grab when second). Kufu roast-roast failed for me; try other"
+    },
+    {
+     "id": "a9",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 19,
+     "upkeep": 7.5,
+     "net": 11.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change. Test steps early; kufu dry-dry worked late,"
+    },
+    {
+     "id": "a10",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 36,
+     "upkeep": 10.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: soak-dry reliable. Kufu: dry-dry worked r12 (roast-roast failed r5). Roba: roast-roast reliable. Taze: dry-dry failed both times; try other pairs early. Verify preparations each"
+    },
+    {
+     "id": "a11",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 10,
+     "upkeep": 10.5,
+     "net": -0.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: soak-dry (confirmed repeatedly). Kufu: dry-dry worked r10-r11 (roast-roast failed). Roba: roast-roast worked r12. Taze: dry-dry failed once; verify early. Grabbing is common; expect shared"
+    },
+    {
+     "id": "a12",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 29,
+     "upkeep": 4.5,
+     "net": 24.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a14",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 4.5,
+     "net": 23.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Taze changed: dry-dry and soak-pound failed. Try other pairs."
+    },
+    {
+     "id": "a14",
+     "parent": "a2",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 20,
+     "upkeep": 6.0,
+     "net": 14.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Check steps first; kufu dry-dry, roba roast-roast, vodu soak-dry worked."
+    },
+    {
+     "id": "a15",
+     "parent": "a2",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 26,
+     "upkeep": 7.5,
+     "net": 18.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: soak-dry. Kufu: dry-dry. Roba: roast-roast. Taze: pound-dry (dry-dry failed)."
+    }
+   ],
+   "mean": {
+    "MEM": 2.062,
+    "TALK": 0.688,
+    "LORE": 1.188,
+    "AGG": 3.375,
+    "gross": 18.75,
+    "net": 12.844,
+    "success_rate": 0.604
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "roast"
+    ],
+    "taze": [
+     "pound",
+     "dry"
+    ],
+    "kufu": [
+     "dry",
+     "dry"
+    ],
+    "vodu": [
+     "soak",
+     "dry"
+    ]
+   }
+  },
+  {
+   "gen": 11,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 1,
+     "upkeep": 4.5,
+     "net": -3.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 32,
+     "upkeep": 3.0,
+     "net": 29.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 17,
+     "upkeep": 12.0,
+     "net": 5.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 11,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Kufu: roast-dry worked r5,r6,r11 (dry-dry failed r1). Vodu: soak-dry reliable all seasons. Roba: roast-roast reliable. Taze: dry-dry failed twice; untested this season, try other pairs early. Preparations may change; verify each round. a11 grabbed often, so expect split of 1 when they grab."
+    },
+    {
+     "id": "a3",
+     "parent": "a10",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 14,
+     "upkeep": 10.5,
+     "net": 3.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 10,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Roba: roast-roast reliable (verified r5,r6,r12). Kufu: roast-dry worked r7-r9; dry-dry worked r12 last season, so verify. Vodu: soak-dry reliable (r10,r11). Taze: dry-dry failed earlier; try other pairs early. Partner a10 grabs often; pair with a10 for roba/vodu/kufu."
+    },
+    {
+     "id": "a4",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 24,
+     "upkeep": 4.5,
+     "net": 19.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 32,
+     "upkeep": 4.5,
+     "net": 27.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a13",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 12,
+     "upkeep": 3.0,
+     "net": 9.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Records were none this season. Test all four actions per"
+    },
+    {
+     "id": "a7",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 44,
+     "upkeep": 4.5,
+     "net": 39.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+    },
+    {
+     "id": "a8",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 21,
+     "upkeep": 6.0,
+     "net": 15.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change. Last season worked: Taze pound-dry, Kufu roast-dry,"
+    },
+    {
+     "id": "a9",
+     "parent": "a15",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 34,
+     "upkeep": 7.5,
+     "net": 26.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Kufu: roast-dry works (dry-dry fails). Roba: roast-roast. Vodu: soak-dry. Taze:"
+    },
+    {
+     "id": "a10",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 10,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: soak then dry worked reliably. Roba: roast-roast worked, grab when second. Kufu: roast-dry worked (roast-roast failed previously). Taze: roast-dry and soak-dry failed; try other"
+    },
+    {
+     "id": "a11",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 41,
+     "upkeep": 10.5,
+     "net": 30.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 11,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: soak then dry reliably works; keep it. Roba: roast-roast works. Kufu: roast then dry worked (dry-dry failed). Grabbing when second got 7 often; both"
+    },
+    {
+     "id": "a12",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 24,
+     "upkeep": 7.5,
+     "net": 16.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 4,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Kufu: roast then dry worked repeatedly (roast-dry). Roba: roast-roast worked. Taze: soak-pound and soak-dry failed; dry-dry failed. Try other combos for taze. Grab when you"
+    },
+    {
+     "id": "a13",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 32,
+     "upkeep": 7.5,
+     "net": 24.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plant recipes may change; verify each step pair. Observed: roba"
+    },
+    {
+     "id": "a14",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 8,
+     "upkeep": 6.0,
+     "net": 2.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; verify each. Prior: vodu soak-dry and taze dry-dry worked, roba/kufu roast-roast worked once. a7 grabbed in r11 taze; expect grabs and check"
+    },
+    {
+     "id": "a15",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 22,
+     "upkeep": 4.5,
+     "net": 17.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Vodu: soak then dry worked with a9. Grabbing pays: first"
+    }
+   ],
+   "mean": {
+    "MEM": 2.5,
+    "TALK": 0.688,
+    "LORE": 1.25,
+    "AGG": 3.312,
+    "gross": 24.75,
+    "net": 18.094,
+    "success_rate": 0.75
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "roba": [
+     "roast",
+     "roast"
+    ],
+    "taze": [
+     "pound",
+     "dry"
+    ],
+    "kufu": [
+     "roast",
+     "dry"
+    ],
+    "vodu": [
+     "soak",
+     "dry"
+    ]
+   }
+  }
+ ],
+ "final_population": [
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 2
+   },
+   "parent": "a7",
+   "inherited": [
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4",
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 0,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a7",
+   "inherited": [
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4",
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a11",
+   "inherited": [
+    "Vodu: soak then dry reliably works; keep it. Roba: roast-roast works. Kufu: roast then dry worked (dry-dry failed). Grabbing when second got 7 often; both",
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 0,
+    "LORE": 2,
+    "AGG": 4
+   },
+   "parent": "a11",
+   "inherited": [
+    "Vodu: soak then dry reliably works; keep it. Roba: roast-roast works. Kufu: roast then dry worked (dry-dry failed). Grabbing when second got 7 often; both",
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 3
+   },
+   "parent": "a1",
+   "inherited": [
+    "",
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a1",
+   "inherited": [
+    "",
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 3
+   },
+   "parent": "a5",
+   "inherited": [
+    "",
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a5",
+   "inherited": [
+    "",
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 1,
+    "LORE": 2,
+    "AGG": 4
+   },
+   "parent": "a10",
+   "inherited": [
+    "Vodu: soak then dry worked reliably. Roba: roast-roast worked, grab when second. Kufu: roast-dry worked (roast-roast failed previously). Taze: roast-dry and soak-dry failed; try other",
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 1,
+    "LORE": 2,
+    "AGG": 4
+   },
+   "parent": "a10",
+   "inherited": [
+    "Vodu: soak then dry worked reliably. Roba: roast-roast worked, grab when second. Kufu: roast-dry worked (roast-roast failed previously). Taze: roast-dry and soak-dry failed; try other",
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 1,
+    "LORE": 2,
+    "AGG": 3
+   },
+   "parent": "a9",
+   "inherited": [
+    "Kufu: roast-dry works (dry-dry fails). Roba: roast-roast. Vodu: soak-dry. Taze:",
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a9",
+   "inherited": [
+    "Kufu: roast-dry works (dry-dry fails). Roba: roast-roast. Vodu: soak-dry. Taze:",
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 2
+   },
+   "parent": "a13",
+   "inherited": [
+    "Plant recipes may change; verify each step pair. Observed: roba",
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 2
+   },
+   "parent": "a13",
+   "inherited": [
+    "Plant recipes may change; verify each step pair. Observed: roba",
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 3
+   },
+   "parent": "a4",
+   "inherited": [
+    "",
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 3
+   },
+   "parent": "a4",
+   "inherited": [
+    "",
+    "Taze: pound>dry worked (grabbed +7). Vodu: soak>dry worked, split 4"
+   ]
+  }
+ ],
+ "usage": {
+  "calls": 4319,
+  "cost_usd": 0.6653
+ },
+ "samples": {
+  "messages": [
+   {
+    "gen": 2,
+    "round": 1,
+    "agent": "a15",
+    "to": "a14",
+    "text": "Hi a14. Kufu worked last season with roast then dry. Let's try roast first; I'll answer with dry as step 2. Shall we?"
+   },
+   {
+    "gen": 0,
+    "round": 8,
+    "agent": "a13",
+    "to": "a8",
+    "text": "Soak then soak?"
+   },
+   {
+    "gen": 4,
+    "round": 12,
+    "agent": "a6",
+    "to": "a11",
+    "text": "Taze: you soak,"
+   },
+   {
+    "gen": 5,
+    "round": 4,
+    "agent": "a0",
+    "to": "a10",
+    "text": "Step 2: roast?"
+   },
+   {
+    "gen": 7,
+    "round": 10,
+    "agent": "a2",
+    "to": "a1",
+    "text": "Vodu: dry then"
+   },
+   {
+    "gen": 1,
+    "round": 12,
+    "agent": "a2",
+    "to": "a1",
+    "text": "Soak, then roast."
+   },
+   {
+    "gen": 2,
+    "round": 6,
+    "agent": "a11",
+    "to": "a4",
+    "text": "Roba this round: roast first, then"
+   },
+   {
+    "gen": 1,
+    "round": 8,
+    "agent": "a12",
+    "to": "a14",
+    "text": "Taze this round. a5 reports soak then roast worked. Proposal: you open with soak as step 1, and I answer roast as step 2."
+   },
+   {
+    "gen": 11,
+    "round": 5,
+    "agent": "a10",
+    "to": "a3",
+    "text": "Roba: roast-roast?"
+   },
+   {
+    "gen": 2,
+    "round": 1,
+    "agent": "a7",
+    "to": "a13",
+    "text": "Vodu: which step"
+   },
+   {
+    "gen": 4,
+    "round": 5,
+    "agent": "a12",
+    "to": "a13",
+    "text": "Kufu: what step1?"
+   },
+   {
+    "gen": 11,
+    "round": 6,
+    "agent": "a14",
+    "to": "a7",
+    "text": "Soak first, then"
+   },
+   {
+    "gen": 4,
+    "round": 9,
+    "agent": "a3",
+    "to": "a4",
+    "text": "Kufu: I go first. Soak then"
+   },
+   {
+    "gen": 10,
+    "round": 11,
+    "agent": "a2",
+    "to": "a0",
+    "text": "Vodu: soak-dry? Yes?"
+   },
+   {
+    "gen": 8,
+    "round": 9,
+    "agent": "a6",
+    "to": "a15",
+    "text": "Vodu: I'll play roast first. You try soak second, please."
+   },
+   {
+    "gen": 5,
+    "round": 1,
+    "agent": "a1",
+    "to": "a4",
+    "text": "Taze is soak then roast. I'll"
+   },
+   {
+    "gen": 9,
+    "round": 3,
+    "agent": "a12",
+    "to": "a14",
+    "text": "Kufu: roast-roast? Confirm."
+   },
+   {
+    "gen": 1,
+    "round": 9,
+    "agent": "a13",
+    "to": "a3",
+    "text": "Kufu this round, not roba. Last season roast then dry worked. Please open roast; I'll answer dry as step 2."
+   },
+   {
+    "gen": 6,
+    "round": 9,
+    "agent": "a6",
+    "to": "a1",
+    "text": "Vodu: dry, soak."
+   },
+   {
+    "gen": 5,
+    "round": 8,
+    "agent": "a0",
+    "to": "a10",
+    "text": "Roba: roast first,"
+   }
+  ],
+  "gossip": [
+   {
+    "gen": 3,
+    "round": 12,
+    "agent": "a7",
+    "text": "Roba: soak confirmed"
+   },
+   {
+    "gen": 0,
+    "round": 7,
+    "agent": "a7",
+    "text": "Kufu: dry as step 1 failed in r5, so dry first looks wrong. Pound second failed twice. I'm trying roast second; step 1 still"
+   },
+   {
+    "gen": 1,
+    "round": 9,
+    "agent": "a2",
+    "text": "Vodu: trying pound"
+   },
+   {
+    "gen": 4,
+    "round": 8,
+    "agent": "a1",
+    "text": "Roba: roast, soak"
+   },
+   {
+    "gen": 3,
+    "round": 5,
+    "agent": "a8",
+    "text": "Kufu: roast then soak, untested"
+   },
+   {
+    "gen": 5,
+    "round": 1,
+    "agent": "a2",
+    "text": "Kufu's steps unknown; testing soak first."
+   },
+   {
+    "gen": 5,
+    "round": 3,
+    "agent": "a0",
+    "text": "Taze: soak, roast"
+   },
+   {
+    "gen": 8,
+    "round": 12,
+    "agent": "a0",
+    "text": "Taze: dry-dry, confirmed"
+   },
+   {
+    "gen": 3,
+    "round": 2,
+    "agent": "a10",
+    "text": "Vodu prep unknown,"
+   },
+   {
+    "gen": 6,
+    "round": 2,
+    "agent": "a11",
+    "text": "Kufu: roast first"
+   },
+   {
+    "gen": 3,
+    "round": 8,
+    "agent": "a2",
+    "text": "Roba: roast then soak, as noted."
+   },
+   {
+    "gen": 6,
+    "round": 10,
+    "agent": "a13",
+    "text": "Vodu: dry, soak"
+   },
+   {
+    "gen": 9,
+    "round": 7,
+    "agent": "a5",
+    "text": "Taze: dry-dry again?"
+   },
+   {
+    "gen": 9,
+    "round": 11,
+    "agent": "a8",
+    "text": "Vodu: soak-dry worked for a8 in r10 with a1. Soak first again."
+   },
+   {
+    "gen": 11,
+    "round": 10,
+    "agent": "a2",
+    "text": "Vodu: soak-dry again"
+   },
+   {
+    "gen": 6,
+    "round": 7,
+    "agent": "a15",
+    "text": "Taze: roast first?"
+   },
+   {
+    "gen": 5,
+    "round": 6,
+    "agent": "a1",
+    "text": "Taze: trying roast second, will report"
+   },
+   {
+    "gen": 11,
+    "round": 11,
+    "agent": "a3",
+    "text": "Vodu: soak-dry confirmed"
+   },
+   {
+    "gen": 4,
+    "round": 9,
+    "agent": "a5",
+    "text": "Kufu: testing dry"
+   },
+   {
+    "gen": 0,
+    "round": 6,
+    "agent": "a15",
+    "text": "Vodu: soak second with a1, testing"
+   }
+  ],
+  "notes": [
+   {
+    "gen": 1,
+    "agent": "a11",
+    "text": "Records were empty for me too. Message partners early to agree on step pairs per plant; test actions systematically and log which pairs succeed. Split"
+   },
+   {
+    "gen": 8,
+    "agent": "a15",
+    "text": "Roba, kufu: roast-roast worked. Taze: dry-dry worked. Vodu unknown; dry-soak"
+   },
+   {
+    "gen": 5,
+    "agent": "a3",
+    "text": "Verify all: kufu roast-roast, roba roast-soak, vodu dry-soak, taze?"
+   },
+   {
+    "gen": 5,
+    "agent": "a13",
+    "text": "Roba: roast then soak (confirmed twice). Taze: soak then roast. Kufu: roast-roast works. Vodu: dry (one step may suffice). Share steps openly; grab only when"
+   },
+   {
+    "gen": 0,
+    "agent": "a5",
+    "text": "Taze prep: soak then roast works (seen with a12). Kufu: roast then dry works (r12); roast>soak failed. Grabbing with partner a12 splits 1 vs 7,"
+   },
+   {
+    "gen": 9,
+    "agent": "a6",
+    "text": "Kufu: roast-roast worked before, but my roast>pound failed; try roast-roast."
+   },
+   {
+    "gen": 0,
+    "agent": "a15",
+    "text": "Soak worked for vodu; roast worked as step 2 for"
+   },
+   {
+    "gen": 0,
+    "agent": "a2",
+    "text": "a4 grabs every round and takes 7, leaving partner 1; avoid pairing with a4 unless forced. Roba prep: roast>soak works. Vodu: soak>soak works. Kufu: roast>soak"
+   },
+   {
+    "gen": 3,
+    "agent": "a14",
+    "text": "Roba: roast then soak worked with a1. Kufu: roast-roast works"
+   },
+   {
+    "gen": 3,
+    "agent": "a1",
+    "text": "Records were empty for me too. Message partners early to agree on each plant's two steps before choosing. Track which step each partner got right,"
+   },
+   {
+    "gen": 0,
+    "agent": "a14",
+    "text": "Records were empty, so I know nothing certain yet. Try messaging partners early to agree on step pairs for each plant, and test which actions"
+   },
+   {
+    "gen": 7,
+    "agent": "a2",
+    "text": "Vodu: dry-soak. Kufu: roast-roast. Taze: avoid dry; try roast-soak."
+   },
+   {
+    "gen": 9,
+    "agent": "a4",
+    "text": "Roba, kufu: roast-roast worked. Taze: dry-dry worked. Vodu: dry-soak failed;"
+   },
+   {
+    "gen": 1,
+    "agent": "a3",
+    "text": "Pair early; agree on each plant's two steps via messages."
+   },
+   {
+    "gen": 11,
+    "agent": "a14",
+    "text": "Preparations may change; verify each. Prior: vodu soak-dry and taze dry-dry worked, roba/kufu roast-roast worked once. a7 grabbed in r11 taze; expect grabs and check"
+   },
+   {
+    "gen": 3,
+    "agent": "a12",
+    "text": "Plants may change. Message partners early; share preparation steps. Roast"
+   },
+   {
+    "gen": 8,
+    "agent": "a1",
+    "text": "Preparations changed. Taze: dry-dry worked. Roba: roast-roast worked. Kufu: roast-roast worked. Vodu: step1 soak (not dry), step2 unknown, not soak. Check each plant's steps first."
+   },
+   {
+    "gen": 6,
+    "agent": "a13",
+    "text": "Vodu dry-soak reliable; roba roast-soak; kufu roast-roast. Taze unclear, verify"
+   },
+   {
+    "gen": 6,
+    "agent": "a0",
+    "text": "Roba: roast then soak. Taze: dry then soak? Kufu: roast"
+   },
+   {
+    "gen": 9,
+    "agent": "a1",
+    "text": "Vodu: soak then dry worked reliably. Roba and kufu: roast-roast."
+   }
+  ]
+ },
+ "samples_seen": {
+  "messages": 1692,
+  "gossip": 1677,
+  "notes": 131
+ }
+}

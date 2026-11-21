@@ -1,0 +1,4856 @@
+{
+ "arm": "MEDLEY",
+ "seed": 4,
+ "model": "claude-haiku-5-5",
+ "mock": false,
+ "config": {
+  "N": 16,
+  "R": 12,
+  "G": 12,
+  "cost": 1.5
+ },
+ "complete": true,
+ "plants": [
+  "zema",
+  "dufo",
+  "fiva",
+  "moma"
+ ],
+ "generations": [
+  {
+   "gen": 0,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 2
+     },
+     "gross": 3,
+     "upkeep": 13.5,
+     "net": -10.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plant preps seen: moma works with dry then roast (both steps right, split or grab). Zema: first step soak was wrong with roast as second; try other pairs. Fiva: dry then roast failed, so step 1 or 2 differs; test pound/soak. Coordinate via messages on which step each plant needs before each round, and check preparation may have changed."
+    },
+    {
+     "id": "a1",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 6,
+     "upkeep": 6.0,
+     "net": 0.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Records were not kept this season. Test each plant's two"
+    },
+    {
+     "id": "a2",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 12,
+     "upkeep": 12.0,
+     "net": 0.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes found: moma = dry then roast; dufo = dry then roast; fiva = pound then roast; zema = roast then roast. Preparations may change between seasons, so re-verify. Grabbing was common and cut the split, so agree on who grabs before the round."
+    },
+    {
+     "id": "a3",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 21,
+     "upkeep": 12.0,
+     "net": 9.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known recipes this season: zema = roast then roast (reliable, partner a8 cooperated). dufo = dry then roast (worked twice; pound first step fails). fiva = pound then roast (second step roast worked with a8; dry first failed). moma: pound first failed with roast second; try dry or soak first"
+    },
+    {
+     "id": "a4",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 9,
+     "upkeep": 13.5,
+     "net": -4.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Only records shown for a0 as partner (I was second each time). Moma: dry then roast works with a0; a0 grabbed in one success. Zema: first step soak failed, so zema's first step is not soak; try other actions. Fiva: dry as first step failed; try roast, soak, or pound. Ask first-movers to state their step 1 before choosing step 2, and exchange messages to find each plant's two-step recipe quickly. Be wary of a0 grabbing, which cuts our share to 1-2."
+    },
+    {
+     "id": "a5",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 30,
+     "upkeep": 16.5,
+     "net": 13.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Partner a2 was reliable and I often grabbed successfully. Plant steps seen: moma second step roast works with first step dry; dufo first step dry works with second step roast; fiva needs first step pound with second step roast (soak failed as first step, roast-roast failed). zema worked with roast>roast. Grab when the harvest is a success and the partner has been cooperative; both grabbing only gives 2 each, so grab is costly if the partner also grabs. Check preparations again next season since they may change."
+    },
+    {
+     "id": "a6",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 1
+     },
+     "gross": 20,
+     "upkeep": 10.5,
+     "net": 9.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Zema: roast then roast works (both steps roast). Fiva: first step pound, second roast worked with a9. Dufo: second step dry with first step roast succeeded, but a9 grabbed the split, leaving us 1; expect grabbing and consider negotiating a split before the harvest. Message partners early to agree on steps for each plant, since each plant's preparation may change between seasons; verify steps by checking the results each round."
+    },
+    {
+     "id": "a7",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 26,
+     "upkeep": 6.0,
+     "net": 20.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "a15 grabs often; expect grabs. Test preparations early; roast worked"
+    },
+    {
+     "id": "a8",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 27,
+     "upkeep": 7.5,
+     "net": 19.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Zema: roast then roast. Dufo: second step dry works. Fiva:"
+    },
+    {
+     "id": "a9",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": 26,
+     "upkeep": 12.0,
+     "net": 14.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 19,
+     "upkeep": 6.0,
+     "net": 13.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "a11 is a reliable partner: successful harvests split evenly, but a11 grabbed in r11 leaving me 1. Expect shared 4-4 splits; watch for grabs. Known"
+    },
+    {
+     "id": "a11",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 40,
+     "upkeep": 7.5,
+     "net": 32.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dufo: dry then roast works. Zema: roast then roast works."
+    },
+    {
+     "id": "a12",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 29,
+     "upkeep": 6.0,
+     "net": 23.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 0
+     },
+     "gross": 0,
+     "upkeep": 10.5,
+     "net": -10.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "I have no records from this season, so I cannot say which preparation steps work for each plant. Next season, test steps early and record them. Each plant needs two correct steps, and first and second see different feedback, so share the outcome of each round openly. Agree on a fixed step pair per plant with a partner quickly. Avoid grabbing when a split is possible, since mutual grabs cut payoffs to 2 each. Watch the public remarks for reliable partners and do not exile members without evidence."
+    },
+    {
+     "id": "a14",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 17,
+     "upkeep": 3.0,
+     "net": 14.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "No records kept. Try pairing with partners who share your"
+    },
+    {
+     "id": "a15",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 17,
+     "upkeep": 6.0,
+     "net": 11.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants need 2 steps each. Round 11 moma worked with dry then roast (dry first, roast second); round 12 fiva worked with pound then roast. Grabbing paid well when a success happened: both grabbing gives only 2 each, so grab alone when possible. Coordinate steps via messages before choosing; try"
+    }
+   ],
+   "mean": {
+    "MEM": 2.188,
+    "TALK": 1.75,
+    "LORE": 2.25,
+    "AGG": 1.875,
+    "gross": 18.875,
+    "net": 9.594,
+    "success_rate": 0.552
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "zema": [
+     "roast",
+     "roast"
+    ],
+    "dufo": [
+     "dry",
+     "roast"
+    ],
+    "fiva": [
+     "pound",
+     "roast"
+    ],
+    "moma": [
+     "dry",
+     "roast"
+    ]
+   }
+  },
+  {
+   "gen": 1,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 37,
+     "upkeep": 7.5,
+     "net": 29.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 2,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Dufo: dry then roast works. Fiva: pound then roast works."
+    },
+    {
+     "id": "a1",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 25,
+     "upkeep": 7.5,
+     "net": 17.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dufo dry>roast; zema pound>pound; fiva pound>roast; moma dry>roast. Recheck."
+    },
+    {
+     "id": "a2",
+     "parent": "a12",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 15,
+     "upkeep": 6.0,
+     "net": 9.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a12",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 29,
+     "upkeep": 7.5,
+     "net": 21.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 36,
+     "upkeep": 3.0,
+     "net": 33.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 4,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Preparations may change. Test early; roast worked before. Dufo: dry"
+    },
+    {
+     "id": "a5",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 17,
+     "upkeep": 4.5,
+     "net": 12.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change. Test early: try roast-roast, dry-roast, etc. Dufo"
+    },
+    {
+     "id": "a6",
+     "parent": "a8",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 10,
+     "upkeep": 6.0,
+     "net": 4.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fiva: pound, roast. Dufo, moma: dry, roast. Zema: roast, roast."
+    },
+    {
+     "id": "a7",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 14,
+     "upkeep": 6.0,
+     "net": 8.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Fiva: pound-roast. Dufo: dry-roast. Zema: roast-roast."
+    },
+    {
+     "id": "a8",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 32,
+     "upkeep": 12.0,
+     "net": 20.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": 8,
+     "upkeep": 12.0,
+     "net": -4.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": 22,
+     "upkeep": 0.0,
+     "net": 22.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 16,
+     "upkeep": 4.5,
+     "net": 11.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dufo: dry then roast works. Zema: roast then roast works."
+    },
+    {
+     "id": "a12",
+     "parent": "a5",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 44,
+     "upkeep": 16.5,
+     "net": 27.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 2,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Preparations may change. Last season's known steps: moma dry>roast; dufo dry>roast; fiva pound>roast; zema roast>roast (roast>soak failed in r11, so zema may have changed). Test steps early and share results publicly. Partner a2 was reliable on dufo and moma. Grab only when the harvest succeeds and the partner has cooperated; mutual grabbing yields just 2 each, so avoid it when the partner grabbed last time."
+    },
+    {
+     "id": "a13",
+     "parent": "a5",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 11,
+     "upkeep": 16.5,
+     "net": -5.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plant preps seen (may change): moma dry>roast works; dufo dry>roast works; fiva pound>roast works (soak first failed); zema roast>roast works, but roast>soak and pound>roast failed as second step. Partner a5 cooperated well with grabs, both grabbing gives only 2 each, so grab only when partner is reliable. Verify preps early each plant before relying on old notes."
+    },
+    {
+     "id": "a14",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 37,
+     "upkeep": 6.0,
+     "net": 31.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dufo: dry then roast works. Zema: roast then roast works. Moma: dry then roast works (r12). a11 is reliable; expect 4-4 splits but watch for"
+    },
+    {
+     "id": "a15",
+     "parent": "a10",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 9,
+     "upkeep": 6.0,
+     "net": 3.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dufo: dry then roast works. Zema: roast then roast works. Fiva: pound then roast works. a0 grabbed often, leaving me 1; expect grabs and consider"
+    }
+   ],
+   "mean": {
+    "MEM": 2.25,
+    "TALK": 1.625,
+    "LORE": 1.188,
+    "AGG": 2.125,
+    "gross": 22.625,
+    "net": 15.031,
+    "success_rate": 0.635
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "zema": [
+     "pound",
+     "pound"
+    ],
+    "dufo": [
+     "dry",
+     "roast"
+    ],
+    "fiva": [
+     "pound",
+     "roast"
+    ],
+    "moma": [
+     "dry",
+     "roast"
+    ]
+   }
+  },
+  {
+   "gen": 2,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 62,
+     "upkeep": 1.5,
+     "net": 60.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; test early. Roast worked before. Dufo: dry"
+    },
+    {
+     "id": "a1",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 50,
+     "upkeep": 4.5,
+     "net": 45.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; test each plant early. Last season roast"
+    },
+    {
+     "id": "a2",
+     "parent": "a14",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 23,
+     "upkeep": 6.0,
+     "net": 17.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Zema: pound then soak worked r11 (verify). Moma: dry then roast worked r12. Dufo: dry then roast per old note (untested). a7 grabs; expect 1"
+    },
+    {
+     "id": "a3",
+     "parent": "a14",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 16,
+     "upkeep": 6.0,
+     "net": 10.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 9,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; test early. Known last season: dufo dry then roast; zema roast then roast; moma dry then roast; fiva pound then roast. a11"
+    },
+    {
+     "id": "a4",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 17,
+     "upkeep": 7.5,
+     "net": 9.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 9,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Zema: pound then soak worked (a6 grabbed often). Fiva: pound then roast worked. Dufo: dry then roast worked. Moma: dry then roast worked. Preparations may"
+    },
+    {
+     "id": "a5",
+     "parent": "a0",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 39,
+     "upkeep": 7.5,
+     "net": 31.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Moma: dry then roast works. Fiva: pound then roast works."
+    },
+    {
+     "id": "a6",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 55,
+     "upkeep": 18.0,
+     "net": 37.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 9,
+     "grabbed": 2,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Known steps (may change; verify early): zema pound>soak (worked r2,r6,r7,r12; roast>roast failed); fiva pound>roast; moma dry>roast; dufo dry>roast. Partner a4 was cooperative and reliable across zema, fiva, moma, dufo. a2 worked on moma but zema pound>roast failed with a2, so use pound>soak on zema. Grab only when the partner cooperated last time; avoid mutual grabbing (only 2 each)."
+    },
+    {
+     "id": "a7",
+     "parent": "a12",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 61,
+     "upkeep": 16.5,
+     "net": 44.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change between seasons; verify before relying on old ones. Last season's records: moma dry>roast (OK r6, r12); zema pound>soak (OK r7, r9-r11, so zema changed from roast>roast); fiva pound>roast (OK r8); dufo dry>soak failed r5, so test dufo again. a2 was reliable partner on moma, zema, fiva. Test unknown steps early and post results publicly. Grab only when partner cooperated last time; mutual grabbing yields only 2 each."
+    },
+    {
+     "id": "a8",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 0.0,
+     "net": 28.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 10,
+     "upkeep": 0.0,
+     "net": 10.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a3",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 58,
+     "upkeep": 7.5,
+     "net": 50.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 62,
+     "upkeep": 10.5,
+     "net": 51.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; test early. Dufo: dry then roast worked."
+    },
+    {
+     "id": "a12",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 26,
+     "upkeep": 12.0,
+     "net": 14.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 44,
+     "upkeep": 12.0,
+     "net": 32.0,
+     "successes": 12,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 44,
+     "upkeep": 6.0,
+     "net": 38.0,
+     "successes": 12,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dufo dry>roast, moma dry>roast, zema pound>soak confirmed. Test early; a13"
+    },
+    {
+     "id": "a15",
+     "parent": "a1",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 39,
+     "upkeep": 10.5,
+     "net": 28.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; verify. Moma dry>roast worked all season. Fiva pound>roast worked. Zema pound>soak worked once, pound>roast failed. Dufo untested: try dry>roast. Grabs split reward;"
+    }
+   ],
+   "mean": {
+    "MEM": 2.375,
+    "TALK": 1.562,
+    "LORE": 1.312,
+    "AGG": 2.188,
+    "gross": 39.625,
+    "net": 31.75,
+    "success_rate": 0.885
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "zema": [
+     "pound",
+     "soak"
+    ],
+    "dufo": [
+     "dry",
+     "roast"
+    ],
+    "fiva": [
+     "pound",
+     "roast"
+    ],
+    "moma": [
+     "dry",
+     "roast"
+    ]
+   }
+  },
+  {
+   "gen": 3,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a0",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 36,
+     "upkeep": 1.5,
+     "net": 34.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; test early each plant. Last season's Dufo:"
+    },
+    {
+     "id": "a1",
+     "parent": "a0",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 31,
+     "upkeep": 1.5,
+     "net": 29.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; test early each plant. Record each plant's"
+    },
+    {
+     "id": "a2",
+     "parent": "a11",
+     "genome": {
+      "MEM": 3,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 15,
+     "upkeep": 10.5,
+     "net": 4.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dufo: dry then roast worked. Moma: roast then roast worked."
+    },
+    {
+     "id": "a3",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 22,
+     "upkeep": 9.0,
+     "net": 13.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 10,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fiva: pound then roast works. Dufo: dry then roast. Moma:"
+    },
+    {
+     "id": "a4",
+     "parent": "a10",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 26,
+     "upkeep": 7.5,
+     "net": 18.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 9,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a10",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 7.5,
+     "net": 10.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 9,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a1",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 40,
+     "upkeep": 4.5,
+     "net": 35.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 10,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; test each plant early. Roast worked for"
+    },
+    {
+     "id": "a7",
+     "parent": "a1",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 32,
+     "upkeep": 3.0,
+     "net": 29.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; test each plant early. Roast worked for"
+    },
+    {
+     "id": "a8",
+     "parent": "a7",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 39,
+     "upkeep": 15.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 3,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Verified this season: zema = pound>soak (r12 OK). fiva step2 = roast (r11 OK with pound first). moma step2 = roast (r10 OK with roast first; r9 soak first failed, so step1 is likely not soak). Dufo untested this season; prior note says dry>soak failed, so test other combos early. a2 was a reliable partner on moma, zema, and fiva, and grabbing with a2 paid off (+7 twice). Post test results publicly early."
+    },
+    {
+     "id": "a9",
+     "parent": "a7",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 42,
+     "upkeep": 16.5,
+     "net": 25.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 9,
+     "grabbed": 5,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Verified preparations (may change, so re-test early): zema pound>soak (OK r9, r11); dufo dry>roast (OK r7, r8, r12, so last season's dry>soak note is outdated); fiva pound>roast (OK r5, r6); moma unclear: pound>roast FAILED r10 with step2 right, so moma likely needs a different step1, try dry>roast first. a5 cooperated on grabbing most rounds but mutual grabs yield only 2 each; grab only when partner grabbed or cooperated last time. Post test results publicly."
+    },
+    {
+     "id": "a10",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 40,
+     "upkeep": 6.0,
+     "net": 34.0,
+     "successes": 12,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test early. Zema: pound>soak. Fiva: pound>roast. Moma: roast>roast. Dufo: dry>roast."
+    },
+    {
+     "id": "a11",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 16,
+     "upkeep": 7.5,
+     "net": 8.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fiva pound>roast; dufo dry>roast; moma: try soak>roast; zema pound>soak."
+    },
+    {
+     "id": "a12",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 44,
+     "upkeep": 18.0,
+     "net": 26.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 9,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verify each plant's preparation early; preparations may change. Last season: dufo dry>roast worked with a4 (both-grab or solo grab); fiva pound>roast and zema pound>soak worked with a4; moma dry>roast failed with a1 (step2 right), worked with a2. Partner a4 was cooperative and reliable. Grab only when partner cooperated last time; avoid mutual grabbing. Test roast>roast or other combos only if the known step fails."
+    },
+    {
+     "id": "a13",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 46,
+     "upkeep": 18.0,
+     "net": 28.0,
+     "successes": 12,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may have changed; verify early. Last season's known steps: zema pound>soak; fiva pound>roast; moma roast>roast (dry>roast also worked earlier); dufo dry>roast. a10 cooperated reliably and grabbed often; a4 was cooperative and reliable. Test each plant's steps before relying on them. Grab only when partner cooperated last time; avoid mutual grabbing, which leaves only 2 each. Keep public remarks constructive to avoid exile."
+    },
+    {
+     "id": "a14",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 12.0,
+     "net": 6.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 27,
+     "upkeep": 12.0,
+     "net": 15.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 2.5,
+    "TALK": 2.25,
+    "LORE": 1.5,
+    "AGG": 3.125,
+    "gross": 30.75,
+    "net": 21.375,
+    "success_rate": 0.833
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "zema": [
+     "pound",
+     "soak"
+    ],
+    "dufo": [
+     "dry",
+     "roast"
+    ],
+    "fiva": [
+     "pound",
+     "roast"
+    ],
+    "moma": [
+     "roast",
+     "roast"
+    ]
+   }
+  },
+  {
+   "gen": 4,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a6",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 3,
+     "upkeep": 4.5,
+     "net": -1.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; test each plant early with different step"
+    },
+    {
+     "id": "a1",
+     "parent": "a6",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 14,
+     "upkeep": 4.5,
+     "net": 9.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant early with different step pairs; preparations may"
+    },
+    {
+     "id": "a2",
+     "parent": "a0",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 23,
+     "upkeep": 1.5,
+     "net": 21.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant early with all actions; preparations may change."
+    },
+    {
+     "id": "a3",
+     "parent": "a0",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 29,
+     "upkeep": 1.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant early with paired steps; preparations may change."
+    },
+    {
+     "id": "a4",
+     "parent": "a10",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 13,
+     "upkeep": 6.0,
+     "net": 7.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dufo: dry>roast. Zema: pound>soak. Fiva: pound>roast. Moma: roast>soak?"
+    },
+    {
+     "id": "a5",
+     "parent": "a10",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 23,
+     "upkeep": 6.0,
+     "net": 17.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Zema: pound>soak worked all season. Dufo: dry>roast worked. Moma: soak>roast"
+    },
+    {
+     "id": "a6",
+     "parent": "a1",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 27,
+     "upkeep": 3.0,
+     "net": 24.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; test each plant early. Fiva: pound then"
+    },
+    {
+     "id": "a7",
+     "parent": "a1",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 23,
+     "upkeep": 0.0,
+     "net": 23.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 29,
+     "upkeep": 1.5,
+     "net": 27.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 36,
+     "upkeep": 0.0,
+     "net": 36.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 46,
+     "upkeep": 18.0,
+     "net": 28.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season summary: a4 was cooperative and reliable; grabbing when partner cooperated worked well. Known last-season steps: zema pound>soak (OK twice), fiva pound>roast (OK, 3 times), dufo dry>roast (OK 4 times), moma failed with roast>roast, soak>dry, roast>pound; moma still unresolved, so test early (try dry>roast or roast>roast). Verify each plant's steps early since preparations may change. Avoid mutual grabbing (only 2 each). Keep remarks constructive to avoid exile."
+    },
+    {
+     "id": "a11",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 27,
+     "upkeep": 18.0,
+     "net": 9.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known steps (verify early, preparations may change): zema pound>soak; fiva pound>roast; dufo dry>roast; moma roast>roast worked once, dry>soak failed. a9 was reliable and cooperative in our pairings, often splitting 4/4 or both grabbing. Grab only when partner cooperated last time; avoid mutual grabbing (2 each). Keep remarks constructive to avoid exile. Test moma with roast>roast early."
+    },
+    {
+     "id": "a12",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 31,
+     "upkeep": 18.0,
+     "net": 13.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known from my records: zema pound>soak worked repeatedly (with a6, a7, a3). dufo dry>roast worked with a6 (both grabbed). fiva pound>roast worked with a6 (a6 grabbed). moma roast>soak worked once as first with a6 (I grabbed); moma dry>soak failed and roast>roast failed earlier, so moma may need a different step-2 (try roast>soak or dry>roast). Verify each plant early since preparations may change. a6 is generally cooperative but often grabs first; grab only when partner cooperated last time and avoid mutual grabbing."
+    },
+    {
+     "id": "a13",
+     "parent": "a12",
+     "genome": {
+      "MEM": 3,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 37,
+     "upkeep": 15.0,
+     "net": 22.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 2 log: zema = pound>soak (worked 5 of 5 times, with a3, a5). fiva = pound>roast (worked with a3). moma = roast>soak worked with a3; roast>roast failed with a6 (step1 right). Preparations may change, so verify early. Grabbing paid 7 when I grabbed and partner didn't; it cost me 1 when a3 grabbed. Grab only if partner did not grab last time, and avoid mutual grabs. Trust a3 and a5 for cooperation."
+    },
+    {
+     "id": "a14",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 26,
+     "upkeep": 18.0,
+     "net": 8.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified (may change, re-test): zema pound>soak (OK r3,r7 last season); dufo dry>roast (OK r1,r2,r12); fiva pound>roast (OK r6,r11). Moma still unsolved: pound>roast, dry>roast, dry>soak, soak>roast, roast>dry all FAILED; try other combos early (e.g., pound>dry, soak>dry, dry>pound). Grabbing: mutual grabs give only 2 each, so grab when partner grabbed or cooperated last time. Post test results publicly."
+    },
+    {
+     "id": "a15",
+     "parent": "a9",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 15,
+     "upkeep": 15.0,
+     "net": 0.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: moma roast>soak OK (r11, r6 soak>dry failed, r7 soak>roast failed). dufo dry>roast OK (r5,r8,r9). zema pound>soak OK (r10,r12). Fiva untested by me; prior note says pound>roast. Grabbing often splits 2-2, so grab only when alone. a1 and a5 cooperated well."
+    }
+   ],
+   "mean": {
+    "MEM": 1.812,
+    "TALK": 1.75,
+    "LORE": 1.875,
+    "AGG": 3.125,
+    "gross": 25.125,
+    "net": 16.969,
+    "success_rate": 0.719
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "zema": [
+     "pound",
+     "soak"
+    ],
+    "dufo": [
+     "dry",
+     "roast"
+    ],
+    "fiva": [
+     "pound",
+     "roast"
+    ],
+    "moma": [
+     "roast",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 5,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a9",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 1.5,
+     "net": 11.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a9",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 12,
+     "upkeep": 0.0,
+     "net": 12.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 1,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 18.0,
+     "net": -20.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations changed this season. Verified: moma = roast>soak (OK twice). dufo = dry>roast (OK twice). zema step2 = pound (step1 not pound; try soak or roast). fiva step2 is not dry; step1 not yet tested (try soak or roast). Previous notes are outdated, so test each plant's steps early and confirm. a4 was cooperative and reliable. Grab only when partner is not grabbing, to avoid mutual grabbing (each gets 2). Keep remarks constructive to avoid exile."
+    },
+    {
+     "id": "a3",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 48,
+     "upkeep": 16.5,
+     "net": 31.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 10,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known steps (may change): dufo dry>roast (worked 4+ times), fiva pound>roast (worked 3+ times), moma roast>soak (worked 5 times this season; last season roast>roast and others failed). zema pound>soak worked last season. Verify each plant's steps early. Grabbing when partner cooperates yields 7; mutual grabbing gives only 2 each, so grab selectively. Partner a13 was reliable across many rounds. Keep remarks constructive to avoid exile."
+    },
+    {
+     "id": "a4",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 10,
+     "upkeep": 1.5,
+     "net": 8.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 7,
+     "upkeep": 1.5,
+     "net": 5.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 4,
+     "upkeep": 4.5,
+     "net": -0.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change, so test each plant early with paired steps, then record which step pairs succeed. Share steps openly with partners and avoid grabbing"
+    },
+    {
+     "id": "a7",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 15,
+     "upkeep": 3.0,
+     "net": 12.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change between seasons, so re-test each plant early with paired steps across all four actions. Record which step pairs succeed per plant, and"
+    },
+    {
+     "id": "a8",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 22,
+     "upkeep": 3.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; test each plant early. Dufo: dry then"
+    },
+    {
+     "id": "a9",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 1,
+     "upkeep": 6.0,
+     "net": -5.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; test each plant early. Last season fiva failed with pound then soak (step2 wrong), so fiva's step2 is unknown; try other actions."
+    },
+    {
+     "id": "a10",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 18,
+     "upkeep": 1.5,
+     "net": 16.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 8,
+     "upkeep": 0.0,
+     "net": 8.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a13",
+     "genome": {
+      "MEM": 3,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 2
+     },
+     "gross": 8,
+     "upkeep": 15.0,
+     "net": -7.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 3 notes from a previous member. Verify preparations early; they may change. Known last season: zema = pound>soak (5/5 with a3, a5), but my zema attempts with a1 failed, so check. fiva = pound>roast (worked with a3). moma = roast>soak (worked with a3). dufo = dry>roast worked with a14. Trust a3 and a5 for cooperation. Grabbing paid 7 when partner didn't grab; mutual grabs cost. Grab only if partner did not grab last round. Avoid a1 for zema."
+    },
+    {
+     "id": "a13",
+     "parent": "a13",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 19,
+     "upkeep": 16.5,
+     "net": 2.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 10,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 3 check: zema=pound>soak, fiva=pound>roast, moma=roast>soak worked reliably for prior seasons; verify early since preparations may change. dufo=dry>roast worked once (a3, r6). Trust a3 and a11 for cooperation; a3 often grabs with you, so mutual grabs gave +2 each. Grabbing alone gives 7 but risks 1 if partner grabs. Suggest: don't grab if partner grabbed last time; avoid mutual grabs. Use messages to confirm steps before choosing."
+    },
+    {
+     "id": "a14",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 23,
+     "upkeep": 1.5,
+     "net": 21.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; test each plant early with all four"
+    },
+    {
+     "id": "a15",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 0,
+     "upkeep": 0.0,
+     "net": 0.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.125,
+    "TALK": 1.125,
+    "LORE": 1.5,
+    "AGG": 3.312,
+    "gross": 12.875,
+    "net": 7.25,
+    "success_rate": 0.51
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "zema": [
+     "soak",
+     "pound"
+    ],
+    "dufo": [
+     "dry",
+     "roast"
+    ],
+    "fiva": [
+     "pound",
+     "roast"
+    ],
+    "moma": [
+     "roast",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 6,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 25,
+     "upkeep": 16.5,
+     "net": 8.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified plant steps this season: moma roast>soak (worked 5+ times, reliable as second or first). dufo dry>roast (worked 4+ times). fiva and zema failed with pound>roast / pound>soak this season, so try other first steps (e.g., dry or roast for first step) and check step 2 feedback early. a13 and a7 were reliable partners; a2 and a10 were fine too. Grab only when partner is cooperative; mutual grabbing yields just 2 each. Keep remarks constructive."
+    },
+    {
+     "id": "a1",
+     "parent": "a3",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 22,
+     "upkeep": 12.0,
+     "net": 10.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plant steps can change; verify early. Last season: moma roast>soak worked, fiva pound>soak worked, dufo dry>roast worked, zema pound>soak failed once (dry>soak also failed). Try zema pound>roast or other combos. Grabbing when partner cooperates yields 7; mutual grabbing only 2 each, so avoid double grabs. Agree steps by message first."
+    },
+    {
+     "id": "a2",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 1,
+     "upkeep": 1.5,
+     "net": -0.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant early with all four actions; record which"
+    },
+    {
+     "id": "a3",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 31,
+     "upkeep": 1.5,
+     "net": 29.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant early with all four actions. Known: dufo"
+    },
+    {
+     "id": "a4",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 14,
+     "upkeep": 3.0,
+     "net": 11.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 11,
+     "upkeep": 3.0,
+     "net": 8.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dufo: dry then roast (worked 4+ times). Moma: roast then"
+    },
+    {
+     "id": "a6",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 2,
+     "upkeep": 1.5,
+     "net": 0.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 10,
+     "upkeep": 3.0,
+     "net": 7.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a1",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 24,
+     "upkeep": 3.0,
+     "net": 21.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Records lost this season; untested. Try dufo dry>roast again; verify"
+    },
+    {
+     "id": "a9",
+     "parent": "a1",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 3,
+     "upkeep": 0.0,
+     "net": 3.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 24,
+     "upkeep": 3.0,
+     "net": 21.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change. Re-test each plant early with paired steps across all four actions and record successful pairs. Last known: dufo dry>roast (4+), fiva pound>roast"
+    },
+    {
+     "id": "a11",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 3,
+     "upkeep": 1.5,
+     "net": 1.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; re-test each plant early. Dufo dry>roast worked"
+    },
+    {
+     "id": "a12",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 1.5,
+     "net": 16.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 20,
+     "upkeep": 1.5,
+     "net": 18.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -1,
+     "upkeep": 0.0,
+     "net": -1.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 29,
+     "upkeep": 1.5,
+     "net": 27.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 0.875,
+    "TALK": 0.5,
+    "LORE": 0.875,
+    "AGG": 3.062,
+    "gross": 14.75,
+    "net": 11.375,
+    "success_rate": 0.542
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "zema": [
+     "soak",
+     "pound"
+    ],
+    "dufo": [
+     "dry",
+     "roast"
+    ],
+    "fiva": [
+     "pound",
+     "soak"
+    ],
+    "moma": [
+     "roast",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 7,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 32,
+     "upkeep": 1.5,
+     "net": 30.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant early with all four actions; record which"
+    },
+    {
+     "id": "a1",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 9,
+     "upkeep": 3.0,
+     "net": 6.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant early with all four actions, since preparations may change between seasons. Record which step pairs work for zema, dufo, fiva, moma. Dufo"
+    },
+    {
+     "id": "a2",
+     "parent": "a15",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 24,
+     "upkeep": 3.0,
+     "net": 21.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a15",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 9,
+     "upkeep": 1.5,
+     "net": 7.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 21,
+     "upkeep": 3.0,
+     "net": 18.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; re-test each plant early with paired steps across all four actions. Last known: dufo dry>roast (4+), fiva pound>roast. Record successful pairs per"
+    },
+    {
+     "id": "a5",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 7,
+     "upkeep": 3.0,
+     "net": 4.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; re-test each plant early with paired steps across all four actions. Last known: dufo dry>roast, fiva pound>roast. Record successful pairs for zema"
+    },
+    {
+     "id": "a6",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 20,
+     "upkeep": 1.5,
+     "net": 18.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 21,
+     "upkeep": 6.0,
+     "net": 15.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dufo: dry>roast worked for me (r11, r12) with a14. Grabbing"
+    },
+    {
+     "id": "a8",
+     "parent": "a13",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 12,
+     "upkeep": 0.0,
+     "net": 12.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 25,
+     "upkeep": 1.5,
+     "net": 23.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a12",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 1.5,
+     "net": 16.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a12",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 21,
+     "upkeep": 1.5,
+     "net": 19.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a4",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 7,
+     "upkeep": 4.5,
+     "net": 2.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant early with all four actions. Dufo: dry"
+    },
+    {
+     "id": "a13",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 15,
+     "upkeep": 1.5,
+     "net": 13.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants: moma roast>soak worked twice; fiva pound>soak worked; dufo dry>roast worked three times; zema pound>soak, dry>soak, pound>roast, pound>dry all failed, so test zema with soak/roast/dry combos early. Agree steps by message. Avoid double grabs (2 each); grab only when partner cooperates."
+    },
+    {
+     "id": "a15",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 34,
+     "upkeep": 12.0,
+     "net": 22.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season over. Plants may change between seasons: verify each with all four actions early. Last season's working pairs: moma roast>soak, fiva pound>soak, dufo dry>roast, zema pound>soak (failed once, so test zema pound>roast). Agree steps by message first. Avoid double grabs; mutual grabbing yields only 2 each."
+    }
+   ],
+   "mean": {
+    "MEM": 0.812,
+    "TALK": 0.562,
+    "LORE": 0.938,
+    "AGG": 3.438,
+    "gross": 19.25,
+    "net": 15.781,
+    "success_rate": 0.646
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "zema": [
+     "pound",
+     "soak"
+    ],
+    "dufo": [
+     "dry",
+     "roast"
+    ],
+    "fiva": [
+     "pound",
+     "soak"
+    ],
+    "moma": [
+     "roast",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 8,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a0",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 1.5,
+     "net": -8.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant early with all four actions; record which"
+    },
+    {
+     "id": "a1",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -9,
+     "upkeep": 3.0,
+     "net": -12.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant early with all four actions; record which"
+    },
+    {
+     "id": "a2",
+     "parent": "a9",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 3.0,
+     "net": -5.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant early with all four actions; record which"
+    },
+    {
+     "id": "a3",
+     "parent": "a9",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 9,
+     "upkeep": 1.5,
+     "net": 7.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 17,
+     "upkeep": 10.5,
+     "net": 6.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Moma: roast>soak works reliably. Fiva: pound>soak worked. Dufo: dry>roast worked before, but roast>soak failed once; retest. Zema: pound>soak, dry>soak, pound>roast, pound>dry failed; try soak/roast/dry combos. Agree steps by message first. Grab only if partner doesn't; double grabs cost us."
+    },
+    {
+     "id": "a5",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 21,
+     "upkeep": 10.5,
+     "net": 10.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known steps (may change): moma roast>soak worked; fiva pound>soak worked repeatedly; dufo dry>roast failed once, try others; zema dry>soak failed, pound>soak/roast/dry failed, test soak/roast combos early. Agree steps by message first. Avoid double grabs (each gets only 2); grab only when partner cooperates."
+    },
+    {
+     "id": "a6",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 34,
+     "upkeep": 12.0,
+     "net": 22.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants may change. Last season: moma roast>soak worked; fiva pound>soak worked (grab when able, avoid double grabs); dufo dry>roast likely, pound>roast failed; zema pound>soak failed once, pound>roast failed too, so test zema dry or soak combos early. Agree steps by message first."
+    },
+    {
+     "id": "a7",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 9,
+     "upkeep": 12.0,
+     "net": -3.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants may change; verify each early with all four actions. Last season's results: fiva pound>soak worked repeatedly; moma roast>soak worked; dufo dry>roast failed once, try other combos; zema dry>soak failed, try pound>roast. Agree steps by message first. Avoid double grabs (each gets only 2)."
+    },
+    {
+     "id": "a8",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 17,
+     "upkeep": 4.5,
+     "net": 12.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 4,
+     "upkeep": 4.5,
+     "net": -0.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a11",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 10,
+     "upkeep": 1.5,
+     "net": 8.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a11",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -1,
+     "upkeep": 3.0,
+     "net": -4.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a6",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 17,
+     "upkeep": 1.5,
+     "net": 15.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -4,
+     "upkeep": 3.0,
+     "net": -7.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": -1,
+     "upkeep": 3.0,
+     "net": -4.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change. Test each plant early by pairing step 1 and step 2 across all four actions; record successful pairs per plant. Last known:"
+    },
+    {
+     "id": "a15",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 0,
+     "upkeep": 3.0,
+     "net": -3.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change. Test each plant early: try all four actions as step pairs, record successful pairs. Last known: dufo dry>roast, fiva pound>roast. Share results"
+    }
+   ],
+   "mean": {
+    "MEM": 1.25,
+    "TALK": 0.812,
+    "LORE": 1.188,
+    "AGG": 3.312,
+    "gross": 7.125,
+    "net": 2.25,
+    "success_rate": 0.385
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "zema": [
+     "pound",
+     "soak"
+    ],
+    "dufo": [
+     "soak",
+     "roast"
+    ],
+    "fiva": [
+     "pound",
+     "soak"
+    ],
+    "moma": [
+     "roast",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 9,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 2,
+     "upkeep": 12.0,
+     "net": -10.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Agree steps by message first. Known (may change): fiva pound>soak worked repeatedly; dufo soak>roast worked; moma roast>soak failed for me, try other combos; zema pound failed with pound>soak, pound>roast, pound>pound, so test dry or soak first. Grab when able, avoid double grabs."
+    },
+    {
+     "id": "a1",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 11,
+     "upkeep": 12.0,
+     "net": -1.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants may change; verify each. Last season fiva pound>soak and zema pound>soak worked with a8, moma pound>pound worked (both grabbed). Failures: moma dry>pound, dufo dry>roast. Agree steps by message first. Grab when able, avoid double grabs (each gets only 2)."
+    },
+    {
+     "id": "a2",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 27,
+     "upkeep": 1.5,
+     "net": 25.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a12",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 3.0,
+     "net": 5.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 14,
+     "upkeep": 4.5,
+     "net": 9.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 5,
+     "upkeep": 3.0,
+     "net": 2.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a5",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 15,
+     "upkeep": 10.5,
+     "net": 4.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants may change; verify each. Zema: pound>soak worked repeatedly (pound first, soak second). Fiva: pound>soak worked. Moma: roast>soak worked once, but roast>soak failed in another round, so recheck. Dufo: soak>soak failed; try dry>roast first. Agree steps by message first. Grab only when partner cooperates; avoid double grabs."
+    },
+    {
+     "id": "a7",
+     "parent": "a5",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 10,
+     "upkeep": 10.5,
+     "net": -0.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants may change; verify each. Last season: moma roast>soak worked (dry/roast/pound>roast failed for moma as first step tries). fiva pound>soak worked repeatedly. zema: pound>soak worked once as second; soak>soak failed; test dry>soak early. dufo: dry>roast failed once, try dry>soak or pound>soak. Agree steps by message first; avoid double grabs."
+    },
+    {
+     "id": "a8",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 17,
+     "upkeep": 1.5,
+     "net": 15.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 12,
+     "upkeep": 1.5,
+     "net": 10.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 4,
+     "upkeep": 3.0,
+     "net": 1.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 4,
+     "upkeep": 1.5,
+     "net": 2.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": -1,
+     "upkeep": 10.5,
+     "net": -11.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known: moma roast>soak worked; fiva pound>soak worked; zema pound>soak worked (both grabbed, +2) but also failed once; dufo dry>roast worked, pound>soak failed. Agree steps by message first. Grab only if partner doesn't; avoid double grabs. Retest dufo and zema if plants changed."
+    },
+    {
+     "id": "a13",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 24,
+     "upkeep": 10.5,
+     "net": 13.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known working sequences: moma roast>soak (failed once, retest); fiva pound>soak reliable; dufo soak>roast and dry>roast worked; zema pound>soak worked, pound>roast/dry failed. Agree steps by message first. Grab only when partner doesn't, to avoid double grabs."
+    },
+    {
+     "id": "a14",
+     "parent": "a9",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 16,
+     "upkeep": 6.0,
+     "net": 10.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants may change; test steps early. Grab only when partner"
+    },
+    {
+     "id": "a15",
+     "parent": "a9",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 4.5,
+     "net": 3.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.688,
+    "TALK": 1.125,
+    "LORE": 1.188,
+    "AGG": 3.375,
+    "gross": 11.0,
+    "net": 5.0,
+    "success_rate": 0.5
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "zema": [
+     "pound",
+     "soak"
+    ],
+    "dufo": [
+     "soak",
+     "roast"
+    ],
+    "fiva": [
+     "pound",
+     "soak"
+    ],
+    "moma": [
+     "pound",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 10,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 4,
+     "upkeep": 1.5,
+     "net": 2.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 1.5,
+     "net": 16.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -5,
+     "upkeep": 1.5,
+     "net": -6.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 7,
+     "upkeep": 3.0,
+     "net": 4.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a13",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 1,
+     "upkeep": 9.0,
+     "net": -8.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season notes: as second, my records show step1 wrong in r9-r12 (zema pound>soak failed twice; moma roast>soak failed). Zema pound>soak previously worked, so preparation may have changed; test alternatives like pound>dry or dry>soak. Agree steps by message first; grab only if partner doesn't."
+    },
+    {
+     "id": "a5",
+     "parent": "a13",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 29,
+     "upkeep": 10.5,
+     "net": 18.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: fiva pound>soak reliable; dufo soak>roast and dry>roast worked; moma pound>pound worked twice (also roast>soak once failed); zema pound>soak worked once, pound>roast/dry failed. Agree steps by message first. Grab only when partner doesn't to avoid double grabs."
+    },
+    {
+     "id": "a6",
+     "parent": "a9",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -8,
+     "upkeep": 0.0,
+     "net": -8.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a9",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -9,
+     "upkeep": 3.0,
+     "net": -12.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plant preparations may change. Test steps early; record which step2"
+    },
+    {
+     "id": "a8",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 11,
+     "upkeep": 9.0,
+     "net": 2.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Zema: step2 soak works with first's pound? Unclear; r9 roast>dry failed, r11 pound>soak step2 right. Moma: pound>pound works. Test steps early; grab only when partner"
+    },
+    {
+     "id": "a9",
+     "parent": "a14",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 31,
+     "upkeep": 6.0,
+     "net": 25.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test steps early; plants may change. Learn each plant's two"
+    },
+    {
+     "id": "a10",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 25,
+     "upkeep": 4.5,
+     "net": 20.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 2,
+     "votes_against": 1,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 15,
+     "upkeep": 3.0,
+     "net": 12.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 9,
+     "upkeep": 4.5,
+     "net": 4.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 21,
+     "upkeep": 3.0,
+     "net": 18.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 3,
+     "upkeep": 10.5,
+     "net": -7.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verify each plant fresh; preparations may change. Last season: fiva pound>soak OK, zema pound>soak OK once but failed later (r11), dufo soak>roast OK, moma roast>soak mixed. Agree steps by message first. Grab only when partner cooperates; avoid double grabs."
+    },
+    {
+     "id": "a15",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 12.0,
+     "net": 6.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants may change; verify each. Fiva: pound>soak worked repeatedly. Zema: pound>soak worked before, but roast>soak failed; recheck. Moma: pound>pound worked; roast>soak and pound>soak failed at times. Dufo: soak>soak failed; try dry>roast. Agree steps by message first. Grab only when partner cooperates; avoid double grabs."
+    }
+   ],
+   "mean": {
+    "MEM": 1.312,
+    "TALK": 1.125,
+    "LORE": 1.0,
+    "AGG": 3.375,
+    "gross": 10.625,
+    "net": 5.469,
+    "success_rate": 0.448
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "zema": [
+     "soak",
+     "soak"
+    ],
+    "dufo": [
+     "soak",
+     "roast"
+    ],
+    "fiva": [
+     "pound",
+     "soak"
+    ],
+    "moma": [
+     "pound",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 11,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a9",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 2,
+     "upkeep": 4.5,
+     "net": -2.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant's two steps early with varied actions; preparations"
+    },
+    {
+     "id": "a1",
+     "parent": "a9",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 7.5,
+     "net": 0.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant's two steps early; preparations may change. Zema:"
+    },
+    {
+     "id": "a2",
+     "parent": "a10",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 16,
+     "upkeep": 6.0,
+     "net": 10.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 7.5,
+     "net": 10.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant's two steps early; preparations may change. Grab"
+    },
+    {
+     "id": "a4",
+     "parent": "a5",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 12.0,
+     "net": 1.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants may change between seasons; retest early. Last season: fiva pound>soak worked (2 of 3); dufo soak>roast worked 3 of 3; moma pound>roast worked once, pound>pound failed; zema pound>soak failed once. Agree steps by message first. Grab only when partner doesn't to avoid double grabs."
+    },
+    {
+     "id": "a5",
+     "parent": "a5",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 12.0,
+     "net": 6.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified with a7: fiva pound>soak (3 OK). dufo soak>roast OK, soak>soak FAIL. zema soak>soak OK, pound>soak/dry/roast all FAIL this time, so the old note is unreliable. moma pound>roast OK twice, pound>soak FAIL. Test early, agree steps by message, and grab only when partner doesn't."
+    },
+    {
+     "id": "a6",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 11,
+     "upkeep": 4.5,
+     "net": 6.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant's two steps early; preparations may change. Record"
+    },
+    {
+     "id": "a7",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 12,
+     "upkeep": 3.0,
+     "net": 9.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a1",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -4,
+     "upkeep": 1.5,
+     "net": -5.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a1",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 3,
+     "upkeep": 1.5,
+     "net": 1.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a11",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -10,
+     "upkeep": 3.0,
+     "net": -13.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a11",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 3.0,
+     "net": 10.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 9,
+     "upkeep": 12.0,
+     "net": -3.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Fiva: pound then soak worked repeatedly (pound>soak OK). Zema: step2 soak seemed right sometimes (dry>soak and roast>soak both showed step2 right/wrong mixed); test pound first then other steps. Moma: pound>pound failed; try roast>pound or dry>dry. Dufo: soak>soak and roast>soak failed; try dry>roast. Agree steps by message first; avoid double grabs."
+    },
+    {
+     "id": "a13",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 4,
+     "upkeep": 10.5,
+     "net": -6.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants may change; verify each. Fiva: pound then soak worked repeatedly. Moma: pound then roast worked once; pound>pound and roast>soak failed. Dufo: pound>soak and roast>soak"
+    },
+    {
+     "id": "a14",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 12,
+     "upkeep": 4.5,
+     "net": 7.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 17,
+     "upkeep": 3.0,
+     "net": 14.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.5,
+    "TALK": 1.562,
+    "LORE": 0.938,
+    "AGG": 3.688,
+    "gross": 8.875,
+    "net": 2.875,
+    "success_rate": 0.469
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "zema": [
+     "soak",
+     "soak"
+    ],
+    "dufo": [
+     "soak",
+     "roast"
+    ],
+    "fiva": [
+     "pound",
+     "soak"
+    ],
+    "moma": [
+     "pound",
+     "roast"
+    ]
+   }
+  }
+ ],
+ "final_population": [
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a15",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a15",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 3,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a3",
+   "inherited": [
+    "Test each plant's two steps early; preparations may change. Grab",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 3,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a3",
+   "inherited": [
+    "Test each plant's two steps early; preparations may change. Grab",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 2,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a11",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 0,
+    "TALK": 2,
+    "LORE": 0,
+    "AGG": 3
+   },
+   "parent": "a11",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 2,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a2",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 3,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a2",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a7",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a7",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 2,
+    "LORE": 0,
+    "AGG": 3
+   },
+   "parent": "a14",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 3
+   },
+   "parent": "a14",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a6",
+   "inherited": [
+    "Test each plant's two steps early; preparations may change. Record",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 0,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a6",
+   "inherited": [
+    "Test each plant's two steps early; preparations may change. Record",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 1,
+    "LORE": 3,
+    "AGG": 3
+   },
+   "parent": "a5",
+   "inherited": [
+    "Verified with a7: fiva pound>soak (3 OK). dufo soak>roast OK, soak>soak FAIL. zema soak>soak OK, pound>soak/dry/roast all FAIL this time, so the old note is unreliable. moma pound>roast OK twice, pound>soak FAIL. Test early, agree steps by message, and grab only when partner doesn't.",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 1,
+    "LORE": 3,
+    "AGG": 2
+   },
+   "parent": "a5",
+   "inherited": [
+    "Verified with a7: fiva pound>soak (3 OK). dufo soak>roast OK, soak>soak FAIL. zema soak>soak OK, pound>soak/dry/roast all FAIL this time, so the old note is unreliable. moma pound>roast OK twice, pound>soak FAIL. Test early, agree steps by message, and grab only when partner doesn't.",
+    ""
+   ]
+  }
+ ],
+ "usage": {
+  "calls": 4113,
+  "cost_usd": 0.6326
+ },
+ "samples": {
+  "messages": [
+   {
+    "gen": 9,
+    "round": 6,
+    "agent": "a11",
+    "to": "a14",
+    "text": "Dufo: what's your"
+   },
+   {
+    "gen": 1,
+    "round": 9,
+    "agent": "a8",
+    "to": "a10",
+    "text": "Zema is untested for us: dry first failed in r5, roast-roast failed in r2. Let's try soak first, and I'll answer pound. Please report"
+   },
+   {
+    "gen": 9,
+    "round": 9,
+    "agent": "a2",
+    "to": "a6",
+    "text": "Zema: pound first,"
+   },
+   {
+    "gen": 1,
+    "round": 8,
+    "agent": "a5",
+    "to": "a13",
+    "text": "Moma in season. What's your step"
+   },
+   {
+    "gen": 9,
+    "round": 12,
+    "agent": "a6",
+    "to": "a2",
+    "text": "Dufo: dry then"
+   },
+   {
+    "gen": 11,
+    "round": 5,
+    "agent": "a9",
+    "to": "a12",
+    "text": "Fiva: try pound"
+   },
+   {
+    "gen": 9,
+    "round": 10,
+    "agent": "a15",
+    "to": "a0",
+    "text": "Dufo this round: I go first"
+   },
+   {
+    "gen": 2,
+    "round": 2,
+    "agent": "a2",
+    "to": "a11",
+    "text": "Fiva: which step"
+   },
+   {
+    "gen": 5,
+    "round": 8,
+    "agent": "a12",
+    "to": "a1",
+    "text": "Zema is in season, I'm first. Notes say pound then soak worked"
+   },
+   {
+    "gen": 3,
+    "round": 12,
+    "agent": "a12",
+    "to": "a4",
+    "text": "a4: Fiva this round. I'll play pound first as recorded, you roast second. Let's both cooperate for the 8 energy and avoid mutual grabbing."
+   },
+   {
+    "gen": 0,
+    "round": 10,
+    "agent": "a12",
+    "to": "a14",
+    "text": "Dufo: dry, then"
+   },
+   {
+    "gen": 4,
+    "round": 6,
+    "agent": "a8",
+    "to": "a15",
+    "text": "Moma: opening dry?"
+   },
+   {
+    "gen": 11,
+    "round": 6,
+    "agent": "a10",
+    "to": "a8",
+    "text": "Dufo for us: I'll open with"
+   },
+   {
+    "gen": 1,
+    "round": 10,
+    "agent": "a8",
+    "to": "a10",
+    "text": "Dufo is new to us both. I'll open with dry as step 1. Could you take step 2 and tell me what you've seen"
+   },
+   {
+    "gen": 5,
+    "round": 1,
+    "agent": "a3",
+    "to": "a7",
+    "text": "Hi a7, dufo is in season. I'll open with dry; can you"
+   },
+   {
+    "gen": 0,
+    "round": 3,
+    "agent": "a5",
+    "to": "a2",
+    "text": "Dufo: soak as step 1 was wrong last round. Let's try roast or dry first. I'll switch my step 2 to dry, since I"
+   },
+   {
+    "gen": 3,
+    "round": 9,
+    "agent": "a7",
+    "to": "a11",
+    "text": "Moma: what's your"
+   },
+   {
+    "gen": 2,
+    "round": 10,
+    "agent": "a10",
+    "to": "a8",
+    "text": "Moma: dry first. I'll play roast."
+   },
+   {
+    "gen": 10,
+    "round": 3,
+    "agent": "a13",
+    "to": "a14",
+    "text": "Moma: try dry"
+   },
+   {
+    "gen": 4,
+    "round": 2,
+    "agent": "a15",
+    "to": "a8",
+    "text": "Hi a8, zema this round, you open step 1 and I answer step 2. Notes say zema was pound then soak; let's try pound"
+   }
+  ],
+  "gossip": [
+   {
+    "gen": 9,
+    "round": 7,
+    "agent": "a12",
+    "text": "Zema: pound pound?"
+   },
+   {
+    "gen": 11,
+    "round": 3,
+    "agent": "a2",
+    "text": "Zema: testing pound first, sharing results."
+   },
+   {
+    "gen": 2,
+    "round": 5,
+    "agent": "a12",
+    "text": "a12 first on zema with pound, following a10's report that pound then soak worked. Second, please report whether step 1 was right."
+   },
+   {
+    "gen": 2,
+    "round": 11,
+    "agent": "a7",
+    "text": "Zema: pound then soak worked in r7, r9, r10 with a2. I'm second, playing soak. Will report step 1 honestly."
+   },
+   {
+    "gen": 11,
+    "round": 10,
+    "agent": "a2",
+    "text": "Fiva: pound then soak worked before"
+   },
+   {
+    "gen": 11,
+    "round": 4,
+    "agent": "a4",
+    "text": "Moma: pound first"
+   },
+   {
+    "gen": 8,
+    "round": 5,
+    "agent": "a6",
+    "text": "Dufo: dry first failed. Testing pound"
+   },
+   {
+    "gen": 11,
+    "round": 4,
+    "agent": "a5",
+    "text": "Zema: pound first"
+   },
+   {
+    "gen": 10,
+    "round": 8,
+    "agent": "a3",
+    "text": "Zema: roast first"
+   },
+   {
+    "gen": 1,
+    "round": 4,
+    "agent": "a8",
+    "text": "Fiva: pound then roast succeeded in r3 with a10. I'm opening with pound again and will report honestly."
+   },
+   {
+    "gen": 4,
+    "round": 3,
+    "agent": "a13",
+    "text": "Zema: last season's pound>soak note is my basis; will report if step"
+   },
+   {
+    "gen": 3,
+    "round": 6,
+    "agent": "a14",
+    "text": "a14 first on moma with a0: roast, since roast>roast succeeded in a15's and a13's rounds. Will report the result."
+   },
+   {
+    "gen": 2,
+    "round": 7,
+    "agent": "a10",
+    "text": "Fiva unknown. Trying dry first."
+   },
+   {
+    "gen": 4,
+    "round": 12,
+    "agent": "a0",
+    "text": "Dufo: answering roast as step 2."
+   },
+   {
+    "gen": 0,
+    "round": 7,
+    "agent": "a3",
+    "text": "Dufo: pound first?"
+   },
+   {
+    "gen": 2,
+    "round": 12,
+    "agent": "a15",
+    "text": "Fiva: pound then"
+   },
+   {
+    "gen": 0,
+    "round": 7,
+    "agent": "a13",
+    "text": "Fiva: a13 opens soak, a1 answers roast. Will report."
+   },
+   {
+    "gen": 11,
+    "round": 6,
+    "agent": "a11",
+    "text": "Moma: pound first, a4 confirming."
+   },
+   {
+    "gen": 4,
+    "round": 10,
+    "agent": "a11",
+    "text": "Fiva: pound then roast has worked in our records (r2, r3). Answering roast with a9 and will report whether step 2 was right."
+   },
+   {
+    "gen": 11,
+    "round": 12,
+    "agent": "a2",
+    "text": "Zema: soak as step 2, per"
+   }
+  ],
+  "notes": [
+   {
+    "gen": 4,
+    "agent": "a14",
+    "text": "Verified (may change, re-test): zema pound>soak (OK r3,r7 last season); dufo dry>roast (OK r1,r2,r12); fiva pound>roast (OK r6,r11). Moma still unsolved: pound>roast, dry>roast, dry>soak, soak>roast, roast>dry all FAILED; try other combos early (e.g., pound>dry, soak>dry, dry>pound). Grabbing: mutual grabs give only 2 each, so grab when partner grabbed or cooperated last time. Post test results publicly."
+   },
+   {
+    "gen": 5,
+    "agent": "a14",
+    "text": "Preparations may change; test each plant early with all four"
+   },
+   {
+    "gen": 5,
+    "agent": "a7",
+    "text": "Preparations may change between seasons, so re-test each plant early with paired steps across all four actions. Record which step pairs succeed per plant, and"
+   },
+   {
+    "gen": 0,
+    "agent": "a7",
+    "text": "a15 grabs often; expect grabs. Test preparations early; roast worked"
+   },
+   {
+    "gen": 9,
+    "agent": "a7",
+    "text": "Plants may change; verify each. Last season: moma roast>soak worked (dry/roast/pound>roast failed for moma as first step tries). fiva pound>soak worked repeatedly. zema: pound>soak worked once as second; soak>soak failed; test dry>soak early. dufo: dry>roast failed once, try dry>soak or pound>soak. Agree steps by message first; avoid double grabs."
+   },
+   {
+    "gen": 3,
+    "agent": "a6",
+    "text": "Preparations may change; test each plant early. Roast worked for"
+   },
+   {
+    "gen": 7,
+    "agent": "a14",
+    "text": "Plants: moma roast>soak worked twice; fiva pound>soak worked; dufo dry>roast worked three times; zema pound>soak, dry>soak, pound>roast, pound>dry all failed, so test zema with soak/roast/dry combos early. Agree steps by message. Avoid double grabs (2 each); grab only when partner cooperates."
+   },
+   {
+    "gen": 10,
+    "agent": "a7",
+    "text": "Plant preparations may change. Test steps early; record which step2"
+   },
+   {
+    "gen": 6,
+    "agent": "a0",
+    "text": "Verified plant steps this season: moma roast>soak (worked 5+ times, reliable as second or first). dufo dry>roast (worked 4+ times). fiva and zema failed with pound>roast / pound>soak this season, so try other first steps (e.g., dry or roast for first step) and check step 2 feedback early. a13 and a7 were reliable partners; a2 and a10 were fine too. Grab only when partner is cooperative; mutual grabbing yields just 2 each. Keep remarks constructive."
+   },
+   {
+    "gen": 0,
+    "agent": "a2",
+    "text": "Recipes found: moma = dry then roast; dufo = dry then roast; fiva = pound then roast; zema = roast then roast. Preparations may change between seasons, so re-verify. Grabbing was common and cut the split, so agree on who grabs before the round."
+   },
+   {
+    "gen": 9,
+    "agent": "a12",
+    "text": "Known: moma roast>soak worked; fiva pound>soak worked; zema pound>soak worked (both grabbed, +2) but also failed once; dufo dry>roast worked, pound>soak failed. Agree steps by message first. Grab only if partner doesn't; avoid double grabs. Retest dufo and zema if plants changed."
+   },
+   {
+    "gen": 0,
+    "agent": "a4",
+    "text": "Only records shown for a0 as partner (I was second each time). Moma: dry then roast works with a0; a0 grabbed in one success. Zema: first step soak failed, so zema's first step is not soak; try other actions. Fiva: dry as first step failed; try roast, soak, or pound. Ask first-movers to state their step 1 before choosing step 2, and exchange messages to find each plant's two-step recipe quickly. Be wary of a0 grabbing, which cuts our share to 1-2."
+   },
+   {
+    "gen": 6,
+    "agent": "a11",
+    "text": "Preparations may change; re-test each plant early. Dufo dry>roast worked"
+   },
+   {
+    "gen": 2,
+    "agent": "a14",
+    "text": "Dufo dry>roast, moma dry>roast, zema pound>soak confirmed. Test early; a13"
+   },
+   {
+    "gen": 1,
+    "agent": "a6",
+    "text": "Fiva: pound, roast. Dufo, moma: dry, roast. Zema: roast, roast."
+   },
+   {
+    "gen": 8,
+    "agent": "a0",
+    "text": "Test each plant early with all four actions; record which"
+   },
+   {
+    "gen": 1,
+    "agent": "a5",
+    "text": "Preparations may change. Test early: try roast-roast, dry-roast, etc. Dufo"
+   },
+   {
+    "gen": 4,
+    "agent": "a11",
+    "text": "Known steps (verify early, preparations may change): zema pound>soak; fiva pound>roast; dufo dry>roast; moma roast>roast worked once, dry>soak failed. a9 was reliable and cooperative in our pairings, often splitting 4/4 or both grabbing. Grab only when partner cooperated last time; avoid mutual grabbing (2 each). Keep remarks constructive to avoid exile. Test moma with roast>roast early."
+   },
+   {
+    "gen": 5,
+    "agent": "a13",
+    "text": "Season 3 check: zema=pound>soak, fiva=pound>roast, moma=roast>soak worked reliably for prior seasons; verify early since preparations may change. dufo=dry>roast worked once (a3, r6). Trust a3 and a11 for cooperation; a3 often grabs with you, so mutual grabs gave +2 each. Grabbing alone gives 7 but risks 1 if partner grabs. Suggest: don't grab if partner grabbed last time; avoid mutual grabs. Use messages to confirm steps before choosing."
+   },
+   {
+    "gen": 9,
+    "agent": "a1",
+    "text": "Plants may change; verify each. Last season fiva pound>soak and zema pound>soak worked with a8, moma pound>pound worked (both grabbed). Failures: moma dry>pound, dufo dry>roast. Agree steps by message first. Grab when able, avoid double grabs (each gets only 2)."
+   }
+  ]
+ },
+ "samples_seen": {
+  "messages": 1500,
+  "gossip": 1481,
+  "notes": 117
+ }
+}

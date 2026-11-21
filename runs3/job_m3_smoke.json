@@ -1,0 +1,44 @@
+[
+ {
+  "name": "m3-smoke",
+  "kind": "breadth",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-3B-Instruct",
+   "families": [
+    "count",
+    "vessel"
+   ],
+   "seed": 98,
+   "steps": 20,
+   "examples": 160,
+   "lr": 0.0002,
+   "near": [
+    "beadpair",
+    "countif",
+    "gap",
+    "morecuts",
+    "needs",
+    "nextsign",
+    "nextto",
+    "notchnum",
+    "onlyin",
+    "path",
+    "sooner",
+    "sort",
+    "swap",
+    "verify",
+    "whichsign",
+    "whohas"
+   ],
+   "sizes": {
+    "pool": 4,
+    "held": 16,
+    "near": 16
+   },
+   "far": false,
+   "public": false
+  },
+  "big": true
+ }
+]

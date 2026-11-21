@@ -1,0 +1,889 @@
+<title>Byproduct Experiment 2</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one lab-report column. Verdicts and the results table first, charts second, method and limits last.
+   Arm names and numbers are set in mono, the way a lab notebook writes loci and readings. */
+:root {
+  --plane: #f3f4f6;
+  --surface: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #7d7b75;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --hair: rgba(11, 11, 11, 0.10);
+  --accent: #2a78d6;
+  --s1: #2a78d6;  /* first series, and "final population" */
+  --s2: #eb6834;  /* second series */
+  --s3: #1baf7a;  /* third series */
+  --s4: #eda100;
+  --ref: #a09f98; /* reference rows: DRIFT, SOLO */
+  --band: rgba(82, 81, 78, 0.13);
+  --warn-bg: #fab219;
+  --warn-ink: #0b0b0b;
+  --hm-0: #cde2fb; --hm-1: #9ec5f4; --hm-2: #6da7ec; --hm-3: #3987e5; --hm-4: #256abf; --hm-5: #104281;
+  --hm-t0: #0b0b0b; --hm-t1: #0b0b0b; --hm-t2: #0b0b0b; --hm-t3: #ffffff; --hm-t4: #ffffff; --hm-t5: #ffffff;
+  --font-text: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --plane: #0f1012; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #929089;
+    --grid: #2c2c2a; --axis: #45453f; --hair: rgba(255, 255, 255, 0.10); --accent: #6da7ec;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --ref: #6f6e69;
+    --band: rgba(195, 194, 183, 0.13); --warn-bg: #fab219; --warn-ink: #0b0b0b;
+    --hm-0: #0d366b; --hm-1: #184f95; --hm-2: #256abf; --hm-3: #3987e5; --hm-4: #6da7ec; --hm-5: #9ec5f4;
+    --hm-t0: #f0efec; --hm-t1: #f0efec; --hm-t2: #ffffff; --hm-t3: #ffffff; --hm-t4: #0b0b0b; --hm-t5: #0b0b0b;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --plane: #0f1012; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #929089;
+  --grid: #2c2c2a; --axis: #45453f; --hair: rgba(255, 255, 255, 0.10); --accent: #6da7ec;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --ref: #6f6e69;
+  --band: rgba(195, 194, 183, 0.13); --warn-bg: #fab219; --warn-ink: #0b0b0b;
+  --hm-0: #0d366b; --hm-1: #184f95; --hm-2: #256abf; --hm-3: #3987e5; --hm-4: #6da7ec; --hm-5: #9ec5f4;
+  --hm-t0: #f0efec; --hm-t1: #f0efec; --hm-t2: #ffffff; --hm-t3: #ffffff; --hm-t4: #0b0b0b; --hm-t5: #0b0b0b;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  background: var(--plane); color: var(--ink);
+  font-family: var(--font-text); font-size: 15px; line-height: 1.55;
+  padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.page { max-width: 1040px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+section { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+h1, h2, h3 { margin: 0; text-wrap: balance; font-weight: 600; }
+h1 { font-size: clamp(26px, 4.4vw, 40px); line-height: 1.12; letter-spacing: -0.015em; max-width: 21ch; }
+h2 { font-size: 21px; line-height: 1.25; letter-spacing: -0.005em; }
+h3 { font-size: 14px; }
+p { margin: 0; max-width: 68ch; }
+.lede { font-size: 18px; line-height: 1.45; color: var(--ink-2); max-width: 54ch; }
+.eyebrow { font-family: var(--font-data); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.sub { color: var(--ink-2); font-size: 14px; }
+.small { color: var(--muted); font-size: 12.5px; max-width: 80ch; }
+code, .mono { font-family: var(--font-data); font-size: 0.92em; }
+.num { font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+
+header.top { display: flex; flex-direction: column; gap: 14px; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-family: var(--font-data); font-size: 12.5px; color: var(--ink-2); }
+.meta b { font-weight: 500; color: var(--ink); }
+
+.mock {
+  background: var(--warn-bg); color: var(--warn-ink); border-radius: 6px; padding: 12px 16px;
+  font-weight: 600; font-size: 16px; letter-spacing: 0.02em;
+}
+.mock span { font-weight: 400; font-size: 14px; letter-spacing: 0; display: block; }
+
+.verdicts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 12px; align-items: start; }
+.verdict { background: var(--surface); border: 1px solid var(--hair); border-radius: 8px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.verdict .vtitle { font-size: 14px; font-weight: 600; }
+.verdict .status { font-family: var(--font-data); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); display: flex; gap: 8px; align-items: center; }
+.verdict .status i { width: 10px; height: 10px; border: 2px solid var(--ink); display: inline-block; border-radius: 50%; flex: none; }
+.verdict .status.supported i { background: var(--ink); }
+.verdict .status.not_supported i { border-radius: 0; }
+.verdict .status.unclear i { background: linear-gradient(90deg, var(--ink) 50%, transparent 50%); }
+.verdict .status.no_data i { border-style: dashed; }
+.verdict .headline { font-size: 17px; line-height: 1.38; font-weight: 500; }
+.verdict ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--ink-2); }
+
+.card { background: var(--surface); border: 1px solid var(--hair); border-radius: 8px; padding: 16px; min-width: 0; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { text-align: left; padding: 8px 9px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+thead th { font-weight: 500; color: var(--ink-2); font-size: 12px; letter-spacing: 0.03em; white-space: nowrap; border-bottom-color: var(--axis); }
+thead th small { display: block; font-size: 11px; color: var(--muted); letter-spacing: 0; font-weight: 400; }
+tbody tr:last-child td { border-bottom: 0; }
+td.r, th.r { text-align: right; }
+td.c, th.c { text-align: center; }
+td .v { font-family: var(--font-data); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td .v.sig { font-weight: 600; }
+td .v.dim { color: var(--muted); }
+td .seeds { display: block; font-family: var(--font-data); font-size: 11px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+td[tabindex]:focus-visible, .hit:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.arm { font-family: var(--font-data); font-weight: 500; white-space: nowrap; }
+.role { display: block; font-size: 11.5px; color: var(--muted); white-space: nowrap; }
+tr.ref td { background: color-mix(in srgb, var(--plane) 60%, transparent); }
+tr.sep td { border-top: 1px solid var(--axis); }
+.yes::before { content: "\25C6\00A0"; font-size: 0.75em; }
+#results { min-width: 680px; }
+#paired { min-width: 640px; }
+#mech { min-width: 860px; }
+#sec-checks h3 { margin: 18px 0 4px; }
+#seedrules { min-width: 860px; }
+#seedrules td.rule { min-width: 230px; }
+.chip { display: inline-block; min-width: 44px; padding: 1px 6px; border-radius: 3px; text-align: center; font-family: var(--font-data); font-size: 12px; font-variant-numeric: tabular-nums; }
+.chip.zero { color: var(--muted); }
+.tagc { display: inline-block; font-family: var(--font-data); font-size: 10.5px; line-height: 1.5; color: var(--ink-2); border: 1px solid var(--axis); border-radius: 3px; padding: 0 4px; margin-left: 4px; white-space: nowrap; vertical-align: 1px; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--ink-2); align-items: center; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
+.dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.dot.hollow { background: var(--surface); border: 2px solid var(--ink-2); }
+.thin { width: 14px; height: 1px; display: inline-block; background: var(--ink-2); opacity: 0.45; }
+.dash { width: 2px; height: 14px; display: inline-block; background: repeating-linear-gradient(to bottom, var(--ink-2) 0 3px, transparent 3px 6px); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: 12px; }
+.mult { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(215px, 100%), 1fr)); gap: 10px; }
+.mult .card { padding: 12px; }
+.three { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr)); gap: 12px; align-items: start; }
+.three .card { display: flex; flex-direction: column; gap: 10px; }
+.three h3 { font-family: var(--font-data); font-weight: 500; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); display: flex; align-items: center; gap: 8px; margin: 0; }
+.three h3 i { width: 10px; height: 10px; border: 2px solid var(--ink); display: inline-block; flex: none; }
+.three h3 i.for { background: var(--ink); border-radius: 50%; }
+.three h3 i.untested { border-style: dashed; border-radius: 50%; }
+.three ul { margin: 0; padding-left: 16px; display: flex; flex-direction: column; gap: 9px; font-size: 13.5px; }
+.three li b { font-weight: 600; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 12px; align-items: start; }
+.panel { display: flex; flex-direction: column; gap: 6px; }
+.panel .ttl { display: flex; flex-direction: column; }
+.panel .ttl .role { white-space: normal; }
+.block { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+svg.chart { display: block; width: 100%; height: auto; overflow: visible; font-family: var(--font-text); }
+svg.chart text { fill: var(--ink-2); font-size: 11px; }
+svg.chart text.tick { fill: var(--muted); font-size: 10.5px; font-family: var(--font-data); }
+svg.chart text.val { fill: var(--ink); font-family: var(--font-data); font-size: 11px; }
+svg.chart text.rowlabel { fill: var(--ink); font-family: var(--font-data); font-size: 11.5px; font-weight: 500; }
+svg.chart text.reflabel { fill: var(--ink-2); font-family: var(--font-data); font-size: 10.5px; }
+svg.chart .gridline { stroke: var(--grid); stroke-width: 1; }
+svg.chart .axisline { stroke: var(--axis); stroke-width: 1; }
+svg.chart .refline { stroke: var(--ink-2); stroke-width: 1.5; stroke-dasharray: 4 3; }
+svg.chart .cross { stroke: var(--axis); stroke-width: 1; }
+svg.chart .ring { stroke: var(--surface); stroke-width: 2; }
+.wide { max-width: 640px; }
+
+.rules { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; font-size: 13px; }
+.rules li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 8px; align-items: baseline; }
+.rules .pc { font-family: var(--font-data); font-size: 12px; font-variant-numeric: tabular-nums; text-align: right; color: var(--ink); }
+.rules .txt { overflow-wrap: anywhere; }
+.hmscale { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-family: var(--font-data); font-size: 11.5px; color: var(--muted); }
+.hmscale i { width: 22px; height: 10px; display: inline-block; }
+
+.samples { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 12px; align-items: start; }
+.samples ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.samples li { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.samples .who { font-family: var(--font-data); font-size: 11px; color: var(--muted); }
+.samples .txt { font-size: 13.5px; overflow-wrap: anywhere; }
+
+ul.plain { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; max-width: 72ch; }
+details { font-size: 13.5px; }
+summary { cursor: pointer; color: var(--ink-2); }
+summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+#tip {
+  position: fixed; z-index: 20; pointer-events: none; background: var(--surface); color: var(--ink);
+  border: 1px solid var(--hair); border-radius: 6px; padding: 8px 10px; font-size: 12px; line-height: 1.45;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14); max-width: 270px;
+}
+#tip .h { font-weight: 600; margin-bottom: 2px; }
+#tip .row { display: flex; align-items: center; gap: 6px; font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+#tip .row .dot { width: 8px; height: 8px; flex: none; }
+#tip .mut { color: var(--muted); }
+@media (max-width: 480px) { .verdict { padding: 14px; } .card { padding: 12px; } }
+</style>
+
+<div class="page" id="page">
+  <header class="top">
+    <div class="eyebrow">Byproduct experiment &middot; version 2 &middot; results</div>
+    <h1 id="thesis-head"></h1>
+    <p class="lede" id="thesis-rest"></p>
+    <div class="meta" id="meta"></div>
+    <div class="mock" id="mock" hidden>MOCK DATA<span>These numbers come from a mock run with no model calls. They show the page layout only and say nothing about the thesis.</span></div>
+  </header>
+
+  <section id="sec-changed">
+    <h2>What changed from version 1</h2>
+    <p>Version 1 evolved four dials on a fixed model and read ability from a table. Here the agents' own prompt rules, called instincts, and their notes evolve. Every ability score is a real model call made with the evolved text in the prompt.</p>
+  </section>
+
+  <section id="sec-verdict">
+    <div class="verdicts">
+      <div class="verdict" id="v-general"></div>
+      <div class="verdict" id="v-knowledge"></div>
+    </div>
+    <p class="small" id="v-rule"></p>
+  </section>
+
+  <section id="sec-findings" hidden>
+    <h2>Evidence for, against, and not tested</h2>
+    <p class="sub">Each verdict above is one rule applied to one number. These are the separate observations behind them, each written from the run data.</p>
+    <div class="three">
+      <div class="card"><h3><i class="for"></i>For the thesis</h3><ul id="f-for"></ul></div>
+      <div class="card"><h3><i class="against"></i>Against the thesis</h3><ul id="f-against"></ul></div>
+      <div class="card"><h3><i class="untested"></i>Not tested by this run</h3><ul id="f-untested"></ul></div>
+    </div>
+  </section>
+
+  <section id="sec-table">
+    <h2>What changed in each arm</h2>
+    <p class="sub">Change in each test score from the generation 0 population to the final population. Every population of a seed is scored on the same task instances. No test score was ever used for selection.</p>
+    <div class="card scroll"><table id="results"></table></div>
+    <p class="small" id="table-note"></p>
+  </section>
+
+  <section id="sec-checks" hidden>
+    <h2>Closer checks</h2>
+    <p class="sub">Two looks at the same data that the pre-set rule does not take. The first was chosen after seeing the results, so it is evidence to follow up and does not change the verdicts.</p>
+    <h3>Seed-by-seed comparison</h3>
+    <p class="small">Every arm of a seed starts from the same generation 0 and is scored on the same tasks. Each cell is the arm's change minus the reference arm's change, averaged over seeds, with the number of seeds in which the arm was higher and the paired t value.</p>
+    <div class="card scroll"><table id="paired"></table></div>
+    <h3>What selection did to the text and the behavior</h3>
+    <p class="small" id="mech-note"></p>
+    <div class="card scroll"><table id="mech"></table></div>
+    <p class="small" id="case-note"></p>
+  </section>
+
+  <section id="sec-transfer">
+    <h2>Transfer tests, generation 0 to final</h2>
+    <p class="sub">One panel per test, each with its own scale. The dashed line is the bare model with no evolved text.</p>
+    <div class="legend"><span><i class="dot hollow"></i>generation 0</span><span><i class="dot" style="background:var(--s1)"></i>final population, mean of seeds</span><span><i class="dot" style="background:var(--s1);opacity:.4;width:6px;height:6px"></i>one seed</span><span><i class="dash"></i>bare model</span></div>
+    <div class="grid" id="ch-transfer"></div>
+    <p class="small" id="ceiling-note"></p>
+  </section>
+
+  <section id="sec-traj">
+    <h2>Over the generations</h2>
+    <p class="sub">One panel per arm. Thick lines are the mean of seeds, thin lines are single seeds. All panels of one measure share one scale.</p>
+    <div class="block">
+      <h3>Mean energy at the end of a lifetime</h3>
+      <div class="legend"><span><i class="sw" style="background:var(--s1)"></i>energy, mean of seeds</span><span><i class="thin"></i>one seed</span></div>
+      <div class="mult" id="ch-energy"></div>
+    </div>
+    <div class="block">
+      <h3>Law-breaking rate</h3>
+      <p class="small">Share of tries that break one of the two hidden laws.</p>
+      <div class="legend"><span><i class="sw" style="background:var(--s1)"></i>law-breaking rate, mean of seeds</span><span><i class="thin"></i>one seed</span></div>
+      <div class="mult" id="ch-illegal"></div>
+    </div>
+    <div class="block">
+      <h3>Share of agents whose text mentions a hidden law</h3>
+      <p class="small" id="mention-note"></p>
+      <div class="legend"><span><i class="sw" style="background:var(--s1)"></i>L1, no action repeats</span><span><i class="sw" style="background:var(--s2)"></i>L2, dry is never first</span><span><i class="thin"></i>one seed</span></div>
+      <div class="mult" id="ch-mentions"></div>
+    </div>
+  </section>
+
+  <section id="sec-grab">
+    <h2>Grabbing and exile</h2>
+    <p class="sub" id="grab-sub"></p>
+    <div class="legend"><span><i class="sw" style="background:var(--s1)"></i>ALPHA, grab allowed, no vote</span><span><i class="sw" style="background:var(--s2)"></i>DOMEST, grab allowed, exile vote</span><span><i class="sw" style="background:var(--s3)"></i>MEDLEY, grab, vote and notes</span><span><i class="thin"></i>one seed</span></div>
+    <div class="card"><div class="wide" id="ch-grab"></div></div>
+  </section>
+
+  <section id="sec-instincts">
+    <h2>What the instincts became</h2>
+    <p class="sub" id="instinct-sub"></p>
+    <div class="card scroll"><table id="seedrules"></table></div>
+    <div class="hmscale" id="hmscale"></div>
+    <h3>Most common rules in the final populations</h3>
+    <p class="small">Share of final agents holding each rule, averaged over seeds. Rules are matched as exact strings. A rule marked new was written by the mutation writer. L1 and L2 mark rules whose text matches the keyword for a hidden law.</p>
+    <div class="grid" id="toprules"></div>
+    <div class="card scroll"><table id="mentions"></table></div>
+  </section>
+
+  <section id="sec-samples">
+    <h2>What the agents wrote</h2>
+    <p class="sub">Examples saved during the runs, shown as written.</p>
+    <div class="samples" id="samples"></div>
+  </section>
+
+  <section id="sec-precheck">
+    <h2>Pre-check: can prompt text move the scores at all</h2>
+    <p id="precheck-text">Before the runs, hand-written rule sets were scored on the same tests. No helpful text beat the bare model on the transfer tests. The two world laws helped on the near test. Harmful text hurt when hidden reasoning was off.</p>
+    <p class="small" id="precheck-note"></p>
+    <div class="two" id="precheck"></div>
+  </section>
+
+  <section id="sec-method">
+    <h2>How it worked</h2>
+    <p id="method-text"></p>
+    <p id="method-text-2"></p>
+    <div class="card scroll"><table id="arms"></table></div>
+  </section>
+
+  <section id="sec-limits">
+    <h2>Limits</h2>
+    <ul class="plain" id="limits"></ul>
+    <details><summary>Run ledger</summary><div class="card scroll" style="margin-top:10px"><table id="ledger"></table></div><p class="small" id="usage-note" style="margin-top:8px"></p></details>
+    <div class="small" id="warnings"></div>
+  </section>
+</div>
+<div id="tip" hidden></div>
+
+<script>
+const R = /*__RESULTS__*/null;
+
+(function () {
+  "use strict";
+  const NS = "http://www.w3.org/2000/svg";
+  const $ = (id) => document.getElementById(id);
+
+  function el(tag, attrs, kids) {
+    const e = document.createElement(tag);
+    for (const k in (attrs || {})) {
+      if (k === "class") e.className = attrs[k];
+      else if (k === "text") e.textContent = attrs[k];
+      else if (k === "style") e.style.cssText = attrs[k];
+      else e.setAttribute(k, attrs[k]);
+    }
+    (kids || []).forEach((c) => { if (c != null) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+    return e;
+  }
+  function s(tag, attrs, text) {
+    const e = document.createElementNS(NS, tag);
+    for (const k in (attrs || {})) {
+      if (k === "style") e.style.cssText = attrs[k]; else e.setAttribute(k, attrs[k]);
+    }
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  const isNum = (x) => typeof x === "number" && isFinite(x);
+  const sgn = (x, n) => !isNum(x) ? "n/a" : (x > 0 ? "+" : x < 0 ? "-" : "") + Math.abs(x).toFixed(n == null ? 2 : n);
+  const fx = (x, n) => !isNum(x) ? "n/a" : x.toFixed(n == null ? 2 : n);
+  const pct = (x) => !isNum(x) ? "n/a" : Math.round(x * 100) + "%";
+  const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const keysOf = (o) => Object.keys(o || {}).sort((a, b) => (Number(a) - Number(b)) || String(a).localeCompare(String(b)));
+  const ARMS = R && Array.isArray(R.arms) ? R.arms : [];
+  const role = (arm) => (((R.arm_meta || {})[arm]) || {}).role || "";
+  const theory = (arm) => (((R.arm_meta || {})[arm]) || {}).theory || "";
+  const isRef = (arm) => arm === "DRIFT" || arm === "SOLO";
+  /* short tag under an arm name: the role for reference and control arms, the theory otherwise */
+  const tag = (arm) => role(arm) && role(arm) !== "theory" ? role(arm) : (theory(arm) || role(arm));
+  const armCell = (arm) => el("td", null, [el("span", { class: "arm", text: arm }), el("span", { class: "role", text: tag(arm) })]);
+  const DEC = Object.assign({ near_energy: 1, near_illegal: 2, mid: 3, far: 3, general: 3 }, ((R || {}).transfer_meta || {}).decimals || {});
+
+  /* ---------- tooltip ---------- */
+  const tip = $("tip");
+  function showTip(html, x, y) {
+    tip.innerHTML = html; tip.hidden = false;
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    let left = x + 14, top = y + 14;
+    if (left + w > window.innerWidth - 8) left = Math.max(8, x - w - 14);
+    if (top + h > window.innerHeight - 8) top = Math.max(8, y - h - 14);
+    tip.style.left = left + "px"; tip.style.top = top + "px";
+  }
+  function hideTip() { tip.hidden = true; }
+  function bindTip(node, htmlFn) {
+    node.addEventListener("pointermove", (e) => showTip(htmlFn(e), e.clientX, e.clientY));
+    node.addEventListener("pointerleave", hideTip);
+    node.addEventListener("focus", () => { const b = node.getBoundingClientRect(); showTip(htmlFn(null), b.left + b.width / 2, b.top + b.height / 2); });
+    node.addEventListener("blur", hideTip);
+  }
+
+  /* ---------- scales ---------- */
+  function niceTicks(lo, hi, n) {
+    if (!(hi > lo)) { hi = lo + 1; }
+    const raw = (hi - lo) / Math.max(1, n), mag = Math.pow(10, Math.floor(Math.log10(raw)));
+    const norm = raw / mag, step = (norm < 1.5 ? 1 : norm < 3 ? 2 : norm < 7 ? 5 : 10) * mag;
+    const a = Math.floor(lo / step + 1e-9) * step, b = Math.ceil(hi / step - 1e-9) * step, out = [];
+    for (let v = a; v <= b + step * 1e-6; v += step) out.push(+v.toFixed(10));
+    return out;
+  }
+  const lin = (d0, d1, r0, r1) => (v) => r0 + (v - d0) / (d1 - d0 || 1) * (r1 - r0);
+  /* fewest decimals that print every tick exactly */
+  const decimalsFor = (ticks) => { for (let d = 0; d < 3; d++) if (ticks.every((t) => Math.abs(t - Number(t.toFixed(d))) < 1e-9)) return d; return 3; };
+
+  function empty(host, msg) { host.appendChild(el("p", { class: "small", text: msg })); }
+
+  /* ---------- line chart: one y scale, mean lines thick, seed lines thin ---------- */
+  function lineChart(host, o) {
+    const W = o.w || 320, H = o.h || 196, m = { l: o.ml || 30, r: o.labelW == null ? 64 : o.labelW, t: 10, b: 30 };
+    const xs = o.xs || [], n = xs.length;
+    if (!n) { empty(host, "No data."); return; }
+    const x = lin(0, Math.max(1, n - 1), m.l, W - m.r), y = lin(o.yDomain[0], o.yDomain[1], H - m.b, m.t);
+    const svg = s("svg", { class: "chart", viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": o.label || "line chart" });
+    const yd = decimalsFor(o.yTicks.length > 1 ? o.yTicks : [0, 1]);
+    o.yTicks.forEach((t) => {
+      svg.appendChild(s("line", { class: (t === o.yDomain[0] || (o.zeroLine && t === 0)) ? "axisline" : "gridline", x1: m.l, x2: W - m.r, y1: y(t), y2: y(t) }));
+      svg.appendChild(s("text", { class: "tick", x: m.l - 6, y: y(t) + 3.5, "text-anchor": "end" }, t.toFixed(yd)));
+    });
+    const every = n > 12 ? 4 : n > 7 ? 2 : 1;
+    xs.forEach((lab, i) => {
+      if (i % every === 0 || i === n - 1) {
+        if (i !== n - 1 && (n - 1 - i) < every) return;
+        svg.appendChild(s("text", { class: "tick", x: x(i), y: H - m.b + 14, "text-anchor": "middle" }, String(lab)));
+      }
+    });
+    if (o.xLabel) svg.appendChild(s("text", { x: (m.l + W - m.r) / 2, y: H - 4, "text-anchor": "middle", style: "fill:var(--muted);font-size:10.5px" }, o.xLabel));
+    const path = (vals) => {
+      let d = "", pen = false;
+      (vals || []).forEach((v, i) => { if (!isNum(v)) { pen = false; return; } d += (pen ? "L" : "M") + x(i).toFixed(1) + " " + y(v).toFixed(1); pen = true; });
+      return d;
+    };
+    o.series.forEach((se) => (se.seeds || []).forEach((vals) => {
+      const d = path(vals); if (!d) return;
+      svg.appendChild(s("path", { d: d, fill: "none", "stroke-width": 1, "stroke-linejoin": "round", style: `stroke:${se.color};opacity:.4` }));
+    }));
+    const ends = [];
+    o.series.forEach((se) => {
+      const d = path(se.mean); if (!d) return;
+      svg.appendChild(s("path", { d: d, fill: "none", "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round", style: `stroke:${se.color}` }));
+      let li = -1; (se.mean || []).forEach((v, i) => { if (isNum(v)) li = i; });
+      if (li >= 0) {
+        svg.appendChild(s("circle", { class: "ring", cx: x(li), cy: y(se.mean[li]), r: 4, style: `fill:${se.color}` }));
+        ends.push({ name: se.short == null ? se.name : se.short, v: se.mean[li], py: y(se.mean[li]) });
+      }
+    });
+    /* endpoint labels, nudged apart; ink text, the dot on the line carries the color */
+    ends.sort((a, b) => a.py - b.py);
+    for (let i = 1; i < ends.length; i++) if (ends[i].py - ends[i - 1].py < 12) ends[i].py = ends[i - 1].py + 12;
+    const over = ends.length ? ends[ends.length - 1].py - (H - m.b) : 0;
+    if (over > 0) { ends.forEach((e) => { e.py -= over; }); for (let i = ends.length - 2; i >= 0; i--) if (ends[i + 1].py - ends[i].py < 12) ends[i].py = ends[i + 1].py - 12; }
+    if (m.r >= 40) ends.forEach((e) => {
+      const t = s("text", { class: "val", x: W - m.r + 8, y: e.py + 3.5 });
+      if (e.name) t.appendChild(s("tspan", { style: "fill:var(--ink-2)" }, e.name + " "));
+      t.appendChild(s("tspan", null, fx(e.v, o.valDec == null ? 1 : o.valDec)));
+      svg.appendChild(t);
+    });
+    /* hover layer: crosshair plus tooltip */
+    const cross = s("line", { class: "cross", y1: m.t, y2: H - m.b, x1: 0, x2: 0, visibility: "hidden" });
+    svg.appendChild(cross);
+    const hit = s("rect", { class: "hit", x: m.l - 6, y: m.t, width: W - m.r - m.l + 12, height: H - m.b - m.t, fill: "transparent", tabindex: 0 });
+    svg.appendChild(hit);
+    const td = o.tipDec == null ? 2 : o.tipDec;
+    const tipAt = (i) => {
+      let h = `<div class="h">${esc(o.title ? o.title + ", " : "")}${esc(o.xName || "x")} ${esc(xs[i])}</div>`;
+      o.series.forEach((se) => {
+        const sv = (se.seeds || []).map((v) => fx((v || [])[i], td)).join(" / ");
+        h += `<div class="row"><i class="dot" style="background:${se.color}"></i>${esc(se.name)} ${fx((se.mean || [])[i], td)}${sv ? ` <span class="mut">(${sv})</span>` : ""}</div>`;
+      });
+      return h;
+    };
+    hit.addEventListener("pointermove", (e) => {
+      const b = svg.getBoundingClientRect(), vx = (e.clientX - b.left) / b.width * W;
+      const i = Math.max(0, Math.min(n - 1, Math.round((vx - m.l) / ((W - m.r - m.l) / Math.max(1, n - 1)))));
+      cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("visibility", "visible");
+      showTip(tipAt(i), e.clientX, e.clientY);
+    });
+    hit.addEventListener("pointerleave", () => { cross.setAttribute("visibility", "hidden"); hideTip(); });
+    hit.addEventListener("focus", () => { const b = svg.getBoundingClientRect(); showTip(tipAt(n - 1), b.right - 80, b.top + 20); });
+    hit.addEventListener("blur", hideTip);
+    host.appendChild(svg);
+  }
+
+  /* ---------- dumbbell panel: one row per arm, one value scale, a marked reference line ---------- */
+  function dumbbell(host, o) {
+    const rows = o.rows || [];
+    if (!rows.length) { empty(host, "No data."); return; }
+    const W = 330, rowH = 26, m = { l: 66, r: 62, t: 28, b: 26 }, H = m.t + rows.length * rowH + m.b;
+    let lo = Infinity, hi = -Infinity;
+    const see = (v) => { if (isNum(v)) { lo = Math.min(lo, v); hi = Math.max(hi, v); } };
+    rows.forEach((r) => { see(r.start); see(r.end); r.seeds.forEach((z) => see(z.v)); });
+    see(o.ref);
+    if (!isFinite(lo)) { empty(host, "No data."); return; }
+    if (hi - lo < 1e-9) { const p = Math.abs(lo) * 0.1 || 0.1; lo -= p; hi += p; } else { const p = (hi - lo) * 0.08; lo -= p; hi += p; }
+    const ticks = niceTicks(lo, hi, 4); lo = ticks[0]; hi = ticks[ticks.length - 1];
+    const x = lin(lo, hi, m.l, W - m.r), dec = decimalsFor(ticks), skip = ticks.length > 5 ? 2 : 1;
+    const svg = s("svg", { class: "chart", viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": o.label });
+    ticks.forEach((t, i) => {
+      svg.appendChild(s("line", { class: "gridline", x1: x(t), x2: x(t), y1: m.t, y2: H - m.b }));
+      if (i % skip === 0) svg.appendChild(s("text", { class: "tick", x: x(t), y: H - m.b + 14, "text-anchor": "middle" }, t.toFixed(dec)));
+    });
+    if (isNum(o.ref)) {
+      const rx = x(o.ref), anchor = rx < m.l + 44 ? "start" : rx > W - m.r - 44 ? "end" : "middle";
+      svg.appendChild(s("line", { class: "refline", x1: rx, x2: rx, y1: m.t - 4, y2: H - m.b }));
+      svg.appendChild(s("text", { class: "reflabel", x: rx, y: m.t - 10, "text-anchor": anchor }, "bare " + fx(o.ref, o.dec)));
+    }
+    rows.forEach((r, i) => {
+      const cy = m.t + i * rowH + rowH / 2, col = isRef(r.arm) ? "var(--ref)" : "var(--s1)";
+      svg.appendChild(s("text", { class: "rowlabel", x: 0, y: cy + 4 }, r.arm));
+      if (isNum(r.start) && isNum(r.end)) svg.appendChild(s("line", { x1: x(r.start), x2: x(r.end), y1: cy, y2: cy, "stroke-width": 2, style: "stroke:var(--axis)" }));
+      r.seeds.forEach((z) => { if (isNum(z.v)) svg.appendChild(s("circle", { cx: x(z.v), cy: cy, r: 3, style: `fill:${col};opacity:.4` })); });
+      if (isNum(r.start)) svg.appendChild(s("circle", { cx: x(r.start), cy: cy, r: 4.5, "stroke-width": 2, style: "fill:var(--surface);stroke:var(--ink-2)" }));
+      if (isNum(r.end)) svg.appendChild(s("circle", { class: "ring", cx: x(r.end), cy: cy, r: 5, style: `fill:${col}` }));
+      svg.appendChild(s("text", { class: "val", x: W - m.r + 8, y: cy + 4, style: r.sig ? "font-weight:600" : "" }, r.valueText + (r.sig ? " ◆" : "")));
+      const hit = s("rect", { class: "hit", x: 0, y: cy - rowH / 2, width: W, height: rowH, fill: "transparent", tabindex: 0 });
+      bindTip(hit, () => r.tip);
+      svg.appendChild(hit);
+    });
+    host.appendChild(svg);
+  }
+
+  /* ---------- header ---------- */
+  function header() {
+    const th = R.thesis || "", cut = th.indexOf(". ");
+    $("thesis-head").textContent = cut > 0 ? th.slice(0, cut + 1) : th;
+    $("thesis-rest").textContent = cut > 0 ? th.slice(cut + 2) : "";
+    const c = R.config || {}, u = R.usage || {}, items = [];
+    if (R.model) items.push(["model", R.model]);
+    if (R.thinking) items.push(["hidden reasoning", R.thinking]);
+    if (c.N != null) items.push(["agents per generation", c.N]);
+    if (c.R != null) items.push(["rounds per lifetime", c.R]);
+    if (c.G != null) items.push(["generations", c.G]);
+    items.push(["seeds", (R.seeds || []).length], ["arms", ARMS.length]);
+    if (isNum(u.total_calls)) items.push(["model calls", u.total_calls.toLocaleString("en-US")]);
+    if (isNum(u.total_cost_usd)) items.push(["spend", "$" + u.total_cost_usd.toFixed(2)]);
+    if (R.generated) items.push(["analyzed", R.generated]);
+    items.forEach(([k, v]) => $("meta").appendChild(el("span", null, [k + " ", el("b", { text: String(v) })])));
+    $("mock").hidden = !R.mock;
+  }
+
+  /* ---------- verdicts ---------- */
+  function verdictCard(host, v, title, names) {
+    v = v || {};
+    const stt = names[v.status] ? v.status : "no_data";
+    host.appendChild(el("div", { class: "vtitle", text: title }));
+    host.appendChild(el("div", { class: "status " + stt }, [el("i"), el("span", { text: names[stt] + (v.label ? " · measured by " + v.label : "") })]));
+    host.appendChild(el("div", { class: "headline", text: v.headline || "No verdict was computed." }));
+    const rs = v.reasons || [];
+    if (rs.length) host.appendChild(el("ul", null, rs.map((r) => el("li", { text: r }))));
+  }
+  function verdicts() {
+    verdictCard($("v-general"), R.verdict_general, "General ability (the thesis)",
+      { supported: "Thesis supported", not_supported: "Thesis not supported", unclear: "Unclear", no_data: "No data" });
+    verdictCard($("v-knowledge"), R.verdict_knowledge, "World knowledge",
+      { supported: "Supported", not_supported: "Not supported", unclear: "Unclear", no_data: "No data" });
+    const rule = (R.verdict_general || {}).rule || (R.verdict_knowledge || {}).rule;
+    $("v-rule").textContent = rule ? "How both are decided: " + rule + " General ability is the mean of the code-breaking and rule induction scores. World knowledge is energy earned in a fresh world that keeps the two hidden laws." : "";
+  }
+
+  /* ---------- findings ---------- */
+  function findings() {
+    const F = R.findings || ((R.extras || {}).findings) || null; if (!F) return;
+    let n = 0;
+    [["for", "f-for"], ["against", "f-against"], ["untested", "f-untested"]].forEach(([k, id]) => (F[k] || []).forEach((t) => {
+      t = String(t); n++;
+      const cut = t.indexOf(". "), li = el("li");
+      if (cut > 0 && cut < 70) { li.appendChild(el("b", { text: t.slice(0, cut + 1) })); li.appendChild(document.createTextNode(t.slice(cut + 1))); } else li.textContent = t;
+      $(id).appendChild(li);
+    }));
+    if (n) $("sec-findings").hidden = false;
+  }
+
+  /* ---------- closer checks ---------- */
+  function checks() {
+    const X = R.extras || {}, P = X.paired, M = X.mechanism; if (!P || !M) return;
+    $("sec-checks").hidden = false;
+    const cols = [["near_energy", "vs_drift", "Near energy, against DRIFT", 1], ["near_energy", "vs_solo", "Near energy, against SOLO", 1],
+                  ["general", "vs_drift", "General ability, against DRIFT", 3], ["general", "vs_solo", "General ability, against SOLO", 3]];
+    const t = $("paired");
+    t.appendChild(el("thead", null, [el("tr", null, [el("th", { text: "Arm" })].concat(cols.map((c) => el("th", { class: "r" }, [c[2], el("small", { text: "mean gap · seeds higher · t" })]))))]));
+    t.appendChild(el("tbody", null, ARMS.filter((a) => (P.near_energy || {})[a]).map((arm) => el("tr", { class: isRef(arm) ? "ref" : "" }, [armCell(arm)].concat(cols.map(([ms, k, , d]) => {
+      const z = ((P[ms] || {})[arm] || {})[k], td = el("td", { class: "r" });
+      if (!z) { td.appendChild(el("span", { class: "v dim", text: "n/a" })); return td; }
+      const clear = z.higher === z.n || z.lower === z.n;
+      td.appendChild(el("span", { class: "v" + (clear ? " sig" : " dim"), text: sgn(z.mean, d) }));
+      td.appendChild(el("span", { class: "seeds", text: z.higher + " of " + z.n + " higher · t " + (isNum(z.t) ? z.t.toFixed(1) : "n/a") }));
+      return td; }))))));
+    const mt = $("mech"), cell = (txt, dim) => el("td", { class: "r" }, [el("span", { class: "v" + (dim ? " dim" : ""), text: txt })]);
+    mt.appendChild(el("thead", null, [el("tr", null, [el("th", { text: "Arm" })].concat(
+      [["Hold a harmful rule", "generation 0 → final"], ["Hold the consistency rule", "generation 0 → final"], ["Grab rate", "all generations"], ["Votes cast / grabs", ""], ["Exiled", ""], ["Notes, near energy", "with minus without"], ["Notes, general ability", "with minus without"]]
+        .map((h) => el("th", { class: "r" }, [h[0], el("small", { text: h[1] || " " })]))))]));
+    mt.appendChild(el("tbody", null, ARMS.filter((a) => M[a]).map((arm) => { const m = M[arm], nn = m.notes_near, ng = m.notes_general;
+      return el("tr", { class: isRef(arm) ? "ref" : "" }, [armCell(arm),
+        cell(pct(m.harmful_gen0) + " → " + pct(m.harmful_final)), cell(pct(m.good_gen0) + " → " + pct(m.good_final)),
+        cell(isNum(m.grab_rate) ? (100 * m.grab_rate).toFixed(1) + "%" : "n/a", !isNum(m.grab_rate)),
+        cell(m.votes != null ? m.votes + " / " + m.grabs : "n/a", m.votes == null), cell(m.exiled != null ? String(m.exiled) : "n/a", m.exiled == null),
+        cell(nn ? sgn(nn.mean, 1) + " (" + nn.higher + " of " + nn.n + " higher)" : "n/a", !nn),
+        cell(ng ? sgn(ng.mean, 3) + " (" + ng.higher + " of " + ng.n + " higher)" : "n/a", !ng)]); })));
+    $("mech-note").textContent = "Harmful rules are the three harmful starting rules plus rewrites of them by the mutation writer. The consistency rule is the starting rule \"Only try preparations that fit all your past results.\" Shares are of agents, averaged over seeds.";
+    const C = X.case;
+    if (C && C.arms && C.arms.ALPHA) {
+      const line = (a) => { const z = C.arms[a]; if (!z) return null; const n = z.hold.length - 1;
+        return a + ": rule held by " + pct(z.hold[0]) + " → " + pct(z.hold[n]) + ", grab rate " + pct(z.grab[0]) + " → " + pct(z.grab[n]) + (z.exiled_gens.length ? ", exile in generation " + z.exiled_gens.join(", ") : ""); };
+      $("case-note").textContent = "One seed carries the grabbing contrast. Seed " + C.seed + ", rule \"" + C.rule + "\", first to last generation. " + ["ALPHA", "DOMEST", "MEDLEY"].map(line).filter(Boolean).join(". ") + ".";
+    }
+  }
+
+  /* ---------- results table ---------- */
+  const COLS = [
+    ["near_energy", "Δ near-transfer energy", "fresh world, same laws"],
+    ["near_illegal", "Δ law-breaking tries", "lower is better"],
+    ["mid", "Δ code-breaking", "mid transfer"],
+    ["far", "Δ rule induction", "far transfer"],
+    ["general", "Δ general ability", "mean of the two"]
+  ];
+  function seedLine(seeds, dec) { return keysOf(seeds).map((k) => sgn(seeds[k], dec)).join("  "); }
+  function deltaCell(mean, seeds, dec, sig, dim, tipHtml) {
+    const td = el("td", { class: "r" });
+    if (!isNum(mean)) { td.appendChild(el("span", { class: "v dim", text: "n/a" })); return td; }
+    td.appendChild(el("span", { class: "v" + (sig ? " sig yes" : dim ? " dim" : ""), text: sgn(mean, dec) }));
+    const sv = seedLine(seeds, dec);
+    if (sv) td.appendChild(el("span", { class: "seeds", text: sv }));
+    if (tipHtml) { td.setAttribute("tabindex", "0"); bindTip(td, () => tipHtml); }
+    return td;
+  }
+  function resultsTable() {
+    const t = $("results"), T = R.transfer || {}, M = R.transfer_meta || {}, N = R.noise || {};
+    t.appendChild(el("thead", null, [el("tr", null, [el("th", { text: "Arm" })].concat(
+      COLS.map((c) => el("th", { class: "r" }, [c[1], el("small", { text: c[2] })]))))]));
+    const tb = el("tbody");
+    ARMS.forEach((arm) => {
+      const tr = el("tr", { class: isRef(arm) ? "ref" : "" });
+      tr.appendChild(armCell(arm));
+      COLS.forEach(([ms]) => {
+        const e = (T[ms] || {})[arm] || {}, c = e.change || {}, d = DEC[ms], nn = e.no_notes;
+        const tipHtml = `<div class="h">${esc(arm)}, ${esc((M.labels || {})[ms] || ms)}</div>` +
+          `<div class="row">${fx(e.start, d)} → ${fx(e.end, d)} (${sgn(c.mean, d)})</div>` +
+          (isNum(c.vs_drift) && arm !== "DRIFT" ? `<div class="row mut">against DRIFT: ${sgn(c.vs_drift, d)}</div>` : "") +
+          (isNum(c.vs_solo) ? `<div class="row mut">against SOLO: ${sgn(c.vs_solo, d)}</div>` : "") +
+          (isNum((e.vs_bare || {}).mean) ? `<div class="row mut">final against bare model: ${sgn(e.vs_bare.mean, d)}</div>` : "") +
+          (nn && isNum((nn.change || {}).mean) ? `<div class="row mut">with notes removed: ${sgn(nn.change.mean, d)}</div>` : "");
+        tr.appendChild(deltaCell(c.mean, c.seeds, d, c.exceeds_noise === true, c.exceeds_noise === false, tipHtml));
+      });
+      tb.appendChild(tr);
+    });
+    /* reference row: where the bare model sits relative to generation 0 */
+    const bare = el("tr", { class: "ref sep" }, [el("td", null, [el("span", { class: "arm", text: "bare model" }), el("span", { class: "role", text: "no evolved text, against generation 0" })])]);
+    COLS.forEach(([ms]) => {
+      const b = (M.bare || {})[ms] || {}, g = (M.gen0 || {})[ms] || {}, d = DEC[ms], seeds = {};
+      keysOf(b.seeds).forEach((k) => { if (isNum(b.seeds[k]) && isNum((g.seeds || {})[k])) seeds[k] = b.seeds[k] - g.seeds[k]; });
+      const diff = isNum(b.mean) && isNum(g.mean) ? b.mean - g.mean : null;
+      bare.appendChild(deltaCell(diff, seeds, d, false, false,
+        `<div class="h">Bare model, ${esc((M.labels || {})[ms] || ms)}</div><div class="row">bare model ${fx(b.mean, d)}</div><div class="row">generation 0 ${fx(g.mean, d)}</div>`));
+    });
+    tb.appendChild(bare);
+    const nz = el("tr", { class: "ref" }, [el("td", null, [el("span", { class: "arm", text: "noise band" }), el("span", { class: "role", text: "2 × SD of DRIFT across seeds" })])]);
+    COLS.forEach(([ms]) => {
+      const z = N[ms] || {};
+      nz.appendChild(el("td", { class: "r" }, [el("span", { class: "v" + (isNum(z.band) ? "" : " dim"), text: isNum(z.band) ? "±" + z.band.toFixed(DEC[ms]) : "n/a" })]));
+    });
+    tb.appendChild(nz);
+    t.appendChild(tb);
+    $("table-note").textContent =
+      "◆ and bold: the arm's mean change differs from the DRIFT arm's mean change by more than the noise band, in either direction. " +
+      "Small grey figures are the single seeds. The bare model row shows the bare model's score minus the generation 0 score, so a positive number means the starting instincts cost that much. " +
+      "DRIFT is the noise floor: parents are chosen at random, and the mutation writer still adds rules. SOLO is the baseline: selection on energy with no social pressure." +
+      (M.available ? "" : " No transfer measurement was found, so this table is empty.");
+  }
+
+  /* ---------- transfer dumbbells ---------- */
+  function transferCharts() {
+    const host = $("ch-transfer"), T = R.transfer || {}, M = R.transfer_meta || {};
+    if (!M.available) { empty(host, "No transfer measurement was found."); }
+    else [
+      ["near_energy", "Near: energy in a fresh world", "same hidden laws, new recipes"],
+      ["mid", "Mid: code-breaking score", "same kind of search, no laws"],
+      ["far", "Far: rule induction score", "a different task"]
+    ].forEach(([ms, title, sub]) => {
+      const d = DEC[ms], rows = [];
+      ARMS.forEach((arm) => {
+        const e = (T[ms] || {})[arm]; if (!e || !isNum(e.end)) return;
+        const c = e.change || {}, seeds = keysOf(e.end_seeds).map((k) => ({ seed: k, v: e.end_seeds[k], b: (e.start_seeds || {})[k] }));
+        rows.push({
+          arm: arm, start: e.start, end: e.end, seeds: seeds, sig: c.exceeds_noise === true, valueText: sgn(c.mean, d),
+          tip: `<div class="h">${esc(arm)}, ${esc(tag(arm))}</div><div class="row">${fx(e.start, d)} → ${fx(e.end, d)} (${sgn(c.mean, d)})</div>` +
+            seeds.map((z) => `<div class="row mut">seed ${esc(z.seed)}: ${fx(z.b, d)} → ${fx(z.v, d)}</div>`).join("") +
+            (isNum((e.vs_bare || {}).mean) ? `<div class="row mut">final against bare model: ${sgn(e.vs_bare.mean, d)}</div>` : "")
+        });
+      });
+      const panel = el("div", { class: "card panel" }, [el("div", { class: "ttl" }, [el("h3", { text: title }), el("span", { class: "role", text: sub })])]);
+      dumbbell(panel, { rows: rows, ref: ((M.bare || {})[ms] || {}).mean, dec: d, label: title + ", generation 0 and final population per arm, with the bare model as a reference line" });
+      host.appendChild(panel);
+    });
+    const C = R.ceiling || {}, names = [], known = ["mid", "far", "general"].filter((k) => C[k] && C[k].any_exceeds != null);
+    known.forEach((k) => { if (C[k].any_exceeds) names.push(C[k].label + " (" + Object.keys(C[k].arms || {}).filter((a) => C[k].arms[a].exceeds).join(", ") + ")"); });
+    const g = C.general || {}, best = g.best_arm && g.arms ? g.arms[g.best_arm] : null;
+    $("ceiling-note").textContent = !known.length ? "The comparison with the bare model is not available." :
+      (names.length ? "Final populations beat the bare model by more than the noise band on: " + names.join("; ") + "."
+        : "No final population beat the bare model by more than the noise band on code-breaking, rule induction or general ability.") +
+      (best && isNum(best.diff) ? " The largest difference from the bare model in general ability was " + sgn(best.diff, 3) + " (" + g.best_arm + "), against a noise band of " + fx(g.band, 3) + "." : "");
+  }
+
+  /* ---------- trajectories ---------- */
+  function sharedDomain(keys, fromZero) {
+    const T = R.trajectories || {};
+    let lo = Infinity, hi = -Infinity;
+    ARMS.forEach((arm) => { const t = T[arm]; if (!t) return;
+      keysOf(t.seeds).forEach((sk) => keys.forEach((k) => ((t.seeds[sk] || {})[k] || []).forEach((v) => { if (isNum(v)) { lo = Math.min(lo, v); hi = Math.max(hi, v); } }))); });
+    if (!isFinite(lo)) return null;
+    if (fromZero) lo = Math.min(0, lo);
+    if (hi - lo < 1e-9) hi = lo + (Math.abs(lo) * 0.1 || 0.1);
+    const ticks = niceTicks(lo, hi, 4);
+    return { domain: [ticks[0], ticks[ticks.length - 1]], ticks: ticks };
+  }
+  function multiples(hostId, spec) {
+    const host = $(hostId), T = R.trajectories || {};
+    const dom = spec.fixed || sharedDomain(spec.series.map((x) => x.key), spec.fromZero);
+    if (!dom) { empty(host, "No runs."); return; }
+    ARMS.forEach((arm) => {
+      const t = T[arm]; if (!t) return;
+      const panel = el("div", { class: "card panel" }, [el("div", { class: "ttl" }, [el("span", { class: "arm", text: arm }), el("span", { class: "role", text: tag(arm) })])]);
+      const sk = keysOf(t.seeds);
+      lineChart(panel, {
+        xs: t.gens || [], w: 250, h: 150, ml: 34, labelW: spec.labelW, yDomain: dom.domain, yTicks: dom.ticks, zeroLine: true,
+        xLabel: "generation", xName: "generation", title: arm, valDec: spec.valDec, tipDec: spec.tipDec,
+        label: spec.name + " over generations in arm " + arm,
+        series: spec.series.map((x) => ({ name: x.name, short: x.short, color: x.color, mean: (t.mean || {})[x.key], seeds: sk.map((k) => (t.seeds[k] || {})[x.key]) }))
+      });
+      host.appendChild(panel);
+    });
+  }
+  function trajectories() {
+    try { multiples("ch-energy", { name: "Mean energy", series: [{ key: "energy", name: "energy", short: "", color: "var(--s1)" }], labelW: 46, valDec: 1, tipDec: 1 }); } catch (e) { console.error("energy", e); }
+    try { multiples("ch-illegal", { name: "Law-breaking rate", fromZero: true, series: [{ key: "illegal_rate", name: "law-breaking rate", short: "", color: "var(--s1)" }], labelW: 46, valDec: 2 }); } catch (e) { console.error("illegal", e); }
+    try { multiples("ch-mentions", { name: "Share of agents mentioning each hidden law", fixed: { domain: [0, 1], ticks: [0, 0.5, 1] },
+      series: [{ key: "mentions_L1", name: "L1", color: "var(--s1)" }, { key: "mentions_L2", name: "L2", color: "var(--s2)" }], labelW: 60, valDec: 2 }); } catch (e) { console.error("mentions", e); }
+    const sr = ((R.rules || {}).seed_rules) || [], k1 = sr.filter((x) => x.L1).length, k2 = sr.filter((x) => x.L2).length;
+    $("mention-note").textContent = "Text means an agent's instincts plus the note it was given. Mentions are found by keyword and are approximate." +
+      (sr.length ? " Starting rules that match a keyword without stating the law: " + k1 + " for L1, " + k2 + " for L2. A share above zero at generation 0 can come from those." : "") +
+      ((((R.extras || {}).notes) || {}).mention_caveat ? " " + R.extras.notes.mention_caveat : "");
+  }
+
+  /* ---------- grabbing and exile ---------- */
+  function grab() {
+    const S = R.social || {}, G = S.grab_rate || {}, E = S.exile || {}, host = $("ch-grab"), sub = $("grab-sub");
+    const order = ["ALPHA", "DOMEST", "MEDLEY"].filter((a) => G[a]), colors = { ALPHA: "var(--s1)", DOMEST: "var(--s2)", MEDLEY: "var(--s3)" };
+    let text = "Share of chances to take the whole harvest that were taken. Grabbing is the agent's own choice under its instincts.";
+    if (order.length) text += " From the first to the last generation the rate went " + order.map((a) => "from " + fx(G[a].first, 2) + " to " + fx(G[a].last, 2) + " in " + a).join(", ") + ".";
+    ["DOMEST", "MEDLEY"].forEach((a) => { const e = E[a]; if (!e) return;
+      text += " In " + a + " the vote exiled " + e.exiled_total + " member" + (e.exiled_total === 1 ? "" : "s") + " in total, in " + e.generations_with_exile + " of " + e.generations +
+        " generations played, with " + fx(e.votes_per_generation, 1) + " of " + e.members + " members casting a vote per generation. Exile needs " + e.threshold + " votes against one member."; });
+    sub.textContent = text;
+    if (!order.length) { empty(host, "No arm with grabbing has runs."); return; }
+    const n = Math.max.apply(null, order.map((a) => (G[a].gens || []).length)), xs = Array.from({ length: n }, (_, i) => i);
+    lineChart(host, { xs: xs, w: 600, h: 240, ml: 34, yDomain: [0, 1], yTicks: [0, 0.25, 0.5, 0.75, 1], xLabel: "generation", xName: "generation", title: "Grab rate", labelW: 96, valDec: 2,
+      label: "Grab rate over generations in " + order.join(", "),
+      series: order.map((a) => ({ name: a, color: colors[a], mean: G[a].mean, seeds: keysOf(G[a].seeds).map((k) => G[a].seeds[k]) })) });
+  }
+
+  /* ---------- instincts ---------- */
+  function shareChip(v) {
+    if (!isNum(v)) return el("span", { class: "chip zero", text: "n/a" });
+    if (v <= 0) return el("span", { class: "chip zero", text: "0%" });
+    const b = Math.min(5, Math.floor(v * 6));
+    return el("span", { class: "chip", style: `background:var(--hm-${b});color:var(--hm-t${b})`, text: pct(v) });
+  }
+  function flags(x) {
+    const out = [];
+    if (x.seeded === false) out.push(el("span", { class: "tagc", text: "new" }));
+    if (x.L1) out.push(el("span", { class: "tagc", text: "L1" }));
+    if (x.L2) out.push(el("span", { class: "tagc", text: "L2" }));
+    return out;
+  }
+  function instincts() {
+    const X = R.rules || {}, c = R.constants || {}, t = $("seedrules"), sr = X.seed_rules || [];
+    $("instinct-sub").textContent = "Generation 0 gives every agent " + (c.seed_rules_per_agent || 2) + " rules from a fixed pool of " + (c.seed_rules || sr.length || 16) +
+      ", the same draw in every arm for a given seed. The table shows the share of agents holding each starting rule at generation 0 and in each arm's final population, averaged over seeds. A tag L1 or L2 after a rule marks a keyword match for that hidden law.";
+    if (!sr.length) { t.parentNode.replaceWith(el("p", { class: "small", text: "No rule data." })); }
+    else {
+      t.appendChild(el("thead", null, [el("tr", null, [el("th", { text: "Starting rule" }), el("th", { class: "c", text: "Generation 0" })].concat(ARMS.map((a) => el("th", { class: "c", text: a + " final" }))))]));
+      t.appendChild(el("tbody", null, sr.map((row) => el("tr", null, [el("td", { class: "rule" }, [row.rule].concat(flags(row))), el("td", { class: "c" }, [shareChip(row.gen0)])].concat(
+        ARMS.map((a) => el("td", { class: "c" }, [shareChip(((row.arms || {})[a] || {}).final)])))))));
+      const sc = $("hmscale"); sc.appendChild(el("span", { text: "share of agents: low" }));
+      for (let b = 0; b < 6; b++) sc.appendChild(el("i", { style: `background:var(--hm-${b})` }));
+      sc.appendChild(el("span", { text: "high" }));
+    }
+    const host = $("toprules"), top = X.top_final || {}, sum = X.summary || {};
+    ARMS.forEach((arm) => {
+      const list = top[arm] || [], z = sum[arm] || {};
+      const card = el("div", { class: "card panel" }, [el("div", { class: "ttl" }, [el("span", { class: "arm", text: arm }),
+        el("span", { class: "role", text: isNum(z.rules_per_agent_final) ? fx(z.rules_per_agent_final, 1) + " rules per agent, " + pct(z.unseeded_share_final) + " of them new" : tag(arm) })])]);
+      if (!list.length) card.appendChild(el("p", { class: "small", text: "No rules." }));
+      else card.appendChild(el("ul", { class: "rules" }, list.map((x) => el("li", null, [el("span", { class: "pc", text: pct(x.share) }), el("span", { class: "txt" }, [x.rule].concat(flags(x)))]))));
+      host.appendChild(card);
+    });
+    /* law mentions in the final populations */
+    const LM = X.law_mentions || {}, mt = $("mentions");
+    if (!LM.final) { mt.parentNode.replaceWith(el("p", { class: "small", text: "No law-mention data." })); return; }
+    const cell = (v) => el("td", { class: "r" }, [el("span", { class: "v" + (isNum(v) && v > 0 ? "" : " dim"), text: pct(v) })]);
+    const rowOf = (name, sub, m, cls) => el("tr", { class: cls || "" }, [el("td", null, [el("span", { class: "arm", text: name }), el("span", { class: "role", text: sub })]),
+      cell(((m || {}).instinct || {}).L1), cell(((m || {}).instinct || {}).L2), cell(((m || {}).note || {}).L1), cell(((m || {}).note || {}).L2)]);
+    mt.appendChild(el("thead", null, [el("tr", null, [el("th", { text: "Final agents that mention a law" })].concat(
+      [["L1 in instincts", "no action repeats"], ["L2 in instincts", "dry is never first"], ["L1 in notes", ""], ["L2 in notes", ""]].map((h) => el("th", { class: "r" }, [h[0], el("small", { text: h[1] || " " })]))))]));
+    mt.appendChild(el("tbody", null, [rowOf("generation 0", "all arms start here", LM.gen0, "ref")].concat(ARMS.filter((a) => LM.final[a]).map((a) => rowOf(a, tag(a), LM.final[a], isRef(a) ? "ref" : "")))));
+  }
+
+  /* ---------- samples ---------- */
+  function samples() {
+    const S = R.samples || {}, host = $("samples"), N = (R.config || {}).N;
+    [["notes", "Notes given to the final newborns"], ["new_rules", "Rules written by the mutation writer"], ["messages", "Messages between partners"], ["votes", "Exile votes"]].forEach(([k, title]) => {
+      const card = el("div", { class: "card panel" }, [el("h3", { text: title })]), items = S[k] || [];
+      if (!items.length) card.appendChild(el("p", { class: "small", text: "No examples saved." }));
+      else card.appendChild(el("ul", null, items.map((it) => el("li", null, [
+        el("span", { class: "who", text: [it.arm, "seed " + it.seed, it.gen != null ? "gen " + it.gen : null, it.agent, it.to ? "to " + it.to : null,
+          it.holders != null ? "read by " + it.holders + (N ? " of " + N : "") : null, it.topic ? "topic: " + it.topic : null].filter((z) => z != null && z !== "").join(" · ") }),
+        el("span", { class: "txt", text: it.text })]))));
+      host.appendChild(card);
+    });
+  }
+
+  /* ---------- pre-check ---------- */
+  function precheck() {
+    const Hd = R.headroom, host = $("precheck");
+    if (!Hd || !(Hd.tables || []).length) { $("precheck-text").hidden = true; empty(host, "No pre-check files were found."); return; }
+    const cols = [["near_energy", "Near energy", 1], ["mid_code", "Code-breaking", 3], ["far_rule", "Rule induction", 3]], notes = [];
+    Hd.tables.forEach((tb) => {
+      const t = el("table");
+      t.appendChild(el("thead", null, [el("tr", null, [el("th", { text: "Prompt text" })].concat(cols.map((c) => el("th", { class: "r" }, [c[1], el("small", { text: "mean ± standard error" })]))))]));
+      t.appendChild(el("tbody", null, (tb.rows || []).map((r) => el("tr", { class: r.set === "bare" ? "ref" : "" }, [el("td", { text: r.label || r.set })].concat(
+        cols.map((c) => { const z = r[c[0]] || {}; return el("td", { class: "r" }, [el("span", { class: "v", text: fx(z.mean, c[2]) }), el("span", { class: "seeds", text: isNum(z.se) ? "± " + z.se.toFixed(c[2]) : "" })]); }))))));
+      const same = R.thinking && tb.thinking === R.thinking;
+      host.appendChild(el("div", { class: "card panel" }, [el("div", { class: "ttl" }, [el("h3", { text: "Hidden reasoning " + tb.thinking }),
+        el("span", { class: "role", text: (tb.reps != null ? tb.reps + " repeats per row" : "") + (same ? ", the setting used in these runs" : "") + (tb.mock ? ", mock" : "") })]), el("div", { class: "scroll" }, [t])]));
+      const by = {}; (tb.rows || []).forEach((r) => { by[r.set] = r; });
+      const d = (a, k) => by[a] && by.bare && isNum((by[a][k] || {}).mean) && isNum((by.bare[k] || {}).mean) ? by[a][k].mean - by.bare[k].mean : null;
+      const parts = [];
+      if (d("method+laws", "near_energy") != null) parts.push("the two laws changed near energy by " + sgn(d("method+laws", "near_energy"), 1));
+      if (d("harmful", "near_energy") != null) parts.push("harmful rules changed near energy by " + sgn(d("harmful", "near_energy"), 1) + " and code-breaking by " + sgn(d("harmful", "mid_code"), 3));
+      if (parts.length) notes.push("Hidden reasoning " + tb.thinking + ", against the bare model: " + parts.join("; ") + ".");
+    });
+    $("precheck-note").textContent = notes.join(" ") + " Every row of a table was scored on the same task instances.";
+  }
+
+  /* ---------- method ---------- */
+  function method() {
+    const c = R.config || {}, k = R.constants || {};
+    $("method-text").textContent =
+      "The model's weights never change. Each agent carries up to " + (k.max_rules || 6) + " short rules in its prompt, its instincts, of at most " + (k.rule_words || 14) + " words each. " +
+      "Agents forage" + (c.R != null ? " for " + c.R + " rounds" : "") + (c.P != null ? " on " + c.P + " plants" : "") + " whose three-step recipes are redrawn every generation. " +
+      "Two hidden laws hold in every generation: no action repeats in a recipe, and dry is never the first step. These laws are the only world knowledge worth inheriting. " +
+      "Fitness is energy alone. Selected parents each leave two offspring. An offspring copies its parent's rules and, with probability " + (k.p_mutate != null ? k.p_mutate : 0.5) +
+      ", gets one blind change: a rule is deleted, copied from another parent, or written or reworded by the model without seeing any outcome.";
+    $("method-text-2").textContent =
+      "In the arms with notes, each agent writes up to " + (k.note_words || 40) + " words at the end of its life, and offspring read their parent's note and the top earner's note. " +
+      "After the last generation every final population is scored with its evolved text in the prompt: on a fresh world with the same laws, on code-breaking and on rule induction. " +
+      "The same tests are run on the generation 0 population and on the bare model with no evolved text.";
+    const a = $("arms"), yn = (b) => b ? "yes" : "no";
+    a.appendChild(el("thead", null, [el("tr", null, ["Arm", "Tests", "Foraging", "Grab", "Exile vote", "Notes", "Parents"].map((h) => el("th", { text: h })))]));
+    a.appendChild(el("tbody", null, ARMS.map((arm) => { const m = (R.arm_meta || {})[arm] || {}; return el("tr", { class: isRef(arm) ? "ref" : "" }, [
+      el("td", null, [el("span", { class: "arm", text: arm }), el("span", { class: "role", text: m.role || "" })]), el("td", { text: m.theory || "" }), el("td", { text: m.foraging || "" }),
+      el("td", { text: yn(m.grab) }), el("td", { text: yn(m.vote) }), el("td", { text: yn(m.notes) }), el("td", { text: m.parents || "" })]); })));
+  }
+
+  /* ---------- limits and ledger ---------- */
+  function limits() {
+    const n = (R.seeds || []).length, runs = R.runs || [], part = runs.filter((r) => !r.complete).length, L = $("limits");
+    const pf = runs.reduce((a, r) => a + (r.parse_fail || 0), 0), E = (R.social || {}).exile || {};
+    const sr = ((R.rules || {}).seed_rules) || [], k1 = sr.filter((x) => x.L1).length;
+    const noExile = ["DOMEST", "MEDLEY"].filter((a) => E[a] && !E[a].exiled_total);
+    [
+      "Frozen weights. The model itself never changed. Only the prompt rules and, in some arms, the inherited notes evolved.",
+      "The mutation writer is the model itself. New and reworded rules come from the same model, so knowledge can enter through mutation alone. DRIFT has the same writer and no selection, so DRIFT shows that contribution.",
+      "The ceiling is the bare model. In the pre-check no helpful text raised a transfer score above the bare model, so evolved text was expected to add local knowledge or remove damage, and no more.",
+      n + " seed" + (n === 1 ? "" : "s") + " per arm is a small sample. The noise band comes from the DRIFT arm's spread across the same few seeds, so it is itself uncertain.",
+      "One world design. One recipe length, one pair of hidden laws, one lifetime length and one starting pool of rules were tried.",
+      "Law mentions are detected by keyword and are approximate." + (k1 ? " Starting rules that match the L1 keywords without stating the law: " + k1 + "." : ""),
+      noExile.length ? "The exile vote never removed anyone in " + noExile.join(" or ") + ", so exile did not act as a selection pressure there." : null,
+      !runs.length ? "No runs were found." : part ? part + " of " + runs.length + " runs did not finish and have no measured final population." : "All " + runs.length + " runs finished.",
+      pf ? pf + " model replies could not be parsed and were replaced by a default action." : null
+    ].concat((((R.extras || {}).notes) || {}).limits || []).filter(Boolean).forEach((t) => L.appendChild(el("li", { text: t })));
+    const t = $("ledger");
+    t.appendChild(el("thead", null, [el("tr", null, ["Arm", "Seed", "Generations", "Finished", "Measured", "Calls", "Unparsed replies"].map((h) => el("th", { text: h })))]));
+    t.appendChild(el("tbody", null, runs.map((r) => el("tr", null, [
+      el("td", null, [el("span", { class: "arm", text: r.arm })]), el("td", { class: "num", text: String(r.seed) }),
+      el("td", { class: "num", text: r.gens_done + (r.gens_planned != null ? " of " + r.gens_planned : "") }), el("td", { text: r.complete ? "yes" : "no" }),
+      el("td", { text: r.measured ? "yes" : "no" }),
+      el("td", { class: "num", text: r.calls != null ? Number(r.calls).toLocaleString("en-US") : "n/a" }),
+      el("td", { class: "num", text: r.parse_fail != null ? String(r.parse_fail) : "n/a" })]))));
+    const u = R.usage || {}, part2 = (name, z) => z && (z.calls != null || z.cost_usd != null) ?
+      name + " " + (z.calls != null ? Number(z.calls).toLocaleString("en-US") + " calls" : "calls unknown") + (isNum(z.cost_usd) ? ", $" + z.cost_usd.toFixed(2) : ", spend unknown") : null;
+    const us = [part2("Simulation:", u.simulation), part2("Measurement:", u.measurement), part2("Pre-check:", u.headroom)].filter(Boolean);
+    if (us.length) $("usage-note").textContent = us.join(". ") + ".";
+    const w = R.warnings || [];
+    if (w.length) $("warnings").textContent = "Notes from the analysis: " + w.join(" ");
+  }
+
+  if (!R) { $("page").innerHTML = "<p>No results were built into this page. Run python3 -m evo2.build_report.</p>"; return; }
+  [header, verdicts, findings, resultsTable, checks, transferCharts, trajectories, grab, instincts, samples, precheck, method, limits].forEach((fn) => {
+    try { fn(); } catch (e) { console.error(fn.name, e); }
+  });
+})();
+</script>

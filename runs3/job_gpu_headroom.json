@@ -1,0 +1,1 @@
+[{"name": "gpu-headroom-15b", "kind": "headroom", "gpu": true, "params": {"model": "Qwen/Qwen2.5-1.5B-Instruct", "n": 48, "temps": [0.0, 0.7], "battery": true}}]

@@ -1,0 +1,10 @@
+# Rebuilding the statistics and pages from the stored results needs only the Python
+# standard library. The figures need matplotlib.
+matplotlib>=3.8
+
+# Rerunning experiments (costs money, see README):
+#   versions 1 and 2:  pip install anthropic
+#   version 3:         pip install modal
+# The Modal image installs torch, transformers, peft, accelerate, safetensors and
+# huggingface_hub on the remote machine (see evo3/modal_app.py). Nothing heavy is
+# needed locally. evo3/local.py is an optional Apple-silicon path that needs mlx and mlx-lm.

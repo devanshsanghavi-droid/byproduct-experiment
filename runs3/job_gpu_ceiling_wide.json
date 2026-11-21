@@ -1,0 +1,122 @@
+[
+ {
+  "name": "gpu-ceiling-wide",
+  "kind": "ceiling",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "world": {
+    "plants": {
+     "steps": 2,
+     "actions": 4,
+     "n": 2,
+     "tries": 5
+    },
+    "tracks": {
+     "ring": 6,
+     "n": 2,
+     "rounds": 4
+    },
+    "trade": {
+     "offers": 3,
+     "bundle": 1,
+     "rounds": 8
+    },
+    "wide": {
+     "families": [
+      "count",
+      "tally",
+      "path",
+      "series",
+      "sort",
+      "gate",
+      "decode",
+      "oddone",
+      "minmax",
+      "swap",
+      "share",
+      "pick",
+      "countif"
+     ],
+     "rounds": 3
+    }
+   },
+   "lives": 150,
+   "stages": [
+    400,
+    1200
+   ],
+   "lr": 0.0002,
+   "before": true
+  }
+ },
+ {
+  "name": "gpu-ceiling-narrow-ctl",
+  "kind": "ceiling",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "world": {
+    "plants": {
+     "steps": 2,
+     "actions": 4,
+     "n": 2,
+     "tries": 5
+    },
+    "tracks": {
+     "ring": 6,
+     "n": 2,
+     "rounds": 4
+    },
+    "trade": {
+     "offers": 3,
+     "bundle": 1,
+     "rounds": 8
+    }
+   },
+   "test_world": {
+    "plants": {
+     "steps": 2,
+     "actions": 4,
+     "n": 2,
+     "tries": 5
+    },
+    "tracks": {
+     "ring": 6,
+     "n": 2,
+     "rounds": 4
+    },
+    "trade": {
+     "offers": 3,
+     "bundle": 1,
+     "rounds": 8
+    },
+    "wide": {
+     "families": [
+      "count",
+      "tally",
+      "path",
+      "series",
+      "sort",
+      "gate",
+      "decode",
+      "oddone",
+      "minmax",
+      "swap",
+      "share",
+      "pick",
+      "countif"
+     ],
+     "rounds": 3
+    }
+   },
+   "lives": 375,
+   "stages": [
+    400,
+    1200
+   ],
+   "lr": 0.0002,
+   "before": false
+  }
+ }
+]

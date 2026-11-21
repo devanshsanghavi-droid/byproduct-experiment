@@ -1,0 +1,43 @@
+[
+ {
+  "name": "nr-smoke",
+  "kind": "breadth",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "families": [
+    "count",
+    "vessel"
+   ],
+   "seed": 98,
+   "steps": 20,
+   "examples": 160,
+   "lr": 0.0002,
+   "near": [
+    "beadpair",
+    "countif",
+    "gap",
+    "morecuts",
+    "needs",
+    "nextsign",
+    "nextto",
+    "notchnum",
+    "onlyin",
+    "path",
+    "sooner",
+    "sort",
+    "swap",
+    "verify",
+    "whichsign",
+    "whohas"
+   ],
+   "sizes": {
+    "pool": 1,
+    "held": 2,
+    "near": 2
+   },
+   "far": false,
+   "public": false
+  }
+ }
+]

@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root { color-scheme: light }
+body { margin: 0; font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif }
+img { max-width: 100% }
+[hidden] { display: none !important }
+</style>
+<title>Byproduct Experiment Summary</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+/* Layout: one reading column. Verdict first, then one table per question, two figures drawn to scale. Tokens match the three earlier results pages. */
+:root { --bg:#f6f4ee; --card:#fffdf8; --fg:#1c1b18; --muted:#6a665d; --rule:#dcd7ca; --accent:#1f6f54; --drift:#8a8578;
+  --pass:#1f6f54; --fail:#b0432b; --run:#8a6a12; --passbg:#dcefe6; --failbg:#f6ddd6; --runbg:#f3e9c8; --band:#ebe7db; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#151513; --card:#1d1c19; --fg:#ebe8e0; --muted:#a09b90;
+  --rule:#35332e; --accent:#62c49e; --drift:#8f8a7e; --pass:#7fd3b0; --fail:#f09a84; --run:#e2c46a; --passbg:#173428; --failbg:#3b1d16;
+  --runbg:#3a3113; --band:#26251f; color-scheme: dark } }
+:root[data-theme="dark"] { --bg:#151513; --card:#1d1c19; --fg:#ebe8e0; --muted:#a09b90; --rule:#35332e; --accent:#62c49e;
+  --drift:#8f8a7e; --pass:#7fd3b0; --fail:#f09a84; --run:#e2c46a; --passbg:#173428; --failbg:#3b1d16; --runbg:#3a3113; --band:#26251f; color-scheme: dark }
+body { background:var(--bg); color:var(--fg); font:15px/1.55 Inter,system-ui,sans-serif; }
+main { max-width:1000px; margin:0 auto; padding-block:28px 56px; padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px)); display:flex; flex-direction:column; gap:30px; }
+h1 { font:600 clamp(20px,3.2vw,27px)/1.25 "Space Grotesk",Inter,sans-serif; margin:0; text-wrap:balance; }
+h2 { font:600 18px/1.3 "Space Grotesk",Inter,sans-serif; margin:0 0 10px; text-wrap:balance; }
+h3 { font:600 13px/1.3 Inter,sans-serif; letter-spacing:.06em; text-transform:uppercase; margin:0 0 8px; }
+p { margin:0 0 8px; max-width:68ch; } .lede { font-size:16.5px; } .muted,figcaption,small { color:var(--muted); }
+.kicker { font:600 12px/1.3 Inter,sans-serif; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+section { min-width:0; } .scroll + p, figure + p { margin-top:10px; }
+.scroll { overflow-x:auto; border:1px solid var(--rule); border-radius:10px; background:var(--card); }
+table { border-collapse:collapse; width:100%; font-size:13.5px; font-variant-numeric:tabular-nums; }
+th,td { padding:8px 10px; text-align:left; border-bottom:1px solid var(--rule); vertical-align:top; }
+th { font-weight:600; font-size:12px; color:var(--muted); } tbody tr:last-child td { border-bottom:0; }
+tr.ref td { color:var(--muted); } td:first-child { min-width:132px; } td small { font-size:12px; }
+.badge { display:inline-block; padding:2px 9px; border-radius:99px; font-weight:600; font-size:12px; white-space:nowrap; }
+.badge.fail { color:var(--fail); background:var(--failbg); } .badge.partial { color:var(--run); background:var(--runbg); }
+.badge.pass { color:var(--pass); background:var(--passbg); }
+figure { margin:0; background:var(--card); border:1px solid var(--rule); border-radius:10px; padding:12px 12px 6px; min-width:0; overflow-x:auto; }
+figcaption { font-size:13px; margin-bottom:8px; max-width:74ch; } svg { width:100%; min-width:540px; height:auto; display:block; }
+.grid { stroke:var(--rule); stroke-width:1; } .zero { stroke:var(--muted); stroke-width:1.2; } .band { fill:var(--band); }
+.chance { stroke:var(--fg); stroke-width:1.2; stroke-dasharray:4 3; fill:none; }
+.tick { fill:var(--muted); font:11px Inter,sans-serif; } .val { fill:var(--fg); font:600 11.5px Inter,sans-serif; }
+.rowlab { fill:var(--fg); font:12px Inter,sans-serif; } .rowlab .ver { font-weight:600; } .grouplab { fill:var(--fg); font:600 12px Inter,sans-serif; }
+.bar.task,.bar.wide { fill:var(--accent); } .bar.gen,.bar.unmod { fill:var(--drift); } .bar.ctl { fill:var(--run); }
+.cols { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:22px; }
+.cols > div { min-width:0; } .for h3 { color:var(--pass); } .against h3 { color:var(--fail); } .open h3 { color:var(--run); }
+ul { margin:0; padding-left:20px; max-width:70ch; } li { margin-bottom:6px; }
+a { color:var(--accent); } a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+</style>
+<main>
+<header>
+  <div class="kicker">Byproduct experiment. Final summary of versions 1 to 3.</div>
+  <h1>All three surviving theories say intelligence was a byproduct. A faithful simulation therefore scores agents only on staying alive and being copied, then measures general ability separately on held-out tests.</h1>
+</header>
+
+<section>
+  <p class="lede">The prediction did not hold at this scale. In every version, selecting on survival alone raised skill on the tasks agents were selected on. General ability on held-out tests never moved beyond noise, and no theory arm beat plain selection.</p>
+  <p>The strongest form of the test was not run: the five social arms with changing weights, on a model large enough to pass the ceiling check.</p>
+</section>
+
+<section>
+  <h2>Three versions at a glance</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Version</th><th>What could evolve</th><th>Model and run</th><th>Skill on selected tasks, selection minus chance</th><th>General ability, selection minus chance</th><th>Noise it is judged against</th><th>Outcome by pre-set rule</th></tr></thead>
+    <tbody>
+    <tr><td><b>1</b><br><small>2026-11-11</small></td><td>Four capacity settings per agent, each with an energy cost</td><td>Claude Haiku 5.5, frozen. 7 arms, 5 seeds, 16 agents, 12 generations</td><td>Not measured separately</td><td>+0.055<br><small>SOLO +0.102, chance +0.047</small></td><td>Band of 0.175 (2 SD of the chance arm over 5 seeds)</td><td><span class="badge fail">Not supported</span></td></tr>
+    <tr><td><b>2</b><br><small>2026-11-11</small></td><td>Prompt rules and inherited notes</td><td>Claude Haiku 5.5, frozen, hidden reasoning off. 7 arms, 5 seeds, 16 agents, 12 generations</td><td>+8.2 energy<br><small>SOLO +10.8, chance +2.6. Higher in 5 of 5 seeds</small></td><td>+0.015<br><small>SOLO +0.029, chance +0.014. Higher in 3 of 5 seeds</small></td><td>Bands of 14.5 energy and 0.085 general ability</td><td><span class="badge fail">Not supported</span></td></tr>
+    <tr><td><b>3</b><br><small>2026-11-12 to 14</small></td><td>Model weights, through one LoRA adapter per population</td><td>Qwen2.5-1.5B on a Modal A10 GPU. SOLO and chance arms only, 5 seeds, 32 lives, 8 generations</td><td>+8.4 energy (SE 2.4)<br><small>SOLO 29.7, chance 21.3. Higher in 4 of 5 seeds</small></td><td>-0.005 (SE 0.008)<br><small>SOLO 0.351, chance 0.356</small></td><td>Standard errors across seeds</td><td><span class="badge partial">Checks partial</span><br><small>full run not justified</small></td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">Chance is the DRIFT arm: same world, parents picked at random. SOLO is selection on survival energy with no social mechanism. In version 1, held-out ability was read from two of the capacity settings, so it is a weaker measure than in versions 2 and 3.</p>
+</section>
+
+<section>
+  <h2>The same pattern twice</h2>
+  <figure>
+    <figcaption>Selection minus chance, paired by seed and divided by its standard error. Versions 2 and 3 use different models and different things that evolve. Bars inside the shaded band cannot be told apart from zero.</figcaption>
+    <svg viewBox="0 0 680 222" role="img" aria-label="Selection minus chance in standard errors, versions 2 and 3">
+<rect class="band" x="250.0" y="22" width="228.6" height="164"/>
+<line class="grid" x1="250.0" y1="22" x2="250.0" y2="186"/>
+<text class="tick" x="250.0" y="202" text-anchor="middle">-2</text>
+<line class="zero" x1="364.3" y1="22" x2="364.3" y2="186"/>
+<text class="tick" x="364.3" y="202" text-anchor="middle">0</text>
+<line class="grid" x1="478.6" y1="22" x2="478.6" y2="186"/>
+<text class="tick" x="478.6" y="202" text-anchor="middle">+2</text>
+<line class="grid" x1="592.9" y1="22" x2="592.9" y2="186"/>
+<text class="tick" x="592.9" y="202" text-anchor="middle">+4</text>
+<text class="tick" x="364.3" y="16" text-anchor="middle">inside 2 standard errors of zero</text>
+<text class="tick" x="650" y="218" text-anchor="end">selection minus chance, in standard errors</text>
+<text class="rowlab" x="238" y="48" text-anchor="end"><tspan class="ver">Version 2</tspan> skill on the selected task</text>
+<rect class="bar task" x="364.3" y="36" width="216.0" height="16" rx="2"/>
+<text class="val" x="586.3" y="48">+3.8</text>
+<text class="rowlab" x="238" y="82" text-anchor="end"><tspan class="ver">Version 2</tspan> general ability</text>
+<rect class="bar gen" x="364.3" y="70" width="54.9" height="16" rx="2"/>
+<text class="val" x="425.1" y="82">+1.0</text>
+<text class="rowlab" x="238" y="132" text-anchor="end"><tspan class="ver">Version 3</tspan> skill on the selected tasks</text>
+<rect class="bar task" x="364.3" y="120" width="201.5" height="16" rx="2"/>
+<text class="val" x="571.8" y="132">+3.5</text>
+<text class="rowlab" x="238" y="166" text-anchor="end"><tspan class="ver">Version 3</tspan> general ability</text>
+<rect class="bar gen" x="331.7" y="154" width="32.6" height="16" rx="2"/>
+<text class="val" x="325.7" y="166" text-anchor="end">-0.6</text>
+</svg>
+  </figure>
+  <p>Skill on the selected task sits 3.5 to 3.8 standard errors above chance in both versions. General ability sits inside the band in both. The version 2 paired check was added after seeing the data, so its pre-set outcome stays as "not supported".</p>
+</section>
+
+<section>
+  <h2>Evidence for and against the thesis</h2>
+  <div class="cols">
+    <div class="for"><h3>For</h3><ul>
+      <li>Skill rose with no reward for skill. Version 2: SOLO gained +10.8 energy against +2.6 under chance. Version 3: SOLO ended at 29.7 against 21.3.</li>
+      <li>The mechanisms two theories need did operate in version 2. With an exile vote the grab rate was about 2% against about 8% without it. Inherited notes added +3.1 energy, higher in 5 of 5 seeds.</li>
+      <li>In version 1, ability rose in both solo-foraging arms in 5 of 5 seeds (SOLO +0.102, CULTURE +0.105). Both are inside the noise band of 0.175.</li>
+      <li>Breadth of pressure matters a little. Training on 16 task families lifted families never trained on by +0.054 (SE 0.016) over training on 3.</li>
+    </ul></div>
+    <div class="against"><h3>Against</h3><ul>
+      <li>General ability never moved beyond noise. Version 1: best arm +0.105 against a band of 0.175. Version 2: -0.002 to +0.029 against a band of 0.085. Version 3: -0.005 (SE 0.008).</li>
+      <li>No theory arm beat plain selection. Version 1: CULTURE +0.105, SOLO +0.102. Version 2: all four theory arms ended below SOLO on the selected task.</li>
+      <li>Social life cut costly capacity in version 1: COOP -1.79, ALPHA -1.11, DOMEST -2.49, MEDLEY -2.08, against a band of 0.98.</li>
+      <li>In version 2 every evolved population ended below the model with no evolved text (0.490 to 0.520 against 0.554). Notes lowered general ability in MEDLEY by 0.027, in 5 of 5 seeds.</li>
+      <li>Training directly on correct answers is the upper bound for any selection scheme. It left general ability unchanged: 0.325 to 0.324 on the 3-family world.</li>
+    </ul></div>
+    <div class="open"><h3>Not tested</h3><ul>
+      <li>Theory arms with changing weights. Version 3 built only SOLO and the chance arm.</li>
+      <li>Self-Domestication at full strength. Exile removed 0 agents in version 1 and 4 in version 2, and the grabbing contrast rests on one seed.</li>
+      <li>Large models, runs longer than 12 generations, groups larger than 32.</li>
+      <li>A world broad enough for the ceiling check to pass.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>The theories, arm by arm</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Theory and arm</th><th>What happened to its mechanism</th><th>Mechanism operated</th><th>Version 2: selected-task energy change</th><th>Version 2: general ability change</th><th>Version 1: held-out ability change</th><th>Version 1: total capacity change</th></tr></thead>
+    <tbody>
+    <tr class="ref"><td><b>Chance only</b><br><small>DRIFT</small></td><td>Parents picked at random. Version 1 used this arm for the rejected Cognitive Revolution theory.</td><td>Noise floor</td><td>+2.6</td><td>+0.014</td><td>+0.047</td><td>+0.60</td></tr>
+<tr class="ref"><td><b>Ecology only</b><br><small>SOLO</small></td><td>Top survivors reproduce. No social mechanism.</td><td>Baseline</td><td>+10.8</td><td>+0.029</td><td>+0.102</td><td>-0.29</td></tr>
+<tr><td><b>Cooperative Brain</b><br><small>COOP</small></td><td>Pairs advised and shared in both versions.</td><td>Yes</td><td>+6.6</td><td>+0.014</td><td>-0.005</td><td>-1.79</td></tr>
+<tr><td><b>Control for self-domestication</b><br><small>ALPHA</small></td><td>Grabbing allowed, no vote. Grab rate about 8% in version 2.</td><td>Yes</td><td>+8.8</td><td>+0.011</td><td>+0.023</td><td>-1.11</td></tr>
+<tr><td><b>Self-Domestication</b><br><small>DOMEST</small></td><td>Version 1: 0 exiles, so not tested. Version 2: 3 exiles, grab rate about 2%.</td><td>Weakly</td><td>+5.0</td><td>-0.002</td><td>-0.103</td><td>-2.49</td></tr>
+<tr><td><b>Cultural Brain</b><br><small>CULTURE</small></td><td>Notes were inherited and used. In version 2 they added +3.1 energy on the selected task.</td><td>Yes</td><td>+7.6</td><td>-0.002</td><td>+0.105</td><td>+0.45</td></tr>
+<tr><td><b>All three together</b><br><small>MEDLEY</small></td><td>1 exile in version 2. Notes added +3.0 energy.</td><td>Partly</td><td>+4.7</td><td>+0.004</td><td>+0.001</td><td>-2.08</td></tr>
+    <tr class="ref"><td><b>Noise band</b><br><small>2 SD of chance arm</small></td><td></td><td></td><td>14.5</td><td>0.085</td><td>0.175</td><td>0.98</td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">Changes are final generation minus generation 0, mean of 5 seeds. An arm counts only if it clears the chance arm by more than the noise band. None does on either ability column.</p>
+</section>
+
+<section>
+  <h2>Version 3 in detail: can training move the tests at all?</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Check (Qwen2.5-1.5B, GPU)</th><th>Outcome</th><th>Result</th></tr></thead>
+    <tbody>
+    <tr><td>Headroom</td><td><span class="badge partial">Partial</span></td><td>All 3 world families and code-breaking above chance. Rule induction and ordering at chance.</td></tr>
+    <tr><td>Ceiling, 3-family world</td><td><span class="badge fail">Fail</span></td><td>Trained on correct play: selected-task energy 21.9 to 68.6, general ability 0.325 to 0.324, retention 0.82 to 0.72.</td></tr>
+    <tr><td>Pilot, 5 seeds</td><td><span class="badge partial">Partial</span></td><td>SOLO 29.7, chance 21.3, unmodified 21.9. Gap +8.4 (SE 2.4). General ability gap -0.005 (SE 0.008).</td></tr>
+    <tr><td>Ceiling, 16-family world</td><td><span class="badge partial">Partial</span></td><td>Families never trained on: +0.054 (SE 0.016) over the control. General ability: +0.000 (SE 0.018).</td></tr>
+    </tbody>
+  </table></div>
+  <figure style="margin-top:14px">
+    <figcaption>Ceiling check on the wider world. Both trained arms got 1,200 steps on 9,750 examples of correct play. Scores are fractions correct at temperature 0 on the same items. Dashed lines mark random replies.</figcaption>
+    <svg viewBox="0 0 680 300" role="img" aria-label="Wider-world ceiling check scores">
+<line class="grid" x1="48" y1="250.0" x2="664" y2="250.0"/>
+<text class="tick" x="42" y="253.5" text-anchor="end">0.00</text>
+<line class="grid" x1="48" y1="197.5" x2="664" y2="197.5"/>
+<text class="tick" x="42" y="201.0" text-anchor="end">0.25</text>
+<line class="grid" x1="48" y1="145.0" x2="664" y2="145.0"/>
+<text class="tick" x="42" y="148.5" text-anchor="end">0.50</text>
+<line class="grid" x1="48" y1="92.5" x2="664" y2="92.5"/>
+<text class="tick" x="42" y="96.0" text-anchor="end">0.75</text>
+<line class="grid" x1="48" y1="40.0" x2="664" y2="40.0"/>
+<text class="tick" x="42" y="43.5" text-anchor="end">1.00</text>
+<rect class="bar unmod" x="48" y="10" width="12" height="12" rx="2"/>
+<text class="tick" x="65" y="20">Unmodified model</text>
+<rect class="bar ctl" x="177.2" y="10" width="12" height="12" rx="2"/>
+<text class="tick" x="194.2" y="20">Control: 3-family training</text>
+<rect class="bar wide" x="368.4" y="10" width="12" height="12" rx="2"/>
+<text class="tick" x="385.4" y="20">16-family training</text>
+<line class="chance" x1="510.0" y1="16" x2="532.0" y2="16"/><text class="tick" x="538.0" y="20">Chance</text>
+<rect class="bar unmod" x="62" y="148.2" width="46" height="101.8" rx="2"/>
+<text class="val" x="85.0" y="143.2" text-anchor="middle">0.485</text>
+<rect class="bar ctl" x="116" y="143.0" width="46" height="107.0" rx="2"/>
+<text class="val" x="139.0" y="138.0" text-anchor="middle">0.510</text>
+<rect class="bar wide" x="170" y="56.8" width="46" height="193.2" rx="2"/>
+<text class="val" x="193.0" y="51.8" text-anchor="middle">0.920</text>
+<line class="chance" x1="56" y1="213.4" x2="222" y2="213.4"/>
+<text class="grouplab" x="139.0" y="270" text-anchor="middle">13 families trained on</text>
+<text class="tick" x="139.0" y="285" text-anchor="middle">wider arm only</text>
+<rect class="bar unmod" x="267" y="143.6" width="46" height="106.4" rx="2"/>
+<text class="val" x="290.0" y="138.6" text-anchor="middle">0.507</text>
+<rect class="bar ctl" x="321" y="126.4" width="46" height="123.6" rx="2"/>
+<text class="val" x="344.0" y="121.4" text-anchor="middle">0.589</text>
+<rect class="bar wide" x="375" y="115.1" width="46" height="134.9" rx="2"/>
+<text class="val" x="398.0" y="110.1" text-anchor="middle">0.642</text>
+<line class="chance" x1="261" y1="192.4" x2="427" y2="192.4"/>
+<text class="grouplab" x="344.0" y="270" text-anchor="middle">6 families never trained on</text>
+<text class="tick" x="344.0" y="285" text-anchor="middle">held out of both arms</text>
+<rect class="bar unmod" x="472" y="181.0" width="46" height="69.0" rx="2"/>
+<text class="val" x="495.0" y="176.0" text-anchor="middle">0.329</text>
+<rect class="bar ctl" x="526" y="174.7" width="46" height="75.3" rx="2"/>
+<text class="val" x="549.0" y="169.7" text-anchor="middle">0.359</text>
+<rect class="bar wide" x="580" y="174.6" width="46" height="75.4" rx="2"/>
+<text class="val" x="603.0" y="169.6" text-anchor="middle">0.359</text>
+<line class="chance" x1="466" y1="190.9" x2="632" y2="190.9"/>
+<text class="grouplab" x="549.0" y="270" text-anchor="middle">General ability</text>
+<text class="tick" x="549.0" y="285" text-anchor="middle">three original tests</text>
+</svg>
+  </figure>
+  <ul>
+    <li>Training on 16 families nearly solved the 13 new ones. Training on 3 families left them where they started.</li>
+    <li>Most of the held-out gain is one family, reversing a list: 0.094 unmodified, 0.708 control, 0.823 wider. The other five families: 0.590, 0.565, 0.606.</li>
+    <li>General ability rose by about 0.03 in every trained adapter, with or without selection or breadth (wider +0.031, SE 0.020; control +0.030, SE 0.019). Neither clears 2 standard errors.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Limits</h2>
+  <ul>
+    <li>Scale. A frozen Haiku model in versions 1 and 2, and 0.5B and 1.5B open models in version 3. A null result here does not transfer to large models or long runs.</li>
+    <li>Version 1 read ability from two capacity settings through a table measured once, so ability could only move with those settings.</li>
+    <li>Version 2 started below the unmodified model because the starting rule pool held harmful rules. Every gain was recovery toward that model.</li>
+    <li>Version 3 has one adapter per population, and each ceiling arm is one training run. Its standard errors cover test items only.</li>
+    <li>All tests were written for this project by the same author. For the 1.5B model, two of the three general tests sat at chance.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>What would change this answer</h2>
+  <p class="muted">My recommendation, in order. None of it has been run or priced.</p>
+  <ul>
+    <li>Repeat only the ceiling check on a larger open model, with the 16-family world and a public far-transfer test. If direct training cannot move held-out tests, selection cannot either.</li>
+    <li>If that check passes, build the five social arms with changing weights and run all seven.</li>
+    <li>If it fails again, the finding stands as: selection through survival buys task skill, and task skill stays where it was trained.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Follow-up, 2026-11-14: the breadth curve</h2>
+  <p>The first step above was replaced by a cheaper test on the same 1.5B model: 18 runs trained on 2 to 64 task families with a fixed budget. By a rule set in advance the result is flat. Families built on skills the training pool never uses gained +0.067 (SE 0.008) from any training and nothing more from breadth (+0.003 per doubling, SE 0.005). Families from the same pool that a run did not train on did gain with breadth (+0.035 per doubling, SE 0.005), a comparison chosen after seeing the data. That comparison was then rerun with its rule fixed first: 20 new runs, tested on 16 pool families that no run trained on. Confirmed: +0.024 per doubling (SE 0.005), from 0.601 at 2 families to 0.704 at 32 (untrained 0.543), while the held-out families stayed flat in the same runs (+0.003, SE 0.004). Two checks with rules fixed first then repeated it: on a second, separate set of 16 reserved families (+0.026 per doubling, SE 0.005) and on a 3B model with the same families and seeds (+0.024, SE 0.005). Both replicated; the 3B check reran 14 runs after a GPU memory error, a recorded deviation from its plan. Details: <a href="breadth.html">breadth curve results</a>. Cost: $2.66 for the first 19 runs, $2.58 for the rerun and $7.89 for the two checks, all on Modal, not included in the table below.</p>
+</section>
+
+<section>
+  <h2>Follow-up, 2026-11-17: the theory arms with changing weights (version 4)</h2>
+  <p>Version 4 ran theory arms with changing weights for the first time. It could not test the thesis. A free check before any model call showed that the social rules could separate an arm from its control by under one doubling of breadth (0.96 at most), where two were needed for a score difference to be detectable with 5 seeds. The verdict was fixed then as not testable at this scale. A smoke test then showed the 1.5B model keeps a shared harvest every time it is asked (15 of 15), so the three self-domestication arms were dropped by rule. Theory 3 is untested again.</p>
+  <p>25 runs followed: 5 arms, 5 seeds, populations of 32 agents sharing one adapter, 8 generations. Cooperation widened what a population practised by +0.35 doublings (SE 0.10), which is inside the range the hand-written rules produce with no learning (+0.19 to +0.52), so its label is "broadens, mechanical". Copying from successful non-parents changed nothing (-0.02, SE 0.10). Populations did learn: practised skill rose +0.077 (SE 0.014) over the untrained 0.510. By the pre-set rule the credit goes to learning from correct answers and not to selection, because survival selection added +0.001 (SE 0.022) over random parents.</p>
+  <p>Exploratory, added after the smoke test: all five arms ended above the untrained model on similar unseen tasks, by +0.047 to +0.088 (+0.028 to +0.068 counting valid replies only). Selection against random parents on that score was +0.041 (SE 0.021), just short of the 2 standard error rule. Version 3's learning rule, which copies wrong answers too, scored lower than the new rule on those tasks (-0.036, SE 0.008). Cost $4.53. <a href="social.html">Version 4 results</a>.</p>
+</section>
+
+<section>
+  <h2>Cost</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Item</th><th>Spend</th><th>Budget</th></tr></thead>
+    <tbody>
+    <tr><td>Version 1 full run and tests</td><td>$17.47</td><td rowspan="2">Claude API, $200 of credits. Total with pilots about $48.5</td></tr>
+    <tr><td>Version 2 full run, tests and headroom checks</td><td>$30.39</td></tr>
+    <tr><td>Version 3 checks on Modal (GPU part $2.99, wider-world step $0.61)</td><td>$7.02</td><td>$10 limit, own upper estimate</td></tr>
+    <tr class="ref"><td>Three versions, pilots excluded</td><td>$54.88</td><td></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>Detail pages and research used</h2>
+  <ul>
+    <li><a href="report.html">Version 1 results</a>, <a href="report2.html">Version 2 results</a>, <a href="report3.html">Version 3 results</a>, <a href="breadth.html">breadth experiments</a>, <a href="social.html">Version 4 results</a>.</li>
+    <li>Generalisation to unseen tasks depends on the number of distinct tasks more than on examples per task (<a href="https://arxiv.org/abs/2402.10891">arXiv 2402.10891</a>, <a href="https://arxiv.org/abs/2405.19787">arXiv 2405.19787</a>). Read from search summaries.</li>
+    <li>LoRA forgets less and learns less than full fine-tuning (Biderman et al. 2024). Repeated training on a model's own unfiltered output degrades it (arXiv 2510.16657, read from search summaries).</li>
+  </ul>
+</section>
+</main>

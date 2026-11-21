@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.venv*/
+.DS_Store
+*.log
+models/
+
+# Page fragments written by the build scripts. The standalone copies live in docs/.
+/report.html
+/report2.html
+/report3.html
+/breadth.html
+/summary.html
+
+# Never commit keys.
+.env
+.env.*
+/social.html

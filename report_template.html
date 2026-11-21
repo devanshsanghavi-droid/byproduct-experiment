@@ -1,0 +1,778 @@
+<title>Byproduct Experiment</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one lab-report column. Verdict and results table first, charts second, method and limits last.
+   Gene names and numbers are set in mono, the way a lab notebook writes loci and readings. */
+:root {
+  --plane: #f3f4f6;
+  --surface: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #7d7b75;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --hair: rgba(11, 11, 11, 0.10);
+  --accent: #2a78d6;
+  --s1: #2a78d6;  /* MEM, and "after" */
+  --s2: #eb6834;  /* TALK */
+  --s3: #1baf7a;  /* LORE */
+  --s4: #eda100;  /* AGG */
+  --ref: #a09f98; /* reference rows: DRIFT, SOLO */
+  --band: rgba(82, 81, 78, 0.13);
+  --warn-bg: #fab219;
+  --warn-ink: #0b0b0b;
+  --hm-0: #cde2fb; --hm-1: #9ec5f4; --hm-2: #6da7ec; --hm-3: #3987e5; --hm-4: #256abf; --hm-5: #104281;
+  --hm-t0: #0b0b0b; --hm-t1: #0b0b0b; --hm-t2: #0b0b0b; --hm-t3: #ffffff; --hm-t4: #ffffff; --hm-t5: #ffffff;
+  --font-text: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --plane: #0f1012; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #929089;
+    --grid: #2c2c2a; --axis: #45453f; --hair: rgba(255, 255, 255, 0.10); --accent: #6da7ec;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --ref: #6f6e69;
+    --band: rgba(195, 194, 183, 0.13); --warn-bg: #fab219; --warn-ink: #0b0b0b;
+    --hm-0: #0d366b; --hm-1: #184f95; --hm-2: #256abf; --hm-3: #3987e5; --hm-4: #6da7ec; --hm-5: #9ec5f4;
+    --hm-t0: #f0efec; --hm-t1: #f0efec; --hm-t2: #ffffff; --hm-t3: #ffffff; --hm-t4: #0b0b0b; --hm-t5: #0b0b0b;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --plane: #0f1012; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #929089;
+  --grid: #2c2c2a; --axis: #45453f; --hair: rgba(255, 255, 255, 0.10); --accent: #6da7ec;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --ref: #6f6e69;
+  --band: rgba(195, 194, 183, 0.13); --warn-bg: #fab219; --warn-ink: #0b0b0b;
+  --hm-0: #0d366b; --hm-1: #184f95; --hm-2: #256abf; --hm-3: #3987e5; --hm-4: #6da7ec; --hm-5: #9ec5f4;
+  --hm-t0: #f0efec; --hm-t1: #f0efec; --hm-t2: #ffffff; --hm-t3: #ffffff; --hm-t4: #0b0b0b; --hm-t5: #0b0b0b;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--plane); color: var(--ink);
+  font-family: var(--font-text); font-size: 15px; line-height: 1.55;
+  padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.page { max-width: 1040px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+section { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+h1, h2, h3 { margin: 0; text-wrap: balance; font-weight: 600; }
+h1 { font-size: clamp(26px, 4.4vw, 40px); line-height: 1.12; letter-spacing: -0.015em; max-width: 21ch; }
+h2 { font-size: 21px; line-height: 1.25; letter-spacing: -0.005em; }
+h3 { font-size: 14px; }
+p { margin: 0; max-width: 68ch; }
+.lede { font-size: 18px; line-height: 1.45; color: var(--ink-2); max-width: 54ch; }
+.eyebrow { font-family: var(--font-data); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.sub { color: var(--ink-2); font-size: 14px; }
+.small { color: var(--muted); font-size: 12.5px; max-width: 80ch; }
+code, .mono { font-family: var(--font-data); font-size: 0.92em; }
+.num { font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+
+header.top { display: flex; flex-direction: column; gap: 14px; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-family: var(--font-data); font-size: 12.5px; color: var(--ink-2); }
+.meta b { font-weight: 500; color: var(--ink); }
+
+.mock {
+  background: var(--warn-bg); color: var(--warn-ink); border-radius: 6px; padding: 12px 16px;
+  font-weight: 600; font-size: 16px; letter-spacing: 0.02em;
+}
+.mock span { font-weight: 400; font-size: 14px; letter-spacing: 0; display: block; }
+
+.verdict { background: var(--surface); border: 1px solid var(--hair); border-radius: 8px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; }
+.verdict .status { font-family: var(--font-data); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); display: flex; gap: 8px; align-items: center; }
+.verdict .status i { width: 10px; height: 10px; border: 2px solid var(--ink); display: inline-block; border-radius: 50%; }
+.verdict .status.supported i { background: var(--ink); }
+.verdict .status.not_supported i { border-radius: 0; }
+.verdict .status.unclear i { background: linear-gradient(90deg, var(--ink) 50%, transparent 50%); }
+.verdict .headline { font-size: 19px; line-height: 1.35; font-weight: 500; max-width: 62ch; }
+.verdict ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 13.5px; color: var(--ink-2); }
+.verdict li { max-width: 86ch; }
+
+.card { background: var(--surface); border: 1px solid var(--hair); border-radius: 8px; padding: 16px; min-width: 0; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { text-align: left; padding: 8px 9px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+thead th { font-weight: 500; color: var(--ink-2); font-size: 12px; letter-spacing: 0.03em; white-space: nowrap; border-bottom-color: var(--axis); }
+tbody tr:last-child td { border-bottom: 0; }
+td.r, th.r { text-align: right; }
+td .v { font-family: var(--font-data); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td .v.sig { font-weight: 600; }
+td .v.dim { color: var(--muted); }
+td .seeds { display: block; font-family: var(--font-data); font-size: 11px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.arm { font-family: var(--font-data); font-weight: 500; white-space: nowrap; }
+.role { display: block; font-size: 11.5px; color: var(--muted); white-space: nowrap; }
+tr.ref td { background: color-mix(in srgb, var(--plane) 60%, transparent); }
+.yes::before { content: "\25C6\00A0"; font-size: 0.75em; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--ink-2); align-items: center; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
+.dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.dot.hollow { background: var(--surface); border: 2px solid var(--ink-2); }
+.thin { width: 14px; height: 1px; display: inline-block; background: var(--ink-2); opacity: 0.45; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.three { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 12px; align-items: start; }
+.three .card { display: flex; flex-direction: column; gap: 10px; }
+.three h3 { font-family: var(--font-data); font-weight: 500; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); display: flex; align-items: center; gap: 8px; margin: 0; }
+.three h3 i { width: 10px; height: 10px; border: 2px solid var(--ink); display: inline-block; flex: none; }
+.three h3 i.for { background: var(--ink); border-radius: 50%; }
+.three h3 i.untested { border-style: dashed; border-radius: 50%; }
+.three ul { margin: 0; padding-left: 16px; display: flex; flex-direction: column; gap: 9px; font-size: 13.5px; }
+.three li b { font-weight: 600; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; align-items: start; }
+.panel { display: flex; flex-direction: column; gap: 6px; }
+.panel .ttl { display: flex; flex-direction: column; }
+.panel .ttl .role { white-space: normal; }
+svg.chart { display: block; width: 100%; height: auto; overflow: visible; font-family: var(--font-text); }
+svg.chart text { fill: var(--ink-2); font-size: 11px; }
+svg.chart text.tick { fill: var(--muted); font-size: 10.5px; font-family: var(--font-data); }
+svg.chart text.val { fill: var(--ink); font-family: var(--font-data); font-size: 11px; }
+svg.chart text.rowlabel { fill: var(--ink); font-family: var(--font-data); font-size: 12px; font-weight: 500; }
+svg.chart text.rowsub { fill: var(--muted); font-size: 10px; }
+svg.chart .gridline { stroke: var(--grid); stroke-width: 1; }
+svg.chart .axisline { stroke: var(--axis); stroke-width: 1; }
+svg.chart .cross { stroke: var(--axis); stroke-width: 1; }
+svg.chart .ring { stroke: var(--surface); stroke-width: 2; }
+.wide { max-width: 620px; }
+
+.hm { border-collapse: separate; border-spacing: 2px; width: auto; }
+.hm th, .hm td { border: 0; padding: 0; }
+.hm th { font-family: var(--font-data); font-size: 11.5px; font-weight: 400; color: var(--muted); text-align: center; padding: 2px 6px; white-space: nowrap; }
+.hm td { width: 52px; height: 36px; text-align: center; border-radius: 3px; font-family: var(--font-data); font-size: 12px; font-variant-numeric: tabular-nums; cursor: default; }
+.hm td:focus-visible, .hit:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.hmscale { display: flex; align-items: center; gap: 6px; font-family: var(--font-data); font-size: 11.5px; color: var(--muted); }
+.hmscale i { width: 22px; height: 10px; display: inline-block; }
+
+.samples { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; align-items: start; }
+.samples ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.samples li { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.samples .who { font-family: var(--font-data); font-size: 11px; color: var(--muted); }
+.samples .txt { font-size: 13.5px; overflow-wrap: anywhere; }
+
+ul.plain { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; max-width: 72ch; }
+details { font-size: 13.5px; }
+summary { cursor: pointer; color: var(--ink-2); }
+summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+#tip {
+  position: fixed; z-index: 20; pointer-events: none; background: var(--surface); color: var(--ink);
+  border: 1px solid var(--hair); border-radius: 6px; padding: 8px 10px; font-size: 12px; line-height: 1.45;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14); max-width: 260px;
+}
+#tip .h { font-weight: 600; margin-bottom: 2px; }
+#tip .row { display: flex; align-items: center; gap: 6px; font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+#tip .row .dot { width: 8px; height: 8px; flex: none; }
+#tip .mut { color: var(--muted); }
+@media (max-width: 480px) { .hm td { width: 44px; } .verdict { padding: 14px; } .card { padding: 12px; } }
+</style>
+
+<div class="page" id="page">
+  <header class="top">
+    <div class="eyebrow">Byproduct experiment &middot; results</div>
+    <h1 id="thesis-head"></h1>
+    <p class="lede" id="thesis-rest"></p>
+    <div class="meta" id="meta"></div>
+    <div class="mock" id="mock" hidden>MOCK DATA<span>These numbers come from a fake-data generator or a mock run with no model calls. They show the page layout only and say nothing about the thesis.</span></div>
+  </header>
+
+  <section id="sec-verdict">
+    <div class="verdict">
+      <div class="status" id="v-status"><i></i><span></span></div>
+      <div class="headline" id="v-head"></div>
+      <ul id="v-reasons"></ul>
+      <p class="small" id="v-rule"></p>
+    </div>
+  </section>
+
+  <section id="sec-findings" hidden>
+    <h2>Evidence for, against, and not tested</h2>
+    <p class="sub">The verdict above is one rule applied to one number. These are the separate observations behind it, each written from the run data.</p>
+    <div class="three">
+      <div class="card"><h3><i class="for"></i>For the thesis</h3><ul id="f-for"></ul></div>
+      <div class="card"><h3><i class="against"></i>Against the thesis</h3><ul id="f-against"></ul></div>
+      <div class="card"><h3><i class="untested"></i>Not tested by this run</h3><ul id="f-untested"></ul></div>
+    </div>
+  </section>
+
+  <section id="sec-table">
+    <h2>What changed in each arm</h2>
+    <p class="sub">Change from generation 0 to the final population. Genes are levels on a 0 to 4 scale. Held-out ability is a 0 to 1 score on tasks that never affected survival.</p>
+    <div class="card scroll"><table id="results"></table></div>
+    <p class="small" id="table-note"></p>
+  </section>
+
+  <section id="sec-ability">
+    <h2>Held-out ability, before and after</h2>
+    <p class="sub">Mean score across the three held-out tests. Nothing in the simulation rewarded these scores.</p>
+    <div class="legend"><span><i class="dot hollow"></i>generation 0</span><span><i class="dot" style="background:var(--s1)"></i>final population, mean of seeds</span><span><i class="dot" style="background:var(--s1);opacity:.4;width:6px;height:6px"></i>one seed</span></div>
+    <div class="card"><div id="ch-ability"></div></div>
+  </section>
+
+  <section id="sec-capacity">
+    <h2>Change in total capacity</h2>
+    <p class="sub">Total capacity is MEM + TALK + LORE, the three genes that cost energy. Bars show the mean change, dots show each seed.</p>
+    <div class="legend"><span><i class="dot" style="background:var(--s1)"></i>one seed</span><span><i style="width:16px;height:10px;background:var(--band);display:inline-block"></i>DRIFT noise band</span></div>
+    <div class="card"><div id="ch-capacity"></div></div>
+  </section>
+
+  <section id="sec-forage" hidden>
+    <h2>What selection rewarded</h2>
+    <p class="sub">Left: foraging success and net energy in the first and last generation. Right: within a generation, how strongly each gene level went with net energy (correlation from -1 to +1, averaged over all generations and seeds). A positive number means agents with more of that gene left more offspring.</p>
+    <div class="two">
+      <div class="card scroll"><table id="forage"></table></div>
+      <div class="card scroll"><table id="gradient"></table></div>
+    </div>
+    <p class="small">In DRIFT parents are picked at random, so its correlations show what the world pays for without any selection acting on it.</p>
+  </section>
+
+  <section id="sec-traj">
+    <h2>Gene levels over generations</h2>
+    <p class="sub">One panel per arm. Thick lines are the mean of seeds, thin lines are single seeds. The last point is the newborn population after the final selection.</p>
+    <div class="legend" id="gene-legend"></div>
+    <div class="grid" id="ch-traj"></div>
+  </section>
+
+  <section id="sec-agg">
+    <h2>Grabbing with and without a vote</h2>
+    <p class="sub" id="agg-sub"></p>
+    <div class="legend"><span><i class="sw" style="background:var(--s1)"></i>ALPHA, grab allowed, no vote</span><span><i class="sw" style="background:var(--s2)"></i>DOMEST, grab allowed, band can vote to exile</span><span><i class="thin"></i>one seed</span></div>
+    <div class="card"><div class="wide" id="ch-agg"></div></div>
+  </section>
+
+  <section id="sec-surface">
+    <h2>The ability surface</h2>
+    <p class="sub">How well the frozen model does on each held-out test at each gene level. A population's ability is read off this surface from its genes.</p>
+    <div class="two">
+      <div class="card panel">
+        <h3>H2 stranger relay, by MEM and TALK</h3>
+        <div class="scroll"><table class="hm" id="hm"></table></div>
+        <div class="hmscale" id="hmscale"></div>
+      </div>
+      <div class="card panel">
+        <h3>H1 code-breaking and H3 rule induction, by MEM</h3>
+        <div class="legend"><span><i class="sw" style="background:var(--s1)"></i>H1 code-breaking</span><span><i class="sw" style="background:var(--s2)"></i>H3 rule induction</span></div>
+        <div id="ch-h13"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-sanity">
+    <h2>Did selection work at all</h2>
+    <p class="sub">A costly gene that an arm cannot use should fall. If these checks fail, the other results are not trustworthy.</p>
+    <div class="card scroll"><table id="sanity"></table></div>
+  </section>
+
+  <section id="sec-method">
+    <h2>How it worked</h2>
+    <p id="method-text"></p>
+    <div class="two">
+      <div class="card scroll"><table id="genes"></table></div>
+      <div class="card scroll"><table id="arms"></table></div>
+    </div>
+  </section>
+
+  <section id="sec-samples">
+    <h2>What the agents said</h2>
+    <p class="sub">Examples saved during the runs, shown as written.</p>
+    <div class="samples" id="samples"></div>
+  </section>
+
+  <section id="sec-limits">
+    <h2>Limits</h2>
+    <ul class="plain" id="limits"></ul>
+    <details><summary>Run ledger</summary><div class="card scroll" style="margin-top:10px"><table id="ledger"></table></div></details>
+    <div class="small" id="warnings"></div>
+  </section>
+</div>
+<div id="tip" hidden></div>
+
+<script>
+const R = /*__RESULTS__*/null;
+
+(function () {
+  "use strict";
+  const GENES = ["MEM", "TALK", "LORE", "AGG"];
+  const GENE_COLOR = { MEM: "var(--s1)", TALK: "var(--s2)", LORE: "var(--s3)", AGG: "var(--s4)" };
+  const NS = "http://www.w3.org/2000/svg";
+  const $ = (id) => document.getElementById(id);
+
+  function el(tag, attrs, kids) {
+    const e = document.createElement(tag);
+    for (const k in (attrs || {})) {
+      if (k === "class") e.className = attrs[k];
+      else if (k === "text") e.textContent = attrs[k];
+      else if (k === "style") e.style.cssText = attrs[k];
+      else e.setAttribute(k, attrs[k]);
+    }
+    (kids || []).forEach((c) => e.appendChild(typeof c === "string" ? document.createTextNode(c) : c));
+    return e;
+  }
+  function s(tag, attrs, text) {
+    const e = document.createElementNS(NS, tag);
+    for (const k in (attrs || {})) {
+      if (k === "style") e.style.cssText = attrs[k]; else e.setAttribute(k, attrs[k]);
+    }
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  const isNum = (x) => typeof x === "number" && isFinite(x);
+  const sgn = (x, n) => !isNum(x) ? "n/a" : (x > 0 ? "+" : x < 0 ? "-" : "") + Math.abs(x).toFixed(n == null ? 2 : n);
+  const fx = (x, n) => !isNum(x) ? "n/a" : x.toFixed(n == null ? 2 : n);
+  const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const role = (arm) => ((R.arm_meta || {})[arm] || {}).role || "";
+  const theory = (arm) => ((R.arm_meta || {})[arm] || {}).theory || "";
+  const isRef = (arm) => arm === "DRIFT" || arm === "SOLO";
+  /* short tag under an arm name: the role for reference and control arms, the theory otherwise */
+  const tag = (arm) => role(arm) && role(arm) !== "theory" ? role(arm) : (theory(arm) || role(arm));
+
+  /* ---------- tooltip ---------- */
+  const tip = $("tip");
+  function showTip(html, x, y) {
+    tip.innerHTML = html; tip.hidden = false;
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    let left = x + 14, top = y + 14;
+    if (left + w > window.innerWidth - 8) left = Math.max(8, x - w - 14);
+    if (top + h > window.innerHeight - 8) top = Math.max(8, y - h - 14);
+    tip.style.left = left + "px"; tip.style.top = top + "px";
+  }
+  function hideTip() { tip.hidden = true; }
+  function bindTip(node, htmlFn) {
+    node.addEventListener("pointermove", (e) => showTip(htmlFn(e), e.clientX, e.clientY));
+    node.addEventListener("pointerleave", hideTip);
+    node.addEventListener("focus", () => { const b = node.getBoundingClientRect(); showTip(htmlFn(null), b.left + b.width / 2, b.top + b.height / 2); });
+    node.addEventListener("blur", hideTip);
+  }
+
+  /* ---------- scales ---------- */
+  function niceTicks(lo, hi, n) {
+    if (!(hi > lo)) { hi = lo + 1; }
+    const raw = (hi - lo) / Math.max(1, n), mag = Math.pow(10, Math.floor(Math.log10(raw)));
+    const norm = raw / mag, step = (norm < 1.5 ? 1 : norm < 3 ? 2 : norm < 7 ? 5 : 10) * mag;
+    const a = Math.floor(lo / step) * step, b = Math.ceil(hi / step) * step, out = [];
+    for (let v = a; v <= b + step * 1e-6; v += step) out.push(+v.toFixed(10));
+    return out;
+  }
+  const lin = (d0, d1, r0, r1) => (v) => r0 + (v - d0) / (d1 - d0 || 1) * (r1 - r0);
+  const decimalsFor = (ticks) => { const st = Math.abs(ticks[1] - ticks[0]); return st >= 1 ? 0 : st >= 0.1 ? 1 : st >= 0.01 ? 2 : 3; };
+
+  function empty(host, msg) { host.appendChild(el("p", { class: "small", text: msg })); }
+
+  /* ---------- line chart ---------- */
+  function lineChart(host, o) {
+    const W = o.w || 320, H = o.h || 196, m = { l: 30, r: o.labelW == null ? 64 : o.labelW, t: 10, b: 30 };
+    const xs = o.xs, n = xs.length;
+    if (!n) { empty(host, "No data."); return; }
+    const x = lin(0, Math.max(1, n - 1), m.l, W - m.r), y = lin(o.yDomain[0], o.yDomain[1], H - m.b, m.t);
+    const svg = s("svg", { class: "chart", viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": o.label || "line chart" });
+    const yd = decimalsFor(o.yTicks.length > 1 ? o.yTicks : [0, 1]);
+    o.yTicks.forEach((t) => {
+      svg.appendChild(s("line", { class: t === o.yDomain[0] ? "axisline" : "gridline", x1: m.l, x2: W - m.r, y1: y(t), y2: y(t) }));
+      svg.appendChild(s("text", { class: "tick", x: m.l - 6, y: y(t) + 3.5, "text-anchor": "end" }, t.toFixed(yd)));
+    });
+    const every = n > 12 ? 4 : n > 7 ? 2 : 1;
+    xs.forEach((lab, i) => {
+      if (i % every === 0 || i === n - 1) {
+        if (i !== n - 1 && (n - 1 - i) < every) return;
+        svg.appendChild(s("text", { class: "tick", x: x(i), y: H - m.b + 14, "text-anchor": "middle" }, String(lab)));
+      }
+    });
+    if (o.xLabel) svg.appendChild(s("text", { x: (m.l + W - m.r) / 2, y: H - 2, "text-anchor": "middle", style: "fill:var(--muted);font-size:10.5px" }, o.xLabel));
+    const path = (vals) => {
+      let d = "", pen = false;
+      vals.forEach((v, i) => { if (!isNum(v)) { pen = false; return; } d += (pen ? "L" : "M") + x(i).toFixed(1) + " " + y(v).toFixed(1); pen = true; });
+      return d;
+    };
+    o.series.forEach((se) => (se.seeds || []).forEach((vals) => {
+      svg.appendChild(s("path", { d: path(vals), fill: "none", "stroke-width": 1, "stroke-linejoin": "round", style: `stroke:${se.color};opacity:.32` }));
+    }));
+    const ends = [];
+    o.series.forEach((se) => {
+      svg.appendChild(s("path", { d: path(se.mean), fill: "none", "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round", style: `stroke:${se.color}` }));
+      if (o.points) se.mean.forEach((v, i) => { if (isNum(v)) svg.appendChild(s("circle", { class: "ring", cx: x(i), cy: y(v), r: 4, style: `fill:${se.color}` })); });
+      let li = -1; se.mean.forEach((v, i) => { if (isNum(v)) li = i; });
+      if (li >= 0) {
+        if (!o.points) svg.appendChild(s("circle", { class: "ring", cx: x(li), cy: y(se.mean[li]), r: 4, style: `fill:${se.color}` }));
+        ends.push({ name: se.short || se.name, v: se.mean[li], py: y(se.mean[li]), px: x(li) });
+      }
+    });
+    /* endpoint labels, nudged apart; ink text, the dot on the line carries the color */
+    ends.sort((a, b) => a.py - b.py);
+    for (let i = 1; i < ends.length; i++) if (ends[i].py - ends[i - 1].py < 12) ends[i].py = ends[i - 1].py + 12;
+    const over = ends.length ? ends[ends.length - 1].py - (H - m.b) : 0;
+    if (over > 0) { ends.forEach((e) => { e.py -= over; }); for (let i = ends.length - 2; i >= 0; i--) if (ends[i + 1].py - ends[i].py < 12) ends[i].py = ends[i + 1].py - 12; }
+    if (m.r >= 40) ends.forEach((e) => {
+      const t = s("text", { class: "val", x: W - m.r + 8, y: e.py + 3.5 });
+      t.appendChild(s("tspan", { style: "fill:var(--ink-2)" }, e.name + " "));
+      t.appendChild(s("tspan", null, fx(e.v, o.valDec == null ? 1 : o.valDec)));
+      svg.appendChild(t);
+    });
+    /* hover layer: crosshair plus tooltip */
+    const cross = s("line", { class: "cross", y1: m.t, y2: H - m.b, x1: 0, x2: 0, visibility: "hidden" });
+    svg.appendChild(cross);
+    const hit = s("rect", { class: "hit", x: m.l - 6, y: m.t, width: W - m.r - m.l + 12, height: H - m.b - m.t, fill: "transparent", tabindex: 0 });
+    svg.appendChild(hit);
+    const tipAt = (i) => {
+      let h = `<div class="h">${esc(o.title ? o.title + ", " : "")}${esc(o.xName || "x")} ${esc(xs[i])}</div>`;
+      o.series.forEach((se) => {
+        const sv = (se.seeds || []).map((v) => fx(v[i], 2)).join(" / ");
+        h += `<div class="row"><i class="dot" style="background:${se.color}"></i>${esc(se.name)} ${fx(se.mean[i], 2)}${sv ? ` <span class="mut">(${sv})</span>` : ""}</div>`;
+      });
+      return h;
+    };
+    hit.addEventListener("pointermove", (e) => {
+      const b = svg.getBoundingClientRect(), vx = (e.clientX - b.left) / b.width * W;
+      const i = Math.max(0, Math.min(n - 1, Math.round((vx - m.l) / ((W - m.r - m.l) / Math.max(1, n - 1)))));
+      cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("visibility", "visible");
+      showTip(tipAt(i), e.clientX, e.clientY);
+    });
+    hit.addEventListener("pointerleave", () => { cross.setAttribute("visibility", "hidden"); hideTip(); });
+    hit.addEventListener("focus", () => { const b = svg.getBoundingClientRect(); showTip(tipAt(n - 1), b.right - 80, b.top + 20); });
+    hit.addEventListener("blur", hideTip);
+    host.appendChild(svg);
+  }
+
+  /* ---------- row chart: one row per arm on a shared value axis ---------- */
+  function rowChart(host, o) {
+    const rows = o.rows;
+    if (!rows.length) { empty(host, "No data."); return; }
+    const W = 640, rowH = 38, m = { l: 150, r: 74, t: 22, b: 26 }, H = m.t + rows.length * rowH + m.b;
+    let lo = Infinity, hi = -Infinity;
+    rows.forEach((r) => r.extent.forEach((v) => { if (isNum(v)) { lo = Math.min(lo, v); hi = Math.max(hi, v); } }));
+    (o.include || []).forEach((v) => { if (isNum(v)) { lo = Math.min(lo, v); hi = Math.max(hi, v); } });
+    if (!isFinite(lo)) { empty(host, "No data."); return; }
+    const pad = (hi - lo || 1) * 0.06; lo -= pad; hi += pad;
+    const ticks = niceTicks(lo, hi, 5); lo = ticks[0]; hi = ticks[ticks.length - 1];
+    const x = lin(lo, hi, m.l, W - m.r), dec = decimalsFor(ticks);
+    const svg = s("svg", { class: "chart", viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": o.label });
+    ticks.forEach((t) => {
+      svg.appendChild(s("line", { class: "gridline", x1: x(t), x2: x(t), y1: m.t, y2: H - m.b }));
+      svg.appendChild(s("text", { class: "tick", x: x(t), y: H - m.b + 14, "text-anchor": "middle" }, (o.signed && t > 0 ? "+" : "") + t.toFixed(dec)));
+    });
+    if (o.band && isNum(o.band.lo) && isNum(o.band.hi)) {
+      const bx0 = x(Math.max(lo, o.band.lo)), bx1 = x(Math.min(hi, o.band.hi));
+      svg.appendChild(s("rect", { x: bx0, y: m.t, width: Math.max(0, bx1 - bx0), height: H - m.b - m.t, style: "fill:var(--band)" }));
+      svg.appendChild(s("text", { x: (bx0 + bx1) / 2, y: m.t - 7, "text-anchor": "middle", style: "fill:var(--muted);font-size:10px" }, o.band.label));
+    }
+    if (o.zero && lo < 0 && hi > 0) svg.appendChild(s("line", { class: "axisline", x1: x(0), x2: x(0), y1: m.t, y2: H - m.b }));
+    rows.forEach((r, i) => {
+      const cy = m.t + i * rowH + rowH / 2;
+      svg.appendChild(s("text", { class: "rowlabel", x: 0, y: cy - 1 }, r.arm));
+      svg.appendChild(s("text", { class: "rowsub", x: 0, y: cy + 11 }, r.sub || ""));
+      o.draw(svg, r, x, cy);
+      svg.appendChild(s("text", { class: "val", x: W - m.r + 10, y: cy + 4, style: r.sig ? "font-weight:600" : "" }, r.valueText + (r.sig ? " ◆" : "")));
+      const hit = s("rect", { class: "hit", x: 0, y: cy - rowH / 2, width: W, height: rowH, fill: "transparent", tabindex: 0 });
+      bindTip(hit, () => r.tip);
+      svg.appendChild(hit);
+    });
+    host.appendChild(el("div", { class: "scroll" }, [svg]));
+    svg.style.minWidth = "440px";
+  }
+  function bar(svg, x0, x1, cy, thick, color) {
+    const r = Math.min(4, Math.abs(x1 - x0)), top = cy - thick / 2, bot = cy + thick / 2, dir = x1 >= x0 ? 1 : -1;
+    const d = `M${x0} ${top}L${x1 - dir * r} ${top}Q${x1} ${top} ${x1} ${top + r}L${x1} ${bot - r}Q${x1} ${bot} ${x1 - dir * r} ${bot}L${x0} ${bot}Z`;
+    svg.appendChild(s("path", { d: d, style: `fill:${color}` }));
+  }
+
+  /* ---------- header ---------- */
+  function header() {
+    const th = R.thesis || "", cut = th.indexOf(". ");
+    $("thesis-head").textContent = cut > 0 ? th.slice(0, cut + 1) : th;
+    $("thesis-rest").textContent = cut > 0 ? th.slice(cut + 2) : "";
+    const c = R.config || {}, u = R.usage || {}, items = [];
+    if ((R.models || []).length) items.push(["model", R.models.join(", ")]);
+    if (c.N != null) items.push(["agents per generation", c.N]);
+    if (c.R != null) items.push(["rounds per lifetime", c.R]);
+    if (c.G != null) items.push(["generations", c.G]);
+    items.push(["seeds", (R.seeds || []).length], ["arms", (R.arms || []).length]);
+    if (c.cost != null) items.push(["upkeep per capacity level", c.cost]);
+    if (isNum(u.total_calls)) items.push(["model calls", u.total_calls.toLocaleString("en-US")]);
+    if (isNum(u.total_cost_usd)) items.push(["spend", "$" + u.total_cost_usd.toFixed(2)]);
+    if (R.generated) items.push(["analyzed", R.generated]);
+    items.forEach(([k, v]) => $("meta").appendChild(el("span", null, [k + " ", el("b", { text: String(v) })])));
+    $("mock").hidden = !R.mock;
+  }
+
+  /* ---------- verdict ---------- */
+  function verdict() {
+    const v = R.verdict || {}, names = { supported: "Thesis supported", not_supported: "Thesis not supported", unclear: "Unclear", no_data: "No data" };
+    const st = $("v-status"); st.classList.add(v.status || "no_data");
+    st.querySelector("span").textContent = (names[v.status] || "No data") + (v.measure ? " · measured by " + v.measure : "");
+    $("v-head").textContent = v.headline || "";
+    (v.reasons || []).forEach((r) => $("v-reasons").appendChild(el("li", { text: r })));
+    $("v-rule").textContent = v.rule ? "How this is decided: " + v.rule : "";
+  }
+
+  /* ---------- results table ---------- */
+  function deltaCell(c, dec) {
+    const td = el("td", { class: "r" });
+    if (!c || !isNum(c.mean)) { td.appendChild(el("span", { class: "v dim", text: "n/a" })); return td; }
+    const sig = c.exceeds_noise === true;
+    td.appendChild(el("span", { class: "v" + (sig ? " sig yes" : c.exceeds_noise === false ? " dim" : ""), text: sgn(c.mean, dec) }));
+    const sv = Object.keys(c.seeds || {}).sort().map((k) => sgn(c.seeds[k], dec)).join("  ");
+    if (sv) td.appendChild(el("span", { class: "seeds", text: sv }));
+    return td;
+  }
+  function resultsTable() {
+    const t = $("results"), ab = (R.ability || {}).available ? R.ability.arms : null;
+    const head = ["Arm", "Δ MEM", "Δ TALK", "Δ LORE", "Δ capacity", "Δ AGG", "Δ held-out ability"];
+    t.appendChild(el("thead", null, [el("tr", null, head.map((h, i) => el("th", { class: i ? "r" : "", text: h })))]));
+    const tb = el("tbody");
+    (R.arms || []).forEach((arm) => {
+      const ch = (R.change || {})[arm] || {}, tr = el("tr", { class: isRef(arm) ? "ref" : "" });
+      tr.appendChild(el("td", null, [el("span", { class: "arm", text: arm }), el("span", { class: "role", text: tag(arm) })]));
+      ["MEM", "TALK", "LORE", "CAP", "AGG"].forEach((g) => tr.appendChild(deltaCell(ch[g], 2)));
+      const a = ab && ab[arm] ? ab[arm].mean : null, ac = deltaCell(a, 3);
+      if (a && isNum(a.start)) {
+        const line = ac.querySelector(".seeds") || ac.appendChild(el("span", { class: "seeds" }));
+        line.textContent = fx(a.start, 3) + " → " + fx(a.end, 3);
+      }
+      tr.appendChild(ac);
+      tb.appendChild(tr);
+    });
+    t.appendChild(tb);
+    const nz = R.noise || {}, an = ((R.ability || {}).noise || {}).mean;
+    const band = (z, d) => z && isNum(z.band) ? "±" + z.band.toFixed(d) : "unknown";
+    $("table-note").textContent =
+      "◆ and bold: the mean change differs from what the DRIFT arm did by more than the DRIFT noise band " +
+      "(twice the spread of DRIFT across its seeds). Small grey figures are the single seeds; under held-out ability they are the before and after scores, and the chart below shows its seeds. Noise bands: " +
+      GENES.map((g) => g + " " + band(nz[g], 2)).join(", ") + ", capacity " + band(nz.CAP, 2) +
+      ", ability " + band(an, 3) + ". DRIFT is the noise floor: parents are chosen at random. " +
+      "SOLO is the baseline: selection on energy with no social pressure.";
+  }
+
+  /* ---------- ability dumbbells ---------- */
+  function abilityChart() {
+    const host = $("ch-ability"), A = R.ability || {};
+    if (!A.available) { empty(host, "No held-out ability surface was found, so ability could not be computed."); return; }
+    const per = {}; (A.per_run || []).forEach((r) => { (per[r.arm] = per[r.arm] || []).push(r); });
+    const rows = [];
+    (R.arms || []).forEach((arm) => {
+      const c = (A.arms[arm] || {}).mean; if (!c || !isNum(c.start)) return;
+      const seeds = (per[arm] || []).map((r) => ({ seed: r.seed, b: (r.before || {}).mean, a: (r.after || {}).mean })).filter((z) => isNum(z.a));
+      const tests = ["H1", "H2", "H3"].map((t) => { const z = (A.arms[arm] || {})[t]; return z && isNum(z.start) ? `<div class="row">${t} ${fx(z.start, 3)} → ${fx(z.end, 3)}</div>` : ""; }).join("");
+      rows.push({
+        arm: arm, sub: tag(arm), start: c.start, end: c.end, seeds: seeds, sig: c.exceeds_noise === true,
+        extent: [c.start, c.end].concat(seeds.map((z) => z.a)), valueText: sgn(c.mean, 3),
+        tip: `<div class="h">${arm}</div><div class="row">mean ${fx(c.start, 3)} → ${fx(c.end, 3)} (${sgn(c.mean, 3)})</div>${tests}` +
+          seeds.map((z) => `<div class="row mut">seed ${esc(z.seed)}: ${fx(z.b, 3)} → ${fx(z.a, 3)}</div>`).join("")
+      });
+    });
+    rowChart(host, {
+      rows: rows, label: "Held-out ability at generation 0 and in the final population, per arm",
+      draw: (svg, r, x, cy) => {
+        svg.appendChild(s("line", { x1: x(r.start), x2: x(r.end), y1: cy, y2: cy, "stroke-width": 2, style: "stroke:var(--axis)" }));
+        r.seeds.forEach((z) => svg.appendChild(s("circle", { cx: x(z.a), cy: cy, r: 3, style: `fill:${isRef(r.arm) ? "var(--ref)" : "var(--s1)"};opacity:.4` })));
+        svg.appendChild(s("circle", { cx: x(r.start), cy: cy, r: 4.5, "stroke-width": 2, style: "fill:var(--surface);stroke:var(--ink-2)" }));
+        svg.appendChild(s("circle", { class: "ring", cx: x(r.end), cy: cy, r: 5.5, style: `fill:${isRef(r.arm) ? "var(--ref)" : "var(--s1)"}` }));
+      }
+    });
+  }
+
+  /* ---------- capacity bars ---------- */
+  function capacityChart() {
+    const host = $("ch-capacity"), rows = [], nz = (R.noise || {}).CAP;
+    (R.arms || []).forEach((arm) => {
+      const c = ((R.change || {})[arm] || {}).CAP; if (!c || !isNum(c.mean)) return;
+      const seeds = Object.keys(c.seeds || {}).sort().map((k) => ({ seed: k, v: c.seeds[k] })).filter((z) => isNum(z.v));
+      rows.push({
+        arm: arm, sub: tag(arm), mean: c.mean, seeds: seeds, sig: c.exceeds_noise === true,
+        extent: [0, c.mean].concat(seeds.map((z) => z.v)), valueText: sgn(c.mean, 2),
+        tip: `<div class="h">${arm}</div><div class="row">capacity ${fx(c.start, 2)} → ${fx(c.end, 2)} (${sgn(c.mean, 2)})</div>` +
+          seeds.map((z) => `<div class="row mut">seed ${esc(z.seed)}: ${sgn(z.v, 2)}</div>`).join("") +
+          (isNum(c.vs_solo) ? `<div class="row mut">vs SOLO: ${sgn(c.vs_solo, 2)}</div>` : "")
+      });
+    });
+    const band = nz && isNum(nz.band) && isNum(nz.mean) ? { lo: nz.mean - nz.band, hi: nz.mean + nz.band, label: "DRIFT noise band" } : null;
+    rowChart(host, {
+      rows: rows, zero: true, signed: true, band: band, include: band ? [band.lo, band.hi] : [],
+      label: "Change in total capacity per arm, with single seeds and the DRIFT noise band",
+      draw: (svg, r, x, cy) => {
+        const col = isRef(r.arm) ? "var(--ref)" : "var(--s1)";
+        bar(svg, x(0), x(r.mean), cy, 14, col);
+        r.seeds.forEach((z) => svg.appendChild(s("circle", { class: "ring", cx: x(z.v), cy: cy, r: 4, style: `fill:${col}` })));
+      }
+    });
+  }
+
+  /* ---------- gene trajectories ---------- */
+  function trajectories() {
+    GENES.forEach((g) => $("gene-legend").appendChild(el("span", null, [el("i", { class: "sw", style: "background:" + GENE_COLOR[g] }), g])));
+    $("gene-legend").appendChild(el("span", null, [el("i", { class: "thin" }), "one seed"]));
+    const host = $("ch-traj"), T = R.trajectories || {};
+    if (!(R.arms || []).length) { empty(host, "No runs."); return; }
+    (R.arms || []).forEach((arm) => {
+      const t = T[arm]; if (!t) return;
+      const panel = el("div", { class: "card panel" }, [el("div", { class: "ttl" }, [el("span", { class: "arm", text: arm }), el("span", { class: "role", text: role(arm) && role(arm) !== "theory" ? role(arm) + " · " + theory(arm) : theory(arm) })])]);
+      const seedKeys = Object.keys(t.seeds || {}).sort();
+      lineChart(panel, {
+        xs: t.gens, yDomain: [0, 4], yTicks: [0, 1, 2, 3, 4], xLabel: "generation", xName: "generation", title: arm, labelW: 70,
+        label: "Mean gene levels over generations in arm " + arm,
+        series: GENES.map((g) => ({ name: g, color: GENE_COLOR[g], mean: t.mean[g], seeds: seedKeys.map((k) => t.seeds[k][g]) }))
+      });
+      host.appendChild(panel);
+    });
+  }
+
+  /* ---------- findings, foraging, selection gradient ---------- */
+  function findings() {
+    const F = ((R.extras || {}).findings) || null; if (!F) return;
+    [["for", "f-for"], ["against", "f-against"], ["untested", "f-untested"]].forEach(([k, id]) => (F[k] || []).forEach((t) => {
+      const cut = t.indexOf(". "), li = el("li");
+      if (cut > 0 && cut < 70) { li.appendChild(el("b", { text: t.slice(0, cut + 1) })); li.appendChild(document.createTextNode(t.slice(cut + 1))); } else li.textContent = t;
+      $(id).appendChild(li);
+    }));
+    $("sec-findings").hidden = false;
+  }
+  function forage() {
+    const X = R.extras || {}, Fo = X.foraging, Gr = X.gradient; if (!Fo || !Gr) return;
+    const armCell = (arm) => el("td", null, [el("span", { class: "arm", text: arm }), el("span", { class: "role", text: tag(arm) })]);
+    const num = (txt, cls) => el("td", { class: "r" }, [el("span", { class: "v" + (cls || ""), text: txt })]);
+    const t = $("forage");
+    t.appendChild(el("thead", null, [el("tr", null, ["Arm", "Success, first", "Success, last", "Net energy, first", "Net energy, last"].map((h, i) => el("th", { class: i ? "r" : "", text: h })))]));
+    t.appendChild(el("tbody", null, (R.arms || []).filter((a) => Fo[a]).map((a) => el("tr", { class: isRef(a) ? "ref" : "" }, [
+      armCell(a), num(fx(Fo[a].success_start, 2), " dim"), num(fx(Fo[a].success_end, 2), Fo[a].success_end - Fo[a].success_start > 0.2 ? " sig" : ""),
+      num(sgn(Fo[a].net_start, 1), " dim"), num(sgn(Fo[a].net_end, 1))]))));
+    const g = $("gradient"), genes = ["MEM", "TALK", "LORE", "AGG"];
+    g.appendChild(el("thead", null, [el("tr", null, ["Arm"].concat(genes.map((x) => x + " vs net energy")).map((h, i) => el("th", { class: i ? "r" : "", text: h })))]));
+    g.appendChild(el("tbody", null, (R.arms || []).filter((a) => Gr[a]).map((a) => el("tr", { class: isRef(a) ? "ref" : "" }, [armCell(a)].concat(
+      genes.map((x) => { const v = (Gr[a][x] || {}).net; return num(sgn(v, 2), Math.abs(v) >= 0.15 ? " sig" : " dim"); }))))));
+    $("sec-forage").hidden = false;
+  }
+  function exileNote() {
+    const E = (R.extras || {}).exile || {}, d = E.DOMEST; if (!d) return "";
+    return " The vote exiled " + d.exiled_total + " members in " + d.generations + " generations: about " + Math.round(d.votes_per_generation) + " of " + d.members +
+      " members named anyone, and exile needed " + d.threshold + " votes against one member. So this chart compares grabbing with and without a public board, not with and without punishment.";
+  }
+
+  /* ---------- AGG contrast ---------- */
+  function aggChart() {
+    const A = R.agg_contrast || {}, host = $("ch-agg"), sub = $("agg-sub");
+    if (!A.available) { sub.textContent = "This comparison needs both the ALPHA and DOMEST arms."; empty(host, "Not available."); return; }
+    const f = A.final_diff || {}, sv = Object.keys(f.seeds || {}).sort().map((k) => sgn(f.seeds[k], 2)).join(", ");
+    sub.textContent = "Mean AGG level in the two arms that differ only by the exile vote. AGG changed " + sgn(f.alpha_change, 2) +
+      " in ALPHA and " + sgn(f.domest_change, 2) + " in DOMEST. Difference per seed, DOMEST minus ALPHA: " + (sv || "n/a") + "." + exileNote();
+    const n = Math.max(A.ALPHA.gens.length, A.DOMEST.gens.length), xs = Array.from({ length: n }, (_, i) => i);
+    const mk = (arm, color) => ({ name: arm, color: color, mean: A[arm].mean, seeds: Object.keys(A[arm].seeds).sort().map((k) => A[arm].seeds[k]) });
+    lineChart(host, { xs: xs, w: 600, h: 240, yDomain: [0, 4], yTicks: [0, 1, 2, 3, 4], xLabel: "generation", xName: "generation", title: "AGG level", labelW: 92, valDec: 2,
+      label: "Mean AGG level over generations, ALPHA versus DOMEST", series: [mk("ALPHA", "var(--s1)"), mk("DOMEST", "var(--s2)")] });
+  }
+
+  /* ---------- ability surface ---------- */
+  function surface() {
+    const S = R.surface, hm = $("hm"), words = [0, 3, 6, 12, 24], slots = [0, 2, 4, 8, 16];
+    if (!S) { $("sec-surface").appendChild(el("p", { class: "small", text: "No held-out surface file was found." })); $("sec-surface").querySelector(".two").hidden = true; return; }
+    const cells = S.H2 || {}, vals = Object.keys(cells).map((k) => (cells[k] || {}).mean).filter(isNum);
+    if (vals.length) {
+      const lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
+      const top = el("tr", null, [el("th", { text: "MEM \\ TALK" })].concat(words.map((w, t) => el("th", { text: t + " (" + w + "w)" }))));
+      hm.appendChild(el("thead", null, [top]));
+      const tb = el("tbody");
+      for (let mLev = 4; mLev >= 0; mLev--) {
+        const tr = el("tr", null, [el("th", { text: mLev + " (" + slots[mLev] + ")" })]);
+        for (let t = 0; t < 5; t++) {
+          const c = cells[mLev + "," + t], td = el("td", { tabindex: 0 });
+          if (c && isNum(c.mean)) {
+            const b = Math.min(5, Math.floor((c.mean - lo) / ((hi - lo) || 1) * 6));
+            td.style.background = `var(--hm-${b})`; td.style.color = `var(--hm-t${b})`; td.textContent = c.mean.toFixed(2);
+            bindTip(td, () => `<div class="h">H2 at MEM ${mLev}, TALK ${t}</div><div class="row">mean ${fx(c.mean, 3)}</div><div class="row mut">sd ${fx(c.sd, 3)}, n ${c.n == null ? "n/a" : c.n}</div>`);
+          } else { td.textContent = "n/a"; td.style.color = "var(--muted)"; }
+          tr.appendChild(td);
+        }
+        tb.appendChild(tr);
+      }
+      hm.appendChild(tb);
+      const sc = $("hmscale"); sc.appendChild(el("span", { text: lo.toFixed(2) }));
+      for (let b = 0; b < 6; b++) sc.appendChild(el("i", { style: `background:var(--hm-${b})` }));
+      sc.appendChild(el("span", { text: hi.toFixed(2) + " score. Rows: MEM level (records visible). Columns: TALK level (words)." }));
+    } else empty(hm.parentNode, "No H2 results.");
+    const get = (T) => [0, 1, 2, 3, 4].map((mLev) => { const c = (S[T] || {})[String(mLev)]; return c && isNum(c.mean) ? c.mean : null; });
+    const h1 = get("H1"), h3 = get("H3"), all = h1.concat(h3).filter(isNum);
+    if (all.length) {
+      lineChart($("ch-h13"), { xs: [0, 1, 2, 3, 4], w: 360, h: 220, yDomain: [0, 1], yTicks: [0, 0.25, 0.5, 0.75, 1], xLabel: "MEM level", xName: "MEM level", title: "Score", points: true, labelW: 60, valDec: 2,
+        label: "H1 and H3 scores by MEM level", series: [{ name: "H1", color: "var(--s1)", mean: h1 }, { name: "H3", color: "var(--s2)", mean: h3 }] });
+    } else empty($("ch-h13"), "No H1 or H3 results.");
+  }
+
+  /* ---------- sanity checks ---------- */
+  function sanity() {
+    const t = $("sanity"), list = R.sanity || [];
+    if (!list.length) { t.parentNode.replaceWith(el("p", { class: "small", text: "No checks could be computed from the arms present." })); return; }
+    t.appendChild(el("thead", null, [el("tr", null, ["Check", "Expected", "Observed change", "Seeds", "Result"].map((h) => el("th", { text: h })))]));
+    const tb = el("tbody");
+    list.forEach((c) => {
+      const sv = Object.keys(c.seeds || {}).sort().map((k) => sgn(c.seeds[k], 2)).join("  ");
+      tb.appendChild(el("tr", null, [
+        el("td", { text: c.name }), el("td", null, [el("span", { class: "mono", text: c.gene + " should " + c.expected })]),
+        el("td", null, [el("span", { class: "v", text: sgn(c.observed, 2) })]), el("td", null, [el("span", { class: "v dim", text: sv })]),
+        el("td", { text: (c.pass ? "As expected" : "Not as expected") + (c.beyond_noise === true ? ", beyond noise" : c.beyond_noise === false ? ", within noise" : "") })]));
+    });
+    t.appendChild(tb);
+  }
+
+  /* ---------- method ---------- */
+  function method() {
+    const c = R.config || {};
+    $("method-text").textContent =
+      "The model's weights never change. What evolves is a four-gene genome that limits how much memory, message length and inherited notes an agent may use. " +
+      "Each capacity level costs " + (c.cost != null ? c.cost : "a fixed amount of") + " energy per lifetime. Agents forage for plants with hidden recipes" +
+      (c.R != null ? " over " + c.R + " rounds" : "") + ". The half with the most net energy each leave two offspring, with blind mutations. " +
+      "No score for intelligence exists anywhere in the loop.";
+    const g = $("genes");
+    g.appendChild(el("thead", null, [el("tr", null, ["Gene", "Levels 0 to 4 give", "Costs energy"].map((h) => el("th", { text: h })))]));
+    const rows = [["MEM", "0, 2, 4, 8, 16 own past trials visible", "yes"], ["TALK", "0, 3, 6, 12, 24 words per message", "yes"], ["LORE", "0, 10, 25, 50, 100 words of inherited notes", "yes"], ["AGG", "0, .2, .4, .6, .8 chance of grabbing a shared harvest", "no"]];
+    g.appendChild(el("tbody", null, rows.map((r) => el("tr", null, [el("td", null, [el("span", { class: "arm", text: r[0] })]), el("td", { text: r[1] }), el("td", { text: r[2] })]))));
+    const a = $("arms"), yn = (b) => b ? "yes" : "no";
+    a.appendChild(el("thead", null, [el("tr", null, ["Arm", "Tests", "Foraging", "Grab", "Vote", "Notes", "Parents"].map((h) => el("th", { text: h })))]));
+    a.appendChild(el("tbody", null, (R.arms || []).map((arm) => { const m = (R.arm_meta || {})[arm] || {}; return el("tr", null, [
+      el("td", null, [el("span", { class: "arm", text: arm })]), el("td", { text: m.theory || "" }), el("td", { text: m.foraging || "" }),
+      el("td", { text: yn(m.grab) }), el("td", { text: yn(m.vote) }), el("td", { text: yn(m.notes) }), el("td", { text: m.parents || "" })]); })));
+  }
+
+  /* ---------- samples ---------- */
+  function samples() {
+    const S = R.samples || {}, host = $("samples");
+    [["messages", "Messages between partners"], ["gossip", "Gossip on the public board"], ["notes", "Notes left for offspring"]].forEach(([k, title]) => {
+      const card = el("div", { class: "card panel" }, [el("h3", { text: title })]), items = S[k] || [];
+      if (!items.length) card.appendChild(el("p", { class: "small", text: "No examples saved." }));
+      else card.appendChild(el("ul", null, items.map((it) => el("li", null, [
+        el("span", { class: "who", text: [it.arm, "seed " + it.seed, it.gen != null ? "gen " + it.gen : null, it.agent].filter((z) => z != null && z !== "").join(" · ") }),
+        el("span", { class: "txt", text: it.text })]))));
+      host.appendChild(card);
+    });
+  }
+
+  /* ---------- limits ---------- */
+  function limits() {
+    const n = (R.seeds || []).length, runs = R.runs || [], part = runs.filter((r) => !r.complete).length, L = $("limits");
+    const pf = runs.reduce((a, r) => a + (r.parse_fail || 0), 0);
+    [
+      "Frozen weights. The model itself never changed. Only the four genes and, in some arms, the inherited notes evolved.",
+      "The model already knows human strategy. It was trained on human text, so agents did not have to discover cooperation, gossip or note-taking from nothing.",
+      "Held-out scores follow from the capacity genes by construction. Ability is read off a surface indexed by MEM and TALK, so ability can only move when those genes move.",
+      n + " seed" + (n === 1 ? "" : "s") + " per arm is a small sample. The noise band comes from the DRIFT arm's spread across the same few seeds, so it is itself uncertain.",
+      ((R.extras || {}).exile || {}).DOMEST && !R.extras.exile.DOMEST.exiled_total ? "The exile vote never removed anyone, so the self-domestication mechanism did not operate. DOMEST and MEDLEY ran as grabbing arms with a public board." : null,
+      "Guessing was not uniform. With no memory, agents rarely guessed a recipe that repeats one action, so plants with such recipes were harder than the rest.",
+      "One upkeep cost and one world were tried. A different cost of capacity, a longer lifetime or a harder world could change which genes pay.",
+      part ? part + " of " + runs.length + " runs did not finish. Their last played generation stands in for the final population." : "All " + runs.length + " runs finished.",
+      pf ? pf + " model replies could not be parsed and were replaced by a default action." : null
+    ].filter(Boolean).forEach((t) => L.appendChild(el("li", { text: t })));
+    const t = $("ledger");
+    t.appendChild(el("thead", null, [el("tr", null, ["Arm", "Seed", "Generations", "Finished", "Calls", "Spend"].map((h) => el("th", { text: h })))]));
+    t.appendChild(el("tbody", null, runs.map((r) => el("tr", null, [
+      el("td", null, [el("span", { class: "arm", text: r.arm })]), el("td", { class: "num", text: String(r.seed) }),
+      el("td", { class: "num", text: r.gens_done + (r.gens_planned != null ? " of " + r.gens_planned : "") }), el("td", { text: r.complete ? "yes" : "no" }),
+      el("td", { class: "num", text: r.calls != null ? Number(r.calls).toLocaleString("en-US") : "n/a" }),
+      el("td", { class: "num", text: isNum(r.cost_usd) ? "$" + r.cost_usd.toFixed(2) : "n/a" })]))));
+    const w = R.warnings || [];
+    if (w.length) $("warnings").textContent = "Notes from the analysis: " + w.join(" ");
+  }
+
+  if (!R) { $("page").innerHTML = "<p>No results were built into this page. Run python3 -m evo.build_report.</p>"; return; }
+  [header, verdict, findings, resultsTable, forage, abilityChart, capacityChart, trajectories, aggChart, surface, sanity, method, samples, limits].forEach((fn) => {
+    try { fn(); } catch (e) { console.error(fn.name, e); }
+  });
+})();
+</script>

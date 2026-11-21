@@ -1,0 +1,4856 @@
+{
+ "arm": "MEDLEY",
+ "seed": 3,
+ "model": "claude-haiku-5-5",
+ "mock": false,
+ "config": {
+  "N": 16,
+  "R": 12,
+  "G": 12,
+  "cost": 1.5
+ },
+ "complete": true,
+ "plants": [
+  "dosu",
+  "sune",
+  "zozu",
+  "goto"
+ ],
+ "generations": [
+  {
+   "gen": 0,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 10.5,
+     "net": 12.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 2,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Plants need specific 2-step preps; test by trial. Seen: dosu=pound then dry worked; zozu=dry then pound worked (grab both sides gives 2 each, so grab only when alone). sune: soak>roast failed (step2 right), try other step1. Partner a6 was cooperative; keep messaging steps before choosing."
+    },
+    {
+     "id": "a1",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 13,
+     "upkeep": 4.5,
+     "net": 8.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 7,
+     "upkeep": 0.0,
+     "net": 7.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 5,
+     "upkeep": 9.0,
+     "net": -4.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "a4 and a11 reliably cooperate; soak then dry works for goto, roast for sune, dry/pound for zozu. Avoid a8, who repeatedly failed. Verify each plant's"
+    },
+    {
+     "id": "a4",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 18,
+     "upkeep": 4.5,
+     "net": 13.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 7.5,
+     "net": 10.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 1,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 5,
+     "upkeep": 6.0,
+     "net": -1.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 4.5,
+     "net": 13.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "No records kept from this season, so I have no verified preparations. Next season: test each plant's two-step preparation early, trying pairs of actions systematically and logging which steps succeeded. Share results honestly via remarks. Avoid grabbing unless needed, since mutual grabbing halves rewards. Watch for exile voting and cooperate"
+    },
+    {
+     "id": "a8",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 20,
+     "upkeep": 3.0,
+     "net": 17.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 9,
+     "upkeep": 7.5,
+     "net": 1.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known prep: zozu dry>pound, goto soak>dry, dosu pound>dry. Expect grabs"
+    },
+    {
+     "id": "a10",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 4,
+      "AGG": 1
+     },
+     "gross": 13,
+     "upkeep": 13.5,
+     "net": -0.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plant recipes seen: dosu = pound then dry (reliable, worked every time). goto = soak then dry (worked once as second). sune failed 3 times with first step wrong; tried soak, pound, dry as step1 with roast as step2 - none worked, so try other step1 options (e.g. roast) early. Partner a12 was reliable for dosu and goto; coordinate via messages before each round and check the first step carefully."
+    },
+    {
+     "id": "a11",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 11,
+     "upkeep": 4.5,
+     "net": 6.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "I have no records from this season, so I cannot confirm any plant's 2-step preparation. Next season, test each plant early and log which steps worked. Coordinate with partners via messages before choosing, and share outcomes honestly. Avoid grabbing unless needed; splitting successful harvests keeps trust and reduces exile risk."
+    },
+    {
+     "id": "a12",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 13,
+     "upkeep": 9.0,
+     "net": 4.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: pound then dry works reliably. Goto: soak then dry worked once. Sune: roast as step 2 failed with several step 1s; try other step"
+    },
+    {
+     "id": "a13",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 17,
+     "upkeep": 13.5,
+     "net": 3.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plant steps vary by season; re-test. Zozu: dry then pound"
+    },
+    {
+     "id": "a14",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 41,
+     "upkeep": 13.5,
+     "net": 27.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Goto prep appears to be soak then dry; dosu prep is pound then dry (worked with several partners). Zozu: dry then pound worked when both"
+    },
+    {
+     "id": "a15",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 1
+     },
+     "gross": 5,
+     "upkeep": 9.0,
+     "net": -4.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Two rounds logged with a1. Goto: second step soak worked with first step dry (OK, +4 split). Dosu: first step pound worked with second step dry; a1 grabbed and took 7, I got 1. Lesson: expect grabbers; agree on steps by public remark first, and avoid pairing where a partner grabs unless the split is fair. Check each plant's preparation again next season, since it may change."
+    }
+   ],
+   "mean": {
+    "MEM": 2.062,
+    "TALK": 1.375,
+    "LORE": 1.562,
+    "AGG": 2.375,
+    "gross": 14.75,
+    "net": 7.25,
+    "success_rate": 0.479
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "pound",
+     "dry"
+    ],
+    "sune": [
+     "roast",
+     "roast"
+    ],
+    "zozu": [
+     "dry",
+     "pound"
+    ],
+    "goto": [
+     "soak",
+     "dry"
+    ]
+   }
+  },
+  {
+   "gen": 1,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 16,
+     "upkeep": 13.5,
+     "net": 2.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Zozu: dry then pound (worked repeatedly as first). Dosu: pound then dry (worked as first and second). Goto: soak then dry per prior notes; roast"
+    },
+    {
+     "id": "a1",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 21,
+     "upkeep": 12.0,
+     "net": 9.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune step2=roast (confirmed twice); sune step1 is not dry or soak. Goto step2 is not dry (soak>dry failed), so try pound or roast. Zozu: dry"
+    },
+    {
+     "id": "a2",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 3.0,
+     "net": 10.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 3.0,
+     "net": 35.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 10,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 24,
+     "upkeep": 4.5,
+     "net": 19.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Goto: soak then dry (reported). Dosu: pound then dry (reported). Zozu: dry then pound (reported). Sune: untested, try pairs systematically. Verify each before relying on it; log results. Avoid grabbing unless needed. Cooperate, don't exile honest partners."
+    },
+    {
+     "id": "a5",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 26,
+     "upkeep": 4.5,
+     "net": 21.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Records were not kept this season, so treat preparations as unverified. Goto: soak then dry (reported). Dosu: pound then dry (reported). Zozu: dry then pound (reported). Sune: untested; try pairs systematically and log results. Avoid grabbing unless needed. Check exile votes."
+    },
+    {
+     "id": "a6",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 12,
+     "upkeep": 4.5,
+     "net": 7.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a4",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 17,
+     "upkeep": 4.5,
+     "net": 12.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Goto: soak then dry (confirmed r11 failure was step1). Dosu:"
+    },
+    {
+     "id": "a8",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 42,
+     "upkeep": 9.0,
+     "net": 33.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preps may change between seasons; verify by trial. Last season: dosu=pound then dry; zozu=dry then pound (both worked). goto soak>roast FAILED (step2 wrong), so try soak>dry or other. sune: soak>roast failed; try other step1. Message steps before choosing. Grab only when alone with a success; both grabbing gives 2 each."
+    },
+    {
+     "id": "a9",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 26,
+     "upkeep": 9.0,
+     "net": 17.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: pound then dry (worked). Zozu: dry then pound (worked). Goto: soak then dry (reported, unverified). Sune: soak>roast failed, pound>roast failed (step2 roast right? unclear); try other step2 like dry or soak. Message steps before choosing. Grab only when alone; mutual grab gives 2 each."
+    },
+    {
+     "id": "a10",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 27,
+     "upkeep": 7.5,
+     "net": 19.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 13,
+     "upkeep": 7.5,
+     "net": 5.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a1",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 13,
+     "upkeep": 4.5,
+     "net": 8.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a1",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 15,
+     "upkeep": 1.5,
+     "net": 13.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 20,
+     "upkeep": 0.0,
+     "net": 20.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 0.0,
+     "net": 23.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.188,
+    "TALK": 1.438,
+    "LORE": 1.062,
+    "AGG": 3.125,
+    "gross": 21.625,
+    "net": 16.094,
+    "success_rate": 0.656
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "pound",
+     "dry"
+    ],
+    "sune": [
+     "roast",
+     "roast"
+    ],
+    "zozu": [
+     "dry",
+     "pound"
+    ],
+    "goto": [
+     "pound",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 2,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a3",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 17,
+     "upkeep": 4.5,
+     "net": 12.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 20,
+     "upkeep": 3.0,
+     "net": 17.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 12,
+     "upkeep": 9.0,
+     "net": 3.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preps may change; verify by trial. Known last season: dosu=pound>dry, zozu=dry>pound worked. goto: pound>soak succeeded (r12); soak>roast failed. sune: roast>pound failed step2 (step1 roast right?); try other combos. Message steps before choosing. Grab only when alone with success."
+    },
+    {
+     "id": "a3",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 9,
+     "upkeep": 12.0,
+     "net": -3.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified so far: dosu = pound then dry; zozu = dry then pound; goto = pound then soak (pound>soak worked, goto soak>roast failed). Sune still unknown: soak>roast failed, so try other step1/step2 pairs. Always message your intended steps before choosing. Grab only when alone with a success; if both grab, each gets 2 instead of 4. Check preps by trial since they may change."
+    },
+    {
+     "id": "a4",
+     "parent": "a15",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 10,
+     "upkeep": 0.0,
+     "net": 10.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a15",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 24,
+     "upkeep": 0.0,
+     "net": 24.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 15,
+     "upkeep": 7.5,
+     "net": 7.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations are unverified and may change. Last season's records show sune: roast then roast worked (both grabbed). Goto: pound then soak worked once (a5 grabbed, I got 1). Test dosu and zozu pairs systematically and log every result. Grab only when needed; check exile votes."
+    },
+    {
+     "id": "a7",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 28,
+     "upkeep": 6.0,
+     "net": 22.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Records were not kept, so log every round: plant, both steps, outcome. Previous notes are unverified; test goto, dosu, zozu first with soak/dry/pound/roast pairs. Sune is untested: try pairs systematically. Avoid grabbing unless needed. Check exile votes."
+    },
+    {
+     "id": "a8",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 27,
+     "upkeep": 1.5,
+     "net": 25.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 21,
+     "upkeep": 0.0,
+     "net": 21.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 5,
+     "upkeep": 4.5,
+     "net": 0.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Prior reports (unverified this season): Goto: soak then dry. Dosu: pound then dry. Zozu: dry then pound. Sune still untested; try pairs systematically and log results. Verify before relying. Avoid grabbing unless needed; cooperate; don't exile honest partners."
+    },
+    {
+     "id": "a11",
+     "parent": "a4",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 16,
+     "upkeep": 6.0,
+     "net": 10.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known (prior season, may change): goto=soak then dry; dosu=pound then dry; zozu=dry then pound. Sune still untested. This season: dosu r11 soak>dry OK (conflicting, so preparations changed; re-verify). Goto r12 pound>soak OK. Verify before relying; log results; grab only if needed; don't exile honest partners."
+    },
+    {
+     "id": "a12",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 15,
+     "upkeep": 7.5,
+     "net": 7.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 6,
+     "upkeep": 7.5,
+     "net": -1.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a9",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 11,
+     "upkeep": 12.0,
+     "net": -1.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: Dosu = pound then dry. Zozu = dry then pound (dry>pound gave +4 with a10). Sune: roast as step2 failed twice (with pound and roast as step1); still unknown, try soak or dry as step2 and message your step first. Goto: soak then dry is unverified, test it. Grab only when alone; mutual grab gives 2 each, so avoid grabbing when partner may too."
+    },
+    {
+     "id": "a15",
+     "parent": "a9",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 24,
+     "upkeep": 9.0,
+     "net": 15.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: pound then dry worked. Zozu: dry then pound worked (last season's first-step dry, second pound). Goto: pound>soak worked when both grabbed; soak>dry reported. Sune: soak>roast and pound>roast failed; try dry or soak as step2. Message steps before choosing. Grab only when alone; mutual grab gives 2 each."
+    }
+   ],
+   "mean": {
+    "MEM": 0.875,
+    "TALK": 1.25,
+    "LORE": 1.625,
+    "AGG": 3.688,
+    "gross": 16.25,
+    "net": 10.625,
+    "success_rate": 0.583
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "soak",
+     "dry"
+    ],
+    "sune": [
+     "roast",
+     "roast"
+    ],
+    "zozu": [
+     "dry",
+     "pound"
+    ],
+    "goto": [
+     "pound",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 3,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -3,
+     "upkeep": 4.5,
+     "net": -7.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "No records kept. Coordinate step pairs via messages early; test"
+    },
+    {
+     "id": "a1",
+     "parent": "a8",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -3,
+     "upkeep": 1.5,
+     "net": -4.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 5,
+     "upkeep": 0.0,
+     "net": 5.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 19,
+     "upkeep": 0.0,
+     "net": 19.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": -6,
+     "upkeep": 7.5,
+     "net": -13.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Log every round: plant, both steps, outcome. Zozu: dry-dry and dry-soak failed (step2 wrong), so try other step2 options (roast, pound) with dry first. Test dosu, goto, sune systematically with all four actions. Avoid grabbing unless needed. Check exile votes."
+    },
+    {
+     "id": "a5",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 3,
+     "upkeep": 6.0,
+     "net": -3.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Records were kept by no one, so log each round: plant, both steps, outcome. Previous advice is unverified. Plant preparations may change; test all four actions per plant, starting with goto, dosu, zozu, then sune. Share step results in remarks. Avoid grabbing unless needed. Check exile votes each round."
+    },
+    {
+     "id": "a6",
+     "parent": "a9",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 2,
+     "upkeep": 1.5,
+     "net": 0.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "No records kept; test each plant's two-step preparation early, share"
+    },
+    {
+     "id": "a7",
+     "parent": "a9",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 0.0,
+     "net": -7.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 25,
+     "upkeep": 3.0,
+     "net": 22.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 12,
+     "upkeep": 3.0,
+     "net": 9.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a15",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 13,
+     "upkeep": 10.5,
+     "net": 2.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: pound then dry worked (soak>dry also OK). Zozu: dry then pound worked. Goto: pound then soak worked. Sune: soak/roast/pound-first failed; try dry or soak as step2 with a different step1. Message steps first. Grab only when alone; mutual grab gives 2 each."
+    },
+    {
+     "id": "a11",
+     "parent": "a15",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 9,
+     "upkeep": 7.5,
+     "net": 1.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: pound then dry worked last season. Zozu: dry then pound worked. Goto: pound then soak worked when both grabbed. Sune: unknown; try soak then"
+    },
+    {
+     "id": "a12",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 6.0,
+     "net": -3.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: avoid soak as step2; dosu: step2 dry worked. Test"
+    },
+    {
+     "id": "a13",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 10,
+     "upkeep": 4.5,
+     "net": 5.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 10,
+     "upkeep": 0.0,
+     "net": 10.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 10,
+     "upkeep": 3.0,
+     "net": 7.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "No records kept; try each plant's steps early, share honest"
+    }
+   ],
+   "mean": {
+    "MEM": 0.875,
+    "TALK": 0.625,
+    "LORE": 0.938,
+    "AGG": 3.75,
+    "gross": 6.375,
+    "net": 2.719,
+    "success_rate": 0.406
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "soak",
+     "dry"
+    ],
+    "sune": [
+     "soak",
+     "roast"
+    ],
+    "zozu": [
+     "dry",
+     "pound"
+    ],
+    "goto": [
+     "pound",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 4,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 1,
+     "upkeep": 3.0,
+     "net": -2.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Grab only when partner is cooperative; check which plant's steps"
+    },
+    {
+     "id": "a1",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 15,
+     "upkeep": 4.5,
+     "net": 10.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test all four actions per plant early; share preparation findings."
+    },
+    {
+     "id": "a2",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -6,
+     "upkeep": 0.0,
+     "net": -6.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 10,
+     "upkeep": 0.0,
+     "net": 10.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 2,
+     "upkeep": 1.5,
+     "net": 0.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "No records kept; test plant preparations early, share steps honestly,"
+    },
+    {
+     "id": "a5",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 2,
+     "upkeep": 0.0,
+     "net": 2.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a9",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 11,
+     "upkeep": 4.5,
+     "net": 6.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a9",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -3,
+     "upkeep": 3.0,
+     "net": -6.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a15",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": -1,
+     "upkeep": 6.0,
+     "net": -7.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Records were not kept this season. Log each plant's working step pair as soon as found, since preparations may change. Share steps honestly and avoid"
+    },
+    {
+     "id": "a9",
+     "parent": "a15",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -4,
+     "upkeep": 3.0,
+     "net": -7.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Preparations may change; test each plant's steps early and record"
+    },
+    {
+     "id": "a10",
+     "parent": "a13",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 2,
+     "upkeep": 4.5,
+     "net": -2.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a13",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 7,
+     "upkeep": 4.5,
+     "net": 2.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 0.0,
+     "net": 8.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -3,
+     "upkeep": 0.0,
+     "net": -3.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a10",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 21,
+     "upkeep": 10.5,
+     "net": 10.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: soak then dry worked (pound>dry also OK). Goto: pound then soak worked. Zozu: dry then pound worked. Sune: untested with dry/soak first; try dry or soak as step 1 with varied step 2. Message steps first. Grabbing with a partner gave only 2 each; grab mainly when alone."
+    },
+    {
+     "id": "a15",
+     "parent": "a10",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 2,
+     "upkeep": 10.5,
+     "net": -8.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: pound then dry worked (soak then dry also OK). Zozu: dry then pound worked. Goto: pound then soak worked. Sune: soak, roast, pound-first failed; try dry or soak as step2 with a different step1. Message steps first. Grab only when alone; mutual grab gives 2 each. Verify plant prep"
+    }
+   ],
+   "mean": {
+    "MEM": 1.125,
+    "TALK": 0.438,
+    "LORE": 0.75,
+    "AGG": 3.812,
+    "gross": 4.0,
+    "net": 0.531,
+    "success_rate": 0.354
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "soak",
+     "dry"
+    ],
+    "sune": [
+     "soak",
+     "roast"
+    ],
+    "zozu": [
+     "pound",
+     "dry"
+    ],
+    "goto": [
+     "pound",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 5,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 12,
+     "upkeep": 10.5,
+     "net": 1.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: soak then dry works. Goto: pound then soak works. Zozu: dry then pound works (roast>pound failed). Sune: soak>roast worked once (both grabbed, +2). Message your steps first. Grab mainly when alone; grabbing with a partner gives only 2 each."
+    },
+    {
+     "id": "a1",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": -4,
+     "upkeep": 10.5,
+     "net": -14.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: soak then roast worked (with a5). Zozu: dry then pound worked earlier; dry>pound failed this season, so test variants. Goto: pound then soak worked earlier; soak>pound and pound>roast failed. Dosu: soak then dry worked. Message steps first; grab mainly when alone (shared grabs give only 2)."
+    },
+    {
+     "id": "a2",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 9,
+     "upkeep": 6.0,
+     "net": 3.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune needs soak then roast; both grabbing gives +2. Test"
+    },
+    {
+     "id": "a3",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 15,
+     "upkeep": 6.0,
+     "net": 9.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test all four actions per plant early. Known: zozu takes"
+    },
+    {
+     "id": "a4",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -3,
+     "upkeep": 1.5,
+     "net": -4.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -6,
+     "upkeep": 1.5,
+     "net": -7.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test actions early per plant; record which steps worked; share"
+    },
+    {
+     "id": "a6",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 10,
+     "upkeep": 0.0,
+     "net": 10.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -9,
+     "upkeep": 0.0,
+     "net": -9.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 3,
+     "upkeep": 4.5,
+     "net": -1.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a11",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 21,
+     "upkeep": 7.5,
+     "net": 13.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: soak then roast works; grab only when partner also"
+    },
+    {
+     "id": "a12",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -3,
+     "upkeep": 0.0,
+     "net": -3.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a5",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -6,
+     "upkeep": 0.0,
+     "net": -6.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 5,
+     "upkeep": 1.5,
+     "net": 3.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test plant steps early, record what works, share findings honestly,"
+    },
+    {
+     "id": "a15",
+     "parent": "a4",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -6,
+     "upkeep": 0.0,
+     "net": -6.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.312,
+    "TALK": 0.438,
+    "LORE": 0.688,
+    "AGG": 3.75,
+    "gross": 1.5,
+    "net": -2.156,
+    "success_rate": 0.292
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "soak",
+     "dry"
+    ],
+    "sune": [
+     "soak",
+     "roast"
+    ],
+    "zozu": [
+     "pound",
+     "dry"
+    ],
+    "goto": [
+     "soak",
+     "dry"
+    ]
+   }
+  },
+  {
+   "gen": 6,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 5,
+     "upkeep": 9.0,
+     "net": -4.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: soak then roast works; grab only when partner also grabs. Dosu: roast then roast worked once. Goto and zozu: many failures; try varied steps"
+    },
+    {
+     "id": "a1",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 15,
+     "upkeep": 7.5,
+     "net": 7.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast. Goto: soak then dry. Zozu: pound"
+    },
+    {
+     "id": "a2",
+     "parent": "a6",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 24,
+     "upkeep": 0.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a6",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 4,
+     "upkeep": 0.0,
+     "net": 4.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 6.0,
+     "net": 7.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: soak then roast works. Dosu: roast then roast works."
+    },
+    {
+     "id": "a5",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 21,
+     "upkeep": 6.0,
+     "net": 15.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: soak then roast works. Dosu: roast then roast works."
+    },
+    {
+     "id": "a6",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 19,
+     "upkeep": 1.5,
+     "net": 17.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant early; record working step pairs. Sune: soak"
+    },
+    {
+     "id": "a7",
+     "parent": "a14",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 4.5,
+     "net": 8.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant's steps early and record exact working pairs, including which actions failed. Sune: soak then roast worked before, but verify since preparations can"
+    },
+    {
+     "id": "a8",
+     "parent": "a2",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 12,
+     "upkeep": 4.5,
+     "net": 7.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: soak then roast works; grab only when partner also"
+    },
+    {
+     "id": "a9",
+     "parent": "a2",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 6.0,
+     "net": 7.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast worked; sune: soak then roast worked."
+    },
+    {
+     "id": "a10",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 11,
+     "upkeep": 10.5,
+     "net": 0.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: soak then dry worked before; roast>roast worked once (both grabbed). Goto: pound then soak worked before; pound>roast failed twice, so avoid roast on step 2. Zozu: dry then pound worked; roast>pound failed. Sune: soak then roast worked; grab only if partner also grabs. Message steps first; verify preparations, since"
+    },
+    {
+     "id": "a11",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 12,
+     "upkeep": 10.5,
+     "net": 1.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast works (grab when partner does). Sune: soak then roast. Goto: pound then soak. Zozu: dry then pound (roast/pound failed). Check plant"
+    },
+    {
+     "id": "a12",
+     "parent": "a9",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 7,
+     "upkeep": 4.5,
+     "net": 2.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a9",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 11,
+     "upkeep": 4.5,
+     "net": 6.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a12",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 7,
+     "upkeep": 1.5,
+     "net": 5.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a12",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -1,
+     "upkeep": 1.5,
+     "net": -2.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.812,
+    "TALK": 0.5,
+    "LORE": 0.938,
+    "AGG": 3.75,
+    "gross": 11.625,
+    "net": 6.75,
+    "success_rate": 0.51
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "roast",
+     "roast"
+    ],
+    "sune": [
+     "soak",
+     "roast"
+    ],
+    "zozu": [
+     "pound",
+     "dry"
+    ],
+    "goto": [
+     "soak",
+     "dry"
+    ]
+   }
+  },
+  {
+   "gen": 7,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 12,
+     "upkeep": 1.5,
+     "net": 10.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 13,
+     "upkeep": 0.0,
+     "net": 13.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a6",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 0,
+     "upkeep": 0.0,
+     "net": 0.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a6",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 14,
+     "upkeep": 1.5,
+     "net": 12.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: soak first step confirmed last season. Test dosu, zozu,"
+    },
+    {
+     "id": "a4",
+     "parent": "a5",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -1,
+     "upkeep": 6.0,
+     "net": -7.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: pound then dry works. Goto: unknown; roast then dry"
+    },
+    {
+     "id": "a5",
+     "parent": "a5",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 4,
+     "upkeep": 7.5,
+     "net": -3.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plant preps vary by season; test steps early. Goto was"
+    },
+    {
+     "id": "a6",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": -3,
+     "upkeep": 6.0,
+     "net": -9.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Plants' preparations may change between seasons, so verify every plant early. Sune: soak then roast worked last season, but confirm it. Record exact working step pairs and which pairs failed for dosu, zozu, and goto. Share results publicly so partners can match steps quickly."
+    },
+    {
+     "id": "a7",
+     "parent": "a7",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 4,
+     "upkeep": 6.0,
+     "net": -2.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test each plant's 2-step preparation early, logging exact working pairs and failed pairs per plant. Sune: soak then roast worked last season, but verify. Share"
+    },
+    {
+     "id": "a8",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 11,
+     "upkeep": 7.5,
+     "net": 3.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast worked. Sune: pound first; second step not pound or roast, try dry. Zozu: pound first; second not pound, try soak. Goto:"
+    },
+    {
+     "id": "a9",
+     "parent": "a1",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 9.0,
+     "net": 4.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast (worked repeatedly). Zozu: pound then dry (worked with pound first). Goto: unclear; soak-first failed, try other combos. Sune: unknown; pound/soak/roast first"
+    },
+    {
+     "id": "a10",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 25,
+     "upkeep": 4.5,
+     "net": 20.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Goto: pound then dry failed; try soak or other combos."
+    },
+    {
+     "id": "a11",
+     "parent": "a8",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -6,
+     "upkeep": 4.5,
+     "net": -10.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: soak then roast worked before, but r11 failed, so"
+    },
+    {
+     "id": "a12",
+     "parent": "a9",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 2,
+     "upkeep": 6.0,
+     "net": -4.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Dosu: roast then roast worked before. Sune: soak then roast"
+    },
+    {
+     "id": "a13",
+     "parent": "a9",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -4,
+     "upkeep": 7.5,
+     "net": -11.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast worked. Sune: soak then roast worked."
+    },
+    {
+     "id": "a14",
+     "parent": "a4",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 2,
+     "upkeep": 6.0,
+     "net": -4.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: soak then roast works (verified by prior notes). Zozu:"
+    },
+    {
+     "id": "a15",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 12,
+     "upkeep": 7.5,
+     "net": 4.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast works. Sune: soak then roast (not"
+    }
+   ],
+   "mean": {
+    "MEM": 1.562,
+    "TALK": 0.688,
+    "LORE": 1.125,
+    "AGG": 3.812,
+    "gross": 6.125,
+    "net": 1.062,
+    "success_rate": 0.365
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "roast",
+     "roast"
+    ],
+    "sune": [
+     "pound",
+     "dry"
+    ],
+    "zozu": [
+     "pound",
+     "dry"
+    ],
+    "goto": [
+     "soak",
+     "dry"
+    ]
+   }
+  },
+  {
+   "gen": 8,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a10",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 2,
+     "upkeep": 4.5,
+     "net": -2.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Zozu: pound then dry works. Dosu: roast then roast works."
+    },
+    {
+     "id": "a1",
+     "parent": "a10",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 6.0,
+     "net": 2.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast worked. Zozu: pound then dry worked."
+    },
+    {
+     "id": "a2",
+     "parent": "a1",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 2,
+     "upkeep": 0.0,
+     "net": 2.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a1",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 1.5,
+     "net": -3.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 1.5,
+     "net": -3.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Test soak first on dosu and zozu. Goto: pound then"
+    },
+    {
+     "id": "a5",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -6,
+     "upkeep": 1.5,
+     "net": -7.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: soak first step worked before; test dosu, zozu. Goto:"
+    },
+    {
+     "id": "a6",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 15,
+     "upkeep": 1.5,
+     "net": 13.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a0",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -1,
+     "upkeep": 1.5,
+     "net": -2.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 2,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 9.0,
+     "net": 9.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 2,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Zozu: pound,dry. Dosu: roast,roast. Goto: soak,pound. Sune: unknown."
+    },
+    {
+     "id": "a9",
+     "parent": "a15",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 6,
+     "upkeep": 9.0,
+     "net": -3.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 3,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: pound then dry. Zozu: pound then dry. Goto: soak"
+    },
+    {
+     "id": "a10",
+     "parent": "a9",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 2,
+     "upkeep": 6.0,
+     "net": -4.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast>roast. Zozu: pound>dry. Sune: avoid roast. Goto: try soak."
+    },
+    {
+     "id": "a11",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 30,
+     "upkeep": 9.0,
+     "net": 21.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: pound then dry worked repeatedly (a12). Dosu: roast then roast worked. Zozu: pound then dry worked (grab when second). Goto: roast>pound, pound>dry, soak>soak all"
+    },
+    {
+     "id": "a12",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 24,
+     "upkeep": 9.0,
+     "net": 15.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast works. Sune: pound then dry works. Zozu: pound then dry works (soak and roast failed as second steps). Goto: pound then"
+    },
+    {
+     "id": "a13",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -1,
+     "upkeep": 7.5,
+     "net": -8.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Goto: soak then pound worked. Zozu: pound then dry worked."
+    },
+    {
+     "id": "a14",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -4,
+     "upkeep": 0.0,
+     "net": -4.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 15,
+     "upkeep": 0.0,
+     "net": 15.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.812,
+    "TALK": 0.25,
+    "LORE": 0.75,
+    "AGG": 3.688,
+    "gross": 6.625,
+    "net": 2.406,
+    "success_rate": 0.385
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "roast",
+     "roast"
+    ],
+    "sune": [
+     "pound",
+     "dry"
+    ],
+    "zozu": [
+     "pound",
+     "dry"
+    ],
+    "goto": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 9,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 9.0,
+     "net": 4.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 9,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Zozu: pound then dry works (both grab, +2 each). Dosu: roast then roast works. Sune: pound then dry or pound then pound worked. Goto: roast"
+    },
+    {
+     "id": "a1",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 35,
+     "upkeep": 9.0,
+     "net": 26.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 9,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast worked repeatedly (grab when possible). Zozu: pound then dry worked. Goto: soak then pound worked as second; roast>pound failed. Sune: pound>dry"
+    },
+    {
+     "id": "a2",
+     "parent": "a15",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 17,
+     "upkeep": 1.5,
+     "net": 15.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a15",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 0.0,
+     "net": 13.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 39,
+     "upkeep": 9.0,
+     "net": 30.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast works. Sune: pound then dry or pound then pound both worked. Zozu: pound then dry works. Goto: soak then pound worked"
+    },
+    {
+     "id": "a5",
+     "parent": "a12",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 50,
+     "upkeep": 9.0,
+     "net": 41.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 9,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast worked (both seasons). Sune: pound then dry or pound then pound both worked. Zozu: pound then dry worked; pound then pound failed. Goto: soak>soak, roast>pound, pound>dry worked last season; verify before relying. Grabbing when second was often rewarded (+7)."
+    },
+    {
+     "id": "a6",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 20,
+     "upkeep": 1.5,
+     "net": 18.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 30,
+     "upkeep": 1.5,
+     "net": 28.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 9,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a8",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 25,
+     "upkeep": 9.0,
+     "net": 16.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Goto: soak,pound. Zozu: pound,dry. Dosu: roast,roast. Sune: pound,dry worked. Verify"
+    },
+    {
+     "id": "a9",
+     "parent": "a8",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 27,
+     "upkeep": 9.0,
+     "net": 18.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 9,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: pound then dry worked (a12). Dosu: roast,roast. Zozu: pound,dry."
+    },
+    {
+     "id": "a10",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change. Last season: Dosu roast>roast, Zozu pound>dry, Sune pound>dry (also pound>pound worked), Goto roast>pound or soak>pound. Verify each round; grab when second for"
+    },
+    {
+     "id": "a11",
+     "parent": "a1",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 15,
+     "upkeep": 4.5,
+     "net": 10.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 10,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast worked. Goto: soak then pound worked."
+    },
+    {
+     "id": "a12",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 0.0,
+     "net": 38.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 17,
+     "upkeep": 0.0,
+     "net": 17.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 16,
+     "upkeep": 6.0,
+     "net": 10.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: pound then dry worked repeatedly last season; try it first. Zozu: pound then dry worked. Dosu: roast then roast worked. Goto: roast>pound, pound>dry, soak>soak"
+    },
+    {
+     "id": "a15",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 8,
+     "upkeep": 4.5,
+     "net": 3.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast works. Goto: soak then pound works."
+    }
+   ],
+   "mean": {
+    "MEM": 1.938,
+    "TALK": 0.438,
+    "LORE": 1.062,
+    "AGG": 3.375,
+    "gross": 24.75,
+    "net": 19.594,
+    "success_rate": 0.771
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "roast",
+     "roast"
+    ],
+    "sune": [
+     "pound",
+     "pound"
+    ],
+    "zozu": [
+     "pound",
+     "dry"
+    ],
+    "goto": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 10,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a5",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 29,
+     "upkeep": 12.0,
+     "net": 17.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast worked in both seasons. Sune: pound>pound and pound>dry both worked. Zozu: pound>dry worked, pound>pound failed. Goto: soak>soak worked; roast>pound and pound>dry worked last season, but roast>dry failed, so verify before relying. Grabbing as second was often rewarded (+7), but when both grab each gets only +2, so coordinate grabs via messages. a15 and a9 were the partners I recorded; a15 once failed on goto."
+    },
+    {
+     "id": "a1",
+     "parent": "a5",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 23,
+     "upkeep": 12.0,
+     "net": 11.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified preparations (this season): Zozu = pound then dry (worked 4 times). Sune = pound then pound (worked twice). Dosu = roast then roast (worked; pound>roast failed). Goto: pound>pound and soak>pound failed; untested otherwise, last season's soak>soak/roast>pound/pound>dry may have changed. Grabbing when second was often rewarded; grabbing when both grab gives only 2 each, so grab when partner is likely to cooperate. Check records for the plant before choosing steps; a member who is first sets step 1 and cannot see step 2 in advance, so agree on steps via messages."
+    },
+    {
+     "id": "a2",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 17,
+     "upkeep": 0.0,
+     "net": 17.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a12",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 30,
+     "upkeep": 0.0,
+     "net": 30.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 4,
+     "votes_against": 1,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a4",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 42,
+     "upkeep": 9.0,
+     "net": 33.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 2,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Dosu: roast then roast (works across seasons). Sune: pound then dry or pound then pound. Zozu: pound then dry or pound then pound. Goto: soak"
+    },
+    {
+     "id": "a5",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 9,
+     "upkeep": 7.5,
+     "net": 1.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast,roast. Sune: pound,pound. Goto: soak,soak. Zozu: pound,dry. Verify first."
+    },
+    {
+     "id": "a6",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 9,
+     "upkeep": 1.5,
+     "net": 7.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 1.5,
+     "net": 16.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a1",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 17,
+     "upkeep": 9.0,
+     "net": 8.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 9,
+     "grabbed": 10,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast works (grab when possible). Zozu: pound then dry works. Sune: pound then pound or pound then dry works. Goto: soak then"
+    },
+    {
+     "id": "a9",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 15,
+     "upkeep": 7.5,
+     "net": 7.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast worked repeatedly (both seasons). Sune: pound then pound or pound then dry worked. Zozu: pound then dry worked. Goto: soak then"
+    },
+    {
+     "id": "a10",
+     "parent": "a10",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 21,
+     "upkeep": 9.0,
+     "net": 12.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; verify each round. Seen: Dosu roast>roast; Zozu pound>dry; Sune pound>pound or pound>dry; Goto soak>soak worked. Grabbing by a14 cost us shares; consider"
+    },
+    {
+     "id": "a11",
+     "parent": "a10",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 12,
+     "upkeep": 10.5,
+     "net": 1.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 2,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change; verify each round. Last season: Dosu roast>roast worked; Zozu pound>dry worked; Sune pound>pound worked; Goto soak>soak worked (soak>roast, soak>dry failed). Grab when"
+    },
+    {
+     "id": "a12",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 1.5,
+     "net": 31.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 10,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a6",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 28,
+     "upkeep": 1.5,
+     "net": 26.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a9",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 44,
+     "upkeep": 7.5,
+     "net": 36.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 8,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 10.5,
+     "net": 12.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune: pound then pound works. Dosu: roast,roast. Goto: soak,soak. Zozu:"
+    }
+   ],
+   "mean": {
+    "MEM": 2.375,
+    "TALK": 0.562,
+    "LORE": 1.25,
+    "AGG": 3.5,
+    "gross": 23.125,
+    "net": 16.844,
+    "success_rate": 0.719
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "roast",
+     "roast"
+    ],
+    "sune": [
+     "pound",
+     "pound"
+    ],
+    "zozu": [
+     "pound",
+     "dry"
+    ],
+    "goto": [
+     "soak",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 11,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 46,
+     "upkeep": 9.0,
+     "net": 37.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 1,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 14,
+     "upkeep": 7.5,
+     "net": 6.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 6,
+     "votes_against": 1,
+     "exiled": false,
+     "note": "Dosu: roast-roast works. Zozu: pound then dry works. Sune: step2"
+    },
+    {
+     "id": "a2",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 14,
+     "upkeep": 10.5,
+     "net": 3.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast (reliable). Zozu: pound then dry or pound then pound. Goto: soak then soak. Sune: pound then dry failed for me; try"
+    },
+    {
+     "id": "a3",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 16,
+     "upkeep": 9.0,
+     "net": 7.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then roast. Goto: soak then soak (reliable). Zozu and Sune: pound then dry or pound then pound worked before; verify. Grabbing splits rewards;"
+    },
+    {
+     "id": "a4",
+     "parent": "a12",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 9,
+     "upkeep": 3.0,
+     "net": 6.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Coordinate steps openly via messages; both grab when harvest succeeds"
+    },
+    {
+     "id": "a5",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 16,
+     "upkeep": 3.0,
+     "net": 13.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a3",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 12,
+     "upkeep": 0.0,
+     "net": 12.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 4,
+     "upkeep": 3.0,
+     "net": 1.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 6,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a8",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 1.5,
+     "net": 21.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 1.5,
+     "net": 11.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 5,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 11,
+     "upkeep": 12.0,
+     "net": -1.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 7,
+     "grabbed": 8,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast>roast worked in both seasons; reliable. Zozu: pound>dry worked repeatedly (as first and second); pound>pound failed. Sune: pound>dry failed once for me (step1 wrong), pound>pound and pound>dry worked previously; try pound>pound first. Goto: soak>soak worked; roast>dry failed; verify before relying. Partner a1 was consistently reliable and grabbed often; both grabbing yields only +2 each, so agree grab roles by message beforehand. a15 once failed on goto."
+    },
+    {
+     "id": "a11",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 2
+     },
+     "gross": 18,
+     "upkeep": 12.0,
+     "net": 6.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 1,
+     "grabbed": 7,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Zozu: pound>dry worked reliably (pound>pound failed). Dosu: roast>roast worked. Goto: soak>soak worked; roast>pound and pound>dry worked before, roast>dry failed. Sune: pound>pound and pound>dry worked. Partner a0 was reliable and often grabbed; coordinate grabs by message so both don't grab (each gets only 2). Verify plant preparations early since they may change between seasons."
+    },
+    {
+     "id": "a12",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 11,
+     "upkeep": 1.5,
+     "net": 9.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 26,
+     "upkeep": 0.0,
+     "net": 26.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 4,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 1.5,
+     "net": 16.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 6,
+     "grabbed": 5,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 17,
+     "upkeep": 1.5,
+     "net": 15.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 4,
+     "grabbed": 3,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.812,
+    "TALK": 0.5,
+    "LORE": 0.875,
+    "AGG": 3.688,
+    "gross": 16.75,
+    "net": 11.969,
+    "success_rate": 0.604
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "roast",
+     "roast"
+    ],
+    "sune": [
+     "roast",
+     "dry"
+    ],
+    "zozu": [
+     "pound",
+     "dry"
+    ],
+    "goto": [
+     "soak",
+     "soak"
+    ]
+   }
+  }
+ ],
+ "final_population": [
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 2,
+    "LORE": 0,
+    "AGG": 3
+   },
+   "parent": "a0",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 3,
+    "LORE": 0,
+    "AGG": 3
+   },
+   "parent": "a0",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 0,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a13",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 0,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a13",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 3
+   },
+   "parent": "a8",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a8",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a14",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a14",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a15",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a15",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a5",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a5",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 0,
+    "TALK": 0,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a6",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 0,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 3
+   },
+   "parent": "a6",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a9",
+   "inherited": [
+    "",
+    ""
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 4
+   },
+   "parent": "a9",
+   "inherited": [
+    "",
+    ""
+   ]
+  }
+ ],
+ "usage": {
+  "calls": 3513,
+  "cost_usd": 0.5372
+ },
+ "samples": {
+  "messages": [
+   {
+    "gen": 11,
+    "round": 2,
+    "agent": "a2",
+    "to": "a13",
+    "text": "Zozu: pound then"
+   },
+   {
+    "gen": 6,
+    "round": 8,
+    "agent": "a4",
+    "to": "a9",
+    "text": "Sune: soak then"
+   },
+   {
+    "gen": 7,
+    "round": 10,
+    "agent": "a14",
+    "to": "a6",
+    "text": "Not soak; try"
+   },
+   {
+    "gen": 11,
+    "round": 2,
+    "agent": "a11",
+    "to": "a9",
+    "text": "Zozu: pound then"
+   },
+   {
+    "gen": 0,
+    "round": 12,
+    "agent": "a1",
+    "to": "a15",
+    "text": "Dosu: I pound first, you dry?"
+   },
+   {
+    "gen": 9,
+    "round": 2,
+    "agent": "a10",
+    "to": "a12",
+    "text": "Zozu: pound then dry, as before."
+   },
+   {
+    "gen": 1,
+    "round": 6,
+    "agent": "a11",
+    "to": "a14",
+    "text": "a14, I'm opening pound for dosu; my round 4 record shows pound was right as step 1 and soak failed. Please answer dry."
+   },
+   {
+    "gen": 3,
+    "round": 11,
+    "agent": "a15",
+    "to": "a3",
+    "text": "Sune: soak first?"
+   },
+   {
+    "gen": 11,
+    "round": 11,
+    "agent": "a12",
+    "to": "a5",
+    "text": "Dosu: roast roast?"
+   },
+   {
+    "gen": 0,
+    "round": 9,
+    "agent": "a10",
+    "to": "a12",
+    "text": "Dosu: pound first, then dry."
+   },
+   {
+    "gen": 2,
+    "round": 10,
+    "agent": "a13",
+    "to": "a2",
+    "text": "Dosu this round, I'm first. Known: soak then dry worked for dosu per records. I'll play soak; please answer dry as step 2 to"
+   },
+   {
+    "gen": 10,
+    "round": 7,
+    "agent": "a15",
+    "to": "a0",
+    "text": "Dosu worked roast then roast. Try"
+   },
+   {
+    "gen": 7,
+    "round": 2,
+    "agent": "a13",
+    "to": "a6",
+    "text": "Goto is ours now. Try soak"
+   },
+   {
+    "gen": 2,
+    "round": 11,
+    "agent": "a13",
+    "to": "a2",
+    "text": "a2: Sune this round, I'm first. Dosu worked with soak then dry. Please finish sune with pound as step 2; I'll open with roast."
+   },
+   {
+    "gen": 0,
+    "round": 4,
+    "agent": "a9",
+    "to": "a13",
+    "text": "Soak, then roast?"
+   },
+   {
+    "gen": 10,
+    "round": 1,
+    "agent": "a14",
+    "to": "a4",
+    "text": "Let's both try soak first; share"
+   },
+   {
+    "gen": 3,
+    "round": 9,
+    "agent": "a11",
+    "to": "a4",
+    "text": "Zozu: dry then pound? Confirm step"
+   },
+   {
+    "gen": 6,
+    "round": 2,
+    "agent": "a9",
+    "to": "a4",
+    "text": "Dosu: soak then"
+   },
+   {
+    "gen": 10,
+    "round": 6,
+    "agent": "a14",
+    "to": "a10",
+    "text": "Sune: pound then pound worked. Let's"
+   },
+   {
+    "gen": 2,
+    "round": 11,
+    "agent": "a12",
+    "to": "a9",
+    "text": "Dosu this round: I'll open soak, you finish with dry. Please answer with dry as step 2 so we both succeed."
+   }
+  ],
+  "gossip": [
+   {
+    "gen": 2,
+    "round": 9,
+    "agent": "a14",
+    "text": "Sune: soak and pound fail as step 1 (r6, r7). Trying roast"
+   },
+   {
+    "gen": 0,
+    "round": 11,
+    "agent": "a5",
+    "text": "Goto: a9 and a14 report soak then dry worked for several pairs. I'm first with soak; a8, please take dry as second."
+   },
+   {
+    "gen": 6,
+    "round": 11,
+    "agent": "a9",
+    "text": "Dosu: roast then"
+   },
+   {
+    "gen": 0,
+    "round": 7,
+    "agent": "a13",
+    "text": "Goto: r4 with a9 shows soak as step 1 was right, and roast as step 2 failed. Soak then dry matches a14's record. Trying"
+   },
+   {
+    "gen": 5,
+    "round": 3,
+    "agent": "a1",
+    "text": "Zozu: dry then pound per notes."
+   },
+   {
+    "gen": 9,
+    "round": 6,
+    "agent": "a9",
+    "text": "Sune: pound, pound worked for me."
+   },
+   {
+    "gen": 2,
+    "round": 12,
+    "agent": "a12",
+    "text": "Zozu: a15 reported dry then pound. a9, if you open with dry, I'll finish with pound. Please confirm."
+   },
+   {
+    "gen": 3,
+    "round": 2,
+    "agent": "a15",
+    "text": "Pound first, dry"
+   },
+   {
+    "gen": 11,
+    "round": 7,
+    "agent": "a0",
+    "text": "Zozu: pound then dry worked"
+   },
+   {
+    "gen": 2,
+    "round": 11,
+    "agent": "a7",
+    "text": "Dosu: dry second"
+   },
+   {
+    "gen": 9,
+    "round": 9,
+    "agent": "a8",
+    "text": "Dosu: roast, roast worked in r5."
+   },
+   {
+    "gen": 11,
+    "round": 8,
+    "agent": "a2",
+    "text": "Zozu: pound then"
+   },
+   {
+    "gen": 0,
+    "round": 12,
+    "agent": "a15",
+    "text": "Dosu: pound, dry"
+   },
+   {
+    "gen": 0,
+    "round": 8,
+    "agent": "a1",
+    "text": "Dosu: pound first, trying roast second."
+   },
+   {
+    "gen": 2,
+    "round": 3,
+    "agent": "a3",
+    "text": "Goto: pound or soak first? Testing"
+   },
+   {
+    "gen": 7,
+    "round": 5,
+    "agent": "a13",
+    "text": "Sune step1 soak failed r4; trying"
+   },
+   {
+    "gen": 7,
+    "round": 9,
+    "agent": "a6",
+    "text": "Goto: testing soak"
+   },
+   {
+    "gen": 3,
+    "round": 7,
+    "agent": "a11",
+    "text": "Goto: pound first, soak second worked"
+   },
+   {
+    "gen": 3,
+    "round": 7,
+    "agent": "a4",
+    "text": "Zozu: dry second"
+   },
+   {
+    "gen": 6,
+    "round": 5,
+    "agent": "a4",
+    "text": "Sune: soak first"
+   }
+  ],
+  "notes": [
+   {
+    "gen": 9,
+    "agent": "a5",
+    "text": "Dosu: roast then roast worked (both seasons). Sune: pound then dry or pound then pound both worked. Zozu: pound then dry worked; pound then pound failed. Goto: soak>soak, roast>pound, pound>dry worked last season; verify before relying. Grabbing when second was often rewarded (+7)."
+   },
+   {
+    "gen": 0,
+    "agent": "a12",
+    "text": "Dosu: pound then dry works reliably. Goto: soak then dry worked once. Sune: roast as step 2 failed with several step 1s; try other step"
+   },
+   {
+    "gen": 2,
+    "agent": "a14",
+    "text": "Verified: Dosu = pound then dry. Zozu = dry then pound (dry>pound gave +4 with a10). Sune: roast as step2 failed twice (with pound and roast as step1); still unknown, try soak or dry as step2 and message your step first. Goto: soak then dry is unverified, test it. Grab only when alone; mutual grab gives 2 each, so avoid grabbing when partner may too."
+   },
+   {
+    "gen": 0,
+    "agent": "a11",
+    "text": "I have no records from this season, so I cannot confirm any plant's 2-step preparation. Next season, test each plant early and log which steps worked. Coordinate with partners via messages before choosing, and share outcomes honestly. Avoid grabbing unless needed; splitting successful harvests keeps trust and reduces exile risk."
+   },
+   {
+    "gen": 8,
+    "agent": "a0",
+    "text": "Zozu: pound then dry works. Dosu: roast then roast works."
+   },
+   {
+    "gen": 7,
+    "agent": "a11",
+    "text": "Sune: soak then roast worked before, but r11 failed, so"
+   },
+   {
+    "gen": 10,
+    "agent": "a15",
+    "text": "Sune: pound then pound works. Dosu: roast,roast. Goto: soak,soak. Zozu:"
+   },
+   {
+    "gen": 0,
+    "agent": "a10",
+    "text": "Plant recipes seen: dosu = pound then dry (reliable, worked every time). goto = soak then dry (worked once as second). sune failed 3 times with first step wrong; tried soak, pound, dry as step1 with roast as step2 - none worked, so try other step1 options (e.g. roast) early. Partner a12 was reliable for dosu and goto; coordinate via messages before each round and check the first step carefully."
+   },
+   {
+    "gen": 10,
+    "agent": "a9",
+    "text": "Dosu: roast then roast worked repeatedly (both seasons). Sune: pound then pound or pound then dry worked. Zozu: pound then dry worked. Goto: soak then"
+   },
+   {
+    "gen": 11,
+    "agent": "a4",
+    "text": "Coordinate steps openly via messages; both grab when harvest succeeds"
+   },
+   {
+    "gen": 8,
+    "agent": "a11",
+    "text": "Sune: pound then dry worked repeatedly (a12). Dosu: roast then roast worked. Zozu: pound then dry worked (grab when second). Goto: roast>pound, pound>dry, soak>soak all"
+   },
+   {
+    "gen": 7,
+    "agent": "a8",
+    "text": "Dosu: roast then roast worked. Sune: pound first; second step not pound or roast, try dry. Zozu: pound first; second not pound, try soak. Goto:"
+   },
+   {
+    "gen": 9,
+    "agent": "a11",
+    "text": "Dosu: roast then roast worked. Goto: soak then pound worked."
+   },
+   {
+    "gen": 1,
+    "agent": "a9",
+    "text": "Dosu: pound then dry (worked). Zozu: dry then pound (worked). Goto: soak then dry (reported, unverified). Sune: soak>roast failed, pound>roast failed (step2 roast right? unclear); try other step2 like dry or soak. Message steps before choosing. Grab only when alone; mutual grab gives 2 each."
+   },
+   {
+    "gen": 8,
+    "agent": "a12",
+    "text": "Dosu: roast then roast works. Sune: pound then dry works. Zozu: pound then dry works (soak and roast failed as second steps). Goto: pound then"
+   },
+   {
+    "gen": 6,
+    "agent": "a0",
+    "text": "Sune: soak then roast works; grab only when partner also grabs. Dosu: roast then roast worked once. Goto and zozu: many failures; try varied steps"
+   },
+   {
+    "gen": 1,
+    "agent": "a1",
+    "text": "Sune step2=roast (confirmed twice); sune step1 is not dry or soak. Goto step2 is not dry (soak>dry failed), so try pound or roast. Zozu: dry"
+   },
+   {
+    "gen": 2,
+    "agent": "a2",
+    "text": "Preps may change; verify by trial. Known last season: dosu=pound>dry, zozu=dry>pound worked. goto: pound>soak succeeded (r12); soak>roast failed. sune: roast>pound failed step2 (step1 roast right?); try other combos. Message steps before choosing. Grab only when alone with success."
+   },
+   {
+    "gen": 4,
+    "agent": "a15",
+    "text": "Dosu: pound then dry worked (soak then dry also OK). Zozu: dry then pound worked. Goto: pound then soak worked. Sune: soak, roast, pound-first failed; try dry or soak as step2 with a different step1. Message steps first. Grab only when alone; mutual grab gives 2 each. Verify plant prep"
+   },
+   {
+    "gen": 7,
+    "agent": "a13",
+    "text": "Dosu: roast then roast worked. Sune: soak then roast worked."
+   }
+  ]
+ },
+ "samples_seen": {
+  "messages": 912,
+  "gossip": 894,
+  "notes": 105
+ }
+}

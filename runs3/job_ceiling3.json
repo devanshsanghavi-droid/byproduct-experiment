@@ -1,0 +1,41 @@
+[
+ {
+  "name": "ceiling-05b-3",
+  "kind": "ceiling",
+  "params": {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "world": {
+    "plants": {
+     "steps": 1,
+     "actions": 4,
+     "n": 2,
+     "tries": 5
+    },
+    "tracks": {
+     "ring": 6,
+     "n": 2,
+     "rounds": 4
+    },
+    "trade": {
+     "offers": 3,
+     "bundle": 1,
+     "rounds": 8
+    }
+   },
+   "lives": 150,
+   "stages": [
+    150,
+    400
+   ],
+   "lr": 0.0002,
+   "test_sizes": {
+    "near": 16,
+    "code": 30,
+    "rule": 30,
+    "order": 40,
+    "retention": 60
+   },
+   "before": false
+  }
+ }
+]

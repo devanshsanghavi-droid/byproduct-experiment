@@ -1,0 +1,192 @@
+[
+ {
+  "name": "gpu-pilot-DRIFT-s1",
+  "kind": "sim",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "DRIFT",
+   "seed": 1,
+   "P": {
+    "G": 8,
+    "N": 32,
+    "parents": 8,
+    "iters": 100,
+    "lr": 0.0001,
+    "temp": 0.7,
+    "window": 3
+   }
+  }
+ },
+ {
+  "name": "gpu-pilot-SOLO-s1",
+  "kind": "sim",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "SOLO",
+   "seed": 1,
+   "P": {
+    "G": 8,
+    "N": 32,
+    "parents": 8,
+    "iters": 100,
+    "lr": 0.0001,
+    "temp": 0.7,
+    "window": 3
+   }
+  }
+ },
+ {
+  "name": "gpu-pilot-DRIFT-s2",
+  "kind": "sim",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "DRIFT",
+   "seed": 2,
+   "P": {
+    "G": 8,
+    "N": 32,
+    "parents": 8,
+    "iters": 100,
+    "lr": 0.0001,
+    "temp": 0.7,
+    "window": 3
+   }
+  }
+ },
+ {
+  "name": "gpu-pilot-SOLO-s2",
+  "kind": "sim",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "SOLO",
+   "seed": 2,
+   "P": {
+    "G": 8,
+    "N": 32,
+    "parents": 8,
+    "iters": 100,
+    "lr": 0.0001,
+    "temp": 0.7,
+    "window": 3
+   }
+  }
+ },
+ {
+  "name": "gpu-pilot-DRIFT-s3",
+  "kind": "sim",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "DRIFT",
+   "seed": 3,
+   "P": {
+    "G": 8,
+    "N": 32,
+    "parents": 8,
+    "iters": 100,
+    "lr": 0.0001,
+    "temp": 0.7,
+    "window": 3
+   }
+  }
+ },
+ {
+  "name": "gpu-pilot-SOLO-s3",
+  "kind": "sim",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "SOLO",
+   "seed": 3,
+   "P": {
+    "G": 8,
+    "N": 32,
+    "parents": 8,
+    "iters": 100,
+    "lr": 0.0001,
+    "temp": 0.7,
+    "window": 3
+   }
+  }
+ },
+ {
+  "name": "gpu-pilot-DRIFT-s4",
+  "kind": "sim",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "DRIFT",
+   "seed": 4,
+   "P": {
+    "G": 8,
+    "N": 32,
+    "parents": 8,
+    "iters": 100,
+    "lr": 0.0001,
+    "temp": 0.7,
+    "window": 3
+   }
+  }
+ },
+ {
+  "name": "gpu-pilot-SOLO-s4",
+  "kind": "sim",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "SOLO",
+   "seed": 4,
+   "P": {
+    "G": 8,
+    "N": 32,
+    "parents": 8,
+    "iters": 100,
+    "lr": 0.0001,
+    "temp": 0.7,
+    "window": 3
+   }
+  }
+ },
+ {
+  "name": "gpu-pilot-DRIFT-s5",
+  "kind": "sim",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "DRIFT",
+   "seed": 5,
+   "P": {
+    "G": 8,
+    "N": 32,
+    "parents": 8,
+    "iters": 100,
+    "lr": 0.0001,
+    "temp": 0.7,
+    "window": 3
+   }
+  }
+ },
+ {
+  "name": "gpu-pilot-SOLO-s5",
+  "kind": "sim",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "SOLO",
+   "seed": 5,
+   "P": {
+    "G": 8,
+    "N": 32,
+    "parents": 8,
+    "iters": 100,
+    "lr": 0.0001,
+    "temp": 0.7,
+    "window": 3
+   }
+  }
+ }
+]

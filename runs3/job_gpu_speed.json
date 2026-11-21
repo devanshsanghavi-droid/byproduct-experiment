@@ -1,0 +1,1 @@
+[{"name": "gpu-speed-15b", "kind": "speed", "gpu": true, "params": {"models": ["Qwen/Qwen2.5-1.5B-Instruct"], "lives": 24, "iters": 20}}]

@@ -1,0 +1,173 @@
+{
+ "SOLO": {
+  "practised_families": 8,
+  "practised_before": 0.75,
+  "practised_after": 0.9844,
+  "practised_gain": 0.2344,
+  "inworld": 0.5663,
+  "near": 0.5684,
+  "held": 0.4167,
+  "acc": [
+   0.5,
+   0.8828,
+   0.8893,
+   0.957
+  ],
+  "invalid": [
+   0.0703,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "energy": [
+   7.094,
+   30.0,
+   29.875,
+   37.312
+  ],
+  "added": [
+   120,
+   183,
+   187,
+   191
+  ],
+  "rep_size": [
+   2.0,
+   2.188,
+   2.156,
+   2.656
+  ],
+  "loss": [
+   0.0073,
+   0.0058,
+   0.011,
+   0.0198
+  ],
+  "keep": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "keep_asked": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "keep_invalid": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "votes": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "barred": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "seconds": 248,
+  "gen_seconds": 40.6,
+  "usd": 0.0976,
+  "full_run_usd_estimate": 0.172,
+  "breadth": 3.044,
+  "gpu": "NVIDIA A10"
+ },
+ "MEDLEY": {
+  "practised_families": 12,
+  "practised_before": 0.6979,
+  "practised_after": 0.8021,
+  "practised_gain": 0.1042,
+  "inworld": 0.5714,
+  "near": 0.5938,
+  "held": 0.4653,
+  "acc": [
+   0.4531,
+   0.7773,
+   0.8398,
+   0.8919
+  ],
+  "invalid": [
+   0.0742,
+   0.0013,
+   0.0026,
+   0.0
+  ],
+  "energy": [
+   5.344,
+   13.344,
+   16.656,
+   19.531
+  ],
+  "added": [
+   88,
+   160,
+   170,
+   174
+  ],
+  "rep_size": [
+   2.0,
+   1.875,
+   2.031,
+   2.281
+  ],
+  "loss": [
+   0.0138,
+   0.0005,
+   0.0011,
+   0.0029
+  ],
+  "keep": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "keep_asked": [
+   15,
+   16,
+   16,
+   16
+  ],
+  "keep_invalid": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "votes": [
+   29,
+   32,
+   32,
+   32
+  ],
+  "barred": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "seconds": 298,
+  "gen_seconds": 49.3,
+  "usd": 0.1173,
+  "full_run_usd_estimate": 0.211,
+  "breadth": 3.4061,
+  "gpu": "NVIDIA A10G"
+ },
+ "check1": {
+  "learning": true,
+  "cost": true
+ },
+ "check2": {
+  "keep_rate_gen1": 1.0,
+  "keep_ok": false,
+  "barred_any": true
+ }
+}

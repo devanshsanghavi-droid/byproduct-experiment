@@ -1,0 +1,4594 @@
+{
+ "arm": "CULTURE",
+ "seed": 5,
+ "model": "claude-haiku-5-5",
+ "mock": false,
+ "config": {
+  "N": 16,
+  "R": 12,
+  "G": 12,
+  "cost": 1.5
+ },
+ "complete": true,
+ "plants": [
+  "reki",
+  "keka",
+  "pogu",
+  "baku"
+ ],
+ "generations": [
+  {
+   "gen": 0,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 4.5,
+     "net": -1.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 3,
+     "upkeep": 7.5,
+     "net": -4.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Keka: step2 roast, step1 pound or roast (dry/soak wrong). Pogu: roast, roast. Reki: pound, dry. Baku: untested. Preparations may change, so recheck."
+    },
+    {
+     "id": "a2",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": -2,
+     "upkeep": 10.5,
+     "net": -12.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "I have no records from this season, so I learned nothing reliable about any plant's preparation. Next season: test systematically. Try different two-step pairs from dry, soak, pound, roast for each plant, and record which steps were right. Prioritize plants you see often, and reuse confirmed pairs."
+    },
+    {
+     "id": "a3",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Keka: roast first, not dry. Reki: not roast, not pound."
+    },
+    {
+     "id": "a4",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 12.0,
+     "net": -19.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known: keka step2 = roast; keka step1 is not soak or dry, so try pound>roast. pogu step1 = roast; pogu step2 is not pound or dry, so try roast>soak. baku is untested; try soak>pound or similar and record results."
+    },
+    {
+     "id": "a5",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 13,
+     "upkeep": 9.0,
+     "net": 4.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "reki: pound>dry worked every round in rounds 9-12 (+4 each). Other plants' preparations unknown from my records; try soak, roast, pound, dry pairs and log results. Preparations may change between seasons, so verify reki first."
+    },
+    {
+     "id": "a7",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 1
+     },
+     "gross": 3,
+     "upkeep": 18.0,
+     "net": -15.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Confirmed: reki = pound then dry (3/3 OK). baku = soak then soak (step1 soak confirmed; step2 not pound/dry/roast). pogu step2 = roast; step1 is roast or pound (not soak or dry). keka: step1 not dry, step2 not pound; never solved, so test soak/roast/pound combos. Try pogu as pound>roast next season."
+    },
+    {
+     "id": "a8",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "pogu: step2 is roast (confirmed); step1 is not soak, so try dry or pound. baku: step1 not pound, step2 not dry. Test soak/roast/dry for baku's"
+    },
+    {
+     "id": "a9",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 2
+     },
+     "gross": 18,
+     "upkeep": 13.5,
+     "net": 4.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Last season's results (preparations may change, so re-verify): keka = roast then roast (OK twice, r10 and r12). reki = pound then dry (OK, r11). baku: step1 soak is right; step2 is not pound, so try roast or dry next (r9). pogu: no data yet, so test it. Strategy: first try the known combos for each plant, then test untested actions on baku's step2 and on pogu. Record every step result."
+    },
+    {
+     "id": "a10",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 3,
+     "upkeep": 16.5,
+     "net": -13.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known: pogu = roast, roast (OK). keka = roast, roast (deduced). baku step1 = soak; step2 is roast or soak (test roast). reki: step1 not dry, step2 not roast; untested, try soak/pound combos (e.g. roast>soak, soak>dry). Avoid r6 dry>roast."
+    },
+    {
+     "id": "a11",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 0
+     },
+     "gross": -12,
+     "upkeep": 7.5,
+     "net": -19.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 1 data: reki and pogu both failed with dry as step1 (dry>roast for reki, dry>pound for pogu). Reki step2 is not roast; pogu step2 is not pound. Try soak or roast/pound as step1 for reki and pogu. Keys for keka and baku are unknown, so test them fully and"
+    },
+    {
+     "id": "a12",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 10.5,
+     "net": -2.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Last season's results (may have changed, so verify): reki = pound then dry (worked). pogu = roast then roast (worked). keka = roast then roast (worked). baku = step1 soak confirmed, step2 is not dry; try roast or pound next. Check each plant's recipe first and update this note."
+    },
+    {
+     "id": "a13",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": -2,
+     "upkeep": 12.0,
+     "net": -14.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "reki: pound>dry works (verified twice). keka and pogu: step2 is roast; step1 is not soak, so try dry or pound first. Baku: no data yet,"
+    },
+    {
+     "id": "a14",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 10.5,
+     "net": -12.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 3,
+     "upkeep": 12.0,
+     "net": -9.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "baku: soak>soak works (confirmed twice). pogu: step1 roast is right; step2 is not pound, try dry or soak. reki and keka unknown; test them."
+    }
+   ],
+   "mean": {
+    "MEM": 2.125,
+    "TALK": 2.188,
+    "LORE": 2.188,
+    "AGG": 2.438,
+    "gross": 0.188,
+    "net": -9.562,
+    "success_rate": 0.203
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "pound",
+     "dry"
+    ],
+    "keka": [
+     "roast",
+     "roast"
+    ],
+    "pogu": [
+     "roast",
+     "roast"
+    ],
+    "baku": [
+     "soak",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 1,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a9",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 8,
+     "upkeep": 13.5,
+     "net": -5.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: reki = pound then dry (r9 OK). pogu = roast then roast (r12 OK; roast>dry and roast>pound both failed, so step2 is roast). Still unverified: keka, which was roast then roast last season but may have changed, so test it first. baku: step1 soak is right; step2 is not pound, so test roast or dry next. Check each plant's known combo first, then test baku's step2. Record every step result."
+    },
+    {
+     "id": "a1",
+     "parent": "a9",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 2
+     },
+     "gross": 8,
+     "upkeep": 12.0,
+     "net": -4.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 2 notes. Keka: roast then roast (OK r10, r12). Reki: pound then dry (OK r11). Baku: soak then roast. Step1 soak was confirmed right last season, and r12 showed step2 is not soak, while r11 showed step2 is not dry and not pound. Verify this first. Pogu: still unknown, so test it. Use the 16 combos systematically, one new pair per round, and record each step's result. Keep the known combos for keka, reki, and baku."
+    },
+    {
+     "id": "a2",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 13,
+     "upkeep": 10.5,
+     "net": 2.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: pogu = roast then soak. baku = dry then dry (r12 confirmed step1 dry; r11 ruled out soak/roast as step2). Reki and keka are unverified this season; last season's notes said reki = pound then dry and keka = roast then roast. Test those first."
+    },
+    {
+     "id": "a3",
+     "parent": "a6",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 18,
+     "upkeep": 9.0,
+     "net": 9.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: keka = roast>roast (r9, r11). reki = pound>dry (r10). baku: soak>roast failed r12, so step1 isn't soak and step2 isn't roast or pound; try other step1 options with dry as step2. pogu: untested, try soak/dry/pound pairs and log results."
+    },
+    {
+     "id": "a4",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 13,
+     "upkeep": 4.5,
+     "net": 8.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 6.0,
+     "net": 2.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: reki = pound then dry; pogu = roast then roast; keka = roast then roast; baku = dry then pound. Preparations may change, so re-verify each plant's recipe first. Previous note's baku claim (soak step1) was wrong; soak and roast both failed for baku."
+    },
+    {
+     "id": "a7",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified recipes: reki = pound then dry; pogu = roast then roast; keka = roast then roast. baku: records show soak, roast, pound all wrong for step1 and dry wrong for step2, so try dry then pound (untested). Old baku note was wrong. Check each plant's recipe before relying on"
+    },
+    {
+     "id": "a8",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Baku: dry then pound (deduced from r9-r11; old note said step2 not pound, now superseded). Keka: roast then roast (OK r10, r12 prev). Pogu: roast then roast (OK r12). Reki: pound then dry (OK prev season, recheck). Verify reki and keka again, since preparations may change."
+    },
+    {
+     "id": "a9",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 43,
+     "upkeep": 6.0,
+     "net": 37.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pogu: roast then roast (OK r9,r10,r12). Keka: roast then roast worked r11 (earlier note said step1 pound or roast). Reki: pound then dry (OK last"
+    },
+    {
+     "id": "a10",
+     "parent": "a15",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 13,
+     "upkeep": 12.0,
+     "net": 1.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "pogu: step1 roast right, step2 not pound/soak, try dry. baku: soak>soak failed r12 (changed), try other combos. keka: roast>roast OK r10, recheck. reki: pound>dry OK"
+    },
+    {
+     "id": "a11",
+     "parent": "a15",
+     "genome": {
+      "MEM": 2,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": -12,
+     "upkeep": 10.5,
+     "net": -22.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "baku: dry/roast>pound. keka: dry/pound>roast. pogu: roast>dry/pound. Verify all."
+    },
+    {
+     "id": "a12",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 3.0,
+     "net": -10.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a5",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 3.0,
+     "net": -15.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Baku: pound second. Pogu: not dry first, not soak second."
+    },
+    {
+     "id": "a15",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 3.0,
+     "net": -5.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 1.938,
+    "TALK": 1.562,
+    "LORE": 1.812,
+    "AGG": 3.062,
+    "gross": 11.75,
+    "net": 3.781,
+    "success_rate": 0.396
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "pound",
+     "dry"
+    ],
+    "keka": [
+     "roast",
+     "roast"
+    ],
+    "pogu": [
+     "roast",
+     "roast"
+    ],
+    "baku": [
+     "dry",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 2,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a9",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 6.0,
+     "net": 32.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Keka: roast then roast worked r9-r12 (4/4 OK). Pogu: roast then roast OK previously. Reki: pound then dry worked last season. Baku: untested, try soak"
+    },
+    {
+     "id": "a1",
+     "parent": "a9",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 6.0,
+     "net": 32.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pogu: roast then roast (OK r9-r12). Keka: roast then roast (OK r10). Reki: pound then dry (OK last season, unverified now). Baku: soak step1 right,"
+    },
+    {
+     "id": "a2",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pogu: roast then roast (OK r5-r12). Keka: roast then roast (OK r11, r12). Baku: step2 pound confirmed; step1 not pound or roast, so try dry first (dry then pound was verified last season). Reki: pound then dry last season, unverified this season; re-check."
+    },
+    {
+     "id": "a3",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: reki = pound then dry (r9-11). pogu = roast then roast (r3, r6). keka = roast then roast (r4, r7, r8, r12). baku: step2 = pound (right r1, r2, r5). Step1 is not dry, pound, or roast, so try soak, unverified since an earlier note said soak failed. Re-check"
+    },
+    {
+     "id": "a4",
+     "parent": "a7",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified recipes: reki = pound then dry (r2, r11 OK). pogu = roast then roast (r1 OK). keka = roast then roast (r4, r5, r6, r9, r12 OK). baku = soak then pound (r7, r8, r10 OK). Ignore the old baku note: dry>pound failed in r3, and soak>pound succeeded three"
+    },
+    {
+     "id": "a5",
+     "parent": "a7",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 12.0,
+     "net": 31.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified recipes (season 1 records): reki = pound then dry (r1,r2,r3,r12 OK). pogu = roast then roast (r4,r11 OK). keka = roast then roast (r5,r9,r10 OK). baku = soak then pound (r7,r8 OK). Ignore the earlier baku note: dry then pound was wrong (r6 failed on step1), and soak is correct for step1. Recipes may change between seasons, so check the first use of each plant and fall back to these if they still match."
+    },
+    {
+     "id": "a6",
+     "parent": "a8",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 1
+     },
+     "gross": 43,
+     "upkeep": 12.0,
+     "net": 31.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season (r5-r12): Baku = soak then pound (r12 OK; r7 dry>pound failed on step1, pound correct as step2). Keka = roast then roast (OK r5, r6, r10, r11). Pogu = roast then roast (OK r9). Reki = pound then dry (OK r8). Earlier notes conflicted on Baku and Keka, so trust these records. Next season, recheck Reki and Pogu first, since their preparations may have changed, and test Baku and Keka only if they fail."
+    },
+    {
+     "id": "a7",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season record: pogu roast>roast OK (r12). Baku dry>pound FAILED in r11: step1 is not dry, step2 pound is right, so step1 is unknown (try soak or roast). Keka and reki were not tested this season; previous notes say keka roast>roast and reki pound>dry, but verify, since preparations may change."
+    },
+    {
+     "id": "a8",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 7.5,
+     "net": 20.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified last season (may change): pogu = roast>roast (r9, r11). baku = soak>pound (r10, r12; ignore old 'soak>roast failed' note). keka = roast>roast (r9, r11). reki = pound>dry (r10). Preparations may change between seasons, so check each plant's first step when it's in season, and fall back to these pairs"
+    },
+    {
+     "id": "a9",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: keka = roast>roast; pogu = roast>roast; reki = pound>dry. baku step2 = pound (confirmed r9, r12), step1 is not pound, dry, or soak, so try roast>pound first. Records from prior season are mostly reliable."
+    },
+    {
+     "id": "a10",
+     "parent": "a4",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 4.5,
+     "net": -6.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 6.0,
+     "net": -3.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a12",
+     "parent": "a2",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki: pound then dry, confirmed r9-r12 (4/4), keep it. Keka: roast then roast worked r11, re-verify. Pogu: roast then roast worked r9, r10, r12, but one note claimed roast then soak, so check. Baku: step1 dry confirmed; soak and roast ruled out for step2, so try dry or pound."
+    },
+    {
+     "id": "a13",
+     "parent": "a2",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 23,
+     "upkeep": 10.5,
+     "net": 12.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: keka = roast then roast (r10 OK). Reki = pound then dry (r12 OK). Pogu step1 = roast; step2 is not soak (r9 failed), so try roast then roast. Baku: dry then dry FAILED (r11), so the old 'step1 dry' note is wrong. Test baku next, with"
+    },
+    {
+     "id": "a14",
+     "parent": "a5",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a5",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 7.5,
+     "net": 15.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pogu: roast>roast OK. Keka: roast>roast OK. Reki: soak>dry failed step1"
+    }
+   ],
+   "mean": {
+    "MEM": 2.5,
+    "TALK": 0.75,
+    "LORE": 2.312,
+    "AGG": 2.812,
+    "gross": 27.375,
+    "net": 19.031,
+    "success_rate": 0.656
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "pound",
+     "dry"
+    ],
+    "keka": [
+     "roast",
+     "roast"
+    ],
+    "pogu": [
+     "roast",
+     "roast"
+    ],
+    "baku": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 3,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 7.5,
+     "net": 15.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: reki = dry then pound (changed). keka = roast then roast. pogu = roast then roast. baku = soak then pound or soak"
+    },
+    {
+     "id": "a1",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: reki = dry then pound (r8, r11 OK; old pound-then-dry note was wrong). pogu = roast then roast (repeatedly OK). keka ="
+    },
+    {
+     "id": "a2",
+     "parent": "a12",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Baku: soak then pound confirmed r12 (OK). Reki: pound then dry FAILED r11, so the recipe may have changed; test alternatives. Keka: roast then roast worked earlier; re-verify. Pogu: roast then roast worked r9, r10, r12."
+    },
+    {
+     "id": "a3",
+     "parent": "a12",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pogu: roast then roast (OK r10). Baku: soak then pound (OK r11). Keka: roast then roast (worked earlier, not retested; recheck). Reki: pound>dry failed r9 and soak>roast failed r12, so its recipe likely changed. Test other combinations. Trust this season's records over older notes."
+    },
+    {
+     "id": "a4",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 6.0,
+     "net": 22.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Pogu and keka: roast then roast (OK). Reki: not pound-dry or soak-roast; try new. Baku: soak first step right; find step two."
+    },
+    {
+     "id": "a5",
+     "parent": "a1",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 6.0,
+     "net": 22.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified recipes: reki = pound then dry (r2, r11). pogu = roast then roast (r1, r9-r12). keka = roast then roast (r4-r6, r9, r10, r12). baku = soak then pound (r7, r8, r10, r12). Preparations may change between seasons, so re-check each once before relying on it."
+    },
+    {
+     "id": "a6",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 18,
+     "upkeep": 6.0,
+     "net": 12.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Keka: roast>roast (OK r4-6, r9-12). Pogu: roast>roast (OK r1, r9). Reki: dry>pound worked r10, pound>dry worked before; try either. Baku: still untested, try soak first,"
+    },
+    {
+     "id": "a7",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 23,
+     "upkeep": 6.0,
+     "net": 17.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Baku: soak then pound worked (r11). Keka: roast then roast worked (r12). Reki changed: pound>dry and roast>roast both failed (r9, r10), so try other combos."
+    },
+    {
+     "id": "a8",
+     "parent": "a5",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 2 verified (my records): reki = dry then pound (r8, r11 OK). pogu = roast then roast (r2, r5, r6 OK). keka = roast then roast (r4, r7, r12 OK). baku = soak then pound (r9, r10 OK). Earlier notes said reki = pound then dry, which failed here."
+    },
+    {
+     "id": "a9",
+     "parent": "a5",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 12.0,
+     "net": 21.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 2 records: pogu = roast then roast (OK r1, r12). keka = roast then roast (OK r3, r6, r8). baku = soak then pound (OK r2, r4, r9, r10). reki is unconfirmed: pound>dry, soak>roast and roast>pound all failed. roast>pound showed step2 'pound' correct, and step1 roast wrong, so try dry then pound first (inferred). Check each plant's first use; if it fails, the recipes may have changed, so re-test step by step."
+    },
+    {
+     "id": "a10",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 12.0,
+     "net": 21.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season records (trust these over older notes; some older notes conflicted with them): Keka = roast>roast (OK r5, r8). Pogu = roast>roast (OK r6, r12). Baku = soak>pound (OK r7, r9). Reki = NOT pound>dry (failed r10, both steps wrong) and NOT soak>roast (failed r11, both steps wrong). So reki step1 is not pound or soak, and step2 is not dry or roast. Next season, test reki first, e.g. dry or roast as step1 and soak or pound as step2. Keka, pogu and baku look stable; recheck only if they fail."
+    },
+    {
+     "id": "a11",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season (r5-r12): Baku = soak then pound (r5, r11, r12 OK). Keka = roast then roast (r9, r10 OK). Pogu = roast then roast (r7 OK). Reki = dry then pound (r8 OK; r6 roast>soak failed both steps). Earlier notes said Reki = pound then dry, which conflicts with the r8 record, so trust r8. Preparations may change between seasons: recheck each plant's recipe on first use, and if one fails, test the alternative order or the other common actions."
+    },
+    {
+     "id": "a12",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 28,
+     "upkeep": 7.5,
+     "net": 20.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki changed: pound>dry failed r11 and soak>roast failed r12 (both steps wrong each time). Untested for reki: try dry or roast combos. Pogu: roast>roast (r12 OK). Keka: roast>roast (verify). Baku: soak>pound (r7, r8, r10 OK). Ignore the old baku dry>pound note."
+    },
+    {
+     "id": "a13",
+     "parent": "a7",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 43,
+     "upkeep": 7.5,
+     "net": 35.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes last verified: reki = pound then dry; pogu = roast then roast; keka = roast then roast; baku = soak then pound. Preparations may change, so verify on first use. Old baku dry>pound note is outdated."
+    },
+    {
+     "id": "a14",
+     "parent": "a2",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: baku = soak then pound (r6, r7, r11, r12 OK). pogu = roast then roast (r8 OK). keka = roast then roast (r10 OK). reki changed: pound>dry failed r5, soak>roast failed r9. Reki is unknown, so try untested pairs such as dry then soak, or roast then"
+    },
+    {
+     "id": "a15",
+     "parent": "a2",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: pogu roast>roast OK (r5,r6,r8,r9,r10). keka roast>roast OK (r12). baku soak>pound OK (r7,r11). reki unseen, last verified pound>dry; recheck. Preparations may change, so if a recipe fails, try other pairs and record results."
+    }
+   ],
+   "mean": {
+    "MEM": 2.438,
+    "TALK": 0.562,
+    "LORE": 2.875,
+    "AGG": 2.375,
+    "gross": 32.375,
+    "net": 23.562,
+    "success_rate": 0.74
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "dry",
+     "pound"
+    ],
+    "keka": [
+     "roast",
+     "roast"
+    ],
+    "pogu": [
+     "roast",
+     "roast"
+    ],
+    "baku": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 4,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a13",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 28,
+     "upkeep": 6.0,
+     "net": 22.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: keka = roast then roast (OK twice). Previous notes for reki, pogu, baku unverified this season; re-test on first use. Baku: try soak then pound first, since old note may be outdated. Reki: test pound then dry."
+    },
+    {
+     "id": "a1",
+     "parent": "a13",
+     "genome": {
+      "MEM": 0,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 4.5,
+     "net": 23.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Unverified: no records this season. Previous recipes may be stale. Test each plant's 2-step combo early; reki=pound,dry; pogu=roast,roast; keka=roast,roast; baku=soak,pound were last seen."
+    },
+    {
+     "id": "a2",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Baku: soak then pound (confirmed r11, r12). Pogu: roast then roast (confirmed r9, r10, r12). Reki: pound then dry failed r11; recipe may have changed, so test alternatives. Keka: roast then roast unverified; re-verify on first use."
+    },
+    {
+     "id": "a3",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Baku: soak then pound (confirmed r11, r12). Reki: soak>roast failed r12 (both steps wrong); pound>dry failed r11, so test new combos. Keka: roast then roast, re-verify. Pogu: roast then roast worked r9, r10, r12. Verify each on first use."
+    },
+    {
+     "id": "a4",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: pogu roast>roast; keka roast>roast; baku soak>pound. Reki changed: pound>dry FAILED (r11), soak>roast FAILED (r10). Untested for reki: try other pairs, e.g. roast>dry, dry>roast, dry>pound, pound>roast. Record results."
+    },
+    {
+     "id": "a5",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: pogu roast>roast (r6,r7,r10); keka roast>roast (r9); baku soak>pound (r12). Reki: step1 likely roast (r11 step1 right); step2 not dry, pound, or roast. Try roast>soak next. Earlier note's pogu r5/r8 and keka r12 entries were wrong."
+    },
+    {
+     "id": "a6",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 13.5,
+     "net": 29.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified last season: baku = soak then pound (r8 OK). pogu = roast then roast (r7, r12 OK). keka = roast then roast (r5, r6, r9, r10 OK). reki changed. dry>soak failed with step1 wrong and step2 right, so reki step2 is likely soak and step1 is not dry. Earlier fails: pound>dry and soak>roast. Next season try reki as pound>soak or roast>soak. Verify baku and others on first use, since preparations may change."
+    },
+    {
+     "id": "a7",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: baku = soak then pound (r11, r12). pogu = roast then roast (r7, r8). keka = roast then roast (r5, r6, r10). reki changed: r9 pound>soak showed step2 = soak is right and step1 is not pound. Try dry>soak next. Recheck all recipes on first use."
+    },
+    {
+     "id": "a8",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Keka: roast then roast, confirmed OK r11. Reki: dry then pound failed r12 with both steps wrong, so it is not dry>pound; pound>dry failed r9 and soak>roast failed (old note). Try other combinations, e.g. roast/soak first. Pogu (roast>roast) and baku (soak>pound) were not retested; verify on first use."
+    },
+    {
+     "id": "a9",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 12.0,
+     "net": 16.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: keka = roast then roast (OK r9). pogu = roast then roast (OK r10). baku = soak then pound (OK r12). Trust these. reki changed: dry>pound failed r11 with both steps wrong. Older failures: pound>dry (r9), soak>roast (r12). Reki's recipe is still unknown. Try combinations not yet tested, such as roast, dry, or soak as first step, and avoid pound-first or dry-first unless needed. Record every result."
+    },
+    {
+     "id": "a10",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 12.0,
+     "net": 21.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 3 check: pogu = roast then roast (OK r1,r5,r7). keka = roast then roast (OK r2,r6,r8,r11). baku = soak then pound (OK r3,r4). reki: all three tries failed (dry>pound, soak>roast, pound>dry), and each failure had both steps wrong. That implies step1 = roast and step2 = soak, so reki = roast then soak. Verify on first use, since preparations may change."
+    },
+    {
+     "id": "a11",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: pogu = roast then roast (r1,r3,r4,r5 OK). baku = soak then pound (5 OK). keka = roast then roast (r7 OK). reki FAILED: dry then pound (r8) and soak then roast (r9); pound then dry failed last season. Try untested pairs for reki, such as pound then"
+    },
+    {
+     "id": "a12",
+     "parent": "a11",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season record (my own tests): Pogu = roast then roast (OK r5, r6, r12). Keka = roast then roast (OK r7, r8, r9, r11). Baku = soak then pound (OK r10). Reki: not tested by me. Prior notes say dry then pound (r8), but that r8 entry conflicts with my log, which shows keka that round. Verify reki on first use, and if it fails, try pound then dry, then other action pairs. Preparations may change, so recheck each plant's recipe on first use."
+    },
+    {
+     "id": "a13",
+     "parent": "a11",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 12.0,
+     "net": 16.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Baku = soak then pound (verified r5, r10-r12). Keka = roast then roast (r6 OK). Pogu = roast then roast (r8 OK). Reki: soak>dry failed, soak>pound failed, roast>soak failed. Earlier notes claim dry then pound, which I did not confirm this season, so test dry>pound first on first use. If it fails, try pound>dry, then other combinations. Recheck all recipes on first use, since they may change."
+    },
+    {
+     "id": "a14",
+     "parent": "a1",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: baku = soak then pound (3 OK). pogu = roast then roast (6 OK). reki: dry>pound failed twice and pound>dry failed, so the earlier 'dry then pound' claim is unconfirmed. Try soak or roast combos for reki. keka untested this season; old note says roast then roast."
+    },
+    {
+     "id": "a15",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 7.5,
+     "net": 20.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: pogu = roast then roast; keka = roast then roast (r9); baku = soak then pound (r10, r12). Reki FAILED dry>pound (r5, r6, r11)"
+    }
+   ],
+   "mean": {
+    "MEM": 2.438,
+    "TALK": 0.938,
+    "LORE": 3.188,
+    "AGG": 2.75,
+    "gross": 33.312,
+    "net": 23.469,
+    "success_rate": 0.755
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "roast",
+     "soak"
+    ],
+    "keka": [
+     "roast",
+     "roast"
+    ],
+    "pogu": [
+     "roast",
+     "roast"
+    ],
+    "baku": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 5,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 48,
+     "upkeep": 15.0,
+     "net": 33.0,
+     "successes": 12,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: reki = roast then soak (r5, r6, r8 OK). pogu = roast then roast (r7, r9, r11, r12 OK). baku = soak then pound (r10 OK). keka not seen this season; last season keka = roast then roast (verify on first use). Preparations may change, so verify each plant on first use and fall back to these if they still hold."
+    },
+    {
+     "id": "a1",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 13.5,
+     "net": 24.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season's verified preparations (all OK): pogu = roast then roast (r5-r8). reki = roast then soak (r9, r12). keka = soak then pound (r10); it changed from roast-roast, so do not trust older keka notes. baku = soak then pound (r11). Preparations can change between seasons, so verify each plant on first use. Try roast>roast for pogu and roast>soak for reki first, and soak>pound for keka and baku. Then check whether anything changed."
+    },
+    {
+     "id": "a2",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 7.5,
+     "net": 20.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Baku: soak then pound (confirmed). Pogu: roast then roast (confirmed). Keka changed: step2 is pound (right r11, r12), step1 is not dry or roast, so try soak>pound first. Reki: step2 is likely soak, step1 is not soak or dry, so try pound>soak, then roast>soak."
+    },
+    {
+     "id": "a3",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 3,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 28,
+     "upkeep": 10.5,
+     "net": 17.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki: roast then soak worked r12 this season. Baku: soak then pound (verify first). Pogu: roast then roast (verify first). Keka: roast then roast FAILED r11, so it changed; test new combos, e.g. pound/dry/soak with roast. Verify each on first use."
+    },
+    {
+     "id": "a4",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: reki = roast then soak (r4,r10,r12 OK). pogu = roast then roast (r5,r6,r8 OK). keka = soak then pound (r9,r11 OK); roast-roast and soak-dry failed. baku = soak then pound (r1,r2 OK). Preparations may change, so recheck first."
+    },
+    {
+     "id": "a5",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: baku = soak then pound (verified many times). pogu = roast then roast (verified). reki = roast then soak (r9 OK). keka is not roast-roast this season. r8 soak>dry had step1 right, so keka step1 = soak; step2 is not dry, so try pound or roast. Preparations may"
+    },
+    {
+     "id": "a6",
+     "parent": "a7",
+     "genome": {
+      "MEM": 3,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 15.0,
+     "net": 28.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season's verified recipes: reki = roast then soak (r5, r8, r9, r11 OK). keka = soak then pound (r7 OK); roast>roast failed (r6), so keka changed. baku = soak then pound (r10, r12 OK). pogu was not tested this season; last season it was roast then roast, but recheck on first use. Preparations can change between seasons, so verify every plant on first use before relying on old notes."
+    },
+    {
+     "id": "a7",
+     "parent": "a7",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 12.0,
+     "net": 16.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: baku = soak>pound (r2,5,7,8,10,11,12), pogu = roast>roast (r6). keka now: step1 soak, step2 pound or dry (untested). reki: step1 roast, step2 dry or soak"
+    },
+    {
+     "id": "a8",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 13.5,
+     "net": 19.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season's verified recipes: reki = roast then soak (r7 OK). keka = soak then pound (r11 OK; roast>roast failed r1, dry>soak failed r6). baku = soak then pound (r2, r5, r8, r9 OK). pogu = roast then roast (r4, r10, r12 OK). Previous notes were wrong about keka and reki, so recheck each plant on first use. Earlier failures: pound>soak for reki (r3), so avoid pound as step1 for reki."
+    },
+    {
+     "id": "a9",
+     "parent": "a12",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 12.0,
+     "net": 21.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: keka = soak then pound (r6, r7, r11 OK). baku = soak then pound (r9, r10, r12 OK). The old keka note (roast then roast) is outdated. reki: pound>soak failed with step2 right, so step2 is likely soak and step1 is not pound. dry>soak also failed with step2 right, so step1 is not dry. Try roast>soak first for reki. pogu was not tested; previously roast then roast, so verify on first use. Recheck every recipe on first use."
+    },
+    {
+     "id": "a10",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Baku = soak then pound (confirmed r11, r12). Keka = roast then roast (confirmed). Pogu = roast then roast (verify). Reki changed: dry>pound, pound>dry, soak>roast, dry>soak all failed. Step2 is likely soak, so try roast>soak or pound>soak first."
+    },
+    {
+     "id": "a11",
+     "parent": "a8",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 6.0,
+     "net": 32.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Keka = roast>roast (OK r5,r6,r9,r10,r11). Pogu = roast>roast (OK r7,r11,r12). Baku = soak>pound (OK r8). Reki changed: not dry>pound, not pound>dry, not dry>soak; step2 likely soak, step1 not dry. Try roast>soak or pound>soak first."
+    },
+    {
+     "id": "a12",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 4,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season over. Records: r11 reki roast>soak OK (+4); r12 pogu roast>roast OK (+4). Reki now confirmed as roast then soak (prior pound>dry failed). Pogu roast>roast confirmed again. Baku soak>pound and keka roast>roast were last verified; re-verify on first use since preparations may change."
+    },
+    {
+     "id": "a13",
+     "parent": "a2",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 23,
+     "upkeep": 9.0,
+     "net": 14.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: baku = soak then pound. pogu = roast then roast. keka = soak then pound (r12 OK; r11 roast>pound failed, so step1 soak, step2 pound). reki changed: pound>dry failed r11; dry>soak failed with step2 right, so step2 may be soak. Test reki step1 from roast, soak, pound, or dry,"
+    },
+    {
+     "id": "a14",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: reki = roast>soak (r9, r12 OK). pogu = roast>roast (r10, r11 OK). baku = soak>pound (r6 OK). keka changed: roast>roast failed (r5), and r7/r8 results imply keka = soak>pound. Test keka soak>pound first; the other plants should repeat these pairs."
+    },
+    {
+     "id": "a15",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki = roast>soak (OK r5, r11). Pogu = roast>roast (OK r6, r7, r9, r10, r12). Baku = soak>pound (OK r8). Keka = roast>roast last season but untested this season, so verify it first. Preparations can change, so check each plant's steps when you use it."
+    }
+   ],
+   "mean": {
+    "MEM": 2.5,
+    "TALK": 1.438,
+    "LORE": 3.312,
+    "AGG": 2.75,
+    "gross": 34.875,
+    "net": 24.0,
+    "success_rate": 0.781
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "roast",
+     "soak"
+    ],
+    "keka": [
+     "soak",
+     "pound"
+    ],
+    "pogu": [
+     "roast",
+     "roast"
+    ],
+    "baku": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 6,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 15.0,
+     "net": 8.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Keka = soak then pound (OK r7, r8, r10, r11; r5 soak>dry showed step1 soak right). Keka changed from last season's roast-roast. Pogu = pound then pound (OK r9; r6 dry>pound confirmed step2 pound right). Baku = soak then pound (OK r12). Reki = roast then soak was in the previous note but was not seen in my records; verify on first use. The previous note's pogu claim of roast-roast conflicts with my r9 record, so trust these records over it."
+    },
+    {
+     "id": "a1",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 13.5,
+     "net": 9.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: reki = roast then soak (r5, r6, r8, r11). pogu = roast then roast (r7, r9, r11, r12). baku = soak then pound (r10, r12). keka changed: roast>roast FAILED with both steps wrong (r9), so keka contains no roast. Do not use roast-roast for keka. Next, try keka with dry/soak/pound combinations, excluding roast, and record results. Re-verify reki, pogu and baku on first use in case they change again."
+    },
+    {
+     "id": "a2",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki: roast then soak (verified). Baku: soak then pound (OK r5,r7). Keka: soak then pound (OK r8,r9,r11). Pogu: roast then roast failed r12, so re-test"
+    },
+    {
+     "id": "a3",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 10.5,
+     "net": 12.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: reki = roast>soak (r10, r11 OK). baku = soak>pound (r6, r7, r12 OK). pogu = roast>roast per prior notes; my r5 pound>dry failed. keka changed: not roast>roast. Its first step is soak (r9). Second step is roast or pound, so test soak>roast first."
+    },
+    {
+     "id": "a4",
+     "parent": "a11",
+     "genome": {
+      "MEM": 1,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 6.0,
+     "net": 22.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: reki = roast then soak; pogu = roast then roast; baku = soak then pound. Keka failed roast>roast at r12, so it changed. Neither step is roast. Try pound>soak, soak>pound, or dry>pound next. Preparations may change, so verify each plant on first use."
+    },
+    {
+     "id": "a5",
+     "parent": "a11",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 18,
+     "upkeep": 7.5,
+     "net": 10.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: baku = soak then pound (r9, r11 OK). reki = roast then soak (r5, r6, r8 OK). pogu changed: roast>roast failed r10; pound>soak had step1 right, step2 wrong, so try pound then dry. keka unverified; last season roast>roast, so check it first."
+    },
+    {
+     "id": "a6",
+     "parent": "a10",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 23,
+     "upkeep": 9.0,
+     "net": 14.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: reki = roast>soak (r5, r6, r8, r12). pogu = roast>roast (r7, r9, r11, r12). baku = soak>pound (r10). Keka changed: roast>roast failed with both steps wrong (r11), so neither step is roast. Try dry, pound, or soak combinations, e.g. soak>dry or pound>soak. Verify each plant on first"
+    },
+    {
+     "id": "a7",
+     "parent": "a10",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": -7,
+     "upkeep": 7.5,
+     "net": -14.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Reki = roast then soak (verified r5,r6,r8 this season). Pogu = roast then roast (verified r7,r9,r11,r12). Baku = soak then pound (verified r10; r11,r12 earlier). Keka unseen this season; last season roast then roast, so verify first use. Preparations may change; re-check each plant."
+    },
+    {
+     "id": "a8",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 43,
+     "upkeep": 16.5,
+     "net": 26.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season (my records): baku = soak then pound (OK r1,r4,r8-r10,r12). keka = soak then pound (OK r5,r7); old roast>roast no longer works. reki = roast then soak (OK r2,r6,r11). pogu = roast then roast FAILED in r3 (both steps wrong), so its recipe changed and is unknown. Next season, verify pogu with a new combination, e.g. soak/pound/dry, and do not repeat roast>roast. Re-check baku, keka, and reki on first use too, since preparations may change."
+    },
+    {
+     "id": "a9",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 15.0,
+     "net": 23.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified by my records this season: reki = roast then soak (r8, r9, r12 OK). keka = soak then pound (r6, r10 OK). baku = soak then pound (r11 OK). pogu FAILED roast>roast (r5) and dry>soak (r7), so the old pogu note is wrong this season. Try other pairs for pogu, such as soak then pound or pound then roast, and record the results. Verify each plant on first use before relying on any note."
+    },
+    {
+     "id": "a10",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season (verified): baku = soak then pound; reki = roast then soak; keka = soak then pound; pogu = pound then pound (roast-roast failed). Previous notes on pogu and keka are outdated. Recheck any plant before relying on its recipe."
+    },
+    {
+     "id": "a11",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: baku = soak then pound (r1,r2,r3,r6,r10 OK). reki = roast then soak (r4 OK). pogu = pound then pound (r9,r11,r12 OK; roast-roast failed r5). keka not seen by me; earlier notes conflict (soak-pound vs roast-roast), so test it first. Recheck all."
+    },
+    {
+     "id": "a12",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 13.5,
+     "net": 24.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: reki = roast>soak (OK r6, r7, r10, r12). keka = soak>pound (OK r8, r11). Pogu is NOT roast>roast (failed r5), and pound>dry failed r9 with pound as step1 correct, so step1 is likely pound and step2 is not dry. Next, try pound>roast or pound>soak for pogu. Baku was not tested by me; last notes say soak>pound, so verify first. Older notes conflict on pogu, so trust these records."
+    },
+    {
+     "id": "a13",
+     "parent": "a1",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 12.0,
+     "net": 31.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season-end, my records: keka = soak>pound (r9 OK). baku = soak>pound (r11, r12 OK). pogu = roast>roast FAILED (r10, both steps wrong), so it has changed. Try other combos for pogu, such as dry, pound, or soak in each step. Reki: not tested by me; earlier notes say roast>soak, so verify first. Re-verify all plants on first use."
+    },
+    {
+     "id": "a14",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: reki = roast>soak (r6,r7,r11 OK). keka = soak>pound (r8,r9 OK). baku = soak>pound (r10 OK). pogu is NOT roast>roast now: r5 and r12 failed. Its step2 is pound (r12). Step1 is not roast or soak, so try pound>pound first, then dry>pound. Verify all on first use."
+    },
+    {
+     "id": "a15",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season (my records): keka = soak>pound (r6, r7, r10, r11 OK). baku = soak>pound (r8 OK). reki = roast>soak (r12 OK). pogu: roast>roast FAILED (r5); pound>dry FAILED with step1 right, so step1=pound is likely correct and step2 is not dry. Try pound>roast or pound>soak next. Prior notes conflicted on pogu and reki, so verify each on first use."
+    }
+   ],
+   "mean": {
+    "MEM": 2.562,
+    "TALK": 1.375,
+    "LORE": 3.375,
+    "AGG": 3.312,
+    "gross": 28.938,
+    "net": 17.969,
+    "success_rate": 0.682
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "roast",
+     "soak"
+    ],
+    "keka": [
+     "soak",
+     "pound"
+    ],
+    "pogu": [
+     "pound",
+     "pound"
+    ],
+    "baku": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 7,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a13",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 10.5,
+     "net": 17.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: baku = soak>pound (OK r10, r12). reki = roast>soak (OK r11). keka: roast>soak failed r9, step1 wrong, step2 soak right; conflicts with prior soak>pound note, so retest. pogu: roast>roast failed, untested otherwise; try dry/pound/soak combos."
+    },
+    {
+     "id": "a1",
+     "parent": "a13",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 12.0,
+     "net": 6.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: keka = pound>soak (r11 OK; r10 showed soak is step2). reki = roast>soak (r12 OK). Keka's old note (soak>pound) is outdated. Prior-season notes say baku = soak>pound (r11, r12 OK), but this is unverified. Pogu: roast>roast failed last season, so it changed. Untested this season: try dry, pound, or soak combos. Re-verify baku and pogu on first use. Plants may change between seasons, so always re-check."
+    },
+    {
+     "id": "a2",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "pogu = pound>pound (OK r5,r6,r9). reki = roast>soak (OK r8,r10,r12). keka changed: dry>roast failed r7, soak>pound failed r11, so try other combos. baku: soak>pound was reported OK by others, but verify it on first use."
+    },
+    {
+     "id": "a3",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: reki = roast>soak (r9, r11 OK). baku = soak>pound (r10, r12 OK). keka = soak>pound (r9 OK). pogu: roast>roast failed, and step2 may be pound. Untested for pogu: pound>pound, then dry>pound. Verify on first use."
+    },
+    {
+     "id": "a4",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season (my records): baku = soak>pound OK in r5, r8, r9, r12. reki = roast>soak OK in r7, r10, r11. keka = soak>pound FAILED both steps in r6, so it has likely changed; try other combos such as pound>soak or dry>pound. pogu: I did not test it; roast>roast failed in earlier notes, so try pound or dry first. Re-verify keka and pogu on first use."
+    },
+    {
+     "id": "a5",
+     "parent": "a15",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 18,
+     "upkeep": 9.0,
+     "net": 9.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season (verified): reki = roast>soak (r10 OK). baku = soak>pound (r9 OK). pogu: step1 = pound is right (r11). roast and soak are excluded as step2, and roast is excluded as step1, so try pound>pound. keka changed: soak>pound FAILED both steps (r12). Try other combos for keka, e.g. dry or pound first. Re-verify each plant on first use."
+    },
+    {
+     "id": "a6",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 16.5,
+     "net": 11.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season (my records): pogu = pound then pound (r6 OK; dry>pound and soak>pound each had pound right, soak/dry wrong). reki = roast then soak (OK r2,r3,r7,r10). keka = pound then soak (OK r11,r12; soak>pound failed r5). baku = soak then pound (OK r8). Old notes for keka and pogu are outdated. Re-check each plant on first use anyway, since preparations may change again."
+    },
+    {
+     "id": "a7",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 16.5,
+     "net": 16.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified my records. reki = roast>soak (OK 6 of 6 uses). baku = soak>pound (OK r3,r5,r10). pogu: dry>pound and soak>pound both had step2 right, so step2 is likely pound; roast is excluded for step1 (roast>roast failed). Try pound>pound first. keka: soak>pound FAILED with both steps wrong (r9), so its recipe changed. Try roast>dry or dry>soak, avoiding soak>pound. Re-check each plant on first use."
+    },
+    {
+     "id": "a8",
+     "parent": "a12",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 2
+     },
+     "gross": 23,
+     "upkeep": 12.0,
+     "net": 11.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified by my records: baku = soak>pound (OK r9, r11, r12). Keka: soak>pound FAILED r5, and step2 was soak in r6 and r7, so try pound>soak first. Pogu: pound is step1 (right in r8, r10); soak and roast failed as step2, and dry failed per another note, so try pound>pound. Reki: unverified by me; older notes say roast>soak. Re-verify all plants on first use, since preparations change between seasons."
+    },
+    {
+     "id": "a9",
+     "parent": "a12",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 13.5,
+     "net": 14.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 2 records. baku = soak>pound (OK r5, r8, r9, r11). reki = roast>soak (OK r7, r10). pogu: pound>soak FAILED r6, step1 pound was right, step2 soak wrong. Try pound>roast, pound>dry, or pound>pound next. keka: soak>pound FAILED r12, both steps wrong, so it has changed. Try other combos, such as dry>roast or roast>dry. Re-verify each plant on first use, since preparations can change between seasons."
+    },
+    {
+     "id": "a10",
+     "parent": "a9",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 16.5,
+     "net": 6.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified in my records: reki = roast>soak (r5 OK). keka = pound>soak (r7, r9, r10, r12 OK; ignore the older soak>pound claim). baku = soak>pound (r8, r11 OK). pogu: pound>dry FAILED (r6), but step1 'pound' was right, so pogu likely = pound>X where X is not dry. Next try pound>roast, pound>soak, or pound>pound. Re-verify each plant on first use, since preparations may change."
+    },
+    {
+     "id": "a11",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 15.0,
+     "net": 8.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: baku = soak>pound (4 OK). reki = roast>soak (2 OK). pogu = pound>pound (r12 OK). keka is NOT soak>pound (r3 failed). From r3 and r7, keka step1 is dry or pound and step2 is soak or roast. Test keka with pound>soak or dry>roast first."
+    },
+    {
+     "id": "a12",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season verified by my records: reki = roast then soak (r1,r6,r8,r9,r10 OK). keka = pound then soak (r11,r12 OK; soak-pound and roast-roast failed). pogu = pound then pound (r3,r5 OK). baku = soak then pound (r7 OK). Recheck all, since preparations may change."
+    },
+    {
+     "id": "a13",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season (my records): pogu = pound>pound (OK r1,r2,r5,r7,r10). baku = soak>pound (OK r6,r11,r12). reki = roast>soak (OK r4,r9). keka: soak>pound FAILED r3, roast>roast FAILED r8. Untested for keka: try pound>soak, dry>pound, pound>roast, etc. Recheck all plants."
+    },
+    {
+     "id": "a14",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 2 verified: reki=roast>soak, keka=pound>soak (not soak>pound), pogu=pound>pound, baku=soak>pound. Preparations may change, so check these first and test if a plant fails."
+    },
+    {
+     "id": "a15",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: baku = soak>pound (6 OK). pogu = pound>pound (5 OK). reki = roast>soak (2 OK). keka conflicts: soak>pound FAILED for me (r7) but was OK in another record, so recheck keka, trying other combos such as dry or roast first. Recipes may change between seasons."
+    }
+   ],
+   "mean": {
+    "MEM": 3.188,
+    "TALK": 1.375,
+    "LORE": 3.438,
+    "AGG": 3.625,
+    "gross": 30.188,
+    "net": 18.188,
+    "success_rate": 0.703
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "roast",
+     "soak"
+    ],
+    "keka": [
+     "pound",
+     "soak"
+    ],
+    "pogu": [
+     "pound",
+     "pound"
+    ],
+    "baku": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 8,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a15",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: baku=soak>pound (6 OK). keka=pound>soak (3 OK; soak>pound failed for previous notes). reki roast>soak FAILED r7, so retest. pogu=pound>pound unverified this season."
+    },
+    {
+     "id": "a1",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 12.0,
+     "net": 11.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: keka = pound>soak (derived: r11 showed step1 pound right; r5, r6, r8 ruled out other step2 options). reki = dry>roast (OK in r7 and r12; the old roast>soak note is outdated). baku = soak>pound (OK r9, r10). pogu was not tested this season; last season's pound>pound may still hold, so recheck it. Recipes can change between seasons, so confirm before relying on these."
+    },
+    {
+     "id": "a2",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season verified: reki = dry then roast (r9-11 OK; r1, r4, r5 failed). keka = pound then soak (r2, r7, r8, r12 OK). baku = soak then pound (r3, r6 OK). pogu not tested this season; last known pound then pound, so recheck. Preparations may change again, so verify each"
+    },
+    {
+     "id": "a3",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 12.0,
+     "net": 31.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 2 results (my records): keka = pound>soak (OK 3 times). pogu = pound>pound (OK 3 times). baku = soak>pound (OK 5 times). reki = roast>soak FAILED (both steps wrong), so reki's recipe changed. Try other combos for reki, such as dry first or pound/dry steps. Recheck keka, pogu and baku first, since preparations may change again."
+    },
+    {
+     "id": "a4",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season (my records, verified): keka = pound>soak (4 OK). baku = soak>pound (4 OK). pogu = pound>pound (1 OK). reki = dry>roast; roast>soak, pound>dry and soak>roast all failed, and soak>roast showed roast correct as step2. Recipes may change between seasons, so recheck each one."
+    },
+    {
+     "id": "a5",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Last season (may change): baku = soak>pound, pogu = pound>pound, reki = dry>roast, keka = pound>soak. Each was confirmed by OK results. If a plant fails, check the step-by-step feedback first, since recipes may have changed. Recheck all four before relying on these."
+    },
+    {
+     "id": "a6",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 2 records (recipes may change, so verify on first use): baku = soak>pound (OK 5 times). pogu = pound>pound (OK twice). keka = pound>soak (OK twice); dry>pound failed. reki = dry>roast (OK once); roast>soak failed this season, contrary to the prior note. Last season's notes were partly wrong, so start each plant with its most recent verified combo and fall back to exploring only if it fails."
+    },
+    {
+     "id": "a7",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 2
+     },
+     "gross": 18,
+     "upkeep": 10.5,
+     "net": 7.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified from my records: reki = dry>roast (OK r10). pogu = pound>pound (OK r7, r12). keka: soak is step2 (right in r5 and r11); step1 is not roast or dry, and soak>pound failed in r6, so try pound>soak first. baku: soak>pound was reported OK by others; I did not test it, so recheck on first use. Recipes may change between seasons, so verify on first use."
+    },
+    {
+     "id": "a8",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 3 verified: reki=dry>roast (roast>soak failed r4). keka=pound>soak (soak>pound failed earlier). baku=soak>pound. pogu=pound>pound. Recheck if a plant fails."
+    },
+    {
+     "id": "a9",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 3 verified: reki=dry>roast (roast>soak and soak>pound failed), keka=pound>soak (soak>pound failed), pogu=pound>pound, baku=soak>pound. Recheck first; test if any fails."
+    },
+    {
+     "id": "a10",
+     "parent": "a3",
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 8,
+     "upkeep": 7.5,
+     "net": 0.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season notes: baku = soak>pound (OK r11 this season). reki roast>soak FAILED r12, so reki changed; try other combos (e.g., dry/pound first). Keka unresolved: soak>pound failed for one forager, OK for another; test dry or roast first. Pogu pound>pound was OK in a prior note; recheck. Recipes may change, so"
+    },
+    {
+     "id": "a11",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Recipes changed this season. reki = dry>roast (verified twice; roast>soak failed). pogu = pound>pound (verified). Untested this season: baku (last season soak>pound), keka (soak>pound failed once; try dry or roast first). Recheck all before relying on them."
+    },
+    {
+     "id": "a12",
+     "parent": "a2",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: baku = soak>pound (verified 4x). pogu = pound>pound (verified 3x). reki = dry>roast (2 OK; roast>soak and soak>roast failed). keka: roast>pound failed both steps; still unknown, so try dry, pound, or soak first, e.g. dry>pound or pound>dry."
+    },
+    {
+     "id": "a13",
+     "parent": "a2",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 28,
+     "upkeep": 10.5,
+     "net": 17.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: pogu = pound>pound (OK r5, r10). baku = soak>pound (OK r12). reki CHANGED: now dry>roast (OK r7-9); roast>soak is outdated, and soak>dry failed r6. keka: pound>dry failed with step1 right, so step1 is likely pound and step2 is not dry. Earlier keka fails were dry>roast and soak>pound. Try pound>soak, pound>roast, or pound>pound next. Always re-verify, since recipes change."
+    },
+    {
+     "id": "a14",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: keka = pound>soak (OK r9, r10). pogu = pound>pound (OK r11). baku = soak>pound (OK r12). reki untested this season; prior notes say roast>soak. Recipes may change, so recheck each plant before relying on these."
+    },
+    {
+     "id": "a15",
+     "parent": "a0",
+     "genome": {
+      "MEM": 2,
+      "TALK": 3,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 23,
+     "upkeep": 12.0,
+     "net": 11.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: baku = soak>pound (OK r12). pogu = pound>pound (OK r9). reki changed: roast>soak failed both steps; dry>pound got step1 right, step2 wrong. So reki step1 = dry, step2 is roast or dry. Recheck keka and reki step2 first."
+    }
+   ],
+   "mean": {
+    "MEM": 3.25,
+    "TALK": 0.625,
+    "LORE": 3.125,
+    "AGG": 3.625,
+    "gross": 30.188,
+    "net": 19.688,
+    "success_rate": 0.703
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "dry",
+     "roast"
+    ],
+    "keka": [
+     "pound",
+     "soak"
+    ],
+    "pogu": [
+     "pound",
+     "pound"
+    ],
+    "baku": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 9,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: reki=dry>roast, keka=pound>soak, baku=pound>soak, pogu=pound>pound. Baku's old soak>pound note was wrong. Recheck any plant that fails."
+    },
+    {
+     "id": "a1",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified (3 seasons of records): pogu=pound>pound, reki=dry>roast, keka=pound>soak. Baku=pound>soak (deduced from r2, r4, r5, not yet tested). Recheck if any plant fails, especially baku."
+    },
+    {
+     "id": "a2",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 4 notes. keka = pound>soak (OK 5/5 last season, recheck first). pogu = pound>pound (OK 4/4). reki = dry>roast (OK once, last season). baku: soak>pound failed with both steps wrong, and dry>soak had step2 right, so baku's second step is likely soak. Its first step is probably roast or pound, not soak or dry. Try pound>soak or roast>soak for baku. If a plant fails, recheck its recipe."
+    },
+    {
+     "id": "a3",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 4 notes. Verified this season: pogu = pound>pound (OK 4 times). reki = dry>roast (OK 5 times). keka = pound>soak (OK once). baku CHANGED: soak>pound failed and roast>dry failed, both steps wrong each time. Step1 for baku must be dry or pound, and step2 must be soak or roast. Test dry>soak, dry>roast, pound>soak, or pound>roast first. Recheck keka if it fails."
+    },
+    {
+     "id": "a4",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season (season 4 notes): baku = pound>soak (OK r9, r10). Old soak>pound failed. dry>soak failed, but its step2 soak was right, so soak is the second step. pogu = pound>pound (OK r2 only, so recheck if it fails). reki = dry>roast (OK 3 times). keka = pound>soak (OK 4 times). Start with these combos. If one fails, check whether the failure was step1 or step2 before trying other actions."
+    },
+    {
+     "id": "a5",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: reki = dry>roast (OK 3 of 3). pogu = pound>pound (OK 6 of 6). keka = pound>soak (OK 1 of 1). baku has changed: soak>pound failed (both steps wrong) and roast>dry failed (both wrong). Next season, use the verified combos for reki, pogu and keka. For baku, try untested combos such as pound>soak, dry>soak, or pound>roast, and record the result."
+    },
+    {
+     "id": "a6",
+     "parent": "a0",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: keka=pound>soak, reki=dry>roast, pogu=pound>pound. baku soak>pound FAILED (r6), so baku is unknown; try other pairs like dry>roast or roast>dry."
+    },
+    {
+     "id": "a7",
+     "parent": "a0",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season verified: reki=dry>roast, keka=pound>soak, baku=pound>soak (not soak>pound), pogu=pound>pound. Prior notes conflicted on baku; trust these. Retest only if a plant fails."
+    },
+    {
+     "id": "a8",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: reki=dry>roast, keka=pound>soak, pogu=pound>pound. baku changed: soak>pound and dry>roast both failed. Test other baku combos, e.g. roast>pound or pound>roast."
+    },
+    {
+     "id": "a9",
+     "parent": "a9",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 4 verified: reki=dry>roast, keka=pound>soak, pogu=pound>pound. baku: soak>soak failed, second step soak was right, so first step is not soak. Try dry>soak or roast>soak for"
+    },
+    {
+     "id": "a10",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: pogu=pound>pound (many OKs), reki=dry>roast (OK r3-5), keka=pound>soak (OK r9). baku=soak>pound failed r11 with both steps wrong, so it changed. Try other baku combos, e.g. dry>pound, pound>dry, or roast>dry. Recheck all plants early, since preparations may change."
+    },
+    {
+     "id": "a11",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 4 results: pogu=pound>pound (2 OK). reki=dry>roast (3 OK). keka=pound>soak (2 OK). baku changed: pound>soak OK twice; soak>pound failed. Preparations may change, so start with these and recheck if one fails."
+    },
+    {
+     "id": "a12",
+     "parent": "a2",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: pogu = pound then pound (6 OK). reki = dry then roast (OK r6, r10). keka = pound then soak (OK r11). baku = pound then soak (soak>pound, roast>soak, dry>soak all failed; step2 soak was right in r3 and r9). Recheck any plant that fails."
+    },
+    {
+     "id": "a13",
+     "parent": "a2",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season verified: reki = dry then roast (5 OK). keka = pound then soak (4 OK). pogu = pound then pound (2 OK). baku = soak then pound FAILED with both steps wrong, so its preparation changed. Next season, test baku with untried pairs such as pound>soak, dry>roast, or"
+    },
+    {
+     "id": "a14",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: reki=dry>roast (r7 OK). keka=pound>soak (r8, r9 OK). pogu=pound>pound (r6, r12 OK). baku=pound>soak (r11 OK); old soak>pound and dry/roast>soak failed. Recheck each plant before relying on these."
+    },
+    {
+     "id": "a15",
+     "parent": "a14",
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 12.0,
+     "net": 21.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: reki = dry>roast (OK r9, r11). baku failed both roast>dry (r10) and soak>pound (r12), so its recipe changed; try untested pairs such as pound>dry, pound>roast, or dry>pound. Keka (pound>soak) and pogu (pound>pound) were confirmed in earlier notes but not in my records, so recheck them first. Use each plant's recipe only after a fresh check."
+    }
+   ],
+   "mean": {
+    "MEM": 3.75,
+    "TALK": 0.375,
+    "LORE": 3.0,
+    "AGG": 3.625,
+    "gross": 36.75,
+    "net": 26.062,
+    "success_rate": 0.812
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "dry",
+     "roast"
+    ],
+    "keka": [
+     "pound",
+     "soak"
+    ],
+    "pogu": [
+     "pound",
+     "pound"
+    ],
+    "baku": [
+     "pound",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 10,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: keka=pound>soak, reki=dry>soak, pogu=pound>pound, baku=pound>soak. Preparations may change, so check these first and re-verify if they fail."
+    },
+    {
+     "id": "a1",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season verified: reki=dry>soak, keka=pound>soak, pogu=pound>pound, baku=pound>soak. Earlier note saying reki=dry>roast was wrong. Preparations may change, so recheck these first."
+    },
+    {
+     "id": "a2",
+     "parent": "a13",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: reki = dry>soak (r6, r8, r11 OK; old note dry>roast is outdated). keka = pound>soak (r9, r12 OK). pogu = pound>pound (r5, r10 OK). baku failed dry>roast and soak>pound, both steps wrong, so its first step is likely pound or roast and second dry or soak. Try"
+    },
+    {
+     "id": "a3",
+     "parent": "a13",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: keka = pound>soak (OK r5,r6,r8). reki changed: dry>soak OK x3 (r9,r10,r12); dry>roast FAILED r7, so don't use roast. pogu = pound>pound (OK r11). baku unknown; soak>pound failed last season. Try untried pairs like roast>dry or dry>pound."
+    },
+    {
+     "id": "a4",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season (r12 end): keka=pound>soak (OK r1,3,5,10). pogu=pound>pound (OK r2,8,12). reki=dry>soak (OK r9; dry>roast failed r7). baku=pound>soak (OK r11; earlier soak>pound and roast>dry, dry>pound failed). Preparations may change between seasons, so recheck each plant's first use."
+    },
+    {
+     "id": "a5",
+     "parent": "a10",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 2 results: baku=pound>soak (OK r8,9,12). keka=pound>soak (OK r6,10). reki changed: dry step1 right, roast step2 wrong (r11), so try dry>soak, dry>pound, or dry>dry. pogu last known pound>pound, unverified this season, so recheck early. Check all plants first each round."
+    },
+    {
+     "id": "a6",
+     "parent": "a7",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: reki=dry>soak (dry>roast failed r5), keka=pound>soak, baku=pound>soak, pogu=pound>pound. Prior notes saying reki=dry>roast and baku soak>pound were wrong. Retest only if a plant fails."
+    },
+    {
+     "id": "a7",
+     "parent": "a7",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified from records: reki=dry>soak (not roast), keka=pound>soak, pogu=pound>pound, baku=pound>soak. Preparations may change between seasons, so retest if a plant fails."
+    },
+    {
+     "id": "a8",
+     "parent": "a0",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: reki=dry>soak (roast and pound failed), keka=pound>soak, baku=pound>soak, pogu=pound>pound. Verify each before relying on old notes, since preparations may change."
+    },
+    {
+     "id": "a9",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: reki=dry>soak (r10; old dry>roast note wrong), keka=pound>soak, pogu=pound>pound, baku=pound>soak (r5). Use these directly; recheck only if one fails."
+    },
+    {
+     "id": "a10",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 9.0,
+     "net": 14.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "reki=dry>soak; keka=pound>soak; baku=pound>? (not roast); pogu=pound>pound?"
+    },
+    {
+     "id": "a11",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 28,
+     "upkeep": 10.5,
+     "net": 17.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: keka=pound>soak, pogu=pound>pound, reki=dry>soak (changed). baku step1=pound (r5,r12 right), step2 not roast/dry, so try pound>soak. Recheck all before using."
+    },
+    {
+     "id": "a12",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 5 verified: reki = dry>soak (OK 4 times; dry>roast failed). keka = pound>soak (OK 4 times). baku = pound>soak (OK once; dry>soak failed on step1, consistent). pogu = pound>pound (OK once this season, earlier notes agree). Plants may change between seasons, so check the first use of each: if a verified pair fails, test the other pairs using the step-by-step feedback."
+    },
+    {
+     "id": "a13",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 12.0,
+     "net": 21.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 5 results (12 rounds, all verified): pogu = pound>pound (OK r1, r9). reki = dry>soak (OK r5, r11; dry>roast and dry>pound failed). keka = pound>soak (OK r6, r7, r10). baku = pound>soak (OK r8, r12; dry>soak failed step1 only). Plants may change between seasons, so test these first. If one fails, check the step that was wrong, using the same step with the other options. Preparations were stable this season."
+    },
+    {
+     "id": "a14",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 43,
+     "upkeep": 12.0,
+     "net": 31.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 5 results: keka = pound>soak (OK r1,r8,r10). baku = pound>soak (OK r2,r4,r7). reki = dry>soak (OK r5,r9,r11); dry>roast FAILED r3, so ignore old reki note. pogu = pound>pound (OK r6,r12). Preparations may change between seasons, so verify each plant's combo first and fall back to checking step1 vs step2 if a combo fails."
+    },
+    {
+     "id": "a15",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 5 results: baku = pound>soak (OK 6 times). keka = pound>soak (OK 2 times). pogu = pound>pound (OK 2 times). reki CHANGED: dry>roast and dry>pound both failed with step1 dry right and step2 wrong, so reki step1 is dry and step2 is neither roast nor pound. Next, try reki = dry>soak, then dry>dry. Season 4 notes about reki and baku are outdated, so don't rely on them."
+    }
+   ],
+   "mean": {
+    "MEM": 3.75,
+    "TALK": 0.312,
+    "LORE": 2.688,
+    "AGG": 3.562,
+    "gross": 35.188,
+    "net": 25.062,
+    "success_rate": 0.786
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "dry",
+     "soak"
+    ],
+    "keka": [
+     "pound",
+     "soak"
+    ],
+    "pogu": [
+     "pound",
+     "pound"
+    ],
+    "baku": [
+     "pound",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 11,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+    },
+    {
+     "id": "a1",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: baku=pound>soak, pogu=pound>pound, reki=dry>soak, keka=roast>dry (keka changed; pound>soak failed). Retest only if a plant fails."
+    },
+    {
+     "id": "a2",
+     "parent": "a7",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "reki=dry>soak; keka=roast>dry; pogu=pound>pound; baku=pound>soak. Verified this season."
+    },
+    {
+     "id": "a3",
+     "parent": "a7",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: reki=dry>soak, baku=pound>soak, pogu=pound>pound, keka=roast>dry (keka pound>soak failed r5). Retest only if a plant fails."
+    },
+    {
+     "id": "a4",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 6 verified: pogu = pound>pound (7 OKs). baku = pound>soak (OK r5). reki = dry>soak (OK r6, r11). keka FAILED both pound>soak (r2) and dry>roast (r10), so its preparation is unknown. Try other combos, e.g. soak or roast first, or pound>roast/dry>soak, and log the result. Ignore the old keka=pound>soak note."
+    },
+    {
+     "id": "a5",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 6 verified: pogu = pound>pound (r1,r2,r10 OK). reki = dry>soak (r4,r6,r11,r12 OK). keka = roast>dry (r8,r9 OK); old pound>soak failed, so keka changed. baku = pound>soak (r7 OK, one test only, recheck if it fails)."
+    },
+    {
+     "id": "a6",
+     "parent": "a2",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: baku = pound>soak (OK r1,r3,r7,r8). pogu = pound>pound (OK r2,r5,r6,r9,r10). reki = dry>soak (OK r11,r12). keka = pound>soak FAILED r4 (both steps wrong), so its preparation changed. Untested for keka: try soak>dry, roast>pound, or dry>roast. Retest the others only if they fail."
+    },
+    {
+     "id": "a7",
+     "parent": "a2",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season (verified): reki=dry>soak (r5,r11). pogu=pound>pound (r6,r8,r12). baku=pound>soak (r7,r9). keka=roast>dry (r10). Preparations can change between seasons, so retest a plant if its listed steps fail. Keka's old pound>soak is no longer confirmed."
+    },
+    {
+     "id": "a8",
+     "parent": "a3",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season-end records: baku=pound>soak (OK r9). reki=dry>soak (OK r10, r11). keka=roast>dry (OK r12; older note said pound>soak, so it may have changed). pogu=pound>pound (from earlier note, unconfirmed this season). Retest keka and pogu first if they fail."
+    },
+    {
+     "id": "a9",
+     "parent": "a3",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season (verified by my records): reki = dry>soak (OK r5,r10,r12). keka = roast>dry (OK r9,r11); pound>soak FAILED r6, so don't use it. pogu = pound>pound (OK r7). baku not tested this season; earlier notes conflict, so try pound>soak first, then untried pairs. Plants may change between seasons, so retest"
+    },
+    {
+     "id": "a10",
+     "parent": "a9",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: reki=dry>soak (r7 OK), keka=pound>soak, pogu=pound>pound (r5,r6,r10 OK), baku=pound>soak (r8,r9,r11,r12 OK). Use directly; recheck only if one fails."
+    },
+    {
+     "id": "a11",
+     "parent": "a9",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: reki=dry>soak (r6), pogu=pound>pound (r5,7,8), baku=pound>soak (r12), keka=roast>dry (r9-11; old pound>soak failed). Retest a plant's old note if it fails."
+    },
+    {
+     "id": "a12",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "keka=roast>dry (changed). baku=pound>soak. pogu=pound>pound. reki unverified; try dry>soak."
+    },
+    {
+     "id": "a13",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "reki dry>soak; pogu pound>pound; baku pound>soak; keka changed, pound>soak failed,"
+    },
+    {
+     "id": "a14",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 33,
+     "upkeep": 12.0,
+     "net": 21.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 6 check: reki = dry>soak (OK 3x this season). baku = pound>soak (OK 3x). pogu = pound>pound (OK 3x). keka CHANGED: pound>soak, dry>roast, and soak>pound all failed with both steps wrong. Elimination implies keka = roast>dry, so test that first. Treat all other pairs as unverified. If a verified pair fails, check step-by-step feedback before retesting the others."
+    },
+    {
+     "id": "a15",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 4
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 6 check: reki = dry>soak, baku = pound>soak, pogu = pound>pound were all OK in season 5 and season 6 (r1-r10), so reuse them. keka changed: pound>soak and dry>roast both failed with both steps wrong. So keka's step1 is roast or soak, and step2 is pound or dry. Test keka with soak>pound, soak>dry, roast>pound, or roast>dry, reading step-by-step feedback."
+    }
+   ],
+   "mean": {
+    "MEM": 3.625,
+    "TALK": 0.375,
+    "LORE": 2.562,
+    "AGG": 3.438,
+    "gross": 41.125,
+    "net": 31.281,
+    "success_rate": 0.885
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "reki": [
+     "dry",
+     "soak"
+    ],
+    "keka": [
+     "roast",
+     "dry"
+    ],
+    "pogu": [
+     "pound",
+     "pound"
+    ],
+    "baku": [
+     "pound",
+     "soak"
+    ]
+   }
+  }
+ ],
+ "final_population": [
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 0,
+    "LORE": 3,
+    "AGG": 3
+   },
+   "parent": "a7",
+   "inherited": [
+    "This season (verified): reki=dry>soak (r5,r11). pogu=pound>pound (r6,r8,r12). baku=pound>soak (r7,r9). keka=roast>dry (r10). Preparations can change between seasons, so retest a plant if its listed steps fail. Keka's old pound>soak is no longer confirmed.",
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 0,
+    "LORE": 3,
+    "AGG": 3
+   },
+   "parent": "a7",
+   "inherited": [
+    "This season (verified): reki=dry>soak (r5,r11). pogu=pound>pound (r6,r8,r12). baku=pound>soak (r7,r9). keka=roast>dry (r10). Preparations can change between seasons, so retest a plant if its listed steps fail. Keka's old pound>soak is no longer confirmed.",
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a13",
+   "inherited": [
+    "reki dry>soak; pogu pound>pound; baku pound>soak; keka changed, pound>soak failed,",
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 1,
+    "LORE": 2,
+    "AGG": 4
+   },
+   "parent": "a13",
+   "inherited": [
+    "reki dry>soak; pogu pound>pound; baku pound>soak; keka changed, pound>soak failed,",
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 2
+   },
+   "parent": "a2",
+   "inherited": [
+    "reki=dry>soak; keka=roast>dry; pogu=pound>pound; baku=pound>soak. Verified this season.",
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 3
+   },
+   "parent": "a2",
+   "inherited": [
+    "reki=dry>soak; keka=roast>dry; pogu=pound>pound; baku=pound>soak. Verified this season.",
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 0,
+    "LORE": 3,
+    "AGG": 3
+   },
+   "parent": "a10",
+   "inherited": [
+    "Verified this season: reki=dry>soak (r7 OK), keka=pound>soak, pogu=pound>pound (r5,r6,r10 OK), baku=pound>soak (r8,r9,r11,r12 OK). Use directly; recheck only if one fails.",
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 0,
+    "LORE": 4,
+    "AGG": 4
+   },
+   "parent": "a10",
+   "inherited": [
+    "Verified this season: reki=dry>soak (r7 OK), keka=pound>soak, pogu=pound>pound (r5,r6,r10 OK), baku=pound>soak (r8,r9,r11,r12 OK). Use directly; recheck only if one fails.",
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 1,
+    "LORE": 3,
+    "AGG": 4
+   },
+   "parent": "a8",
+   "inherited": [
+    "Season-end records: baku=pound>soak (OK r9). reki=dry>soak (OK r10, r11). keka=roast>dry (OK r12; older note said pound>soak, so it may have changed). pogu=pound>pound (from earlier note, unconfirmed this season). Retest keka and pogu first if they fail.",
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 2,
+    "LORE": 4,
+    "AGG": 4
+   },
+   "parent": "a8",
+   "inherited": [
+    "Season-end records: baku=pound>soak (OK r9). reki=dry>soak (OK r10, r11). keka=roast>dry (OK r12; older note said pound>soak, so it may have changed). pogu=pound>pound (from earlier note, unconfirmed this season). Retest keka and pogu first if they fail.",
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 2,
+    "LORE": 2,
+    "AGG": 4
+   },
+   "parent": "a11",
+   "inherited": [
+    "This season: reki=dry>soak (r6), pogu=pound>pound (r5,7,8), baku=pound>soak (r12), keka=roast>dry (r9-11; old pound>soak failed). Retest a plant's old note if it fails.",
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 1,
+    "LORE": 2,
+    "AGG": 3
+   },
+   "parent": "a11",
+   "inherited": [
+    "This season: reki=dry>soak (r6), pogu=pound>pound (r5,7,8), baku=pound>soak (r12), keka=roast>dry (r9-11; old pound>soak failed). Retest a plant's old note if it fails.",
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 1,
+    "LORE": 2,
+    "AGG": 2
+   },
+   "parent": "a0",
+   "inherited": [
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing.",
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 0,
+    "LORE": 2,
+    "AGG": 3
+   },
+   "parent": "a0",
+   "inherited": [
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing.",
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 0,
+    "LORE": 2,
+    "AGG": 3
+   },
+   "parent": "a1",
+   "inherited": [
+    "Verified this season: baku=pound>soak, pogu=pound>pound, reki=dry>soak, keka=roast>dry (keka changed; pound>soak failed). Retest only if a plant fails.",
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 0,
+    "LORE": 3,
+    "AGG": 3
+   },
+   "parent": "a1",
+   "inherited": [
+    "Verified this season: baku=pound>soak, pogu=pound>pound, reki=dry>soak, keka=roast>dry (keka changed; pound>soak failed). Retest only if a plant fails.",
+    "This season: reki=dry>soak, keka=roast>dry (pound>soak failed), baku=pound>soak, pogu=pound>pound. Preparations may change, so verify each plant before reusing."
+   ]
+  }
+ ],
+ "usage": {
+  "calls": 2485,
+  "cost_usd": 0.3604
+ },
+ "samples": {
+  "messages": [],
+  "gossip": [],
+  "notes": [
+   {
+    "gen": 11,
+    "agent": "a11",
+    "text": "This season: reki=dry>soak (r6), pogu=pound>pound (r5,7,8), baku=pound>soak (r12), keka=roast>dry (r9-11; old pound>soak failed). Retest a plant's old note if it fails."
+   },
+   {
+    "gen": 10,
+    "agent": "a5",
+    "text": "Season 2 results: baku=pound>soak (OK r8,9,12). keka=pound>soak (OK r6,10). reki changed: dry step1 right, roast step2 wrong (r11), so try dry>soak, dry>pound, or dry>dry. pogu last known pound>pound, unverified this season, so recheck early. Check all plants first each round."
+   },
+   {
+    "gen": 11,
+    "agent": "a1",
+    "text": "Verified this season: baku=pound>soak, pogu=pound>pound, reki=dry>soak, keka=roast>dry (keka changed; pound>soak failed). Retest only if a plant fails."
+   },
+   {
+    "gen": 7,
+    "agent": "a2",
+    "text": "pogu = pound>pound (OK r5,r6,r9). reki = roast>soak (OK r8,r10,r12). keka changed: dry>roast failed r7, soak>pound failed r11, so try other combos. baku: soak>pound was reported OK by others, but verify it on first use."
+   },
+   {
+    "gen": 4,
+    "agent": "a1",
+    "text": "Unverified: no records this season. Previous recipes may be stale. Test each plant's 2-step combo early; reki=pound,dry; pogu=roast,roast; keka=roast,roast; baku=soak,pound were last seen."
+   },
+   {
+    "gen": 8,
+    "agent": "a7",
+    "text": "Verified from my records: reki = dry>roast (OK r10). pogu = pound>pound (OK r7, r12). keka: soak is step2 (right in r5 and r11); step1 is not roast or dry, and soak>pound failed in r6, so try pound>soak first. baku: soak>pound was reported OK by others; I did not test it, so recheck on first use. Recipes may change between seasons, so verify on first use."
+   },
+   {
+    "gen": 6,
+    "agent": "a15",
+    "text": "Verified this season (my records): keka = soak>pound (r6, r7, r10, r11 OK). baku = soak>pound (r8 OK). reki = roast>soak (r12 OK). pogu: roast>roast FAILED (r5); pound>dry FAILED with step1 right, so step1=pound is likely correct and step2 is not dry. Try pound>roast or pound>soak next. Prior notes conflicted on pogu and reki, so verify each on first use."
+   },
+   {
+    "gen": 5,
+    "agent": "a0",
+    "text": "Verified this season: reki = roast then soak (r5, r6, r8 OK). pogu = roast then roast (r7, r9, r11, r12 OK). baku = soak then pound (r10 OK). keka not seen this season; last season keka = roast then roast (verify on first use). Preparations may change, so verify each plant on first use and fall back to these if they still hold."
+   },
+   {
+    "gen": 10,
+    "agent": "a11",
+    "text": "Verified this season: keka=pound>soak, pogu=pound>pound, reki=dry>soak (changed). baku step1=pound (r5,r12 right), step2 not roast/dry, so try pound>soak. Recheck all before using."
+   },
+   {
+    "gen": 7,
+    "agent": "a5",
+    "text": "This season (verified): reki = roast>soak (r10 OK). baku = soak>pound (r9 OK). pogu: step1 = pound is right (r11). roast and soak are excluded as step2, and roast is excluded as step1, so try pound>pound. keka changed: soak>pound FAILED both steps (r12). Try other combos for keka, e.g. dry or pound first. Re-verify each plant on first use."
+   },
+   {
+    "gen": 6,
+    "agent": "a6",
+    "text": "Verified this season: reki = roast>soak (r5, r6, r8, r12). pogu = roast>roast (r7, r9, r11, r12). baku = soak>pound (r10). Keka changed: roast>roast failed with both steps wrong (r11), so neither step is roast. Try dry, pound, or soak combinations, e.g. soak>dry or pound>soak. Verify each plant on first"
+   },
+   {
+    "gen": 8,
+    "agent": "a11",
+    "text": "Recipes changed this season. reki = dry>roast (verified twice; roast>soak failed). pogu = pound>pound (verified). Untested this season: baku (last season soak>pound), keka (soak>pound failed once; try dry or roast first). Recheck all before relying on them."
+   },
+   {
+    "gen": 3,
+    "agent": "a12",
+    "text": "Reki changed: pound>dry failed r11 and soak>roast failed r12 (both steps wrong each time). Untested for reki: try dry or roast combos. Pogu: roast>roast (r12 OK). Keka: roast>roast (verify). Baku: soak>pound (r7, r8, r10 OK). Ignore the old baku dry>pound note."
+   },
+   {
+    "gen": 6,
+    "agent": "a0",
+    "text": "Keka = soak then pound (OK r7, r8, r10, r11; r5 soak>dry showed step1 soak right). Keka changed from last season's roast-roast. Pogu = pound then pound (OK r9; r6 dry>pound confirmed step2 pound right). Baku = soak then pound (OK r12). Reki = roast then soak was in the previous note but was not seen in my records; verify on first use. The previous note's pogu claim of roast-roast conflicts with my r9 record, so trust these records over it."
+   },
+   {
+    "gen": 4,
+    "agent": "a9",
+    "text": "Verified this season: keka = roast then roast (OK r9). pogu = roast then roast (OK r10). baku = soak then pound (OK r12). Trust these. reki changed: dry>pound failed r11 with both steps wrong. Older failures: pound>dry (r9), soak>roast (r12). Reki's recipe is still unknown. Try combinations not yet tested, such as roast, dry, or soak as first step, and avoid pound-first or dry-first unless needed. Record every result."
+   },
+   {
+    "gen": 8,
+    "agent": "a15",
+    "text": "This season: baku = soak>pound (OK r12). pogu = pound>pound (OK r9). reki changed: roast>soak failed both steps; dry>pound got step1 right, step2 wrong. So reki step1 = dry, step2 is roast or dry. Recheck keka and reki step2 first."
+   },
+   {
+    "gen": 8,
+    "agent": "a8",
+    "text": "Season 3 verified: reki=dry>roast (roast>soak failed r4). keka=pound>soak (soak>pound failed earlier). baku=soak>pound. pogu=pound>pound. Recheck if a plant fails."
+   },
+   {
+    "gen": 8,
+    "agent": "a4",
+    "text": "This season (my records, verified): keka = pound>soak (4 OK). baku = soak>pound (4 OK). pogu = pound>pound (1 OK). reki = dry>roast; roast>soak, pound>dry and soak>roast all failed, and soak>roast showed roast correct as step2. Recipes may change between seasons, so recheck each one."
+   },
+   {
+    "gen": 9,
+    "agent": "a8",
+    "text": "Verified this season: reki=dry>roast, keka=pound>soak, pogu=pound>pound. baku changed: soak>pound and dry>roast both failed. Test other baku combos, e.g. roast>pound or pound>roast."
+   },
+   {
+    "gen": 11,
+    "agent": "a8",
+    "text": "Season-end records: baku=pound>soak (OK r9). reki=dry>soak (OK r10, r11). keka=roast>dry (OK r12; older note said pound>soak, so it may have changed). pogu=pound>pound (from earlier note, unconfirmed this season). Retest keka and pogu first if they fail."
+   }
+  ]
+ },
+ "samples_seen": {
+  "messages": 0,
+  "gossip": 0,
+  "notes": 181
+ }
+}

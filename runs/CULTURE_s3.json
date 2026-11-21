@@ -1,0 +1,4594 @@
+{
+ "arm": "CULTURE",
+ "seed": 3,
+ "model": "claude-haiku-5-5",
+ "mock": false,
+ "config": {
+  "N": 16,
+  "R": 12,
+  "G": 12,
+  "cost": 1.5
+ },
+ "complete": true,
+ "plants": [
+  "dosu",
+  "sune",
+  "zozu",
+  "goto"
+ ],
+ "generations": [
+  {
+   "gen": 0,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 3,
+     "upkeep": 10.5,
+     "net": -7.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 1 records (preparations may change): goto = soak>dry (OK). zozu = dry>pound (OK). dosu: soak>dry failed, step2 'dry' right so step1 is not soak; try roast>dry or pound>dry. sune: pound>roast failed, step2 'roast' right so step1 not pound; try dry>roast or soak>roast. Verify whether plant preparations changed before reusing."
+    },
+    {
+     "id": "a1",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 3,
+     "upkeep": 4.5,
+     "net": -1.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 0.0,
+     "net": -2.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 18,
+     "upkeep": 9.0,
+     "net": 9.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known: dosu = pound>dry; zozu = dry>pound; goto = soak>dry. sune step2 = roast; sune step1 is dry or roast (untested). Verify sune first, then"
+    },
+    {
+     "id": "a4",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 23,
+     "upkeep": 4.5,
+     "net": 18.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a5",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 4,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 7.5,
+     "net": -9.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 3,
+     "upkeep": 6.0,
+     "net": -3.0,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a7",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 3
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "No records were kept this season, so nothing is known for certain. Next season, log each round's plant and both steps tried, plus which steps were right. Once a plant's 2-step prep is found, reuse it every time that plant appears."
+    },
+    {
+     "id": "a8",
+     "parent": null,
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -2,
+     "upkeep": 3.0,
+     "net": -5.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 8,
+     "upkeep": 7.5,
+     "net": 0.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "zozu: dry then pound. sune: step2 roast, step1 not pound/dry."
+    },
+    {
+     "id": "a10",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 4,
+      "AGG": 1
+     },
+     "gross": 18,
+     "upkeep": 13.5,
+     "net": 4.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known recipes (assuming unchanged; verify first): goto = soak then dry (worked 3 of 3). dosu = pound then dry (worked 3 of 3). sune: step1 is roast (confirmed right), step2 is not dry; try roast>soak or roast>pound. zozu: step1 is not pound and step2 is not soak; both wrong on pound>soak, so try dry or roast or soak first, paired with roast, dry, or pound second. Test sune and zozu early with small guesses, then reuse the known recipes."
+    },
+    {
+     "id": "a11",
+     "parent": null,
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "No records from my season, so I have no confirmed preparations. Next season: log each plant's two correct steps as you learn them. Try different pairs from dry, pound, roast, soak for each plant until both steps are confirmed, then reuse them every time that plant appears."
+    },
+    {
+     "id": "a12",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 18,
+     "upkeep": 9.0,
+     "net": 9.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known (last season): goto = soak>dry; dosu = pound>dry; zozu = dry>pound. sune unknown: not pound>soak; try roast or dry first. Verify all, since preparations"
+    },
+    {
+     "id": "a13",
+     "parent": null,
+     "genome": {
+      "MEM": 4,
+      "TALK": 4,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 8,
+     "upkeep": 13.5,
+     "net": -5.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "zozu: dry,pound. goto: soak,dry. sune: roast then pound/roast. dosu: pound/roast"
+    },
+    {
+     "id": "a14",
+     "parent": null,
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 13.5,
+     "net": 4.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known: dosu = pound>dry; zozu = dry>pound. goto: step1 is soak or pound, step2 is dry or roast (not roast/dry first, not pound/soak second). sune"
+    },
+    {
+     "id": "a15",
+     "parent": null,
+     "genome": {
+      "MEM": 1,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 1
+     },
+     "gross": -12,
+     "upkeep": 9.0,
+     "net": -21.0,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Only 2 rounds were recorded (r11 zozu: pound>soak failed, both steps wrong; r12 dosu: soak>pound failed, both steps wrong). Neither zozu nor dosu has a correct pair yet, so avoid reusing those exact orders. Untested for zozu: other combinations, e.g. starting with dry or roast. Untested for dosu: pairs not starting with soak or pound. Try systematically across the four actions, and record which step was right each time. Sune and goto were not tried."
+    }
+   ],
+   "mean": {
+    "MEM": 2.062,
+    "TALK": 1.375,
+    "LORE": 1.562,
+    "AGG": 2.375,
+    "gross": 5.188,
+    "net": -2.312,
+    "success_rate": 0.286
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "pound",
+     "dry"
+    ],
+    "sune": [
+     "roast",
+     "roast"
+    ],
+    "zozu": [
+     "dry",
+     "pound"
+    ],
+    "goto": [
+     "soak",
+     "dry"
+    ]
+   }
+  },
+  {
+   "gen": 1,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 13,
+     "upkeep": 6.0,
+     "net": 7.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 8,
+     "upkeep": 4.5,
+     "net": 3.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a12",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 23,
+     "upkeep": 10.5,
+     "net": 12.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: dosu = pound>dry (5 OK). zozu = dry>pound (OK). goto = pound>soak (deduced from r5 and r11 failures; the old soak>dry note is wrong). sune still unknown: not pound>soak. Try roast>dry, dry>roast, or soak>roast first, then verify each plant before relying on it."
+    },
+    {
+     "id": "a3",
+     "parent": "a12",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 18,
+     "upkeep": 9.0,
+     "net": 9.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: dosu = pound>dry, zozu = dry>pound. sune = roast>roast (roast right both steps). goto = pound>? where ? is dry or soak; the old"
+    },
+    {
+     "id": "a4",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Last season: sune = roast>roast, zozu = dry>pound, dosu = pound>dry, goto = pound>soak. Preparations may change, so check each plant's first step with a"
+    },
+    {
+     "id": "a5",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: dosu=pound>dry, zozu=dry>pound, sune=roast>roast. goto is NOT soak>dry or roast>pound; try dry>soak, dry>roast, pound>soak, or pound>roast."
+    },
+    {
+     "id": "a6",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 23,
+     "upkeep": 13.5,
+     "net": 9.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: dosu=pound>dry, zozu=dry>pound, sune=roast>roast (3 OK). goto step1=pound (soak wrong); step2 not dry or roast, so try soak next, then pound. Preparations may change,"
+    },
+    {
+     "id": "a7",
+     "parent": "a14",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 3,
+      "AGG": 4
+     },
+     "gross": 28,
+     "upkeep": 15.0,
+     "net": 13.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: dosu = pound>dry; zozu = dry>pound; goto = pound>roast (inferred from r11: soak and dry both wrong). sune: step2 = roast, step1 not soak; try dry>roast or pound>roast first, since soak>roast failed."
+    },
+    {
+     "id": "a8",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 23,
+     "upkeep": 13.5,
+     "net": 9.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: sune = roast>roast (r12 OK). dosu = pound>dry (OK x4). goto = pound>soak (OK x2; old soak>dry note is wrong). zozu = dry>pound (OK x2; old note wrong). Recheck these first, since preparations may change between seasons."
+    },
+    {
+     "id": "a9",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 4,
+      "AGG": 2
+     },
+     "gross": 28,
+     "upkeep": 15.0,
+     "net": 13.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: zozu = dry then pound (6/6 OK). dosu = pound then dry (2/2 OK). sune: step1 roast is right (2/2); step2 is not soak or pound, so try roast then dry or roast. goto changed: soak>dry failed with both steps wrong, so goto's old recipe no longer holds. Its step1 is one of dry/roast/pound and step2 one of soak/roast/pound. Test goto first with a pound>roast or roast>soak guess, and keep using the verified recipes."
+    },
+    {
+     "id": "a10",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 23,
+     "upkeep": 9.0,
+     "net": 14.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "zozu dry-pound; dosu pound-dry; goto pound-soak; sune roast-roast"
+    },
+    {
+     "id": "a11",
+     "parent": "a9",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 18,
+     "upkeep": 7.5,
+     "net": 10.5,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "goto: pound,soak. dosu: pound,dry. sune: roast,roast. zozu: check dry,pound."
+    },
+    {
+     "id": "a12",
+     "parent": "a1",
+     "genome": {
+      "MEM": 0,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": -2,
+     "upkeep": 3.0,
+     "net": -5.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a1",
+     "genome": {
+      "MEM": 1,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": -12,
+     "upkeep": 4.5,
+     "net": -16.5,
+     "successes": 0,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 0.0,
+     "net": -7.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a2",
+     "genome": {
+      "MEM": 0,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 4
+     },
+     "gross": -7,
+     "upkeep": 0.0,
+     "net": -7.0,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 2.688,
+    "TALK": 1.312,
+    "LORE": 1.438,
+    "AGG": 2.188,
+    "gross": 15.188,
+    "net": 7.031,
+    "success_rate": 0.453
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "pound",
+     "dry"
+    ],
+    "sune": [
+     "roast",
+     "roast"
+    ],
+    "zozu": [
+     "dry",
+     "pound"
+    ],
+    "goto": [
+     "pound",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 2,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a5",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 2 verified: dosu=soak>dry, goto=pound>soak, sune=roast>roast, zozu=dry>pound. Preparations may change between seasons, so re-check each plant's steps before relying on these."
+    },
+    {
+     "id": "a1",
+     "parent": "a5",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: dosu=pound>dry, zozu=dry>pound, sune=roast>roast (recheck, may change). goto unknown: not soak>dry or roast>pound; try dry>soak, dry>roast, pound>soak, pound>roast. Season 2 goto untested in records."
+    },
+    {
+     "id": "a2",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 2 verified: dosu=soak>dry, zozu=dry>pound, sune=roast>roast, goto=pound>soak. Preparations may change, so check first; if a plant fails, retry the other listed options."
+    },
+    {
+     "id": "a3",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu ?>dry (try soak>dry); goto pound>soak; zozu dry>pound; sune roast>roast."
+    },
+    {
+     "id": "a4",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Prior note outdated. This season: dosu soak-dry, goto pound-soak, sune"
+    },
+    {
+     "id": "a5",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: dosu=soak>dry, zozu=dry>pound, goto=pound>soak, sune=roast>roast. Previous dosu note (pound>dry) is outdated. Recheck each plant's preparation before relying on these."
+    },
+    {
+     "id": "a6",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 4,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 15.0,
+     "net": 18.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season's verified recipes: dosu = soak>dry (4/4 OK). goto = pound>soak (3/3 OK). sune = roast>roast (2/2 OK). zozu was not tested this season, so its old recipe dry>pound is unconfirmed. Dosu's old pound>dry no longer holds, so recipes can change between seasons. Re-test zozu first, using dry>pound, and check the other plants' recipes before relying on old notes."
+    },
+    {
+     "id": "a7",
+     "parent": "a9",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season (verified): dosu = soak then dry (r5). sune = roast then roast (3/3). zozu = dry then pound (r12). goto = pound then soak (2/2). Old notes are stale: dosu and goto changed. Recheck each plant's recipe before relying on earlier notes."
+    },
+    {
+     "id": "a8",
+     "parent": "a7",
+     "genome": {
+      "MEM": 3,
+      "TALK": 4,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 16.5,
+     "net": 16.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: dosu = pound>dry; zozu = dry>pound; goto = pound>soak (r8, r10, r11 OK; earlier pound>roast failed at step2); sune = roast>roast (r6, r12 OK). Preparations may change between seasons, so re-check if a plant fails. If a plant fails, try swapping one step at a time, starting from the verified order."
+    },
+    {
+     "id": "a9",
+     "parent": "a7",
+     "genome": {
+      "MEM": 3,
+      "TALK": 3,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 15.0,
+     "net": 13.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: zozu = dry>pound (r5, r7, r10). dosu = soak>dry (r6, r11), which changed from last season's pound>dry, so don't trust old dosu notes. sune = roast>roast (r8, r9). goto: pound>roast FAILED with step1 right, so step1 = pound and step2 is not roast. Next, try pound>soak, then pound>dry, then pound>pound. Also recheck the old notes, since preparations can change between seasons."
+    },
+    {
+     "id": "a10",
+     "parent": "a2",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: zozu=dry>pound (4 OKs), sune=roast>roast (3 OKs), goto=pound>soak (1 OK, recheck), dosu=soak>dry (2 OKs). dosu pound>dry FAILED this season, so the old dosu note is outdated. Start with these answers and verify goto again."
+    },
+    {
+     "id": "a11",
+     "parent": "a2",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: dosu = soak>dry (OK r4,r7,r10,r11). zozu = dry>pound (OK r2,r12). goto = pound>soak (OK r6,r8,r9). sune = roast>roast (OK r5). Preparations may change between seasons, so re-check each plant's first step before relying on these."
+    },
+    {
+     "id": "a12",
+     "parent": "a11",
+     "genome": {
+      "MEM": 3,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "zozu: dry,pound. dosu: soak,dry (changed). sune: roast,roast. goto: untested, try"
+    },
+    {
+     "id": "a13",
+     "parent": "a11",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": 8,
+     "upkeep": 6.0,
+     "net": 2.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 13.5,
+     "net": 24.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season (may change next time, so recheck first): sune = roast>roast; dosu = soak>dry (old pound>dry was wrong); goto = pound>soak; zozu = dry>pound. Start by testing these four, then try other combinations only if one fails."
+    },
+    {
+     "id": "a15",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 13.5,
+     "net": 24.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations may change. Last season: sune=roast>roast (OK x5). zozu=dry>pound (OK x4). goto=pound>soak (OK once). dosu changed: pound>dry failed, soak>dry OK (r12), so try soak>dry first. Recheck goto and zozu early."
+    }
+   ],
+   "mean": {
+    "MEM": 3.625,
+    "TALK": 1.375,
+    "LORE": 2.375,
+    "AGG": 1.5,
+    "gross": 35.188,
+    "net": 24.125,
+    "success_rate": 0.786
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "soak",
+     "dry"
+    ],
+    "sune": [
+     "roast",
+     "roast"
+    ],
+    "zozu": [
+     "dry",
+     "pound"
+    ],
+    "goto": [
+     "pound",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 3,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 23,
+     "upkeep": 10.5,
+     "net": 12.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "zozu dry,pound; dosu soak,dry; sune soak,roast; goto pound then soak/pound"
+    },
+    {
+     "id": "a1",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 28,
+     "upkeep": 13.5,
+     "net": 14.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Last season's preps (verify, may change): dosu: soak,dry. goto: pound,soak. sune: soak,roast. zozu: dry,pound. All four worked last season; if one fails, retest its other"
+    },
+    {
+     "id": "a2",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "goto=pound>soak (confirmed 6 OKs). sune=soak>roast (roast>roast failed this season; soak>roast OK twice). zozu=dry>pound (OK). dosu=pound>dry FAILED; try soak>dry (last noted 2 OKs), verify it first."
+    },
+    {
+     "id": "a3",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: zozu=dry>pound (4 OKs). dosu=soak>dry (4 OKs; old pound>dry note is wrong). goto=pound>soak (2 OKs). sune: step2 is roast (right in both fails). Step1 is not roast or dry, so try sune=soak>roast or pound>roast. Recheck all plants, since preparations may change between seasons."
+    },
+    {
+     "id": "a4",
+     "parent": "a3",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 6.0,
+     "net": 32.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu soak>dry; goto pound>soak; zozu dry>pound; sune ?>roast (not dry/roast;"
+    },
+    {
+     "id": "a5",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 7.5,
+     "net": 35.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "sune: try dry>roast; dosu soak>dry; goto pound>soak; zozu dry>pound"
+    },
+    {
+     "id": "a6",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 3 check: zozu=dry,pound; dosu=soak,dry; sune=soak,roast; goto=pound,soak (all verified last season). Recheck each first, since preparations may change."
+    },
+    {
+     "id": "a7",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 3 verified: dosu=soak>dry, sune=soak>roast, zozu=dry>pound, goto=pound>soak. Recheck all, since preparations changed between seasons."
+    },
+    {
+     "id": "a8",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu soak-dry, goto pound-soak, zozu dry-pound, sune soak-roast"
+    },
+    {
+     "id": "a9",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu soak-dry; goto pound-soak; zozu dry-pound; sune soak-roast. Verified this"
+    },
+    {
+     "id": "a10",
+     "parent": "a5",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: dosu=soak,dry; zozu=dry,pound; goto=pound,soak; sune=soak,roast (sune roast,roast failed). Recheck each plant's preparation before relying on these."
+    },
+    {
+     "id": "a11",
+     "parent": "a5",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 2 verified: dosu=soak>dry, zozu=dry>pound, goto=pound>soak, sune=soak>roast (old sune roast>roast was wrong). Preparations may change; recheck each plant's steps before relying on these."
+    },
+    {
+     "id": "a12",
+     "parent": "a2",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 13.5,
+     "net": 24.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 3 verified: dosu=soak>dry (4 OK), zozu=dry>pound (2 OK), goto=pound>soak (3 OK), sune=soak>roast (r12 OK; roast is step2). Check each plant's listed pair first; if it fails, try the other options."
+    },
+    {
+     "id": "a13",
+     "parent": "a2",
+     "genome": {
+      "MEM": 4,
+      "TALK": 3,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 13.5,
+     "net": 19.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "S3 verified: goto=pound>soak, dosu=soak>dry, sune=soak>roast. zozu untested this season; last season dry>pound, so try that first. Preparations may change, so check first."
+    },
+    {
+     "id": "a14",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 13.5,
+     "net": 19.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season's verified preps: dosu = soak>dry (r5,r7,r8). zozu = dry>pound (r1,r4). goto = pound>soak (r3,r6,r10). sune = soak>roast (r12); roast>roast, pound>roast, dry>roast all failed. Re-check each plant's first step before relying on these, since preps may change."
+    },
+    {
+     "id": "a15",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: dosu = soak,dry; zozu = dry,pound; goto = pound,soak; sune = soak,roast. Preparations may change, so re-check each plant if it fails."
+    }
+   ],
+   "mean": {
+    "MEM": 3.812,
+    "TALK": 1.0,
+    "LORE": 2.0,
+    "AGG": 1.438,
+    "gross": 35.812,
+    "net": 25.594,
+    "success_rate": 0.797
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "soak",
+     "dry"
+    ],
+    "sune": [
+     "soak",
+     "roast"
+    ],
+    "zozu": [
+     "dry",
+     "pound"
+    ],
+    "goto": [
+     "pound",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 4,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a5",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "sune: ?>roast (try soak). goto pound>soak; dosu soak>dry; zozu pound>dry"
+    },
+    {
+     "id": "a1",
+     "parent": "a5",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 23,
+     "upkeep": 9.0,
+     "net": 14.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known: goto pound>soak; dosu soak>dry; zozu pound>dry (inferred); sune soak>roast (inferred, step1 unverified). Verify sune and zozu first."
+    },
+    {
+     "id": "a2",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Confirmed: dosu soak-dry, goto pound-soak, sune soak-roast. zozu not dry-pound;"
+    },
+    {
+     "id": "a3",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Zozu not dry-pound; try soak-roast. Other plants same as notes."
+    },
+    {
+     "id": "a4",
+     "parent": "a10",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: dosu=soak,dry; goto=pound,soak; sune=soak,roast; zozu=pound,dry (zozu changed). Preparations may change again, so recheck first; try these orders first."
+    },
+    {
+     "id": "a5",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: dosu=soak,dry; goto=pound,soak; sune=soak,roast; zozu=pound,dry. Use these directly; recheck if any fail."
+    },
+    {
+     "id": "a6",
+     "parent": "a15",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: dosu=soak,dry; zozu=pound,dry (changed); goto=pound,soak; sune=soak,roast. All verified OK. Re-check each plant if it fails."
+    },
+    {
+     "id": "a7",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: sune = soak,roast; goto = pound,soak; zozu = pound,dry. Dosu unchecked this season; last note said soak,dry, so re-check it first if"
+    },
+    {
+     "id": "a8",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 28,
+     "upkeep": 7.5,
+     "net": 20.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Confirmed: goto pound>soak; dosu soak>dry. zozu is NOT dry>pound or soak>roast (try roast/pound then soak/dry). sune step2 is roast, step1 not pound (try soak or"
+    },
+    {
+     "id": "a9",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": 3,
+     "upkeep": 4.5,
+     "net": -1.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a7",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: dosu=soak>dry, goto=pound>soak, sune=soak>roast, zozu=pound>dry. Preparations may change again; recheck first, and try these first."
+    },
+    {
+     "id": "a11",
+     "parent": "a7",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 4 verified: dosu=soak>dry, sune=soak>roast, goto=pound>soak, zozu=pound>dry (changed). Recheck each plant's preparation before relying on it, since preparations can change between seasons."
+    },
+    {
+     "id": "a12",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: zozu=pound>dry, sune=soak>roast, dosu=soak>dry, goto=pound>soak."
+    },
+    {
+     "id": "a13",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 3 verified: goto=pound>soak, dosu=soak>dry, sune=soak>roast (recheck first). zozu failed dry>pound, roast>soak, soak>roast; try pound>dry or dry>roast, avoid repeats."
+    },
+    {
+     "id": "a14",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 2
+     },
+     "gross": 43,
+     "upkeep": 12.0,
+     "net": 31.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 2 records: zozu=pound>dry (4 OKs; dry>pound failed, so the old note is wrong). sune=soak>roast (3 OKs). goto=pound>soak (3 OKs). dosu=soak>dry (only 1 OK this season, so recheck). Preparations may change, so verify each plant's first trial before repeating. Try the recorded answer first, then adjust step by step if it fails."
+    },
+    {
+     "id": "a15",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 43,
+     "upkeep": 12.0,
+     "net": 31.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 2 results (may change next season, so recheck first): dosu=soak>dry (4 OKs). sune=soak>roast (3 OKs). goto=pound>soak (2 OKs). zozu=pound>dry (2 OKs; last season's dry>pound failed, so it changed). Next season, try these first. If one fails, the step that failed is wrong. Try the other options for that step, keeping the verified step."
+    }
+   ],
+   "mean": {
+    "MEM": 3.75,
+    "TALK": 0.375,
+    "LORE": 1.875,
+    "AGG": 1.562,
+    "gross": 32.062,
+    "net": 23.062,
+    "success_rate": 0.734
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "soak",
+     "dry"
+    ],
+    "sune": [
+     "soak",
+     "roast"
+    ],
+    "zozu": [
+     "pound",
+     "dry"
+    ],
+    "goto": [
+     "pound",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 5,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 2
+     },
+     "gross": 43,
+     "upkeep": 12.0,
+     "net": 31.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 3 verified: zozu=pound>dry (OK 8 times in a row, keep). sune=soak>roast (OK 4 times, keep). dosu: soak>roast failed with step1 right, so step1 is likely soak and step2 is not roast. Try soak>dry first (old note), then soak>pound if it fails. goto was not tested this season; old note says pound>soak, so verify it first before relying on it."
+    },
+    {
+     "id": "a1",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 4,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 13.5,
+     "net": 24.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season (repeat these first): zozu = pound>dry (OK 3 of 3). sune = soak>roast (OK 4 of 4). goto = soak>dry (OK r10; r8 confirmed dry as step 2, and pound>soak failed). dosu = soak>dry (OK 2 of 2). All four plants were stable from season 2 to 3 except goto, which changed from pound>soak to soak>dry. Check each plant's first trial, and if it fails, try the recorded answer before adjusting."
+    },
+    {
+     "id": "a2",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season (verified): dosu=soak>dry (OK rounds 7, 10). goto=soak>dry (OK rounds 6, 9; dry>roast failed in round 5, so avoid it). sune=soak>roast (OK rounds 8, 11, 12). zozu was not seen this season; last season's record was pound>dry (4 OKs), so try that first and adjust a failed step using the other actions. Preparations may change, so check each plant's first trial."
+    },
+    {
+     "id": "a3",
+     "parent": "a15",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 12.0,
+     "net": 26.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season (12 rounds, all recorded results): dosu = soak>dry (3 OKs). zozu = pound>dry (3 OKs). sune = soak>roast (3 OKs). goto = soak>dry (1 OK; pound>soak and roast>pound both failed with both steps wrong, so goto changed from last season). Preparations may change again, so try these first. If one fails, change only the failed step and keep the verified one. Old notes conflicted with each other, so trust this season's records over them."
+    },
+    {
+     "id": "a4",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 43,
+     "upkeep": 10.5,
+     "net": 32.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune soak>roast (6 OKs). Zozu pound>dry (5 OKs). Dosu roast>soak failed both steps; try soak>dry or other pairs. Goto pound>soak unverified; retest."
+    },
+    {
+     "id": "a5",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 4
+     },
+     "gross": 23,
+     "upkeep": 9.0,
+     "net": 14.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: dosu soak-dry, sune soak-roast, zozu pound-dry, goto soak-dry. Check"
+    },
+    {
+     "id": "a6",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified last season: dosu=soak,dry; sune=soak,roast; zozu=pound,dry. Recheck these first. goto is neither pound,soak nor dry,roast; try other pairs like soak,dry or roast,pound."
+    },
+    {
+     "id": "a7",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: dosu=soak,dry; goto=pound,soak; sune=soak,roast; zozu=pound,dry."
+    },
+    {
+     "id": "a8",
+     "parent": "a0",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "sune soak>roast; dosu soak>dry; goto soak>dry; zozu try pound>dry"
+    },
+    {
+     "id": "a9",
+     "parent": "a0",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "goto soak>dry; sune soak>roast; zozu pound>dry; dosu untested, try soak>dry"
+    },
+    {
+     "id": "a10",
+     "parent": "a2",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season's confirmed preparations: dosu soak-dry, goto soak-dry (old pound-soak note was wrong), sune soak-roast, zozu pound-dry. Verify before relying on them, since they may"
+    },
+    {
+     "id": "a11",
+     "parent": "a2",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Preparations changed: dosu soak-dry, goto soak-dry, sune soak-roast, zozu pound-dry."
+    },
+    {
+     "id": "a12",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: goto=soak>dry, sune=soak>roast, zozu=pound>dry, dosu=soak>dry. Recheck if unsure."
+    },
+    {
+     "id": "a13",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: dosu=soak>dry, sune=soak>roast, zozu=pound>dry, goto=soak>dry. Recheck if any fail."
+    },
+    {
+     "id": "a14",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 4 verified: sune=soak>roast, dosu=soak>dry, zozu=pound>dry, goto=soak>dry. Recheck each before use; preparations may have changed, so test if an OK fails."
+    },
+    {
+     "id": "a15",
+     "parent": "a13",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: goto=soak>dry (OK 3x; old pound>soak and dry>roast failed). dosu=soak>dry (OK). sune=soak>roast (OK). zozu not tested this season; season 2 had pound>dry, but season 3 failed it, so try pound>dry first, then adjust. Verify each plant's first trial."
+    }
+   ],
+   "mean": {
+    "MEM": 3.875,
+    "TALK": 0.625,
+    "LORE": 2.125,
+    "AGG": 2.125,
+    "gross": 37.062,
+    "net": 27.125,
+    "success_rate": 0.818
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "soak",
+     "dry"
+    ],
+    "sune": [
+     "soak",
+     "roast"
+    ],
+    "zozu": [
+     "pound",
+     "dry"
+    ],
+    "goto": [
+     "soak",
+     "dry"
+    ]
+   }
+  },
+  {
+   "gen": 6,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 12.0,
+     "net": 16.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Known: zozu pound>dry, sune soak>roast, dosu roast>roast (all OK). Goto: pound>soak failed both steps, so try roast>dry, dry>pound, or dry>dry next."
+    },
+    {
+     "id": "a1",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune soak>roast; zozu pound>dry; dosu roast>dry/pound; goto soak/dry>dry."
+    },
+    {
+     "id": "a2",
+     "parent": "a0",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 2
+     },
+     "gross": 23,
+     "upkeep": 12.0,
+     "net": 11.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season 4 verified: dosu=roast>roast (OK r11; earlier dosu notes are outdated, ignore them). sune=soak>roast (OK 4 times, keep). zozu=pound>dry (OK 1 of 1 this season, keep). goto=soak>dry (OK r12; pound>soak failed both steps, so don't use it). Plants may change between seasons, so check the first result and fall back to the verified pair if it fails."
+    },
+    {
+     "id": "a3",
+     "parent": "a0",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 4,
+      "AGG": 3
+     },
+     "gross": 23,
+     "upkeep": 12.0,
+     "net": 11.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season's results: zozu = pound>dry (confirmed twice). sune = soak>roast (confirmed 3 times). dosu = roast>roast (confirmed twice, after the earlier notes were wrong). goto is still unknown: step1 is not pound or dry, so it is soak or roast; step2 is not soak or pound, so it is dry or roast. Test goto as soak>dry, soak>roast, roast>dry, or roast>roast. Preparations may have changed since last season, so check each plant's pair once before relying on it."
+    },
+    {
+     "id": "a4",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 43,
+     "upkeep": 7.5,
+     "net": 35.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "goto soak>dry, sune soak>roast, zozu pound>dry all worked. dosu: roast"
+    },
+    {
+     "id": "a5",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: sune soak>roast, zozu pound>dry, goto soak>dry (reliable). Dosu: step2 roast seemed right in r4/r11, but step1 candidates soak/dry/pound/roast all failed; retest dosu step1 carefully,"
+    },
+    {
+     "id": "a6",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: try roast>roast (soak, dry, pound ruled out). Keep others:"
+    },
+    {
+     "id": "a7",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: sune soak>roast, goto soak>dry, zozu pound>dry (recheck). Dosu step2 is roast (OK in r10,r12); step1 is not soak, pound, or dry, so try roast>roast."
+    },
+    {
+     "id": "a8",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 8,
+     "upkeep": 7.5,
+     "net": 0.5,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a9",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast then pound, untested. Zozu pound-dry, sune soak-roast, goto"
+    },
+    {
+     "id": "a10",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: sune=soak>roast, zozu=pound>dry, dosu=roast>roast (2 OKs; old soak>dry failed), goto=soak>dry (1 OK). Recheck goto and dosu before relying on them; retest if an"
+    },
+    {
+     "id": "a11",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: zozu=pound>dry, goto=soak>dry, sune=soak>roast. Dosu: step2 is roast (pound>roast, dry>roast each had roast right); step1 not pound/dry/soak, so try roast>roast."
+    },
+    {
+     "id": "a12",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: goto=soak>dry, sune=soak>roast, zozu=pound>dry, dosu=roast>roast. Recheck if unsure."
+    },
+    {
+     "id": "a13",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: goto soak>dry, sune soak>roast, zozu pound>dry, dosu roast>roast. Recheck"
+    },
+    {
+     "id": "a14",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: try roast>pound (soak, dry wrong). Keep sune, zozu, goto."
+    },
+    {
+     "id": "a15",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu=roast>roast (r10 OK). Sune=soak>roast, zozu=pound>dry, goto=soak>dry all verified."
+    }
+   ],
+   "mean": {
+    "MEM": 4.0,
+    "TALK": 0.688,
+    "LORE": 1.625,
+    "AGG": 1.75,
+    "gross": 31.125,
+    "net": 21.656,
+    "success_rate": 0.719
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "roast",
+     "roast"
+    ],
+    "sune": [
+     "soak",
+     "roast"
+    ],
+    "zozu": [
+     "pound",
+     "dry"
+    ],
+    "goto": [
+     "soak",
+     "dry"
+    ]
+   }
+  },
+  {
+   "gen": 7,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 28,
+     "upkeep": 7.5,
+     "net": 20.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu: roast>roast (step1 confirmed, step2 deduced). sune: pound>dry. zozu: pound>dry."
+    },
+    {
+     "id": "a1",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 28,
+     "upkeep": 7.5,
+     "net": 20.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "goto soak>dry; dosu roast>roast; sune pound>dry (changed); zozu untested, try"
+    },
+    {
+     "id": "a2",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 13,
+     "upkeep": 9.0,
+     "net": 4.0,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a3",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast>roast (confirmed twice). Zozu: pound>dry (confirmed twice). Goto: soak>dry (confirmed many times). Sune: soak>roast (from last note, untested this season)."
+    },
+    {
+     "id": "a4",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 18,
+     "upkeep": 9.0,
+     "net": 9.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu roast>roast; sune pound>dry; zozu pound>dry; goto soak>dry. All verified."
+    },
+    {
+     "id": "a5",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 28,
+     "upkeep": 12.0,
+     "net": 16.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "goto: soak>dry. zozu: pound>dry. sune: pound>dry (changed). dosu: roast first; second not pound, try dry or soak, or roast."
+    },
+    {
+     "id": "a6",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast>roast (confirmed). Zozu: pound>dry (confirmed). Goto: soak>dry (confirmed). Sune: step2 is dry, step1 not soak/roast; try pound>dry."
+    },
+    {
+     "id": "a7",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Keep dosu roast>roast, zozu pound>dry, goto soak>dry. Sune not soak>roast/dry>pound."
+    },
+    {
+     "id": "a8",
+     "parent": "a12",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 6.0,
+     "net": 32.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "goto=soak>dry, dosu=roast>roast, sune=soak>roast, zozu=pound>dry (verified; recheck if unsure)"
+    },
+    {
+     "id": "a9",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "goto soak>dry; zozu pound>dry; dosu roast>roast; sune pound>dry (changed)"
+    },
+    {
+     "id": "a10",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: zozu=pound>dry, dosu=roast>roast, goto=soak>dry. sune: soak>roast and dry>pound both failed, so try other pairs, e.g. pound>soak or roast>pound. Retest goto if unsure."
+    },
+    {
+     "id": "a11",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: goto=soak>dry, dosu=roast>roast, zozu=pound>dry, sune=pound>dry (sune soak>roast failed). Recheck if preparations changed; retest first if a plant fails."
+    },
+    {
+     "id": "a12",
+     "parent": "a15",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 8,
+     "upkeep": 6.0,
+     "net": 2.0,
+     "successes": 4,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a13",
+     "parent": "a15",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; sune pound>dry (changed); zozu pound>dry; goto soak>dry"
+    },
+    {
+     "id": "a14",
+     "parent": "a1",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune pound>dry; zozu pound>dry; goto soak>dry; dosu roast>soak or pound"
+    },
+    {
+     "id": "a15",
+     "parent": "a1",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 18,
+     "upkeep": 6.0,
+     "net": 12.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    }
+   ],
+   "mean": {
+    "MEM": 3.938,
+    "TALK": 0.562,
+    "LORE": 1.125,
+    "AGG": 1.812,
+    "gross": 29.562,
+    "net": 21.125,
+    "success_rate": 0.693
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "roast",
+     "roast"
+    ],
+    "sune": [
+     "pound",
+     "dry"
+    ],
+    "zozu": [
+     "pound",
+     "dry"
+    ],
+    "goto": [
+     "soak",
+     "dry"
+    ]
+   }
+  },
+  {
+   "gen": 8,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 13,
+     "upkeep": 7.5,
+     "net": 5.5,
+     "successes": 5,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a1",
+     "parent": "a9",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; sune pound>dry; zozu pound>dry; goto soak>pound"
+    },
+    {
+     "id": "a2",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Confirmed: dosu roast>roast, sune pound>dry, zozu pound>dry. goto step1 soak is right; step2 is not dry or roast, so try pound or soak next."
+    },
+    {
+     "id": "a3",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; sune pound>dry; zozu pound>dry; goto soak>FAIL, try other"
+    },
+    {
+     "id": "a4",
+     "parent": "a8",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 43,
+     "upkeep": 6.0,
+     "net": 37.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "goto soak>pound; zozu pound>dry; dosu roast>roast; sune pound>dry"
+    },
+    {
+     "id": "a5",
+     "parent": "a8",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Season verified: dosu roast>roast; goto soak>pound (changed from dry); sune pound>dry; zozu pound>dry. Previous notes may be outdated, so recheck each plant's steps if they"
+    },
+    {
+     "id": "a6",
+     "parent": "a7",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 43,
+     "upkeep": 7.5,
+     "net": 35.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "goto soak>pound now; sune pound>dry; dosu roast>roast; zozu pound>dry."
+    },
+    {
+     "id": "a7",
+     "parent": "a7",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: sune pound>dry, zozu pound>dry, dosu roast>roast, goto soak>pound. Use"
+    },
+    {
+     "id": "a8",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 0
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Sune pound>dry, zozu pound>dry, dosu roast>roast all confirmed repeatedly. Goto step1 soak is right, but dry and roast failed as step2; try goto soak>pound next,"
+    },
+    {
+     "id": "a9",
+     "parent": "a6",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Confirmed: dosu roast>roast; zozu pound>dry; sune pound>dry; goto soak>pound (dry as step2 failed, so goto step2 is not dry). Keep these recipes; if any plant fails, try a different step1/step2 combo."
+    },
+    {
+     "id": "a10",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 43,
+     "upkeep": 7.5,
+     "net": 35.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu=roast>roast; goto=soak>pound; zozu=pound>dry; sune=pound>dry (verified last season)."
+    },
+    {
+     "id": "a11",
+     "parent": "a10",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 43,
+     "upkeep": 7.5,
+     "net": 35.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season verified: sune=pound>dry, zozu=pound>dry, dosu=roast>roast. goto soak>dry FAILED (soak right, second step wrong); try goto soak>pound or soak>roast next."
+    },
+    {
+     "id": "a12",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast, zozu pound>dry, sune pound>dry all worked this season. goto: soak is step1 but soak>dry failed; try soak>roast or soak>pound. Retest first if a"
+    },
+    {
+     "id": "a13",
+     "parent": "a11",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: dosu=roast>roast, zozu=pound>dry, sune=pound>dry. goto=soak>dry FAILED (soak right, dry wrong); goto second step unknown, so test soak>pound, soak>roast, or soak>soak first."
+    },
+    {
+     "id": "a14",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: sune pound>dry (confirmed 4x, changed from last note). zozu pound>dry (confirmed 5x). goto soak>pound (confirmed; soak>dry and soak>roast failed). dosu roast>roast (confirmed once"
+    },
+    {
+     "id": "a15",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 10.5,
+     "net": 27.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Dosu: roast>roast (confirmed 4x). Zozu: pound>dry (confirmed). Sune: pound>dry (changed, confirmed). Goto: step1 soak is right, but dry and roast failed as step2, so try"
+    }
+   ],
+   "mean": {
+    "MEM": 3.812,
+    "TALK": 0.375,
+    "LORE": 1.562,
+    "AGG": 1.75,
+    "gross": 38.625,
+    "net": 30.0,
+    "success_rate": 0.844
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "roast",
+     "roast"
+    ],
+    "sune": [
+     "pound",
+     "dry"
+    ],
+    "zozu": [
+     "pound",
+     "dry"
+    ],
+    "goto": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 9,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 43,
+     "upkeep": 6.0,
+     "net": 37.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; goto soak>pound; zozu pound>dry; sune: pound>dry failed step2,"
+    },
+    {
+     "id": "a1",
+     "parent": "a4",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": 3,
+     "upkeep": 4.5,
+     "net": -1.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: dosu roast>roast; goto soak>pound; sune pound>pound (changed);"
+    },
+    {
+     "id": "a3",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 43,
+     "upkeep": 7.5,
+     "net": 35.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; goto soak>pound; zozu pound>dry; sune pound>soak? (dry failed)"
+    },
+    {
+     "id": "a4",
+     "parent": "a11",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 28,
+     "upkeep": 7.5,
+     "net": 20.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified this season: sune=pound>pound (pound>dry failed), zozu=pound>dry, dosu=roast>roast, goto=soak>pound. Preparations may change, so recheck each plant's first step."
+    },
+    {
+     "id": "a5",
+     "parent": "a11",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 6.0,
+     "net": 27.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "goto soak>pound; zozu pound>dry; dosu roast>roast; sune pound>dry?"
+    },
+    {
+     "id": "a6",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 23,
+     "upkeep": 6.0,
+     "net": 17.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "zozu pound>dry verified; sune pound>pound verified; goto soak>pound likely; dosu"
+    },
+    {
+     "id": "a7",
+     "parent": "a6",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Verified: dosu roast>roast; zozu pound>dry. sune step1 pound, step2 not soak/dry, so try pound>roast. goto soak>pound from old notes, unverified this season."
+    },
+    {
+     "id": "a8",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; zozu pound>dry; goto soak>pound; sune pound>pound (untested)"
+    },
+    {
+     "id": "a9",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; sune pound>soak; zozu pound>dry; goto soak>pound"
+    },
+    {
+     "id": "a10",
+     "parent": "a1",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "sune: pound then soak or pound (not dry/roast). Others: dosu"
+    },
+    {
+     "id": "a11",
+     "parent": "a1",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "Current: dosu roast>roast; sune pound>pound; zozu pound>dry; goto soak>pound. Verify"
+    },
+    {
+     "id": "a12",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: zozu pound>dry, sune pound>pound (not pound>dry), dosu roast>roast, goto soak>pound. Retest only if a plant's preparation seems changed."
+    },
+    {
+     "id": "a13",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "This season: sune = pound>pound (OK twice; pound>dry, pound>roast, pound>soak failed). goto = soak>pound (OK 6/6). zozu = pound>dry (OK once). dosu untested this season; last note said roast>roast, so retest first. Preparations can change, so verify each plant's recipe before relying on old notes."
+    },
+    {
+     "id": "a14",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 43,
+     "upkeep": 7.5,
+     "net": 35.5,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; goto soak>pound; zozu pound>dry; sune pound then not"
+    },
+    {
+     "id": "a15",
+     "parent": "a13",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 43,
+     "upkeep": 9.0,
+     "net": 34.0,
+     "successes": 11,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "goto=soak>pound (verified x6). dosu=roast>roast (verified). zozu=pound>dry (verified). sune changed: pound>dry FAILED, pound is right first step, so test pound>soak, pound>roast, or pound>pound."
+    }
+   ],
+   "mean": {
+    "MEM": 3.562,
+    "TALK": 0.25,
+    "LORE": 1.312,
+    "AGG": 1.812,
+    "gross": 33.0,
+    "net": 25.312,
+    "success_rate": 0.75
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "roast",
+     "roast"
+    ],
+    "sune": [
+     "pound",
+     "pound"
+    ],
+    "zozu": [
+     "pound",
+     "dry"
+    ],
+    "goto": [
+     "soak",
+     "pound"
+    ]
+   }
+  },
+  {
+   "gen": 10,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 6.0,
+     "net": 27.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; zozu pound>dry; sune pound>pound; goto soak>dry/roast untested"
+    },
+    {
+     "id": "a1",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": -7,
+     "upkeep": 4.5,
+     "net": -11.5,
+     "successes": 1,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a2",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 23,
+     "upkeep": 7.5,
+     "net": 15.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; goto soak>soak; zozu pound>dry; sune pound>pound"
+    },
+    {
+     "id": "a3",
+     "parent": "a14",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 23,
+     "upkeep": 7.5,
+     "net": 15.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; goto soak>soak; zozu pound>dry; sune pound>pound. Verified this"
+    },
+    {
+     "id": "a4",
+     "parent": "a3",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 7.5,
+     "net": 20.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; zozu pound>dry; sune pound>pound; goto soak>roast?"
+    },
+    {
+     "id": "a5",
+     "parent": "a3",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": 3,
+     "upkeep": 4.5,
+     "net": -1.5,
+     "successes": 3,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a6",
+     "parent": "a15",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 1
+     },
+     "gross": 23,
+     "upkeep": 9.0,
+     "net": 14.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu: roast>roast. zozu: pound>dry. sune: pound>pound (verified x4). goto: soak first, but soak>pound, soak>dry, soak>roast all failed; try soak>soak."
+    },
+    {
+     "id": "a7",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 9.0,
+     "net": 24.0,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu: roast>roast (verified r11-12). zozu: pound>dry (verified r5-8). goto changed: soak step1 right, soak>pound and soak>roast failed; try soak>dry or soak>soak. sune: pound step1 right, pound>dry failed; try pound>soak, pound>roast, or pound>pound."
+    },
+    {
+     "id": "a8",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; goto soak>soak; sune pound>pound; zozu pound>dry (once)"
+    },
+    {
+     "id": "a9",
+     "parent": "a10",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 0,
+      "AGG": 0
+     },
+     "gross": 23,
+     "upkeep": 7.5,
+     "net": 15.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a10",
+     "parent": "a5",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 23,
+     "upkeep": 6.0,
+     "net": 17.0,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "zozu pound>dry; dosu roast>roast; goto soak>soak; sune pound>pound."
+    },
+    {
+     "id": "a11",
+     "parent": "a5",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 28,
+     "upkeep": 6.0,
+     "net": 22.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "sune: pound>roast or pound>pound; goto soak>pound; zozu pound>dry; dosu roast>roast"
+    },
+    {
+     "id": "a12",
+     "parent": "a2",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 48,
+     "upkeep": 7.5,
+     "net": 40.5,
+     "successes": 12,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; zozu pound>dry; sune pound>pound; goto soak>pound (untested)"
+    },
+    {
+     "id": "a13",
+     "parent": "a2",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 2
+     },
+     "gross": -2,
+     "upkeep": 4.5,
+     "net": -6.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a14",
+     "parent": "a11",
+     "genome": {
+      "MEM": 2,
+      "TALK": 1,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 23,
+     "upkeep": 7.5,
+     "net": 15.5,
+     "successes": 7,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu: roast>roast (confirmed). goto: step1 soak confirmed; step2 not pound/dry/roast, so try soak>soak. sune: pound>dry failed; try pound>pound or other. zozu: pound>dry unverified."
+    },
+    {
+     "id": "a15",
+     "parent": "a11",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; goto soak>soak; zozu pound>dry; sune unknown, try pound>pound"
+    }
+   ],
+   "mean": {
+    "MEM": 3.375,
+    "TALK": 0.25,
+    "LORE": 1.0,
+    "AGG": 1.625,
+    "gross": 22.688,
+    "net": 15.75,
+    "success_rate": 0.578
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "roast",
+     "roast"
+    ],
+    "sune": [
+     "pound",
+     "pound"
+    ],
+    "zozu": [
+     "pound",
+     "dry"
+    ],
+    "goto": [
+     "soak",
+     "soak"
+    ]
+   }
+  },
+  {
+   "gen": 11,
+   "agents": [
+    {
+     "id": "a0",
+     "parent": "a12",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 28,
+     "upkeep": 7.5,
+     "net": 20.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "sune: roast then pound/dry; goto soak>pound; zozu pound>dry; dosu roast>roast"
+    },
+    {
+     "id": "a1",
+     "parent": "a12",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; zozu pound>dry; goto soak>soak (step2 untested); sune pound>pound"
+    },
+    {
+     "id": "a2",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 38,
+     "upkeep": 6.0,
+     "net": 32.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "goto: soak first, dry wrong; try roast second. Others confirmed."
+    },
+    {
+     "id": "a3",
+     "parent": "a0",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 28,
+     "upkeep": 6.0,
+     "net": 22.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; zozu pound>dry; goto soak>pound?; sune not pound>pound"
+    },
+    {
+     "id": "a4",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; goto soak>soak; sune roast>dry; zozu try pound>dry"
+    },
+    {
+     "id": "a5",
+     "parent": "a15",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 38,
+     "upkeep": 7.5,
+     "net": 30.5,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; goto soak>soak; zozu pound>dry; sune roast>dry"
+    },
+    {
+     "id": "a6",
+     "parent": "a7",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu: roast>roast (verified). zozu: pound>dry (verified). goto: soak>soak (verified r8, r11). sune: step1 roast (r10), step2 not soak; try roast>dry, roast>pound, or roast>roast."
+    },
+    {
+     "id": "a7",
+     "parent": "a7",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 3,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu: roast>roast (verified). zozu: pound>dry (verified). goto: soak>soak (verified r6,r8,r12). sune changed: pound>pound and soak>roast both failed fully. Step1 is roast or dry; step2 is soak or dry. Try roast>soak, roast>dry, dry>soak, or dry>dry."
+    },
+    {
+     "id": "a8",
+     "parent": "a11",
+     "genome": {
+      "MEM": 3,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 3
+     },
+     "gross": 33,
+     "upkeep": 7.5,
+     "net": 25.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "sune: ?>dry (not soak). zozu pound>dry. dosu roast>roast. goto untested."
+    },
+    {
+     "id": "a9",
+     "parent": "a11",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 18,
+     "upkeep": 6.0,
+     "net": 12.0,
+     "successes": 6,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "goto: soak>soak likely. zozu: pound>dry. sune: roast>dry. dosu: try roast>roast."
+    },
+    {
+     "id": "a10",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 1
+     },
+     "gross": -2,
+     "upkeep": 6.0,
+     "net": -8.0,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a11",
+     "parent": "a4",
+     "genome": {
+      "MEM": 4,
+      "TALK": 0,
+      "LORE": 2,
+      "AGG": 2
+     },
+     "gross": 28,
+     "upkeep": 9.0,
+     "net": 19.0,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; zozu pound>dry; goto soak>soak (both confirmed). sune: pound>pound FAILED (both steps wrong), so try roast/soak/dry pairs, avoiding pound."
+    },
+    {
+     "id": "a12",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 2,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 33,
+     "upkeep": 10.5,
+     "net": 22.5,
+     "successes": 9,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; goto soak>soak; zozu pound>dry; sune roast>dry (verified this"
+    },
+    {
+     "id": "a13",
+     "parent": "a8",
+     "genome": {
+      "MEM": 4,
+      "TALK": 1,
+      "LORE": 1,
+      "AGG": 1
+     },
+     "gross": 38,
+     "upkeep": 9.0,
+     "net": 29.0,
+     "successes": 10,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast, goto soak>soak, zozu pound>dry all held. sune: step2"
+    },
+    {
+     "id": "a14",
+     "parent": "a10",
+     "genome": {
+      "MEM": 3,
+      "TALK": 0,
+      "LORE": 0,
+      "AGG": 3
+     },
+     "gross": -2,
+     "upkeep": 4.5,
+     "net": -6.5,
+     "successes": 2,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": ""
+    },
+    {
+     "id": "a15",
+     "parent": "a10",
+     "genome": {
+      "MEM": 2,
+      "TALK": 0,
+      "LORE": 1,
+      "AGG": 2
+     },
+     "gross": 28,
+     "upkeep": 4.5,
+     "net": 23.5,
+     "successes": 8,
+     "trials": 12,
+     "grabs": 0,
+     "grabbed": 0,
+     "votes_against": 0,
+     "exiled": false,
+     "note": "dosu roast>roast; sune step1 roast, not soak; verify zozu, goto"
+    }
+   ],
+   "mean": {
+    "MEM": 3.312,
+    "TALK": 0.438,
+    "LORE": 1.125,
+    "AGG": 1.938,
+    "gross": 27.688,
+    "net": 20.375,
+    "success_rate": 0.661
+   },
+   "exiled": 0,
+   "parse_fail": 0,
+   "recipes": {
+    "dosu": [
+     "roast",
+     "roast"
+    ],
+    "sune": [
+     "roast",
+     "dry"
+    ],
+    "zozu": [
+     "pound",
+     "dry"
+    ],
+    "goto": [
+     "soak",
+     "soak"
+    ]
+   }
+  }
+ ],
+ "final_population": [
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 4
+   },
+   "parent": "a2",
+   "inherited": [
+    "goto: soak first, dry wrong; try roast second. Others confirmed.",
+    "goto: soak first, dry wrong; try roast second. Others confirmed."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 3
+   },
+   "parent": "a2",
+   "inherited": [
+    "goto: soak first, dry wrong; try roast second. Others confirmed.",
+    "goto: soak first, dry wrong; try roast second. Others confirmed."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 1
+   },
+   "parent": "a4",
+   "inherited": [
+    "dosu roast>roast; goto soak>soak; sune roast>dry; zozu try pound>dry",
+    "goto: soak first, dry wrong; try roast second. Others confirmed."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 1
+   },
+   "parent": "a4",
+   "inherited": [
+    "dosu roast>roast; goto soak>soak; sune roast>dry; zozu try pound>dry",
+    "goto: soak first, dry wrong; try roast second. Others confirmed."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 3
+   },
+   "parent": "a5",
+   "inherited": [
+    "dosu roast>roast; goto soak>soak; zozu pound>dry; sune roast>dry",
+    "goto: soak first, dry wrong; try roast second. Others confirmed."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 1,
+    "LORE": 2,
+    "AGG": 3
+   },
+   "parent": "a5",
+   "inherited": [
+    "dosu roast>roast; goto soak>soak; zozu pound>dry; sune roast>dry",
+    "goto: soak first, dry wrong; try roast second. Others confirmed."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 1
+   },
+   "parent": "a13",
+   "inherited": [
+    "dosu roast>roast, goto soak>soak, zozu pound>dry all held. sune: step2",
+    "goto: soak first, dry wrong; try roast second. Others confirmed."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 1
+   },
+   "parent": "a13",
+   "inherited": [
+    "dosu roast>roast, goto soak>soak, zozu pound>dry all held. sune: step2",
+    "goto: soak first, dry wrong; try roast second. Others confirmed."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 1
+   },
+   "parent": "a1",
+   "inherited": [
+    "dosu roast>roast; zozu pound>dry; goto soak>soak (step2 untested); sune pound>pound",
+    "goto: soak first, dry wrong; try roast second. Others confirmed."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 4,
+    "TALK": 1,
+    "LORE": 0,
+    "AGG": 1
+   },
+   "parent": "a1",
+   "inherited": [
+    "dosu roast>roast; zozu pound>dry; goto soak>soak (step2 untested); sune pound>pound",
+    "goto: soak first, dry wrong; try roast second. Others confirmed."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 0,
+    "LORE": 2,
+    "AGG": 2
+   },
+   "parent": "a6",
+   "inherited": [
+    "dosu: roast>roast (verified). zozu: pound>dry (verified). goto: soak>soak (verified r8, r11). sune: step1 roast (r10), step2 not soak; try roast>dry, roast>pound, or roast>roast.",
+    "goto: soak first, dry wrong; try roast second. Others confirmed."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 1,
+    "LORE": 2,
+    "AGG": 2
+   },
+   "parent": "a6",
+   "inherited": [
+    "dosu: roast>roast (verified). zozu: pound>dry (verified). goto: soak>soak (verified r8, r11). sune: step1 roast (r10), step2 not soak; try roast>dry, roast>pound, or roast>roast.",
+    "goto: soak first, dry wrong; try roast second. Others confirmed."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 2,
+    "TALK": 1,
+    "LORE": 1,
+    "AGG": 3
+   },
+   "parent": "a8",
+   "inherited": [
+    "sune: ?>dry (not soak). zozu pound>dry. dosu roast>roast. goto untested.",
+    "goto: soak first, dry wrong; try roast second. Others confirmed."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 1,
+    "LORE": 2,
+    "AGG": 3
+   },
+   "parent": "a8",
+   "inherited": [
+    "sune: ?>dry (not soak). zozu pound>dry. dosu roast>roast. goto untested.",
+    "goto: soak first, dry wrong; try roast second. Others confirmed."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 3,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 3
+   },
+   "parent": "a15",
+   "inherited": [
+    "dosu roast>roast; sune step1 roast, not soak; verify zozu, goto",
+    "goto: soak first, dry wrong; try roast second. Others confirmed."
+   ]
+  },
+  {
+   "genome": {
+    "MEM": 1,
+    "TALK": 0,
+    "LORE": 1,
+    "AGG": 2
+   },
+   "parent": "a15",
+   "inherited": [
+    "dosu roast>roast; sune step1 roast, not soak; verify zozu, goto",
+    "goto: soak first, dry wrong; try roast second. Others confirmed."
+   ]
+  }
+ ],
+ "usage": {
+  "calls": 2470,
+  "cost_usd": 0.3606
+ },
+ "samples": {
+  "messages": [],
+  "gossip": [],
+  "notes": [
+   {
+    "gen": 11,
+    "agent": "a11",
+    "text": "dosu roast>roast; zozu pound>dry; goto soak>soak (both confirmed). sune: pound>pound FAILED (both steps wrong), so try roast/soak/dry pairs, avoiding pound."
+   },
+   {
+    "gen": 0,
+    "agent": "a0",
+    "text": "Season 1 records (preparations may change): goto = soak>dry (OK). zozu = dry>pound (OK). dosu: soak>dry failed, step2 'dry' right so step1 is not soak; try roast>dry or pound>dry. sune: pound>roast failed, step2 'roast' right so step1 not pound; try dry>roast or soak>roast. Verify whether plant preparations changed before reusing."
+   },
+   {
+    "gen": 11,
+    "agent": "a12",
+    "text": "dosu roast>roast; goto soak>soak; zozu pound>dry; sune roast>dry (verified this"
+   },
+   {
+    "gen": 6,
+    "agent": "a9",
+    "text": "Dosu: roast then pound, untested. Zozu pound-dry, sune soak-roast, goto"
+   },
+   {
+    "gen": 9,
+    "agent": "a7",
+    "text": "Verified: dosu roast>roast; zozu pound>dry. sune step1 pound, step2 not soak/dry, so try pound>roast. goto soak>pound from old notes, unverified this season."
+   },
+   {
+    "gen": 0,
+    "agent": "a10",
+    "text": "Known recipes (assuming unchanged; verify first): goto = soak then dry (worked 3 of 3). dosu = pound then dry (worked 3 of 3). sune: step1 is roast (confirmed right), step2 is not dry; try roast>soak or roast>pound. zozu: step1 is not pound and step2 is not soak; both wrong on pound>soak, so try dry or roast or soak first, paired with roast, dry, or pound second. Test sune and zozu early with small guesses, then reuse the known recipes."
+   },
+   {
+    "gen": 10,
+    "agent": "a8",
+    "text": "dosu roast>roast; goto soak>soak; sune pound>pound; zozu pound>dry (once)"
+   },
+   {
+    "gen": 4,
+    "agent": "a11",
+    "text": "Season 4 verified: dosu=soak>dry, sune=soak>roast, goto=pound>soak, zozu=pound>dry (changed). Recheck each plant's preparation before relying on it, since preparations can change between seasons."
+   },
+   {
+    "gen": 0,
+    "agent": "a9",
+    "text": "zozu: dry then pound. sune: step2 roast, step1 not pound/dry."
+   },
+   {
+    "gen": 10,
+    "agent": "a11",
+    "text": "sune: pound>roast or pound>pound; goto soak>pound; zozu pound>dry; dosu roast>roast"
+   },
+   {
+    "gen": 7,
+    "agent": "a8",
+    "text": "goto=soak>dry, dosu=roast>roast, sune=soak>roast, zozu=pound>dry (verified; recheck if unsure)"
+   },
+   {
+    "gen": 8,
+    "agent": "a2",
+    "text": "Confirmed: dosu roast>roast, sune pound>dry, zozu pound>dry. goto step1 soak is right; step2 is not dry or roast, so try pound or soak next."
+   },
+   {
+    "gen": 3,
+    "agent": "a2",
+    "text": "goto=pound>soak (confirmed 6 OKs). sune=soak>roast (roast>roast failed this season; soak>roast OK twice). zozu=dry>pound (OK). dosu=pound>dry FAILED; try soak>dry (last noted 2 OKs), verify it first."
+   },
+   {
+    "gen": 4,
+    "agent": "a12",
+    "text": "Verified: zozu=pound>dry, sune=soak>roast, dosu=soak>dry, goto=pound>soak."
+   },
+   {
+    "gen": 8,
+    "agent": "a3",
+    "text": "dosu roast>roast; sune pound>dry; zozu pound>dry; goto soak>FAIL, try other"
+   },
+   {
+    "gen": 9,
+    "agent": "a5",
+    "text": "goto soak>pound; zozu pound>dry; dosu roast>roast; sune pound>dry?"
+   },
+   {
+    "gen": 4,
+    "agent": "a3",
+    "text": "Zozu not dry-pound; try soak-roast. Other plants same as notes."
+   },
+   {
+    "gen": 11,
+    "agent": "a9",
+    "text": "goto: soak>soak likely. zozu: pound>dry. sune: roast>dry. dosu: try roast>roast."
+   },
+   {
+    "gen": 4,
+    "agent": "a4",
+    "text": "Verified this season: dosu=soak,dry; goto=pound,soak; sune=soak,roast; zozu=pound,dry (zozu changed). Preparations may change again, so recheck first; try these orders first."
+   },
+   {
+    "gen": 3,
+    "agent": "a8",
+    "text": "dosu soak-dry, goto pound-soak, zozu dry-pound, sune soak-roast"
+   }
+  ]
+ },
+ "samples_seen": {
+  "messages": 0,
+  "gossip": 0,
+  "notes": 166
+ }
+}

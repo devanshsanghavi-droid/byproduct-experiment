@@ -1,0 +1,277 @@
+[
+ {
+  "name": "s4-DRIFT-s1",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "DRIFT",
+   "seed": 1,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-SOLO-s1",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "SOLO",
+   "seed": 1,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-SOLO-W-s1",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "SOLO-W",
+   "seed": 1,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-COOP-s1",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "COOP",
+   "seed": 1,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-CULTURE-s1",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "CULTURE",
+   "seed": 1,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-DRIFT-s2",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "DRIFT",
+   "seed": 2,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-SOLO-s2",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "SOLO",
+   "seed": 2,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-SOLO-W-s2",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "SOLO-W",
+   "seed": 2,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-COOP-s2",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "COOP",
+   "seed": 2,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-CULTURE-s2",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "CULTURE",
+   "seed": 2,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-DRIFT-s3",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "DRIFT",
+   "seed": 3,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-SOLO-s3",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "SOLO",
+   "seed": 3,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-SOLO-W-s3",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "SOLO-W",
+   "seed": 3,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-COOP-s3",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "COOP",
+   "seed": 3,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-CULTURE-s3",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "CULTURE",
+   "seed": 3,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-DRIFT-s4",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "DRIFT",
+   "seed": 4,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-SOLO-s4",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "SOLO",
+   "seed": 4,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-SOLO-W-s4",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "SOLO-W",
+   "seed": 4,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-COOP-s4",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "COOP",
+   "seed": 4,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-CULTURE-s4",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "CULTURE",
+   "seed": 4,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-DRIFT-s5",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "DRIFT",
+   "seed": 5,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-SOLO-s5",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "SOLO",
+   "seed": 5,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-SOLO-W-s5",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "SOLO-W",
+   "seed": 5,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-COOP-s5",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "COOP",
+   "seed": 5,
+   "P": {}
+  }
+ },
+ {
+  "name": "s4-CULTURE-s5",
+  "kind": "social",
+  "gpu": true,
+  "params": {
+   "model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "arm": "CULTURE",
+   "seed": 5,
+   "P": {}
+  }
+ }
+]
